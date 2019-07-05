@@ -1,10 +1,134 @@
 @import "../plugins/mixin";
 .lineTime {
+    padding-top: 4rem;
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-color: #e4e4e4;
-    display: block;
+    display: flex;
+    flex-direction: column;
     p {
         @include fluid-type(320px, 1440px, 28px, 34px);
+        color: #5A9396;
+    }
+    $color: transparent;
+    $lineColor: #333;
+    $fontColor: transparent;
+    $bgColor1: transparent;
+    $bgColor2: transparent;
+    $yearBgColor: transparent;
+    $breakpoint: 700px;
+    .timeline {
+        position: relative;
+        padding: 1rem;
+        margin: 0 auto;
+        max-width: 1300px;
+        &:before {
+            content: '';
+            position: absolute;
+            height: 94%;
+            border: 1px solid $lineColor;
+            right: 40px;
+            top: 0;
+            margin-top: 4rem;
+            opacity: .3;
+        }
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        @media screen and (min-width: $breakpoint) {
+            &:before {
+                left: calc(50% - 1px);
+                right: auto;
+                margin-top: 4rem;
+            }
+        }
+    }
+    .timeline__item {
+        padding: 1rem;
+        border-image-slice: 1;
+        position: relative;
+        margin: 1rem 3rem 1rem 1rem;
+        clear: both;
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+        }
+        &:before {
+            right: -13.5%;
+            /* top: calc(50% - 5px); */
+            border-style: solid;
+            top: 0;
+            border-width: 3px;
+            width: 30px;
+            height: 30px;
+            background-color: #e4e4e4;
+            border-color: #5A9396;
+        }
+        @media screen and (min-width: $breakpoint) {
+            width: 44%;
+            margin: 1rem;
+            &:nth-of-type(2n) {
+                float: right;
+                margin: 1rem;
+                border-image-slice: 1;
+                &:before {
+                    right: auto;
+                    left: -13.5%;
+                }
+            }
+        }
+    }
+    .timeline__item--year {
+        text-align: center;
+        max-width: 150px;
+        margin: 0 48px 0 auto;
+        font-size: 1.8rem;
+        background-color: $yearBgColor;
+        line-height: 1;
+        border-image: none;
+        padding: .5rem 1rem 1rem;
+        &:before {
+            display: none;
+        }
+        @media screen and (min-width: $breakpoint) {
+            text-align: center;
+            margin: 0 auto;
+            &:nth-of-type(2n) {
+                float: none;
+                margin: 0 auto;
+                border-image: none;
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+    .timeline__title {
+        margin: 0;
+        @include fluid-type(320px, 1440px, 28px, 34px);
+        color: #5A9396;
+        font-weight: 100;
+    }
+    .timeline__blurb {
+        line-height: 1.5;
+        @include fluid-type(320px, 1440px, 14px, 18px);
+        margin: .5rem 0 0;
+        font-weight: 100;
+        color: #333;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 700px) {
+    .lineTime .timeline__item:before {
+        right: -6.5%;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 599px) {
+    .lineTime .timeline__item:before {
+        right: -2.3rem;
     }
 }
