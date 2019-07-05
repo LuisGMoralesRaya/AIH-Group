@@ -30,12 +30,12 @@ $browser-context: 16;
     $max: floor($max-font-size);
     @if $u1==$u2 and $u1==$u3 and $u1==$u4 {
         & {
-            font-size: $min;
+            font-size: $min!important;
             @media screen and (min-width: $min-vw) {
-                font-size: calc( #{$min} + #{strip-unit($max - $min)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+                font-size: calc( #{$min} + #{strip-unit($max - $min)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}))!important;
             }
             @media screen and (min-width: $max-vw) {
-                font-size: $max
+                font-size: $max!important;
             }
         }
     }
