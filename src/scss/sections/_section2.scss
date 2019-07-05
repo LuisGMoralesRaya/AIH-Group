@@ -1,0 +1,397 @@
+/* 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+                                                        SEGUNDA SECCIÓN 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+*/
+
+#seccion2 {
+    width: 100%;
+    height: 100vh;
+    background-color: #1e2142;
+    display: block;
+    -webkit-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
+    -moz-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
+    -ms-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
+    -o-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
+    transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
+}
+
+.tabsempresa {
+    width: 75%;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
+    -moz-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
+    -ms-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
+    -o-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
+    transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
+}
+
+.tabsempresamostrar {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+#iconoempresa {
+    margin: 0 auto;
+}
+
+#iconoempresa img {
+    width: 80px;
+}
+
+#tituloempresa {
+    text-align: center;
+    width: 100%;
+}
+
+#tituloempresa h1 {
+    margin: 0px auto !important;
+    color: white !important;
+    text-align: center;
+    width: 60%;
+    padding: 20px;
+}
+
+.lineaempresa {
+    height: 2px;
+    width: 800px;
+    background-color: white;
+    margin: 0 auto;
+    transition: all 1.5s cubic-bezier(.57, 0, .2, 1);
+    transform: scaleX(0);
+}
+
+.abrirlinea {
+    transform: scaleX(1);
+}
+
+#centrado_empresa {
+    margin: 0px auto !important;
+    color: white !important;
+    text-align: center;
+    width: 60%;
+}
+
+#btn_historia {
+    float: left;
+    text-align: left;
+    font-size: 1.2em;
+    padding: 20px;
+}
+
+#btn_historia:hover {
+    background-color: #5A9396;
+    cursor: pointer;
+}
+
+#btn_estatutos {
+    float: right;
+    text-align: right;
+    font-size: 1.2em;
+    padding: 20px;
+}
+
+#btn_estatutos:hover {
+    background-color: #5A9396;
+    cursor: pointer;
+}
+
+
+/* Efecto parallax triangulos */
+
+#triangulos {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}
+
+#t_1 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 400px solid var(--triangulo-color);
+    border-top: 200px solid transparent;
+    border-bottom: 200px solid transparent;
+    transform: rotate(90deg);
+    filter: blur(5px);
+}
+
+#t_2 {
+    position: absolute;
+    left: 30vh;
+    width: 0;
+    height: 0;
+    border-left: 100px solid var(--triangulo-color);
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    transform: rotate(-90deg);
+    filter: blur(1px);
+}
+
+#t_3 {
+    right: 10px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 180px solid var(--triangulo-color);
+    border-top: 90px solid transparent;
+    border-bottom: 90px solid transparent;
+    transform: rotate(90deg);
+    filter: blur(1px);
+}
+
+#t_4 {
+    bottom: 300px;
+    left: 40vh;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 150px solid var(--triangulo-color);
+    border-top: 75px solid transparent;
+    border-bottom: 75px solid transparent;
+    transform: rotate(-90deg);
+    filter: blur(1px);
+}
+
+#t_5 {
+    bottom: 200px;
+    left: 20vh;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 200px solid var(--triangulo-color);
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    transform: rotate(-90deg);
+    filter: blur(0px);
+}
+
+#t_6 {
+    left: 25vh;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 200px solid var(--triangulo-color);
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    transform: rotate(90deg);
+    filter: blur(5px);
+}
+
+#t_7 {
+    right: 20vh;
+    bottom: 100px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 150px solid var(--triangulo-color);
+    border-top: 75px solid transparent;
+    border-bottom: 75px solid transparent;
+    transform: rotate(90deg);
+    filter: blur(1px);
+}
+
+#t_8 {
+    right: 0px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 400px solid var(--triangulo-color);
+    border-top: 200px solid transparent;
+    border-bottom: 200px solid transparent;
+    transform: rotate(-90deg);
+    filter: blur(1px);
+}
+
+
+/* Z index de triangulos */
+
+.triangulo {
+    z-index: 0;
+}
+
+.zindex10 {
+    z-index: 10;
+}
+
+
+/* Botones empresa */
+
+.button_slide {
+    color: #FFF;
+    border-radius: 0px;
+    padding: 18px 36px;
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #5a9396;
+    -webkit-transition: ease-out 0.3s;
+    -moz-transition: ease-out 0.3s;
+    transition: ease-out 0.3s;
+    background: transparent;
+    opacity: 0;
+    transition: all 1s cubic-bezier(.57, 0, .2, 1);
+}
+
+.button_slide_mostrar {
+    opacity: 1;
+}
+
+.slide_left:hover {
+    box-shadow: inset 0 0 0 50px #5a9396;
+    background-color: transparent !important;
+    color: white;
+}
+
+
+/*  ---- Ventana historia ---- */
+
+#ventanahistoria {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: #5a9396;
+    background-size: cover;
+    display: block;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(-200vh);
+    -webkit-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    -moz-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    -ms-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    -o-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+}
+
+.abierta {
+    transform: translateX(0px) !important;
+    opacity: 1 !important;
+}
+
+#contenedor_textohistoria {
+    width: 100%;
+    height: 500px;
+    display: block;
+}
+
+#textohistoria {
+    color: white;
+    height: 100%;
+    width: 100%;
+    overflow-x: scroll;
+    margin-top: 300px;
+}
+
+#btn_cerrarhistoria {
+    color: white;
+    font-size: 1em;
+    position: absolute;
+    border: 1px solid white;
+    color: white;
+    background-color: #5a9396;
+    margin-top: 350px;
+    margin-left: -49px;
+    border-top: none;
+}
+
+#btn_cerrarhistoria i {
+    font-size: 3em;
+}
+
+#btn_cerrarhistoria:hover {
+    -webkit-transition: all 0.5s cubic-bezier(.57, 0, .2, 1);
+    -moz-transition: all 0.5s cubic-bezier(.57, 0, .2, 1);
+    -ms-transition: all 0.5s cubic-bezier(.57, 0, .2, 1);
+    -o-transition: all 0.5s cubic-bezier(.57, 0, .2, 1);
+    transition: all 0.5s cubic-bezier(.57, 0, .2, 1);
+    background-color: black;
+    color: white;
+}
+
+#img_historia {
+    position: absolute;
+    width: 600px;
+    z-index: -1;
+    left: -300px;
+    top: 100px;
+    transform: translateX(-800px);
+    transition: all 2.5s cubic-bezier(.57, 0, .2, 1);
+}
+
+.imagenhistoria {
+    transform: translateX(0px) !important;
+}
+
+#titulohistoria {
+    text-shadow: 3px 2px 4px #000;
+    text-align: left;
+    transform: translateX(-1000px);
+    transition: all 1.9s cubic-bezier(.57, 0, .2, 1);
+    opacity: 0;
+    color: white;
+}
+
+.mostrartitulohistoria {
+    transform: translateX(0px) !important;
+    opacity: 1 !important;
+}
+
+#lineahistoria {
+    width: 1px;
+    height: 400px;
+    background-color: white;
+}
+
+
+/* Ventana estatutos */
+
+#ventanaestatutos {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: #151727;
+    display: block;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(200vh);
+    -webkit-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    -moz-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    -ms-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    -o-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+}
+
+.abiertaestatutos {
+    transform: translateX(0px) !important;
+    opacity: 1 !important;
+}
+
+#contenedor_textoestatutos {
+    width: 100%;
+    height: 500px;
+    display: block;
+}
+
+#textoestatutos {
+    color: white;
+    height: 100%;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+#btn_cerrarestatutos {
+    color: white;
+    background-color: transparent;
+    font-size: 2em;
+    border: none;
+}

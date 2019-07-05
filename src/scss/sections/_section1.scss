@@ -1,0 +1,616 @@
+/* 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+                                                        PRIMERA SECCIÓN 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+*/
+
+
+/*
+==========================================================================
+========================================================================== Slider 
+========================================================================== 
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ :after,
+ :before {
+    box-sizing: border-box;
+}
+
+.static {
+    position: static;
+}
+
+.cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.owl-carousel .owl-slide {
+    position: relative;
+    height: 100vh;
+    background-color: #1f213e;
+}
+
+.owl-carousel .owl-slide-animated {
+    transform: translateX(20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.05s;
+}
+
+.owl-carousel .owl-slide-animated.is-transitioned {
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s;
+}
+
+.owl-carousel .owl-slide-title.is-transitioned {
+    transition-delay: 0.2s;
+}
+
+.owl-carousel .owl-slide-subtitle.is-transitioned {
+    transition-delay: 0.35s;
+}
+
+.owl-carousel .owl-slide-cta.is-transitioned {
+    transition-delay: 0.5s;
+}
+
+.owl-carousel .owl-nav {
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+
+.owl-carousel .owl-nav svg {
+    opacity: 0.3;
+    transition: opacity 0.3s;
+}
+
+.owl-carousel .owl-nav button:hover svg {
+    opacity: 1;
+}
+
+.owl-carousel .owl-nav [class*="owl-"]:hover {
+    background: transparent;
+}
+
+@media screen and (max-width: 575px) {
+    .owl-carousel .owl-nav {
+        top: 5%;
+    }
+    .owl-carousel .owl-nav svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.owl-slide-title {
+    font-size: 3em;
+    color: white;
+}
+
+
+/* 
+    Ocultar flechas de navegacion 
+    Ocultar puntos
+  */
+
+.owl-nav,
+.owl-dots {
+    display: none;
+}
+
+
+/* Cuadros slider */
+
+.cuadroescondido {
+    opacity: 0;
+    position: absolute;
+    bottom: -450px;
+    -webkit-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    -moz-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    -ms-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    -o-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    z-index: 1;
+    height: 60%;
+    width: 100%;
+}
+
+.cuadrovisible {
+    transform: translateY(-500px);
+    opacity: 1;
+}
+
+.textoformato {
+    color: white !important;
+    font-size: 0.9em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.8px;
+    line-height: 2;
+    text-align: justify;
+}
+
+.owl-carousel .owl-slide-title.is-transitioned {
+    z-index: 2;
+}
+
+.owl-slide-text {
+    transition: all 1s ease;
+    z-index: 1;
+}
+
+.owl-slide-text-desaparecer {
+    transform: translateY(-200px) !important;
+    opacity: 0 !important;
+}
+
+.owl-slide-animated {
+    width: 100%;
+    color: white;
+    margin-left: 450px;
+}
+
+
+/* Lineas slider */
+
+.S1_linea0 {
+    width: 5px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.55);
+    position: absolute;
+    z-index: 3;
+    top: -200px;
+    left: 410px;
+    -webkit-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
+    -moz-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
+    -ms-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
+    -o-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
+    transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
+    opacity: 0;
+    border-radius: 5px;
+}
+
+.S1_linea1 {
+    border-radius: 5px;
+    width: 5px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.55);
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 400px;
+    -webkit-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
+    -moz-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
+    -ms-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
+    -o-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
+    transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
+    opacity: 0;
+}
+
+.S1_linea2 {
+    border-radius: 5px;
+    width: 5px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.55);
+    position: absolute;
+    z-index: 3;
+    top: -100px;
+    left: 390px;
+    -webkit-transition: all 1s cubic-bezier(.57, 0, .2, 1);
+    -moz-transition: all 1s cubic-bezier(.57, 0, .2, 1);
+    -ms-transition: all 1s cubic-bezier(.57, 0, .2, 1);
+    -o-transition: all 1s cubic-bezier(.57, 0, .2, 1);
+    transition: all 1s cubic-bezier(.57, 0, .2, 1);
+    opacity: 0;
+}
+
+.aparecerlinea {
+    opacity: 1;
+}
+
+.S1_linea0-oculta {
+    transform: translateY(-500px);
+    opacity: 0;
+}
+
+.S1_linea1-oculta {
+    transform: translateY(500px);
+    opacity: 0;
+}
+
+.S1_linea2-oculta {
+    transform: translateY(500px);
+    opacity: 0;
+}
+
+
+/* Boton siguiente slide */
+
+#btncuadrito {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #ffffff47;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: #1e2142;
+    margin-bottom: -20px;
+    transition: all 0.5s;
+}
+
+#btncuadrito:hover {
+    cursor: pointer;
+    transform: translateX(5px);
+    background-color: #5A9396;
+}
+
+#btnslide1 {
+    position: relative;
+    border: 1px solid white;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    float: right;
+    transition: all 0.5s;
+    margin-right: 550px;
+    font-size: 0.4em !important;
+}
+
+#btnslide1:hover {
+    cursor: pointer;
+    transform: translateX(5px);
+    background-color: #020202
+}
+
+#btnslide1 i {
+    color: rgb(255, 255, 255);
+}
+
+
+/*
+  ==========================================================================
+  ========================================================================== Logo 
+  ========================================================================== 
+  */
+
+#logo {
+    margin: 100px;
+    position: absolute;
+    z-index: 2;
+    width: 200px;
+    height: 100px;
+}
+
+#logo img {
+    width: 200px;
+}
+
+
+/*
+  ==========================================================================
+  ==========================================================================  Menú 
+  ========================================================================== 
+  */
+
+#menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80px;
+    z-index: 100;
+}
+
+#btnmenu div,
+.btnmensaje div,
+#btnllamada div {
+    height: 100%;
+}
+
+#btnmenu {
+    width: 100%;
+    height: 80px;
+    background-color: #5A9396;
+}
+
+#btnmenu .material-icons {
+    color: #1f213e;
+    font-size: 3em;
+}
+
+#btnmenu:hover {
+    background-color: rgb(73, 198, 205);
+    cursor: pointer;
+}
+
+.btnmensaje {
+    width: 100%;
+    height: 80px;
+    background-color: #1f213e;
+}
+
+.btnmensaje .material-icons {
+    color: #5A9396;
+    font-size: 3em;
+}
+
+.btnmensaje:hover {
+    background-color: rgb(33, 47, 128);
+    cursor: pointer;
+}
+
+#btnllamada {
+    width: 100%;
+    height: 80px;
+    background-color: white;
+}
+
+#btnllamada .material-icons {
+    color: #1f213e;
+    font-size: 3em;
+}
+
+#btnllamada:hover {
+    background-color: rgb(226, 226, 226);
+    cursor: pointer;
+}
+
+
+/*
+  ==========================================================================
+  ========================================================================== Boton menú 
+  ========================================================================== 
+  */
+
+.button_container {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    transition: opacity .25s ease;
+    z-index: 7;
+}
+
+
+/*
+  ==========================================================================
+  ========================================================================== Animación botton menú 
+  ========================================================================== 
+  */
+
+.button_container:hover {
+    opacity: .7;
+}
+
+.button_container.active .top {
+    -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
+    transform: translateY(11px) translateX(0) rotate(45deg);
+    background: #FFF;
+}
+
+.button_container.active .middle {
+    opacity: 0;
+    background: #FFF;
+}
+
+.button_container.active .bottom {
+    -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
+    transform: translateY(-11px) translateX(0) rotate(-45deg);
+    background: #FFF;
+}
+
+.button_container span {
+    background: rgb(29, 27, 50);
+    border: none;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .35s ease;
+    cursor: pointer;
+}
+
+.button_container span:nth-of-type(2) {
+    top: 11px;
+}
+
+.button_container span:nth-of-type(3) {
+    top: 22px;
+}
+
+.button_container_centered {
+    position: relative;
+    width: 50px !important;
+    height: 50px !important;
+    top: 25px;
+    left: 15px;
+}
+
+
+/*
+  ==========================================================================
+  ========================================================================== Ventana emergente 
+  ========================================================================== 
+  */
+
+.overlay {
+    position: fixed;
+    background: rgba(1, 12, 29, 0.58);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    z-index: 6;
+}
+
+.overlay.open {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+
+.overlay.open li {
+    -webkit-animation: fadeInRight .5s ease forwards;
+    animation: fadeInRight .5s ease forwards;
+    -webkit-animation-delay: .35s;
+    animation-delay: .35s;
+    transition: all 0.3s ease;
+}
+
+.overlay.open li:nth-of-type(2) {
+    -webkit-animation-delay: .4s;
+    animation-delay: .4s;
+}
+
+.overlay.open li:nth-of-type(3) {
+    -webkit-animation-delay: .45s;
+    animation-delay: .45s;
+}
+
+.overlay.open li:nth-of-type(4) {
+    -webkit-animation-delay: .50s;
+    animation-delay: .50s;
+}
+
+.overlay.open li:nth-of-type(5) {
+    -webkit-animation-delay: .55s;
+    animation-delay: .55s;
+}
+
+.overlay.open li:nth-of-type(6) {
+    -webkit-animation-delay: .60s;
+    animation-delay: .60s;
+}
+
+.overlay.open li:nth-of-type(7) {
+    -webkit-animation-delay: .65s;
+    animation-delay: .65s;
+}
+
+.overlay.open li:nth-of-type(8) {
+    -webkit-animation-delay: .70s;
+    animation-delay: .70s;
+}
+
+.overlay nav {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translate(-15%, -50%);
+    transform: translate(-15%, -50%);
+    font-size: 40px;
+    font-family: 'Vollkorn', serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+.overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    text-align: left;
+}
+
+.overlay ul li {
+    display: block;
+    height: 25%;
+    height: calc(100% / 4);
+    min-height: 50px;
+    position: relative;
+    opacity: 0;
+}
+
+.overlay ul li a {
+    display: block;
+    position: relative;
+    color: #FFF;
+    text-decoration: none;
+    overflow: hidden;
+    font-weight: 800;
+    font-size: 0.8em;
+    padding: 0px 15px;
+}
+
+.overlay ul li:hover {
+    background-color: rgb(54, 142, 136);
+    color: rgb(29, 33, 48) !important;
+}
+
+.overlay-menu ul li a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+@-webkit-keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        left: 20%;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        left: 20%;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+
+/*
+  ==========================================================================
+  ========================================================================== Ventana formulario 
+  ========================================================================== 
+  */
+
+.control_formulario {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #7d7d7d;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    /* border-radius: .25rem; */
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    color: white;
+}
+
+.form-group {
+    margin: 2rem;
+}

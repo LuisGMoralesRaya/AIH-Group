@@ -1,0 +1,9 @@
+@import 'plugins/normalize.scss';
+@import 'default';
+@import 'sections/section1';
+@import 'sections/section2';
+@import 'sections/section3';
+@import 'sections/sectionExtra';
+body {
+    background-color: transparent;
+}
