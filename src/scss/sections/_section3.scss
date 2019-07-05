@@ -17,9 +17,14 @@
     position: absolute;
 }
 
+#tituloservicios{
+    height: 300px;
+    width: 200px;
+}
+
 #sliderservicios {
-    width: 90%;
-    transform: translateX(200px);
+    width: 70%;
+    transform: translateX(300px);
 }
 
 .itemservicios {
@@ -27,5 +32,5 @@
     background-position: center;
     background-origin: content-box;
     width: 300px;
-    height: 400px;
+    height: 350px;
 }
