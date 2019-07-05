@@ -1,0 +1,1402 @@
+/*==========================================================================
+ ! HTML5 Boilerplate v7.2.0 | MIT License | https://html5boilerplate.com/ 
+ ==========================================================================*/
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+
+}
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+h1{
+  font-weight: 800 !important;
+  text-align: center;
+  margin: 50px;
+}
+
+h2{
+  font-weight: 700 !important;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+
+/* 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+                                                        ESTILOS GENERALES
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+*/
+
+
+.main{
+  overflow-x: hidden;
+}
+
+.completa{
+  width: 100%;
+  height: 100%;
+}
+
+.body_bloqueado{
+  overflow: hidden;
+}
+  
+.main_efecto{
+  filter: blur(10px);
+}
+  
+
+
+
+
+
+
+/* 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+                                                        PRIMERA SECCIÓN 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+*/
+
+
+
+
+
+/*
+==========================================================================
+========================================================================== Slider 
+========================================================================== 
+*/
+
+:root{
+  /* Variables */
+  /* Triangulos flotantes*/
+  --triangulo-color: #272b50a3;
+
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:after, :before {
+  box-sizing: border-box;
+}
+
+
+.static {
+  position: static;
+}
+
+.cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.owl-carousel .owl-slide {
+  position: relative;
+  height: 100vh;
+  background-color: #1f213e;
+}
+
+.owl-carousel .owl-slide-animated {
+  transform: translateX(20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.05s;
+}
+
+.owl-carousel .owl-slide-animated.is-transitioned {
+  transform: none;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+
+.owl-carousel .owl-slide-title.is-transitioned {
+  transition-delay: 0.2s;
+}
+
+.owl-carousel .owl-slide-subtitle.is-transitioned {
+  transition-delay: 0.35s;
+}
+
+.owl-carousel .owl-slide-cta.is-transitioned {
+  transition-delay: 0.5s;
+}
+
+.owl-carousel .owl-nav {
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+.owl-carousel .owl-nav svg {
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.owl-carousel .owl-nav button:hover svg {
+  opacity: 1;
+}
+
+.owl-carousel .owl-nav [class*="owl-"]:hover {
+  background: transparent;
+}
+
+@media screen and (max-width: 575px) {
+  .owl-carousel .owl-nav {
+    top: 5%;
+  }
+  
+  .owl-carousel .owl-nav svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.owl-slide-title{
+  font-size: 3em;
+  color: white;
+}
+
+
+/* 
+  Ocultar flechas de navegacion 
+  Ocultar puntos
+*/
+
+.owl-nav, .owl-dots{
+  display: none;
+}
+
+
+/* Cuadros slider */
+
+.cuadroescondido{
+  opacity: 0;
+  position: absolute;
+  bottom: -450px;
+  -webkit-transition: all 1.3s cubic-bezier(.57,0,.2,1);
+  -moz-transition: all 1.3s cubic-bezier(.57,0,.2,1);
+  -ms-transition: all 1.3s cubic-bezier(.57,0,.2,1);
+  -o-transition: all 1.3s cubic-bezier(.57,0,.2,1);
+  transition: all 1.3s cubic-bezier(.57,0,.2,1);
+  z-index: 1;
+  height: 60%;
+  width: 100%;
+}
+
+.cuadrovisible{
+  transform: translateY(-500px);
+  opacity: 1;
+}
+
+.textoformato{
+    color: white !important;
+    font-size: 0.9em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.8px;
+    line-height: 2;
+    text-align: justify;
+}
+
+
+.owl-carousel .owl-slide-title.is-transitioned{
+  z-index: 2;
+}
+
+.owl-slide-text{
+  transition: all 1s ease;
+  z-index: 1;
+}
+
+.owl-slide-text-desaparecer{
+  transform: translateY(-200px) !important;
+  opacity: 0 !important;
+}
+
+.owl-slide-animated{    
+  width: 100%;
+  color: white;
+  margin-left: 450px;
+}
+
+/* Lineas slider */ 
+.S1_linea0{
+  width: 5px;
+  height: 600px;
+  background-color: rgba(255, 255, 255, 0.55);
+  position: absolute;
+  z-index: 3;
+  top: -200px;
+  left: 410px;
+  -webkit-transition: all 2.3s cubic-bezier(.57,0,.2,1);
+  -moz-transition: all 2.3s cubic-bezier(.57,0,.2,1);
+  -ms-transition: all 2.3s cubic-bezier(.57,0,.2,1);
+  -o-transition: all 2.3s cubic-bezier(.57,0,.2,1);
+  transition: all 2.3s cubic-bezier(.57,0,.2,1);
+  opacity: 0;
+  border-radius: 5px;
+}
+
+.S1_linea1{
+  border-radius: 5px;
+  width: 5px;
+  height: 600px;
+  background-color: rgba(255, 255, 255, 0.55);
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 400px;
+  -webkit-transition: all 2.3s cubic-bezier(.57,0,.2,1);
+  -moz-transition: all 2.3s cubic-bezier(.57,0,.2,1);
+  -ms-transition: all 2.3s cubic-bezier(.57,0,.2,1);
+  -o-transition: all 2.3s cubic-bezier(.57,0,.2,1);
+  transition: all 2.3s cubic-bezier(.57,0,.2,1);
+  opacity: 0;
+}
+
+.S1_linea2{
+  border-radius: 5px; 
+  width: 5px;
+  height: 600px;
+  background-color: rgba(255, 255, 255, 0.55);
+  position: absolute;
+  z-index: 3;
+  top: -100px;
+  left: 390px;
+  -webkit-transition: all 1s cubic-bezier(.57,0,.2,1);
+  -moz-transition: all 1s cubic-bezier(.57,0,.2,1);
+  -ms-transition: all 1s cubic-bezier(.57,0,.2,1);
+  -o-transition: all 1s cubic-bezier(.57,0,.2,1);
+  transition: all 1s cubic-bezier(.57,0,.2,1);
+  opacity: 0;
+}
+
+.aparecerlinea{
+  opacity: 1;
+}
+
+.S1_linea0-oculta{
+  transform: translateY(-500px);
+  opacity: 0;
+}
+
+.S1_linea1-oculta{
+  transform: translateY(500px);
+  opacity: 0;
+}
+
+.S1_linea2-oculta{
+  transform: translateY(500px);
+  opacity: 0;
+}
+
+
+/* Boton siguiente slide */
+
+#btncuadrito{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #ffffff47;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: #1e2142;
+  margin-bottom: -20px;
+  transition: all 0.5s;
+}
+
+
+#btncuadrito:hover{
+  cursor: pointer;
+  transform: translateX(5px);
+  background-color: #5A9396;
+}
+
+#btnslide1{
+  position: relative;
+  border: 1px solid white;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  float: right;
+  transition: all 0.5s;
+  margin-right: 550px;
+  font-size: 0.4em !important;
+}
+
+
+#btnslide1:hover{
+  cursor: pointer;
+  transform: translateX(5px);
+ background-color: #020202
+}
+
+#btnslide1 i{
+  color: rgb(255, 255, 255);
+}
+
+/*
+==========================================================================
+========================================================================== Logo 
+========================================================================== 
+*/
+
+#logo{
+  margin: 100px;
+  position: absolute;
+  z-index: 2;
+  width: 200px;
+  height: 100px;
+
+}
+
+#logo img{
+  width: 200px;
+}
+
+
+/*
+==========================================================================
+==========================================================================  Menú 
+========================================================================== 
+*/
+
+#menu{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80px;
+  z-index: 100;
+}
+
+#btnmenu div, .btnmensaje div, #btnllamada div{
+  height: 100%;
+}
+
+
+#btnmenu{
+  width: 100%;
+  height: 80px;
+  background-color: #5A9396;
+}
+
+  #btnmenu .material-icons{
+    color: #1f213e;
+    font-size: 3em;
+  }
+
+  #btnmenu:hover{
+    background-color: rgb(73, 198, 205);
+    cursor: pointer;
+  }
+
+
+.btnmensaje{
+  width: 100%;
+  height: 80px;
+  background-color: #1f213e;
+}
+  .btnmensaje .material-icons{
+    color:#5A9396;
+    font-size: 3em;
+  }
+  .btnmensaje:hover{
+    background-color: rgb(33, 47, 128);
+    cursor: pointer;
+  }
+
+#btnllamada{
+  width: 100%;
+  height: 80px;
+  background-color: white;
+}
+  #btnllamada .material-icons{
+    color:#1f213e;
+    font-size: 3em;
+  }
+  #btnllamada:hover{
+    background-color: rgb(226, 226, 226);
+    cursor: pointer;
+  }
+
+
+
+
+/*
+==========================================================================
+========================================================================== Boton menú 
+========================================================================== 
+*/
+
+
+
+.button_container {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  transition: opacity .25s ease;
+  z-index: 7;
+}
+
+/*
+==========================================================================
+========================================================================== Animación botton menú 
+========================================================================== 
+*/
+
+.button_container:hover {
+  opacity: .7;
+}
+.button_container.active .top {
+  -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
+          transform: translateY(11px) translateX(0) rotate(45deg);
+  background: #FFF;
+}
+.button_container.active .middle {
+  opacity: 0;
+  background: #FFF;
+}
+.button_container.active .bottom {
+  -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
+          transform: translateY(-11px) translateX(0) rotate(-45deg);
+  background: #FFF;
+}
+.button_container span {
+  background: rgb(29, 27, 50);
+  border: none;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .35s ease;
+  cursor: pointer;
+}
+.button_container span:nth-of-type(2) {
+  top: 11px;
+}
+.button_container span:nth-of-type(3) {
+  top: 22px;
+}
+
+.button_container_centered{
+  position: relative;
+  width: 50px !important;
+  height: 50px !important;
+  top: 25px;
+  left: 15px;
+}
+
+/*
+==========================================================================
+========================================================================== Ventana emergente 
+========================================================================== 
+*/
+
+.overlay {
+  position: fixed;
+  background: rgba(1, 12, 29, 0.58);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+  z-index: 6;
+}
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+.overlay.open li {
+  -webkit-animation: fadeInRight .5s ease forwards;
+          animation: fadeInRight .5s ease forwards;
+  -webkit-animation-delay: .35s;
+          animation-delay: .35s;
+          transition: all 0.3s ease;
+}
+.overlay.open li:nth-of-type(2) {
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+.overlay.open li:nth-of-type(3) {
+  -webkit-animation-delay: .45s;
+          animation-delay: .45s;
+}
+.overlay.open li:nth-of-type(4) {
+  -webkit-animation-delay: .50s;
+          animation-delay: .50s;
+}
+.overlay.open li:nth-of-type(5) {
+  -webkit-animation-delay: .55s;
+          animation-delay: .55s;
+}
+.overlay.open li:nth-of-type(6) {
+  -webkit-animation-delay: .60s;
+          animation-delay: .60s;
+}
+.overlay.open li:nth-of-type(7) {
+  -webkit-animation-delay: .65s;
+          animation-delay: .65s;
+}
+.overlay.open li:nth-of-type(8) {
+  -webkit-animation-delay: .70s;
+          animation-delay: .70s;
+}
+
+.overlay nav {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(-15%,-50%);
+  transform: translate(-15%,-50%);
+  font-size: 40px;
+  font-family: 'Vollkorn', serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  text-align: left;
+}
+.overlay ul li {
+  display: block;
+  height: 25%;
+  height: calc(100% / 4);
+  min-height: 50px;
+  position: relative;
+  opacity: 0;
+}
+.overlay ul li a {
+  display: block;
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+  overflow: hidden;
+  font-weight: 800;
+  font-size: 0.8em;
+  padding: 0px 15px;
+}
+
+.overlay ul li:hover {
+  background-color: rgb(54, 142, 136);
+  color: rgb(29, 33, 48) !important;
+}
+
+
+.overlay-menu ul li a{
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+
+
+/*
+==========================================================================
+========================================================================== Ventana formulario 
+========================================================================== 
+*/
+
+ .control_formulario {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #7d7d7d;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    /* border-radius: .25rem; */
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: white;
+}
+
+.form-group {
+  margin: 2rem;
+}
+
+
+
+
+/* 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+                                                        SEGUNDA SECCIÓN 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+*/
+
+#seccion2{
+  width: 100%;
+  height: 100vh;
+  background-color: #1e2142;
+  display: block;
+  -webkit-transition: all 2.3s cubic-bezier(.57,0,.2,1);
+  -moz-transition: all 2.3s cubic-bezier(.57,0,.2,1);
+  -ms-transition: all 2.3s cubic-bezier(.57,0,.2,1);
+  -o-transition: all 2.3s cubic-bezier(.57,0,.2,1);
+  transition: all 2.3s cubic-bezier(.57,0,.2,1);
+}
+
+.tabsempresa{
+  width: 75%;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: all 2.3s cubic-bezier(.57,0,.2,1);
+  -moz-transition: all 2.3s cubic-bezier(.57,0,.2,1);
+  -ms-transition: all 2.3s cubic-bezier(.57,0,.2,1);
+  -o-transition: all 2.3s cubic-bezier(.57,0,.2,1);
+  transition: all 2.3s cubic-bezier(.57,0,.2,1);
+}
+
+.tabsempresamostrar{
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+#iconoempresa{
+  margin: 0 auto;
+}
+
+#iconoempresa img{
+  width: 80px;
+}
+
+#tituloempresa{
+  text-align: center;
+  width: 100%;
+}
+
+#tituloempresa h1{
+  margin: 0px auto !important;
+  color: white !important;
+  text-align: center;
+  width: 60%;
+  padding: 20px;
+}
+.lineaempresa{
+  height: 2px;
+  width: 800px;
+  background-color: white;
+  margin: 0 auto;
+  transition: all 1.5s cubic-bezier(.57,0,.2,1);
+  transform: scaleX(0);
+}
+
+.abrirlinea{
+  transform: scaleX(1);
+}
+
+
+#centrado_empresa{
+  margin: 0px auto !important;
+  color: white !important;
+  text-align: center;
+  width: 60%;
+}
+#btn_historia{
+  float: left;
+  text-align: left;
+  font-size: 1.2em;
+  padding: 20px;
+}
+
+#btn_historia:hover{
+  background-color: #5A9396;
+  cursor: pointer;
+}
+
+#btn_estatutos{
+  float: right;
+  text-align: right;
+  font-size: 1.2em;
+  padding: 20px;
+}
+
+#btn_estatutos:hover{
+  background-color: #5A9396;
+  cursor: pointer;
+}
+
+
+
+/* Efecto parallax triangulos */
+
+
+#triangulos{
+  width: 100%;
+  position: absolute;
+  height: 100%;
+}
+
+
+
+#t_1{
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  border-left: 400px solid  var(--triangulo-color);
+  border-top: 200px solid transparent;
+  border-bottom: 200px solid transparent; 
+  transform: rotate(90deg);
+  filter: blur(5px);
+}
+
+#t_2{
+    position: absolute;
+    left: 30vh;
+    width: 0; 
+    height: 0; 
+    border-left: 100px solid var(--triangulo-color);
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent; 
+    transform: rotate(-90deg);
+    filter: blur(1px);
+}
+
+#t_3{
+  right: 10px;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 180px solid var(--triangulo-color);
+  border-top: 90px solid transparent;
+  border-bottom: 90px solid transparent;
+  transform: rotate(90deg);
+  filter: blur(1px);
+}
+
+#t_4{
+  bottom: 300px;
+  left: 40vh;
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  border-left: 150px solid  var(--triangulo-color);
+  border-top: 75px solid transparent;
+  border-bottom: 75px solid transparent; 
+  transform: rotate(-90deg);
+  filter: blur(1px);
+}
+
+#t_5{
+  bottom: 200px;
+  left: 20vh;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 200px solid var(--triangulo-color);
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+  transform: rotate(-90deg);
+  filter: blur(0px);
+}
+
+#t_6{
+  left: 25vh;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 200px solid var(--triangulo-color);
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+  transform: rotate(90deg);
+  filter: blur(5px);
+}
+
+#t_7{
+  right: 20vh;
+  bottom: 100px;
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  border-left: 150px solid  var(--triangulo-color);
+  border-top: 75px solid transparent;
+  border-bottom: 75px solid transparent; 
+  transform: rotate(90deg);
+  filter: blur(1px);
+}
+
+#t_8{
+  right: 0px;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 400px solid var(--triangulo-color);
+  border-top: 200px solid transparent;
+  border-bottom: 200px solid transparent;
+  transform: rotate(-90deg);
+  filter: blur(1px);
+}
+
+/* Z index de triangulos */
+.triangulo{
+  z-index: 0;
+}
+
+.zindex10{
+  z-index: 10;
+}
+
+/* Botones empresa */
+
+.button_slide {
+  color: #FFF;
+  border-radius: 0px;
+  padding: 18px 36px;
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #5a9396;
+  -webkit-transition: ease-out 0.3s;
+  -moz-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+  background: transparent;
+  opacity: 0;
+  transition: all 1s cubic-bezier(.57,0,.2,1);
+}
+
+.button_slide_mostrar{
+  opacity: 1;
+}
+
+.slide_left:hover {
+  box-shadow: inset 0 0 0 50px #5a9396;
+  background-color: transparent !important;
+  color: white;
+}
+
+/*  ---- Ventana historia ---- */
+
+#ventanahistoria{
+
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background-color: #5a9396;
+  background-size: cover;
+  display: block;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(-200vh);
+  -webkit-transition: all 1.3s cubic-bezier(.57,0,.2,1);
+  -moz-transition: all 1.3s cubic-bezier(.57,0,.2,1);
+  -ms-transition: all 1.3s cubic-bezier(.57,0,.2,1);
+  -o-transition: all 1.3s cubic-bezier(.57,0,.2,1);
+  transition: all 1.3s cubic-bezier(.57,0,.2,1);
+}
+
+.abierta{
+  transform: translateX(0px) !important;
+  opacity: 1 !important;
+}
+
+
+
+#contenedor_textohistoria{
+  width: 100%;
+  height: 500px;
+  display: block;
+}
+
+
+#textohistoria{
+  color: white;
+  height: 100%;
+  width: 100%;
+  overflow-x: scroll;
+  margin-top: 300px;
+}
+
+#btn_cerrarhistoria{
+  color: white;
+  font-size: 1em;
+  position: absolute;
+  border: 1px solid white;
+  color: white;
+  background-color: #5a9396;
+  margin-top: 350px;
+  margin-left: -49px;
+  border-top: none;
+}
+
+#btn_cerrarhistoria i{
+  font-size: 3em;
+}
+
+#btn_cerrarhistoria:hover{
+  -webkit-transition: all 0.5s cubic-bezier(.57,0,.2,1);
+  -moz-transition: all 0.5s cubic-bezier(.57,0,.2,1);
+  -ms-transition: all 0.5s cubic-bezier(.57,0,.2,1);
+  -o-transition: all 0.5s cubic-bezier(.57,0,.2,1);
+  transition: all 0.5s cubic-bezier(.57,0,.2,1);
+  background-color: black;
+  color: white;
+}
+
+#img_historia{
+    position: absolute;
+    width: 600px;
+    z-index: -1;
+    left: -300px;
+    top: 100px;
+    transform: translateX(-800px);
+    transition: all 2.5s cubic-bezier(.57,0,.2,1);
+}
+
+.imagenhistoria{
+  transform: translateX(0px) !important;
+}
+
+#titulohistoria{
+  text-shadow: 3px 2px 4px #0000004a;
+  text-align: left;
+  transform: translateX(-1000px);
+  transition: all 1.9s cubic-bezier(.57,0,.2,1);
+  opacity: 0;
+  color: white;
+}
+
+.mostrartitulohistoria{
+  transform: translateX(0px) !important;
+  opacity: 1 !important;
+}
+
+#lineahistoria{
+  width: 1px; 
+  height: 400px; 
+  background-color: white;
+}
+
+
+
+
+/* Ventana estatutos */
+
+
+
+#ventanaestatutos{
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background-color: #151727;
+  display: block;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(200vh);
+  -webkit-transition: all 1.3s cubic-bezier(.57,0,.2,1);
+  -moz-transition: all 1.3s cubic-bezier(.57,0,.2,1);
+  -ms-transition: all 1.3s cubic-bezier(.57,0,.2,1);
+  -o-transition: all 1.3s cubic-bezier(.57,0,.2,1);
+  transition: all 1.3s cubic-bezier(.57,0,.2,1);
+}
+
+.abiertaestatutos{
+  transform: translateX(0px) !important;
+  opacity: 1 !important;
+}
+
+
+
+#contenedor_textoestatutos{
+  width: 100%;
+  height: 500px;
+  display: block;
+}
+
+
+#textoestatutos{
+  color: white;
+  height: 100%;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+#btn_cerrarestatutos{
+  color: white;
+  background-color: transparent;
+  font-size: 2em;
+  border: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+                                                    TERCERA SECCIÓN 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+*/
+
+
+#seccion3{
+  width: 100%;
+  height: 100vh;
+  background-color: #e4e4e4;
+  background-image: url("../img/fondoservicios.png");
+  display: block;
+  position: absolute;
+}
+
+#sliderservicios{
+  width: 90%;
+  transform: translateX(200px);
+}
+
+.itemservicios{
+  background-image: url("../img/servicio.png");
+  background-position: center;
+  background-origin: content-box;
+  width: 300px;
+  height: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+                                                        OTRA SECCIÓN 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+--------------------------------------------------------------------------------------------------------------------- 
+*/
+
+
+
+
+/* Test parallax*/ 
+
+
+.test {
+  height: 100vh;
+  background-color: #f0f0f0;
+  margin-top: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.parallax {
+  width: 50%;
+  height: 50%;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'helvetica';
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
