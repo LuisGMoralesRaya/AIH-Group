@@ -19,7 +19,26 @@
 
 #tituloservicios{
     height: 300px;
-    width: 200px;
+    width: 500px;
+    transform: translateX(300px);
+}
+
+#tituloservicios h1{
+    text-align: left;
+    line-height: 0.9;
+}
+
+#tituloservicios h1 span{
+    font-weight: 100;
+}
+
+#tituloservicios #lineaservicios{
+    width: 500px;
+    height: 5px;
+    background-color: black;
+    -ms-transform: translateX(-300px);
+    transform: translate(50px,60px);
+    position: absolute;
 }
 
 #sliderservicios {
@@ -28,9 +47,56 @@
 }
 
 .itemservicios {
-    background-image: url("../img/servicio.png");
-    background-position: center;
-    background-origin: content-box;
-    width: 300px;
+    background-color: transparent;
+    width: 250px;
     height: 350px;
+    margin-right: 100px;
+}
+
+h4{
+    color: white;
+}
+
+/* Cuadros items */
+
+.cuadroitem{
+    height: 70px;
+    width: 70px;
+    position: absolute;
+}
+
+#c_1, #c_2, #c_3, #c_4, #c_5, #c_6{
+    z-index: 1;
+    opacity: .8;
+}
+
+#c_1{
+    background-color: red;
+}
+
+#c_2{
+    background-color:  orange;
+}
+
+#c_3{
+    background-color: yellow;
+}
+
+#c_4{
+    background-color: green;
+}
+
+#c_5{
+    background-color: blue;
+}
+
+#c_6{
+    background-color: violet;
+}
+
+/* Imagen */
+
+.imagenservicios{
+    transform: translate(17px,20px);
+    z-index: -1;
 }
