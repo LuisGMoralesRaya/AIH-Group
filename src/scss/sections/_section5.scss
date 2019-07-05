@@ -1,0 +1,10 @@
+@import "../plugins/mixin";
+.lineTime {
+    width: 100%;
+    height: 100vh;
+    background-color: #e4e4e4;
+    display: block;
+    p {
+        @include fluid-type(320px, 1440px, 28px, 34px);
+    }
+}
