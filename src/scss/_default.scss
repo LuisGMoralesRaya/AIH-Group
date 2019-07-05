@@ -1,3 +1,5 @@
+@import "plugins/mixin";
+
 html {
     color: #222;
     font-size: 1em;
@@ -287,4 +289,8 @@ body{
 
 .main_efecto {
     filter: blur(10px);
+}
+
+h1{
+    @include fluid-type(320px, 1440px, 28px, 34px);
 }
