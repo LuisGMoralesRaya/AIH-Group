@@ -203,9 +203,9 @@ $(document).ready(function() {
 -----------------------------------------------------------
 */
 
-var pxlCount = 0
+var pxlCount = 0;
 $(window).on('scroll', function() {
-    pxlCount = $(document).scrollTop() / 05;
+    pxlCount = $(document).scrollTop() / 5;
     $(".wrapper").css({ "-webkit-filter": "blur(" + pxlCount + "px)", "-moz-filter": "blur(" + pxlCount + "px)", "filter": "blur(" + pxlCount + "px)" });
 
 });
