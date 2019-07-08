@@ -104,6 +104,10 @@
 }
 
 
+
+
+
+
 /* 
     Ocultar flechas de navegacion 
     Ocultar puntos
@@ -161,9 +165,10 @@
 }
 
 .owl-slide-animated {
-    width: 100%;
+    width: 50%;
     color: white;
-    margin-left: 450px;
+    left: 31%;
+    position: relative;
 }
 
 
@@ -176,7 +181,7 @@
     position: absolute;
     z-index: 3;
     top: -200px;
-    left: 410px;
+    left: 20%;
     -webkit-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
     -moz-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
     -ms-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
@@ -184,6 +189,7 @@
     transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
     opacity: 0;
     border-radius: 5px;
+
 }
 
 .S1_linea1 {
@@ -194,13 +200,14 @@
     position: absolute;
     z-index: 3;
     top: 0;
-    left: 400px;
+    left: 19%;
     -webkit-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
     -moz-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
     -ms-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
     -o-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
     transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
     opacity: 0;
+
 }
 
 .S1_linea2 {
@@ -211,13 +218,14 @@
     position: absolute;
     z-index: 3;
     top: -100px;
-    left: 390px;
+    left: 21%;
     -webkit-transition: all 1s cubic-bezier(.57, 0, .2, 1);
     -moz-transition: all 1s cubic-bezier(.57, 0, .2, 1);
     -ms-transition: all 1s cubic-bezier(.57, 0, .2, 1);
     -o-transition: all 1s cubic-bezier(.57, 0, .2, 1);
     transition: all 1s cubic-bezier(.57, 0, .2, 1);
     opacity: 0;
+
 }
 
 .aparecerlinea {
@@ -262,15 +270,15 @@
 }
 
 #btnslide1 {
-    position: relative;
+
     border: 1px solid white;
-    padding: 10px;
+    padding: 1em;
     width: 100px;
     height: 100px;
-    float: right;
-    transition: all 0.5s;
-    margin-right: 550px;
-    font-size: 0.4em !important;
+    transition: all 1s;
+    margin-right: 0px;
+    font-size: 1.4em;
+    z-index: 20;
 }
 
 #btnslide1:hover {
@@ -291,11 +299,10 @@
   */
 
 #logo {
-    margin: 100px;
     position: absolute;
+    left: 5%;
+    top: 5%;
     z-index: 2;
-    width: 200px;
-    height: 100px;
 }
 
 #logo img {
@@ -315,6 +322,7 @@
     right: 0;
     width: 80px;
     z-index: 100;
+    display:none;
 }
 
 #btnmenu div,
@@ -613,4 +621,31 @@
 
 .form-group {
     margin: 2rem;
+}
+
+@media screen and (max-width: 1500px) {
+    .owl-slide-animated{
+        width: 45%;
+    }
+}
+
+// Movil
+
+@media screen and (max-width: 850px) {
+    #menu{
+        display: block;
+    }
+    .S1_linea0, .S1_linea1, .S1_linea2{
+        display: none;
+    }
+    #logo {
+        position: absolute;
+        left: 35%;
+    }   
+
+}
+
+@media screen and (max-width: 1170px) {
+
+
 }
