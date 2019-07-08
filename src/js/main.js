@@ -328,22 +328,32 @@ $('#btn_cerrarestatutos').click(
 ===================================================================================================================== 
 */
 
-$('#sliderservicios').owlCarousel({
-    loop: true,
-    margin: 5,
-    nav: true,
-    responsive: {
-        0: {
-            items: 1
+  $('#sliderservicios').owlCarousel({
+      loop:true,
+      margin:200,
+      nav:true,
+      responsive:{
+          0:{
+              items:1
+          },
+          420:{
+              items:2
+          },
+          670:{
+            items:3
+          },
+          940:{
+            items:4
+          },
+          1500:{
+            items:5
         },
-        600: {
-            items: 3
-        },
-        1000: {
-            items: 5
-        }
-    }
-})
+          1600:{
+            items:6
+          }
+      }
+  })
+
 
 /*--------------------------  Efecto parallax con TweenMax --------------------------- */
 
