@@ -1,0 +1,53 @@
+.ventajasCompetitivas {
+    height: auto;
+    min-height: 110vh;
+    width: 100%;
+    background: url("../img/backSecction6.jpg");
+    background-size: cover;
+    padding: 20px;
+    padding-left: 0;
+    position: relative;
+    .title {
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+        color: white;
+        @include fluid-type(320px,
+        1440px,
+        28px,
+        32px);
+        &:before {
+            content: '';
+            width: 79px;
+            background-color: white;
+            margin-right: 10px;
+            height: 20px;
+        }
+    }
+    .sectionCarousel {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        .containerText {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: bold;
+            color: white;
+            span {
+                font-weight: 100;
+                margin-top: 15px;
+                color: white;
+            }
+        }
+        .containerCarousel {
+            width: 70%;
+        }
+    }
+}
