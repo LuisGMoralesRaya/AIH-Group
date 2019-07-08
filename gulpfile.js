@@ -5,7 +5,6 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
-var gutil = require('gulp-util');
 var concat = require('gulp-concat');
 var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
@@ -13,8 +12,6 @@ var htmlReplace = require('gulp-html-replace');
 var htmlMin = require('gulp-htmlmin');
 var del = require('del');
 var sequence = require('run-sequence');
-var babel = require('gulp-babel')
-var concat = require('gulp-concat');
 
 var config = {
     dist: 'dist/',
@@ -43,9 +40,9 @@ gulp.task('serve', ['sass'], function() {
     browserSync({
         server: config.src
     });
+
     gulp.watch([config.htmlin, config.jsin], ['reload']);
     gulp.watch(config.scssin, ['sass']);
-    gulp.watch('src/js/**/*.js', ['scripts'])
 });
 
 gulp.task('sass', function() {
@@ -66,26 +63,12 @@ gulp.task('css', function() {
         .pipe(cleanCSS())
         .pipe(gulp.dest(config.cssout));
 });
-gulp.task('scripts', () => {
 
-    var babeljs =
-        gulp.src('src/js/*.js')
-        .pipe(babel({
-            presets: ['env']
-        }))
-        .pipe(gulp.dest('js/babel/'));
-
-    var concatjs =
-        gulp.src(['src/js/lib/*.js', 'src/js/babel/*.js'])
-        .pipe(concat('dist/js/main.all.js'))
-        .pipe(gulp.dest(output));
-
-    return merge(babeljs, concatjs);
-})
-gulp.task('js', ['clean'], function() {
-    return gulp.src('src/js/*.js')
-        .pipe(uglify().on('error', gutil.log))
-        .pipe(gulp.dest('dist/js/'));
+gulp.task('js', function() {
+    return gulp.src(config.jsin)
+        .pipe(concat(config.jsoutname))
+        .pipe(uglify())
+        .pipe(gulp.dest(config.jsout));
 });
 
 gulp.task('img', function() {
@@ -114,7 +97,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('build', function() {
-    sequence('clean', ['html', 'scripts', 'css', 'img']);
+    sequence('clean', ['html', 'js', 'css', 'img']);
 });
 
 gulp.task('default', ['serve']);
