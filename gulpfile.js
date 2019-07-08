@@ -43,10 +43,9 @@ gulp.task('serve', ['sass'], function() {
     browserSync({
         server: config.src
     });
-
     gulp.watch([config.htmlin, config.jsin], ['reload']);
     gulp.watch(config.scssin, ['sass']);
-    gulp.watch('js/**/*.js', ['scripts'])
+    gulp.watch('src/js/**/*.js', ['scripts'])
 });
 
 gulp.task('sass', function() {
