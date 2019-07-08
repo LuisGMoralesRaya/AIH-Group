@@ -333,17 +333,26 @@ $('#btn_estatutos').click(
 
     $('#sliderservicios').owlCarousel({
       loop:true,
-      margin:5,
+      margin:200,
       nav:true,
       responsive:{
           0:{
               items:1
           },
-          600:{
-              items:3
+          420:{
+              items:2
           },
-          1000:{
-              items:5
+          670:{
+            items:3
+          },
+          940:{
+            items:4
+          },
+          1500:{
+            items:5
+        },
+          1600:{
+            items:6
           }
       }
   })
