@@ -347,10 +347,7 @@ $('#btn_cerrarestatutos').click(
           },
           1500:{
             items:5
-        },
-          1600:{
-            items:6
-          }
+        }
       }
   })
 
