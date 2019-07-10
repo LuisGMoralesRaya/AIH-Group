@@ -177,16 +177,16 @@
 .S1_linea0 {
     width: 5px;
     height: 600px;
-    background-color: rgba(255, 255, 255, 0.55);
+    background-color: rgb(255, 255, 255);
     position: absolute;
     z-index: 3;
     top: -200px;
     left: 20%;
-    -webkit-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
-    -moz-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
-    -ms-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
-    -o-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
-    transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
+    -webkit-transition: all 1.8s cubic-bezier(.57, 0, .2, 1);
+    -moz-transition: all 1.8s cubic-bezier(.57, 0, .2, 1);
+    -ms-transition: all 1.8s cubic-bezier(.57, 0, .2, 1);
+    -o-transition: all 1.8s cubic-bezier(.57, 0, .2, 1);
+    transition: all 1.8s cubic-bezier(.57, 0, .2, 1);
     opacity: 0;
     border-radius: 5px;
 
@@ -196,16 +196,16 @@
     border-radius: 5px;
     width: 5px;
     height: 600px;
-    background-color: rgba(255, 255, 255, 0.55);
+    background-color: rgb(255, 255, 255);
     position: absolute;
     z-index: 3;
     top: 0;
-    left: 19%;
-    -webkit-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
-    -moz-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
-    -ms-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
-    -o-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
-    transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
+    left: 19.3%;
+    -webkit-transition: all 1.4s cubic-bezier(.57, 0, .2, 1);
+    -moz-transition: all 1.4s cubic-bezier(.57, 0, .2, 1);
+    -ms-transition: all 1.4s cubic-bezier(.57, 0, .2, 1);
+    -o-transition: all 1.4s cubic-bezier(.57, 0, .2, 1);
+    transition: all 1.4s cubic-bezier(.57, 0, .2, 1);
     opacity: 0;
 
 }
@@ -214,11 +214,11 @@
     border-radius: 5px;
     width: 5px;
     height: 600px;
-    background-color: rgba(255, 255, 255, 0.55);
+    background-color: rgb(255, 255, 255);
     position: absolute;
     z-index: 3;
     top: -100px;
-    left: 21%;
+    left: 20.7%;
     -webkit-transition: all 1s cubic-bezier(.57, 0, .2, 1);
     -moz-transition: all 1s cubic-bezier(.57, 0, .2, 1);
     -ms-transition: all 1s cubic-bezier(.57, 0, .2, 1);
@@ -229,7 +229,7 @@
 }
 
 .aparecerlinea {
-    opacity: 1;
+    opacity: 0.4;
 }
 
 .S1_linea0-oculta {
@@ -273,8 +273,8 @@
 
     border: 1px solid white;
     padding: 1em;
-    width: 100px;
-    height: 100px;
+    width: 3em;
+    height: 3em;
     transition: all 1s;
     margin-right: 0px;
     font-size: 1.4em;
@@ -320,7 +320,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 80px;
+    width: 60px;
     z-index: 100;
     display:none;
 }
@@ -333,7 +333,7 @@
 
 #btnmenu {
     width: 100%;
-    height: 80px;
+    height: 60px;
     background-color: #5A9396;
 }
 
@@ -349,13 +349,13 @@
 
 .btnmensaje {
     width: 100%;
-    height: 80px;
+    height: 60px;
     background-color: #1f213e;
 }
 
 .btnmensaje .material-icons {
     color: #5A9396;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .btnmensaje:hover {
@@ -365,13 +365,13 @@
 
 #btnllamada {
     width: 100%;
-    height: 80px;
+    height: 60px;
     background-color: white;
 }
 
 #btnllamada .material-icons {
     color: #1f213e;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 #btnllamada:hover {
@@ -425,7 +425,7 @@
 .button_container span {
     background: rgb(29, 27, 50);
     border: none;
-    height: 5px;
+    height: 3px;
     width: 100%;
     position: absolute;
     top: 0;
@@ -444,11 +444,19 @@
 
 .button_container_centered {
     position: relative;
-    width: 50px !important;
-    height: 50px !important;
-    top: 25px;
+    width: 30px;
+    height: 50px ;
+    top: 20px;
     left: 15px;
 }
+
+.tituloslider{
+   font-weight: 100 !important; 
+   font-size: 0.7em;
+   display: block;
+}
+
+
 
 
 /*
@@ -638,14 +646,59 @@
     .S1_linea0, .S1_linea1, .S1_linea2{
         display: none;
     }
+    
     #logo {
+        width: 100%;
         position: absolute;
-        left: 35%;
-    }   
+        left: 0;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .owl-slide-animated{
+        position: fixed;
+        width: 100%;
+        text-align: center;
+        left: unset;
+    }
+
+
+    #btnslide1 {
+        width: 70px;
+        height: 70px;
+        margin-top: 150px;
+        left: 45%;
+        position: absolute;
+    }
+
 
 }
 
-@media screen and (max-width: 1170px) {
 
+@media screen and (max-width: 430px)
+{
+    #btnslide1 {
+        left: 42%;
+    }
+}
+
+// Celular ariel
+@media screen and (max-width: 360px)
+{
+    #btnslide1 {
+        left: 42%;
+    }
+    #logo{
+        text-align: left;
+        padding-left: 25px;
+        margin-top: -10px;
+    }
+}
+
+
+@media screen and (max-width: 1170px) {
+    .owl-slide-title {
+        font-size: 2.4em;
+    }
 
 }
