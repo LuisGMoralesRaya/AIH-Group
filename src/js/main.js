@@ -18,25 +18,32 @@ $(function() {
     /* ------------------------    Slider 1 */
 
     var scene = new ScrollMagic.Scene({
-            triggerElement: '#seccion2',
-            offset: -470,
+            triggerElement: '#seccion1',
+            offset: 10,
             triggerHook: 0.5,
-            //  duration: "100%"
+            duration: "100%",
             reverse: true
         })
         .setClassToggle('.cuadroescondido', 'cuadrovisible')
+        // .addIndicators({name: "Aparecer cuadro", colorEnd: "#FFFFFF"})
         .addTo(controller);
 
     /* ------------------------    Slider 1 */
     /* Texto slider 1 */
     var scene1 = new ScrollMagic.Scene({
-            triggerElement: '#seccion2',
-            offset: -470,
+            triggerElement: '#seccion1',
+            offset: 10,
             triggerHook: 0.5,
             reverse: true
         })
         .setClassToggle('.owl-slide-title', 'owl-slide-text-desaparecer')
+       // .addIndicators({name: "Desaparecer texto", colorEnd: "#FFFFFF"})
         .addTo(controller);
+
+
+
+
+    /* Lineas transparentes ================================================= */
 
     /* Linea 1 slider 1 */
     var scene2 = new ScrollMagic.Scene({
@@ -46,7 +53,7 @@ $(function() {
             reverse: true
         })
         .setClassToggle('.S1_linea1', 'S1_linea1-oculta')
-        .addIndicators()
+       // .addIndicators()
         .addTo(controller);
 
     /* Linea 0 slider 1 */
@@ -57,7 +64,7 @@ $(function() {
             reverse: true
         })
         .setClassToggle('.S1_linea0', 'S1_linea0-oculta')
-        .addIndicators()
+       // .addIndicators()
         .addTo(controller);
 
     /* Linea 2 slider 1 */
@@ -68,8 +75,11 @@ $(function() {
             reverse: true
         })
         .setClassToggle('.S1_linea2', 'S1_linea2-oculta')
-        .addIndicators()
+       // .addIndicators()
         .addTo(controller);
+
+
+
 
     /* ------------------------    Seccion 2 */
     /* Mostrar tabsempresa */
@@ -80,7 +90,7 @@ $(function() {
             reverse: true
         })
         .setClassToggle('.tabsempresa', 'tabsempresamostrar')
-        .addIndicators()
+        // .addIndicators()
         .addTo(controller);
 
     /* Mostrar linea empresa */
@@ -91,7 +101,7 @@ $(function() {
             reverse: true
         })
         .setClassToggle('.lineaempresa', 'abrirlinea')
-        .addIndicators()
+        // .addIndicators()
         .addTo(controller);
 
     /* Mostrar texto botones empresa */
@@ -102,7 +112,7 @@ $(function() {
             reverse: true
         })
         .setClassToggle('.button_slide', 'button_slide_mostrar')
-        .addIndicators()
+       // .addIndicators()
         .addTo(controller);
 
 });
@@ -205,9 +215,12 @@ $(document).ready(function() {
 
 var pxlCount = 0;
 $(window).on('scroll', function() {
-    pxlCount = $(document).scrollTop() / 5;
-    $(".wrapper").css({ "-webkit-filter": "blur(" + pxlCount + "px)", "-moz-filter": "blur(" + pxlCount + "px)", "filter": "blur(" + pxlCount + "px)" });
+    if($(document).scrollTop()<=70){
+        pxlCount = $(document).scrollTop() / 5;
 
+    }
+    $(".wrapper").css({ "-webkit-filter": "blur(" + pxlCount + "px)", "-moz-filter": "blur(" + pxlCount + "px)", "filter": "blur(" + pxlCount + "px)" });
+    console.log(pxlCount);
 });
 
 
@@ -351,35 +364,3 @@ $('#btn_cerrarestatutos').click(
       }
   })
 
-
-/*--------------------------  Efecto parallax con TweenMax --------------------------- */
-
-
-var rect = $('#container')[0].getBoundingClientRect();
-var mouse = { x: 0, y: 0, moved: false };
-
-$("#container").mousemove(function(e) {
-    mouse.moved = true;
-    mouse.x = e.clientX - rect.left;
-    mouse.y = e.clientY - rect.top;
-});
-
-// Ticker event will be called on every frame
-TweenLite.ticker.addEventListener('tick', function() {
-    if (mouse.moved) {
-        parallaxIt(".slide", -100);
-        parallaxIt("img", -30);
-    }
-    mouse.moved = false;
-});
-
-function parallaxIt(target, movement) {
-    TweenMax.to(target, 0.3, {
-        x: (mouse.x - rect.width / 2) / rect.width * movement,
-        y: (mouse.y - rect.height / 2) / rect.height * movement
-    });
-}
-
-$(window).on('resize scroll', function() {
-    rect = $('#container')[0].getBoundingClientRect();
-});

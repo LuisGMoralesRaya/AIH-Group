@@ -150,6 +150,20 @@
     text-align: justify;
 }
 
+
+#titulocuadro{
+    color: white; 
+    font-size: 3em;
+    font-weight:700;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1;
+}
+
+#contenedorcuadro{
+    border: 1px solid #d4d4d457;
+    padding: 80px
+}
+
 .owl-carousel .owl-slide-title.is-transitioned {
     z-index: 2;
 }
@@ -335,6 +349,7 @@
     width: 100%;
     height: 60px;
     background-color: #5A9396;
+    transform: rotate(90deg);
 }
 
 #btnmenu .material-icons {
@@ -406,47 +421,69 @@
 }
 
 .button_container.active .top {
-    -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
-    transform: translateY(11px) translateX(0) rotate(45deg);
-    background: #FFF;
+    -webkit-transform: translateY(10px) translateX(0) rotate(45deg);
+    transform: translateY(10px) translateX(0) rotate(45deg);
+    background: black;
 }
 
 .button_container.active .middle {
     opacity: 0;
-    background: #FFF;
+    background: black;
 }
 
 .button_container.active .bottom {
-    -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
-    transform: translateY(-11px) translateX(0) rotate(-45deg);
-    background: #FFF;
+    -webkit-transform: translateY(-101px) translateX(0) rotate(-45deg);
+    transform: translateY(-9px) translateX(0) rotate(-45deg);
+    background: black;
 }
 
 .button_container span {
-    background: rgb(29, 27, 50);
-    border: none;
-    height: 3px;
-    width: 100%;
+    background-color: black;
+    border: 2px solid black;
+    height: 2px;
+    border-radius: 100px;
     position: absolute;
-    top: 0;
-    left: 0;
     transition: all .35s ease;
     cursor: pointer;
 }
+
+.button_container span.top {
+    width: 80%;
+    left: 2px;
+    top: 2px;
+}
+
+.button_container span.middle {
+    width: 130%;
+    top: 0;
+    left: -5px;
+}
+
+.button_container span.bottom {
+    width: 80%;
+    top: 0;
+    left: 2px;
+}
+
+
+
+
+
+
 
 .button_container span:nth-of-type(2) {
     top: 11px;
 }
 
 .button_container span:nth-of-type(3) {
-    top: 22px;
+    top: 20px;
 }
 
 .button_container_centered {
     position: relative;
     width: 30px;
     height: 50px ;
-    top: 20px;
+    top: 17px;
     left: 15px;
 }
 
@@ -475,7 +512,7 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity .35s, visibility .35s, height .35s;
-    overflow: hidden;
+
     z-index: 6;
 }
 
@@ -631,13 +668,27 @@
     margin: 2rem;
 }
 
+#tituloformulario{
+    color: white;
+    padding: 50px;
+}
+
+
+
 @media screen and (max-width: 1500px) {
     .owl-slide-animated{
         width: 45%;
     }
 }
 
-// Movil
+
+@media screen and (max-width: 1170px) {
+    .owl-slide-title {
+        font-size: 2.4em;
+    }
+
+}
+
 
 @media screen and (max-width: 850px) {
     #menu{
@@ -666,39 +717,109 @@
     #btnslide1 {
         width: 70px;
         height: 70px;
-        margin-top: 150px;
-        left: 45%;
+        right: 0;
+        left: 0;
+        margin: 150px auto;
         position: absolute;
     }
+
+    #titulocuadro{
+        text-align: center;
+        font-size: 2em;
+    }
+
+    #contenedorcuadro{
+        padding: 2em;
+        margin-top: 3em;
+    }
+
+    #btncuadrito{
+        bottom: -30px;
+        width: 70px;
+        height: 70px;
+        margin-bottom: -20px;
+        right: initial;
+    }
+
+    .overlay nav{
+        -ms-transform: translate(1%, -50%);
+        transform: translate(1%, -50%);
+    }
+
+    .overlay ul li {
+        line-height: 50px;
+        width: 90%;
+    }
+
+    .overlay ul li:nth-child(2) {
+        line-height: 30px;
+    }
+    
+    .overlay ul li a{
+        font-size: 0.6em;
+    }
+
+    .overlay-menu ul li:nth-child(2n + 1) a {
+        font-weight: 200;
+      }
+
+    #tituloformulario{
+        padding: 0px;
+    }
+
+        #overlay-formulario .textoformato{
+            display: none;
+        }
 
 
 }
 
+// Movil
+
 
 @media screen and (max-width: 430px)
 {
-    #btnslide1 {
-        left: 42%;
+
+    label{
+        font-size: 0.8em;
     }
+
+    #btnslide1 {
+        right: 0;
+        left: 0;
+        margin: 150px auto;
+    }
+
+    
+    
 }
 
 // Celular ariel
 @media screen and (max-width: 360px)
 {
     #btnslide1 {
-        left: 42%;
+        right: 0;
+        left: 0;
+        margin: 150px auto;
     }
     #logo{
         text-align: left;
         padding-left: 25px;
-        margin-top: -10px;
-    }
-}
-
-
-@media screen and (max-width: 1170px) {
-    .owl-slide-title {
-        font-size: 2.4em;
     }
 
+    #logo img {
+        width: 150px;
+    }
+
+    #titulocuadro {
+        width: 200px;
+        font-size: 1.5em;
+        margin-bottom: -20px;
+    }
+    .textoformato{
+        font-size: 0.7em;
+    }
+    #contenedorcuadro{
+        padding: 1.5em;
+    }
 }
