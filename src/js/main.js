@@ -93,7 +93,7 @@ $(function() {
         // .addIndicators()
         .addTo(controller);
 
-    /* Mostrar linea empresa */
+    /* Mostrar linea empresa 
     var scene4 = new ScrollMagic.Scene({
             triggerElement: '#iconoempresa',
             offset: -150,
@@ -103,7 +103,7 @@ $(function() {
         .setClassToggle('.lineaempresa', 'abrirlinea')
         // .addIndicators()
         .addTo(controller);
-
+*/
     /* Mostrar texto botones empresa */
     var scene4 = new ScrollMagic.Scene({
             triggerElement: '#iconoempresa',

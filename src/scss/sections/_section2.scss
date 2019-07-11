@@ -9,9 +9,10 @@
 */
 
 #seccion2 {
+    background-image: url(../img/fondoseccion2.jpg);
+    background-size: cover;
     width: 100%;
     height: 100vh;
-    background-color: #1e2142;
     display: block;
     -webkit-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
     -moz-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
@@ -24,11 +25,11 @@
     width: 75%;
     position: absolute;
     opacity: 0;
-    -webkit-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
-    -moz-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
-    -ms-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
-    -o-transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
-    transition: all 2.3s cubic-bezier(.57, 0, .2, 1);
+    -webkit-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    -moz-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    -ms-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    -o-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
 }
 
 .tabsempresamostrar {
@@ -36,27 +37,39 @@
     transform: translateX(0px);
 }
 
-#iconoempresa {
+
+
+#headerempresa {
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
-#iconoempresa img {
-    width: 80px;
-}
-
-#tituloempresa {
-    text-align: center;
-    width: 100%;
-}
-
-#tituloempresa h1 {
-    margin: 0px auto !important;
-    color: white !important;
-    text-align: center;
-    width: 60%;
+#headerempresa h1 {
+    margin: 0px auto;
+    color: white ;
+    text-align: left;
+    max-width: 1000px;
     padding: 20px;
+    font-weight: 300;
 }
 
+#headerempresa h1::before{
+    content: "";
+    border-left: 5px solid #5A9396;
+    padding-left: 10px;
+}
+
+#headerempresa p{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+
+
+/*
 .lineaempresa {
     height: 2px;
     width: 800px;
@@ -70,36 +83,104 @@
     transform: scaleX(1);
 }
 
-#centrado_empresa {
-    margin: 0px auto !important;
-    color: white !important;
-    text-align: center;
-    width: 60%;
-}
+*/
+
 
 #btn_historia {
     float: left;
-    text-align: left;
+    text-align: center;
     font-size: 1.2em;
-    padding: 20px;
+    background-color: black;
+    color: white;
+    position: absolute;
+    left: 0;
+    width: 15%;
+    height: 30%;
+    line-height: 15em;
+    cursor: pointer;
+    z-index: 1;
 }
 
 #btn_historia:hover {
-    background-color: #5A9396;
-    cursor: pointer;
+    background-image: url(../img/prueba.gif);
+    background-position: center;
 }
+
+#btn_historia::after{
+    content: url(../img/flecha_izda.png);
+    width: 70px;
+    height: 70px;
+    padding: 20px 10px;
+    position: absolute;
+    top: 246px;
+    right:-30px;
+    background-color: #ffffff;
+    color: black;
+    line-height: 21px;
+}
+
+
+#btn_historia:hover::after {
+   transform: translateX(5px);
+}
+
+
+#btn_historia span{
+    top: 0;
+    position: relative;
+    left: 5px;
+    font-size: 2em;
+    font-weight: 100;
+}
+
 
 #btn_estatutos {
     float: right;
-    text-align: right;
+    text-align: center;
     font-size: 1.2em;
-    padding: 20px;
+    background-color:#5A9396;
+    color: white;
+    position: absolute;
+    right: 0;
+    width: 15em;
+    height: 15em;
+    line-height: 15em;
+    cursor: pointer;
+    z-index: 20;
 }
 
-#btn_estatutos:hover {
-    background-color: #5A9396;
-    cursor: pointer;
+#btn_estatutos:hover{
+    background-image: url(../img/prueba2.gif);
+    background-position: center;
 }
+
+#btn_estatutos::after{
+    content: url(../img/flecha_dcha.png);
+    width: 70px;
+    height: 70px;
+    padding: 20px 10px;
+    position: absolute;
+    top: 246px;
+    left:-30px;
+    background-color: #ffffff;
+    color: black;
+    line-height: 21px;
+}
+
+#btn_estatutos:hover::after {
+    transform: translateX(-5px);
+}
+
+#btn_estatutos span{
+    top: 0;
+    position: relative;
+    left: 5px;
+    font-size: 2em;
+    font-weight: 100;
+}
+
+
+
 
 
 /* Efecto parallax triangulos */
@@ -222,48 +303,22 @@
 
 /* Botones empresa */
 
-.button_slide {
-    color: #FFF;
-    border-radius: 0px;
-    padding: 18px 36px;
-    display: inline-block;
-    font-size: 14px;
-    letter-spacing: 1px;
-    cursor: pointer;
-    box-shadow: inset 0 0 0 0 #5a9396;
-    -webkit-transition: ease-out 0.3s;
-    -moz-transition: ease-out 0.3s;
-    transition: ease-out 0.3s;
-    background: transparent;
-    opacity: 0;
-    transition: all 1s cubic-bezier(.57, 0, .2, 1);
-}
-
-.button_slide_mostrar {
-    opacity: 1;
-}
-
-.slide_left:hover {
-    box-shadow: inset 0 0 0 50px #5a9396;
-    background-color: transparent !important;
-    color: white;
-}
 
 
 /*  ---- Ventana historia ---- */
 
 #ventanahistoria {
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
-    background-color: #5a9396;
+    background-image: url(../img/seccion2_izda.jpg);
     background-size: cover;
     display: block;
     width: 100%;
     opacity: 0;
-    transform: translateX(-200vh);
+    transform: translateX(-250vh);
     -webkit-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
     -moz-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
     -ms-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
