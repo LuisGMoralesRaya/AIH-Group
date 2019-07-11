@@ -97,7 +97,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('build', function() {
-    sequence('clean', ['html', 'js', 'css', 'img']);
+    sequence('clean', ['html', 'css', 'img']);
 });
 
 gulp.task('default', ['serve']);
