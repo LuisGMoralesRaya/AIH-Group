@@ -1,0 +1,68 @@
+footer {
+    min-height: 17rem;
+    background: url("../img/fondoseccion4.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: {
+        left: 4rem;
+        top: 4rem;
+        right: 4rem;
+        bottom: 0;
+    }
+    .logo {
+        width: 10rem;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+    .menu {}
+    .infoFooter {
+        width: 80%;
+        height: 50px;
+        background-color: #191932;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;
+        margin: 0 auto;
+        .direccion {
+            display: flex;
+            flex-direction: row;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            i {
+                color: rgba(90, 147, 150, 0.5);
+                margin-right: 10px;
+            }
+            p {
+                margin-bottom: 0;
+                font-weight: 100;
+            }
+        }
+    }
+    .copyright {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        margin: 0 auto;
+        color: white;
+        font-weight: 100;
+        text-align: center;
+        width: 100%;
+        span {
+            color: rgba(90, 147, 150, 0.5);
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        >* {
+            font-weight: 100;
+        }
+        position: absolute;
+        bottom: 1rem;
+    }
+}
