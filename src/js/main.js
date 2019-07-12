@@ -320,13 +320,19 @@ btn_scrollup.onclick = function() {
 $('#btn_estatutos').click(
     function() {
         $('#ventanaestatutos').toggleClass('abiertaestatutos');
+        $('#img_estatutos').toggleClass('imagenestatutos');
+        $('#tituloestatutos').toggleClass('mostrartituloestatutos');
         $('body').toggleClass('body_bloqueado');
+        cajahistoria.scrollTop = scrollinicio;
     });
 
 $('#btn_cerrarestatutos').click(
     function() {
         $('#ventanaestatutos').toggleClass('abiertaestatutos');
+        $('#img_estatutos').toggleClass('imagenestatutos');
+        $('#tituloestatutos').toggleClass('mostrartituloestatutos');
         $('body').toggleClass('body_bloqueado');
+        cajahistoria.scrollTop = 0;
     });
 
 
