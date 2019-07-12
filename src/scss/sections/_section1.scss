@@ -314,21 +314,50 @@
 
 
     #navbar{
-      width: 100%;
+        width: 80%;
+        position: fixed;
+        z-index: 3;
+        padding: 100px 100px 20px 100px;
+        border-bottom: 5px solid white;
     }  
+
+    #logo{
+        display: inline;
+    }
+
+    #logo img {
+        width: 200px;
+    }
 
     #menuhorizontal,#submenuservicios{
         position: absolute;
     }
 
     #menuhorizontal{
-        top: 100px;
+        width: 1000px;
         z-index: 99;
+        display: inline;
+        margin-left: 100px;
     }
     
     #menuhorizontal li{
         display: inline;
     }
+
+    #menuhorizontal li:hover{
+       background-color: rgb(55, 55, 55);
+    }
+    #menuhorizontal li:hover a{
+       color: white;
+     }
+
+    #menuhorizontal li a, #submenuservicios li a {
+       text-decoration: none;
+       color: white;
+       padding: 30px;
+    }
+
+
 
     #submenuservicios{
         top: 50px;
@@ -342,9 +371,7 @@
 
 
 
-    #logo img {
-        width: 200px;
-    }
+
 
 
 
