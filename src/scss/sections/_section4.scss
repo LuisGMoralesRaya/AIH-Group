@@ -3,22 +3,14 @@
     width: 100%;
     height: auto;
     display: flex;
-    
     .backgroundSection {
         position: absolute;
         width: 100%;
         height: 100%;
-
-        filter: blur(8px);
-        background: 
-        linear-gradient(
-            rgba(0, 0, 0, 0.45), 
-            rgba(0, 0, 0, 0.45)
-          ),
-        url("../img/fondoseccion4.jpeg");
+        background: url("../img/fondoseccion4.jpg");
     }
-
     svg {
         z-index: 2;
+        width: 100%;
     }
 }
