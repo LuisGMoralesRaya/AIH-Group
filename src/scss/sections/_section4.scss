@@ -1,6 +1,24 @@
 #seccion4 {
+    position: relative;
     width: 100%;
-    height: 100vh;
-    background-color: #e4e4e4;
-    display: block;
+    height: auto;
+    display: flex;
+    
+    .backgroundSection {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        filter: blur(8px);
+        background: 
+        linear-gradient(
+            rgba(0, 0, 0, 0.45), 
+            rgba(0, 0, 0, 0.45)
+          ),
+        url("../img/fondoseccion4.jpeg");
+    }
+
+    svg {
+        z-index: 2;
+    }
 }
