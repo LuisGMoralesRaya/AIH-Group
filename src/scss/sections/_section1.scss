@@ -15,6 +15,10 @@
 ========================================================================== 
 */
 
+body{
+    background-color: black;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -314,11 +318,12 @@
 
 
     #navbar{
-        width: 80%;
+        width: 100%;
+        height: 100px;
         position: fixed;
         z-index: 3;
-        padding: 100px 100px 20px 100px;
-        border-bottom: 5px solid white;
+        border-bottom: 1px solid #afafaf7a;
+        border-radius: 3px;
     }  
 
     #logo{
@@ -326,51 +331,106 @@
     }
 
     #logo img {
+        transform: translate(100px,30px);
         width: 200px;
     }
 
-    #menuhorizontal,#submenuservicios{
-        position: absolute;
-    }
 
-    #menuhorizontal{
-        width: 1000px;
-        z-index: 99;
-        display: inline;
-        margin-left: 100px;
-    }
-    
-    #menuhorizontal li{
-        display: inline;
-    }
+    /* Menu principal */
 
-    #menuhorizontal li:hover{
-       background-color: rgb(55, 55, 55);
-    }
-    #menuhorizontal li:hover a{
-       color: white;
-     }
-
-    #menuhorizontal li a, #submenuservicios li a {
-       text-decoration: none;
-       color: white;
-       padding: 30px;
-    }
+#menuprincipal{
+    margin-top: 20px;
+    position: relative;
+    float: right;
+}
 
 
 
-    #submenuservicios{
-        top: 50px;
+
+
+
+
+    #menuprincipal a {
+        text-decoration: none;
+      }
+      
+      #menuprincipal nav {
+          font-family: monospace;
+      }
+      
+      #menuprincipal  ul {
+        background: rgb(6, 6, 6);
+          list-style: none;
+          margin: 0;
+          padding-left: 0;
+      }
+      
+      #menuprincipal  li {
+          color: #fff;
+        background: transparent;
+          display: block;
+          float: left;
+          padding: 1rem;
+          position: relative;
+          text-decoration: none;
+        transition-duration: 0.5s;
+      }
+        
+      #menuprincipal li a {
+        color: #fff;
+        font-size: 0.9em;
+        font-weight: 300;
+      }
+      
+      #menuprincipal li:hover,
+      #menuprincipal li:focus-within {
+          background: black;
+          cursor: pointer;
+      }
+      
+      #menuprincipal li:focus-within a {
+        outline: none;
+      }
+      
+      #menuprincipal  ul li ul {
+          background: rgb(77, 77, 77);
+          visibility: hidden;
         opacity: 0;
-    }
+        min-width: 5rem;
+          position: absolute;
+        transition: all 0.5s ease;
+        margin-top: 1rem;
+          left: 0;
+        display: none;
+      }
+      
+      #menuprincipal  ul li:hover > ul,
+      #menuprincipal ul li:focus-within > ul,
+      #menuprincipal ul li ul:hover,
+      #menuprincipal ul li ul:focus {
+         visibility: visible;
+         opacity: 1;
+         display: block;
+      }
+      
+      #menuprincipal ul li ul li {
+          clear: both;
+        width: 100%;
+      }
 
-    #divisiones:hover ul{
-        opacity: 1;
-    }
 
 
 
-
+      .scrolled{
+        height: 80px !important;
+        padding: 0px !important;
+        background-image: url(../img/fondoseccion2.jpg);
+        background-size: cover;
+        background-repeat: repeat-y;
+        }
+    
+    
+    
 
 
 

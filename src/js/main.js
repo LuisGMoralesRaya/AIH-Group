@@ -115,6 +115,25 @@ $(function() {
        // .addIndicators()
         .addTo(controller);
 
+    /* Mostrar btn historia */
+    var scene5= new ScrollMagic.Scene({
+        triggerElement: '#seccion2',
+        triggerHook: 0.5,
+        reverse: true
+    })
+    .setClassToggle('.btn_historia', 'btn_historia_aparecer')
+    .addTo(controller);
+
+    /* Mostrar btn estatutos */
+    var scene5= new ScrollMagic.Scene({
+        triggerElement: '#seccion2',
+        triggerHook: 0.5,
+        reverse: true
+    })
+    .setClassToggle('.btn_estatutos', 'btn_estatutos_aparecer')
+    .addTo(controller);
+
+
 });
 
 /* Efecto parallax de con scrollmagic (Triangulos) */
@@ -207,6 +226,27 @@ $(document).ready(function() {
 
 
 
+
+/* 
+Efecto menu
+*/
+$(function() {
+    var header = $("#navbar");
+  
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+        if (scroll >= 100) {
+            header.addClass("scrolled");
+        } else {
+            header.removeClass("scrolled");
+        }
+    });
+  
+});
+
+
+
+
 /* 
 -----------------------------------------------------------
 ----------------------------------------------------------- Efecto blur slider
@@ -220,7 +260,10 @@ $(window).on('scroll', function() {
 
     }
     $(".wrapper").css({ "-webkit-filter": "blur(" + pxlCount + "px)", "-moz-filter": "blur(" + pxlCount + "px)", "filter": "blur(" + pxlCount + "px)" });
-    console.log(pxlCount);
+
+    pxlCount2 = $(document).scrollTop() / 50;
+    $(".scrolled").css({ "background-position": "0px " + "-" + pxlCount2 + "px"});
+
 });
 
 

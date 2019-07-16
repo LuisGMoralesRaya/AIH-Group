@@ -36,8 +36,8 @@
     font-weight: 100;
 }
 
-#tituloservicios #lineaservicios{
-    width: 300px;
+#lineaservicios{
+    width: 350px;
     height: 5px;
     background-color: black;
     transform: translate(19%, 60px);
@@ -79,6 +79,7 @@ h4{
 #c_1, #c_2, #c_3, #c_4, #c_5, #c_6{
     z-index: 1;
     opacity: .8;
+    cursor: pointer;
 }
 
 #c_1{
@@ -113,8 +114,58 @@ h4{
 .iconoservicio{
     position: absolute;
     height: 90%;
+    width: 100%;
 }
 
+
+.iconoadvisor {
+    &:hover {
+      -webkit-filter: drop-shadow(1px 1px 15px #8f1c27);
+      filter: drop-shadow(1px 1px 15px #a71d2b);
+      transform: scale(1.1);
+    }
+  }
+
+  .iconocapital {
+    &:hover {
+      -webkit-filter: drop-shadow(1px 1px 15px #2daf47);
+      filter: drop-shadow(1px 1px 15px #2daf47);
+      transform: scale(1.1);
+    }
+  }
+
+  .iconohabitat {
+    &:hover {
+      -webkit-filter: drop-shadow(1px 1px 15px #d25f22);
+      filter: drop-shadow(1px 1px 15px #d25f22);
+      transform: scale(1.1);
+    }
+  }
+
+  .iconoholding {
+    &:hover {
+      -webkit-filter: drop-shadow(1px 1px 15px #e6b516);
+      filter: drop-shadow(1px 1px 15px #e6b516);
+      transform: scale(1.1);  
+    }
+  }
+
+  .iconopersonnel {
+    &:hover {
+      -webkit-filter: drop-shadow(1px 1px 15px #22a3d2);
+      filter: drop-shadow(1px 1px 15px #22a3d2);
+      transform: scale(1.1);
+    }
+  }
+
+
+  .iconomedia {
+    &:hover {
+      -webkit-filter: drop-shadow(1px 1px 15px #bd2b63);
+      filter: drop-shadow(1px 1px 15px #bd2b63);
+      transform: scale(1.1);
+    }
+  }
 
 
 
@@ -127,9 +178,17 @@ h4{
 }
 
 
-.imagenservicios:hover{
-    transform: scaleX(1.1);
+
+#c_1::before, #c_2::before, #c_3::before, #c_4::before, #c_5::before, #c_6::before{
+    content: "+";
+    color: #ffffff;
+    font-size: 4em;
+    font-weight: 100;
+    position: absolute;
+    top: -10px;
+    right: 18px;
 }
+
 
 
 /* Responsive ------------------------------------- */

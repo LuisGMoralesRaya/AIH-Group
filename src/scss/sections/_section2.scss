@@ -99,9 +99,18 @@
     line-height: 15em;
     cursor: pointer;
     z-index: 1;
-
-
+    transform: translate(-400px, 0px);
+    -webkit-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    -moz-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    -ms-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    -o-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
 }
+
+.btn_historia_aparecer{
+    transform: translate(0px, 0px) !important;
+}
+
 
 #btn_historia:hover {
     background-image: url(../img/prueba.gif);
@@ -150,7 +159,17 @@
     line-height: 2em;
     cursor: pointer;
     z-index: 1;
+    transform: translate(400px, 0px);
+    -webkit-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    -moz-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    -ms-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    -o-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
 
+}
+
+.btn_estatutos_aparecer{
+    transform: translate(0px, 0px) !important;
 }
 
 #btn_estatutos:hover{
