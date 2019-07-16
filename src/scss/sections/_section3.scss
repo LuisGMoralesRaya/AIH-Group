@@ -191,6 +191,39 @@ h4{
 
 
 
+/* Ventanas servicios */
+
+#overlay-advisors{
+    z-index: 6;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/fondoservicio.jpg);
+    visibility: hidden;
+    opacity: 1;
+
+}
+
+
+.overlay-advisors-mostrar{
+    visibility: visible !important;
+    opacity: 0; 
+}
+
+#cerrar_advisors{
+    font-size: 5em;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
 /* Responsive ------------------------------------- */
 @media screen and (max-width: 1200px) {
     #tituloservicios{

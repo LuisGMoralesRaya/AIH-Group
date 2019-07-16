@@ -414,6 +414,38 @@ $('#btn_cerrarestatutos').click(
   })
 
 
+/* ----------------------------------------------- Ventana de aih capital  ----------------------  */
+
+$('#c_1').click(
+    function() {
+        $('#overlay-advisors').toggleClass('overlay-advisors-mostrar');
+        $('body').toggleClass('body_bloqueado');
+        console.log("Abierto");
+    });
+
+
+$('#cerrar_advisors').click(
+        function() {
+            $('#overlay-advisors').toggleClass('overlay-advisors-mostrar');
+            $('body').toggleClass('body_bloqueado');
+            console.log("cerrado");
+        });
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Cuarta Seccion Luis Morales
 
 (function($, document) {
