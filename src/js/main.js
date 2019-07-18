@@ -37,7 +37,7 @@ $(function() {
             reverse: true
         })
         .setClassToggle('.owl-slide-title', 'owl-slide-text-desaparecer')
-       // .addIndicators({name: "Desaparecer texto", colorEnd: "#FFFFFF"})
+        // .addIndicators({name: "Desaparecer texto", colorEnd: "#FFFFFF"})
         .addTo(controller);
 
 
@@ -53,7 +53,7 @@ $(function() {
             reverse: true
         })
         .setClassToggle('.S1_linea1', 'S1_linea1-oculta')
-       // .addIndicators()
+        // .addIndicators()
         .addTo(controller);
 
     /* Linea 0 slider 1 */
@@ -64,7 +64,7 @@ $(function() {
             reverse: true
         })
         .setClassToggle('.S1_linea0', 'S1_linea0-oculta')
-       // .addIndicators()
+        // .addIndicators()
         .addTo(controller);
 
     /* Linea 2 slider 1 */
@@ -75,7 +75,7 @@ $(function() {
             reverse: true
         })
         .setClassToggle('.S1_linea2', 'S1_linea2-oculta')
-       // .addIndicators()
+        // .addIndicators()
         .addTo(controller);
 
 
@@ -112,26 +112,26 @@ $(function() {
             reverse: true
         })
         .setClassToggle('.button_slide', 'button_slide_mostrar')
-       // .addIndicators()
+        // .addIndicators()
         .addTo(controller);
 
     /* Mostrar btn historia */
-    var scene5= new ScrollMagic.Scene({
-        triggerElement: '#seccion2',
-        triggerHook: 0.5,
-        reverse: true
-    })
-    .setClassToggle('.btn_historia', 'btn_historia_aparecer')
-    .addTo(controller);
+    var scene5 = new ScrollMagic.Scene({
+            triggerElement: '#seccion2',
+            triggerHook: 0.5,
+            reverse: true
+        })
+        .setClassToggle('.btn_historia', 'btn_historia_aparecer')
+        .addTo(controller);
 
     /* Mostrar btn estatutos */
-    var scene5= new ScrollMagic.Scene({
-        triggerElement: '#seccion2',
-        triggerHook: 0.5,
-        reverse: true
-    })
-    .setClassToggle('.btn_estatutos', 'btn_estatutos_aparecer')
-    .addTo(controller);
+    var scene5 = new ScrollMagic.Scene({
+            triggerElement: '#seccion2',
+            triggerHook: 0.5,
+            reverse: true
+        })
+        .setClassToggle('.btn_estatutos', 'btn_estatutos_aparecer')
+        .addTo(controller);
 
 
 });
@@ -219,9 +219,146 @@ $owlCarousel.on("resize.owl.carousel", () => {
 */
 
 $(document).ready(function() {
+    //Mapa
+    //jalisco
+    //$("#path5174-4").hide();
+    $("#g1868").hide();
+    //Quintana
+
+    //$("#path9431-3").hide();
+    $("#g1929").hide();
+    //panama
+    //$("#path30323-5").hide();
+    $("#g1878").hide();
+    //republica
+    //$("#path30321-9").hide();
+    $("#g1934").hide();
+
+
+
+
+    //
     $('.customNextBtn').click(function() {
         $owlCarousel.trigger('next.owl.carousel', [100]);
     })
+});
+
+$('path').on({
+    mouseenter: function() {
+
+        var id = $(this).attr("id");
+        console.log(id);
+        //IF Jalisco
+        if (id == "path5174-4") {
+            $("#path5174-4").css({ fill: "#3caeb4" });
+            $("#g1868").fadeIn(500);
+            $("#jalisco").fadeIn(500);
+            //amores
+            $("#path30319-8").css({ fill: "#cccccc" });
+            $("#amores").fadeOut();
+            $("#g1923").fadeOut();
+            //panama
+            $("#path30323-5").css({ fill: "#cccccc" });
+            $("#g1878").fadeOut();
+            $("#panama").fadeOut();
+            //republica
+            $("#path30321-9").css({ fill: "#cccccc" });
+            $("#g1934").fadeOut();
+            $("#dominicana").fadeOut();
+            //quintana
+            $("#path9431-3").css({ fill: "#cccccc" });
+            $("#g1929").fadeOut();
+            $("#quintana").fadeOut();
+            //Amores IF
+        } else if (id == "path30319-8") {
+            $("#path30319-8").css({ fill: "#3caeb4" });
+            $("#g1923").fadeIn(500);
+            $("#amores").fadeIn(500);
+            //Jalisco
+            $("#path5174-4").css({ fill: "#cccccc" });
+            $("#g1868").fadeOut();
+            $("#jalisco").fadeOut();
+            //panama
+            $("#path30323-5").css({ fill: "#cccccc" });
+            $("#g1878").fadeOut();
+            $("#panama").fadeOut();
+            //republica
+            $("#path30321-9").css({ fill: "#cccccc" });
+            $("#g1934").fadeOut();
+            $("#dominicana").fadeOut();
+            //quintana
+            $("#path9431-3").css({ fill: "#cccccc" });
+            $("#g1929").fadeOut();
+            $("#quintana").fadeOut();
+            //IF Quintana Roo
+        } else if (id == "path9431-3") {
+            $("#path9431-3").css({ fill: "#3caeb4" });
+            $("#g1929").fadeIn(500);
+            $("#quintana").fadeIn(500);
+            //Jalisco
+            $("#path5174-4").css({ fill: "#cccccc" });
+            $("#g1868").fadeOut();
+            $("#jalisco").fadeOut();
+            //panama
+            $("#path30323-5").css({ fill: "#cccccc" });
+            $("#g1878").fadeOut();
+            $("#panama").fadeOut();
+            //republica
+            $("#path30321-9").css({ fill: "#cccccc" });
+            $("#g1934").fadeOut();
+            $("#dominicana").fadeOut();
+            //amores
+            $("#path30319-8").css({ fill: "#cccccc" });
+            $("#amores").fadeOut();
+            $("#g1923").fadeOut();
+            //IF Panama
+        } else if (id == "path30323-5") {
+            $("#path30323-5").css({ fill: "#3caeb4" });
+            $("#g1878").fadeIn(500);
+            $("#panama").fadeIn(500);
+            //Jalisco
+            $("#path5174-4").css({ fill: "#cccccc" });
+            $("#g1868").fadeOut();
+            $("#jalisco").fadeOut();
+            //quintana
+            $("#path9431-3").css({ fill: "#cccccc" });
+            $("#g1929").fadeOut();
+            $("#quintana").fadeOut();
+            //republica
+            $("#path30321-9").css({ fill: "#cccccc" });
+            $("#g1934").fadeOut();
+            $("#dominicana").fadeOut();
+            //amores
+            $("#path30319-8").css({ fill: "#cccccc" });
+            $("#amores").fadeOut();
+            $("#g1923").fadeOut();
+            //IF Republica Dominicana
+        } else if (id == "path30321-9") {
+            $("#path30321-9").css({ fill: "#3caeb4" });
+            $("#g1934").fadeIn(500);
+            $("#dominicana").fadeIn(500);
+            //Jalisco
+            $("#path5174-4").css({ fill: "#cccccc" });
+            $("#g1868").fadeOut();
+            $("#jalisco").fadeOut();
+            //quintana
+            $("#path9431-3").css({ fill: "#cccccc" });
+            $("#g1929").fadeOut();
+            $("#quintana").fadeOut();
+            //panama
+            $("#path30323-5").css({ fill: "#cccccc" });
+            $("#g1878").fadeOut();
+            $("#panama").fadeOut();
+            //amores
+            $("#path30319-8").css({ fill: "#cccccc" });
+            $("#amores").fadeOut();
+            $("#g1923").fadeOut();
+        }
+
+    },
+    mouseleave: function() {
+        console.log("Bye");
+    }
 });
 
 
@@ -232,8 +369,8 @@ Efecto menu
 */
 $(function() {
     var header = $("#navbar");
-  
-    $(window).scroll(function() {    
+
+    $(window).scroll(function() {
         var scroll = $(window).scrollTop();
         if (scroll >= 100) {
             header.addClass("scrolled");
@@ -241,7 +378,7 @@ $(function() {
             header.removeClass("scrolled");
         }
     });
-  
+
 });
 
 
@@ -255,14 +392,14 @@ $(function() {
 
 var pxlCount = 0;
 $(window).on('scroll', function() {
-    if($(document).scrollTop()<=70){
+    if ($(document).scrollTop() <= 70) {
         pxlCount = $(document).scrollTop() / 5;
 
     }
     $(".wrapper").css({ "-webkit-filter": "blur(" + pxlCount + "px)", "-moz-filter": "blur(" + pxlCount + "px)", "filter": "blur(" + pxlCount + "px)" });
 
     pxlCount2 = $(document).scrollTop() / 50;
-    $(".scrolled").css({ "background-position": "0px " + "-" + pxlCount2 + "px"});
+    $(".scrolled").css({ "background-position": "0px " + "-" + pxlCount2 + "px" });
 
 });
 
@@ -390,28 +527,28 @@ $('#btn_cerrarestatutos').click(
 ===================================================================================================================== 
 */
 
-  $('#sliderservicios').owlCarousel({
-      loop:true,
-      margin:200,
-      nav:true,
-      responsive:{
-          0:{
-              items:1
-          },
-          420:{
-              items:2
-          },
-          670:{
-            items:3
-          },
-          940:{
-            items:4
-          },
-          1500:{
-            items:5
+$('#sliderservicios').owlCarousel({
+    loop: true,
+    margin: 200,
+    nav: true,
+    responsive: {
+        0: {
+            items: 1
+        },
+        420: {
+            items: 2
+        },
+        670: {
+            items: 3
+        },
+        940: {
+            items: 4
+        },
+        1500: {
+            items: 5
         }
-      }
-  })
+    }
+})
 
 
 /* ----------------------------------------------- Ventana de aih capital  ----------------------  */
@@ -425,12 +562,12 @@ $('#c_1').click(
 
 
 $('#cerrar_advisors').click(
-        function() {
-            $('#overlay-advisors').toggleClass('overlay-advisors-mostrar');
-            $('body').toggleClass('body_bloqueado');
-            console.log("cerrado");
-        });
-    
+    function() {
+        $('#overlay-advisors').toggleClass('overlay-advisors-mostrar');
+        $('body').toggleClass('body_bloqueado');
+        console.log("cerrado");
+    });
+
 
 
 
@@ -451,10 +588,10 @@ $('#cerrar_advisors').click(
 (function($, document) {
     let height = -1;
 
-      $('.tab__content').each(function() {
-          height = height > $(this).outerHeight() ? height : $(this).outerHeight();
-       $(this).css('position', 'absolute');
-      });
-      $('[data-tabs]').css('min-height', height + 40 + 'px');
- 
+    $('.tab__content').each(function() {
+        height = height > $(this).outerHeight() ? height : $(this).outerHeight();
+        $(this).css('position', 'absolute');
+    });
+    $('[data-tabs]').css('min-height', height + 40 + 'px');
+
 }(jQuery, document));
