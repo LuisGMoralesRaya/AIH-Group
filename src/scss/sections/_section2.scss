@@ -90,7 +90,7 @@
     float: left;
     text-align: center;
     font-size: 1.2em;
-    background-color: black;
+    background-color: #292c37;
     color: white;
     position: absolute;
     left: 0;
@@ -592,7 +592,31 @@
     #lineahistoria{
         width: 0px;
     }
+    #btn_cerrarhistoria{
+        margin-left: 0px;
+        z-index: 999;
+        transform: translate(110px, 296px);
+        width: 200px;
+        border: none;
+    }
 
+
+
+
+    #img_estatutos{
+        transform: translate(350px,-800px);
+        width: 400px;
+    }
+    #tituloestatutos{
+        margin-top: -600px;
+    }
+
+    #btn_cerrarestatutos{
+        margin-top: 250px;
+        z-index: 999;
+        border: none;
+        width: 300px;
+    }
 }
 
 
