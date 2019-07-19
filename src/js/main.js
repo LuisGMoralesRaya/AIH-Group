@@ -595,3 +595,36 @@ $('#cerrar_advisors').click(
     $('[data-tabs]').css('min-height', height + 40 + 'px');
 
 }(jQuery, document));
+
+$('.brand-carousel').owlCarousel({
+    loop: true,
+    margin: 0,
+    center: true,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 8
+        }
+    }
+});
+$('.containerSectionCarousel').owlCarousel({
+    autoplay: false,
+    margin: 2,
+    loop: false,
+    responsive: {
+        0: {
+            items: 1
+        },
+        200: {
+            items: 2
+        },
+        500: {
+            items: 2
+        }
+    }
+});
