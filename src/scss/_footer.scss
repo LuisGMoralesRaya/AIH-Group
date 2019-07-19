@@ -1,6 +1,7 @@
 footer {
+    height: 100%;
     min-height: 17rem;
-    background: url("../img/fondoseccion4.jpg");
+    background: url("../img/fondoFooter.jpg");
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -9,18 +10,72 @@ footer {
         left: 4rem;
         top: 4rem;
         right: 4rem;
-        bottom: 0;
+        bottom: 6rem;
     }
     .logo {
         width: 10rem;
         height: auto;
         margin-bottom: 2rem;
     }
-    .menu {}
+    .menuFooter {
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        .containerLinks {
+            width: 700px;
+            position: relative;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: row;
+            border-bottom: 1px solid white;
+            &:before {
+                content: "Hey";
+                color: #5A9396;
+                position: absolute;
+                bottom: -.5rem;
+                font-size: 11px;
+                background-color: #5A9396;
+            }
+            a {
+                color: white;
+                padding-bottom: 1rem;
+                &:after {
+                    content: "|";
+                    color: white!important;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+                &:last-child {
+                    &:after {
+                        content: "";
+                    }
+                }
+                &:hover {
+                    color: #5A9396;
+                }
+            }
+            .active {
+                color: #5A9396!important;
+            }
+        }
+        .iconSocial {
+            display: flex;
+            img {
+                width: 20px;
+                margin-left: 5px;
+                margin-right: 5px;
+                cursor: pointer;
+                &:first-child {
+                    margin-left: 0px;
+                }
+            }
+        }
+    }
     .infoFooter {
         width: 80%;
         height: 50px;
-        background-color: #191932;
+        margin-bottom: 3rem;
+        background-color: #0c0c18;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -64,5 +119,51 @@ footer {
         }
         position: absolute;
         bottom: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+    footer .infoFooter {
+        width: 100%;
+        justify-content: space-between;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+    footer {
+        padding-left: 2rem;
+        padding-right: 20px;
+    }
+    footer .menuFooter .containerLinks {
+        flex-direction: column;
+        border-bottom: none;
+    }
+    footer .menuFooter .containerLinks a:after {
+        content: "";
+    }
+    footer .menuFooter .containerLinks:before {
+        content: "";
+        background-color: transparent;
+    }
+    footer .infoFooter {
+        background-color: transparent;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    footer .infoFooter .direccion {
+        margin-bottom: 2rem;
+        justify-content: flex-start;
+    }
+    footer .infoFooter .direccion i {
+        color: white;
+    }
+    footer .copyright {
+        font-size: 12px;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 }

@@ -9,7 +9,6 @@
     padding-right: 0;
     padding-bottom: 4rem;
     position: relative;
-
     .title {
         display: flex;
         justify-content: flex-start;
@@ -21,7 +20,6 @@
         28px,
         32px);
         margin-bottom: 5rem;
-
         &:before {
             content: '';
             width: 79px;
@@ -30,7 +28,6 @@
             height: 20px;
         }
     }
-
     .sectionCarousel {
         position: relative;
         display: flex;
@@ -38,36 +35,36 @@
         align-content: center;
         align-items: center;
         margin-bottom: 5rem;
-
         .containerText {
             display: flex;
             flex-direction: column;
             width: 40%;
             font-weight: bold;
             color: white;
-
             margin: {
                 left: 6rem;
                 right: 3rem;
                 margin-bottom: 0;
                 margin-top: auto;
             }
-
             span {
                 font-weight: 100;
                 margin-top: 15px;
                 color: white;
             }
         }
-
         .containerCarousel {
             width: 60%;
-
+            display: flex;
+            flex-direction: row;
+            .containerSectionCarousel {
+                display: flex;
+                flex-direction: row;
+            }
             .item {
                 width: 500px;
                 color: white;
                 position: relative;
-
                 .number {
                     box-shadow: 19px 20px 21px 0px rgba(0, 0, 0, 0.45);
                     position: absolute;
@@ -87,14 +84,12 @@
                     font-weight: bold;
                     text-transform: uppercase;
                 }
-
                 .container {
                     width: 100%;
                     border: 2rem solid white;
                     border-right: 4rem solid white;
                     padding: 0;
                     box-shadow: 25px 23px 24px 0px rgba(0, 0, 0, 0.2);
-
                     &_title {
                         @include fluid-type(320px,
                         1440px,
@@ -105,16 +100,13 @@
                         align-items: center;
                         align-content: center;
                         flex-direction: column;
-
                         padding: {
                             top: 5rem;
                             left: 6rem;
                             bottom: 5rem;
                             right: 6rem;
                         }
-
                         ;
-
                         span {
                             position: absolute;
                             background-color: #1f213e;
@@ -132,7 +124,6 @@
                             22px,
                             22px);
                             padding-left: 7%;
-
                             span {
                                 background-color: rgba(90, 147, 150, 0.5);
                                 /* left: 0; */
@@ -140,7 +131,6 @@
                                 height: 30px;
                                 bottom: -1.8rem;
                                 left: 25%;
-
                                 i {
                                     cursor: pointer;
                                     position: absolute;
@@ -156,7 +146,6 @@
                                 }
                             }
                         }
-
                         .arrows {
                             position: absolute;
                             left: 87.2%;
@@ -168,12 +157,10 @@
                             padding-left: 7%;
                         }
                     }
-
                     .contentText {
                         background-color: white;
                         padding: 0;
                     }
-
                     &_text {
                         @include fluid-type(320px,
                         1440px,
@@ -188,14 +175,12 @@
             }
         }
     }
-
     .sectionTabs {
         display: flex;
         align-content: center;
         align-items: center;
         justify-content: space-around;
         padding: 2rem;
-
         .slogan {
             @include fluid-type(320px,
             1440px,
@@ -204,21 +189,30 @@
             display: flex;
             flex-direction: column;
             color: white;
-            width: 30%;
+            width: 20%;
         }
-
         $color_1: white;
         $color_2: #1d1d1d;
-
         .tabs {
             position: relative;
             max-width: 900px;
-            width: 65%;
+            width: 70%;
         }
-
+        .containerLogos {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-grow: 1;
+            img {
+                height: 70px;
+                margin-right: 2rem;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
         .tab {
             float: left;
-
             label {
                 margin-right: 20px;
                 position: relative;
@@ -227,12 +221,10 @@
                 color: $color_1;
                 text-transform: uppercase;
             }
-
             [type=radio] {
                 display: none;
             }
         }
-
         .tab__content {
             position: relative;
             top: 40px;
@@ -242,20 +234,19 @@
             transition: opacity .7s cubic-bezier(.42, 0, .34, 1.01);
             opacity: 0;
         }
-
         [type=radio] {
             &:checked {
                 &~label {
                     border-bottom: 2px solid white;
                     color: $color_2;
                     background-color: white;
-                    padding:{
+                    padding: {
                         left: 10px;
                         right: 10px;
-                    };
+                    }
+                    ;
                     margin-bottom: 0;
                     z-index: 2;
-
                     &~.tab__content {
                         z-index: 1;
                         opacity: 1;
