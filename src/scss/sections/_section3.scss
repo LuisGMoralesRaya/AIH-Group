@@ -118,13 +118,26 @@ h4{
 }
 
 
-.iconoadvisor {
-    &:hover {
+.iconoadvisor{
+    perspective: 1000px;
+}
+
+
+
+
+ .iconoadvisor:hover {
       -webkit-filter: drop-shadow(1px 1px 15px #8f1c27);
       filter: drop-shadow(1px 1px 15px #a71d2b);
       transform: scale(1.1);
-    }
   }
+
+
+
+
+
+
+
+
 
   .iconocapital {
     &:hover {
