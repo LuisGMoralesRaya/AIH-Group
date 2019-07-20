@@ -529,6 +529,8 @@ $('#btn_cerrarestatutos').click(
 
 $('#sliderservicios').owlCarousel({
     loop: true,
+    autoplay:true,
+    autoplayTimeout:1000,
     margin: 200,
     nav: true,
     responsive: {
@@ -553,7 +555,7 @@ $('#sliderservicios').owlCarousel({
 
 /* ----------------------------------------------- Ventana de aih capital  ----------------------  */
 
-$('#c_1').click(
+$('.cuadroitem').click(
     function() {
         $('#overlay-advisors').toggleClass('overlay-advisors-mostrar');
         $('body').toggleClass('body_bloqueado');
@@ -600,6 +602,8 @@ $('.brand-carousel').owlCarousel({
     loop: true,
     margin: 0,
     center: true,
+    autoplay:true,
+    autoplayTimeout:2000,
     responsive: {
         0: {
             items: 1
