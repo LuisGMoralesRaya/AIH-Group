@@ -28,6 +28,7 @@ $background_color_2: #292c3866;
 	margin-left: 35%;
 	a {
 		text-decoration: none;
+		color: white;
 	}
 	nav {
 		font-family: $font_family_1;
@@ -45,7 +46,7 @@ $background_color_2: #292c3866;
 				min-width: 5rem;
 				position: absolute;
 				transition: all 0.5s ease;
-				margin-top: 50px;
+    			margin-top: 55px;
 				left: 0;
 				display: flex;
 				&:hover {
@@ -58,11 +59,12 @@ $background_color_2: #292c3866;
 				}
 				li {
 					clear: both;
-					width: 100%;
 					border: 1px solid white;
 					margin-right: 10px;
 					width: 150px;
+					height: 10px;
 					text-align: center;
+					padding-top: 15px;
 				}
 			}
 			&:hover {
@@ -77,10 +79,14 @@ $background_color_2: #292c3866;
 					opacity: 1;
 				}
 			}
+			.material-icons{
+				font-size: unset;
+			}
 		}
+
 	}
 	li {
-		color: $color_1;
+		// color: $color_1;
 		background: transparent;
 		display: block;
 		float: left;
@@ -91,17 +97,19 @@ $background_color_2: #292c3866;
 		a {
 			color: $color_1;
 			font-size: 0.8em;
-			font-weight: 300;
+			font-weight: 600;
 			text-transform: uppercase;
 		}
 		&:hover {
 			background-color: $background_color_1;
 			cursor: pointer;
-			color: $color_2;
+				color: black;
 			a {
 				color: $color_2;
 			}
 		}
+
+
 		&:focus-within {
 			background-color: $background_color_1;
 			cursor: pointer;
@@ -112,9 +120,97 @@ $background_color_2: #292c3866;
 		}
 	}
 }
+
+.dropdown{
+		li{
+			color: white !important;
+			a{
+				color: white !important ;
+				font-size: 4em;
+			}
+			&:hover a{
+				color: black !important;
+			}
+			&:hover{
+				background-color: transparent !important;
+			}
+		}
+
+}
+
 .scrolled {
 	height: 80px !important;
 	padding: 0px !important;
 	background-color: $background_color_2;
 	margin-top: -15px;
+}
+
+
+.dropdown li:before {
+	content: '';
+	background: rgb(255, 255, 255);
+	position: absolute;
+	width: 0%;
+	top: 0;
+	left: 0;
+	height: 100%;
+	transition: 0.3s linear;
+	z-index: -1;
+  }
+  .dropdown li:hover:before {
+	width: 100%;
+  }
+
+
+/* Reponsive */ 
+
+
+@media screen and (max-width: 1579px) {
+		
+	#menuprincipal ul li{
+		margin-top: -22px;
+	}
+}
+
+@media screen and (max-width: 1360px) {
+	#navbar{
+		width: 80%;
+	}
+	#menuprincipal{
+		margin-left: 30%;
+	}
+	#menuprincipal ul li ul{
+		margin-left: -150%;
+	}
+
+
+}
+
+@media (min-width: 1100px) and (max-width: 1360px) {
+	#menuprincipal ul li{
+		margin-top: 0px;
+	}
+}
+
+@media (min-width:820px) and (max-width: 1099px) {
+	#menuprincipal{
+	margin-top: 20px;
+	}
+	#navbar{
+		width: 100%;
+	}
+
+	#menuprincipal ul li ul{
+		margin-left: -300%;
+		margin-top: 70px;
+	}
+}
+
+
+
+@media (min-width:851px) and (max-width: 880px) {
+	#menuprincipal{
+		margin: 25px 120px;
+	}
+
 }

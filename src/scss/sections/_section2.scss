@@ -595,8 +595,8 @@
     #btn_cerrarhistoria{
         margin-left: 0px;
         z-index: 999;
-        transform: translate(110px, 296px);
-        width: 200px;
+        transform: translate(0px, 296px);
+        width: 300px;
         border: none;
     }
 
@@ -630,7 +630,7 @@
         position: absolute;
         width: 100%;
         bottom: initial;
-        height: 20%;
+        height: 200px;
     }
 
     #btn_estatutos{
