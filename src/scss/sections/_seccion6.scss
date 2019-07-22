@@ -100,6 +100,7 @@
                         align-items: center;
                         align-content: center;
                         flex-direction: column;
+                        position: relative;
                         padding: {
                             top: 5rem;
                             left: 6rem;
@@ -148,8 +149,8 @@
                         }
                         .arrows {
                             position: absolute;
-                            left: 87.2%;
-                            bottom: 35.5%;
+                            left: 99.2%;
+                            bottom: -6.4%;
                             @include fluid-type(320px,
                             1440px,
                             22px,
