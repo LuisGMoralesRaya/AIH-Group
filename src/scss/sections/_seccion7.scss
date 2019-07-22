@@ -44,6 +44,9 @@
         .containerText {
             display: flex;
             position: absolute;
+            img{
+                max-width: 250px;
+            }
             #amores {
                 display: block;
                 position: absolute;

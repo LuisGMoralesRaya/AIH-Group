@@ -66,12 +66,19 @@
         display: flex;
         flex-direction: row;
       }
-
-      .item {
-        width: 420px;
+      .owl-stage{
+        display: flex;
+        padding-left: 2rem;
+        padding-top: 2rem;
+      }
+      .owl-item{
         color: white;
         position: relative;
-        margin-right: 16rem;
+      }
+      .item {
+        width: 550px;
+        color: white;
+        position: relative;
 
         .number {
           box-shadow: 19px 20px 21px 0px rgba(0, 0, 0, 0.45);
@@ -88,6 +95,10 @@
           @include fluid-type(320px, 1440px, 28px, 34px);
           font-weight: bold;
           text-transform: uppercase;
+          svg{
+            fill:white;
+            color: white;
+          }
         }
 
         .container {
@@ -98,7 +109,7 @@
           box-shadow: 25px 23px 24px 0px rgba(0, 0, 0, 0.2);
 
           &_title {
-            @include fluid-type(320px, 1440px, 28px, 32px);
+            @include fluid-type(320px, 1440px, 18px, 28px);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -123,7 +134,7 @@
               text-align: center;
               left: 99.2%;
               bottom: -6.4%;
-              @include fluid-type(320px, 1440px, 14px, 18px);
+              @include fluid-type(320px, 1440px, 18px, 18px);
               padding-left: 2%;
               padding-right: 2%;
 
@@ -266,4 +277,185 @@
       }
     }
   }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  
+  .ventajasCompetitivas .sectionCarousel .containerCarousel{
+    width: 66%;
+  }
+  .ventajasCompetitivas .sectionCarousel .containerText{
+    margin-right: 1rem;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .ventajasCompetitivas .sectionCarousel .containerCarousel{
+    width: 66%;
+  }
+  .ventajasCompetitivas .sectionCarousel .containerText{
+    margin-right: 1rem;
+    margin-left: 3rem;
+    width: 25%;
+  }
+}
+@media (min-width: 0px) and (max-width: 1024px) {
+  .ventajasCompetitivas .sectionCarousel{
+    margin-bottom: 0;
+  }
+  .ventajasCompetitivas .sectionCarousel{
+    flex-direction: column;
+  }
+  .ventajasCompetitivas .sectionCarousel .containerText{
+    width: 90%;
+    padding-right: 3rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 1rem;
+    margin-bottom: 4rem;
+  }
+  .ventajasCompetitivas .sectionCarousel .containerCarousel{
+    width: 100%;
+  }
+  .ventajasCompetitivas .sectionCarousel .containerCarousel .item .container_title{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .ventajasCompetitivas .sectionCarousel .containerCarousel .item .container_title span{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    height: auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+  }
+  .ventajasCompetitivas .sectionCarousel .containerCarousel .item .container_title span span{
+    display: none;
+  }
+}
+@media (min-width: 0px) and (max-width: 944px) {
+  .owl-theme .owl-nav{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    
+  }
+  .owl-carousel .owl-nav button.owl-prev{
+    background: #191932!important;
+    color: #FFF!important;
+    text-decoration: none;
+    margin-right: auto;
+    margin-left: 2rem;
+    height: 50px;
+    width: 50px;
+        font-size: 2rem!important;
+            display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    outline: none;
+  }
+  .owl-carousel .owl-nav button.owl-next{
+    background: #191932!important;
+    color: #FFF!important;
+    text-decoration: none;
+    margin-right: 2rem;
+    height: 50px;
+    width: 50px;
+        font-size: 2rem!important;
+            display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    outline: none;
+  }
+
+  .ventajasCompetitivas .sectionCarousel .containerCarousel .item{
+    margin: 0 auto;
+  }
+}
+@media (min-width: 580px) and (max-width: 943px) {
+  .ventajasCompetitivas .sectionCarousel .containerCarousel .item{
+    width: 400px;
+    color: white;
+    position: relative;
+  }
+}
+@media (min-width: 0px) and (max-width: 579px) {
+  .ventajasCompetitivas .sectionCarousel .containerCarousel .owl-stage{
+    padding-left: 0;
+    padding-top: 0;
+  }
+  .ventajasCompetitivas .sectionCarousel .containerCarousel .item{
+    width: 320px;
+  }
+  .ventajasCompetitivas .sectionCarousel .containerCarousel .item .number{
+    top: 0rem;
+    left: 0rem;
+  }
+  .owl-carousel .owl-nav button.owl-next{
+    margin-right: 0rem;
+  }
+  .owl-carousel .owl-nav button.owl-prev{
+    margin-left: 0rem;
+  }
+  .ventajasCompetitivas .sectionCarousel .containerCarousel .item .container_title{
+    display: flex;
+    flex-direction: column;
+    font-size: 24px!important;
+  }
+  .ventajasCompetitivas .sectionCarousel .containerText{
+    padding-left: 1rem;
+    padding-right: 3rem;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+  .ventajasCompetitivas .sectionTabs .containerLogos{
+    justify-content: center;
+  }
+  .ventajasCompetitivas .sectionTabs .containerLogos img{
+    height: 50px;
+  }
+}
+@media (min-width: 0px) and (max-width: 1024px) {
+  .ventajasCompetitivas .sectionTabs .slogan{
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 3rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    b{
+      margin-right: 10px;
+    }
+  }
+  .ventajasCompetitivas .sectionTabs .tabs{
+    width: 100%;
+  }
+  .ventajasCompetitivas .sectionTabs{
+    flex-direction: column;
+  }
+}
+@media (min-width: 0px) and (max-width: 560px) {
+  .ventajasCompetitivas .sectionTabs .containerLogos img{
+    height: auto;
+    width: 250px;
+    margin: 0 auto;
+  }
+  .ventajasCompetitivas .sectionTabs .containerLogos img:last-child{
+    margin-right: auto;
+  }
+}
+@media (min-width: 1550px) {
+  
+  .ventajasCompetitivas .sectionCarousel .containerCarousel .item{
+    width: 600px;
+  }
+  
 }

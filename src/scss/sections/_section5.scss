@@ -1,4 +1,8 @@
 @import "../plugins/mixin";
+.hideme
+{
+    opacity:0;
+}
 .lineTime {
     padding-top: 4rem;
     width: 100%;
@@ -25,8 +29,8 @@
         &:before {
             content: '';
             position: absolute;
-            height: 94%;
-            border: 1px solid $lineColor;
+            height: 0%;
+            border: 1px solid #333;
             right: 40px;
             top: 0;
             margin-top: 4rem;
@@ -121,7 +125,22 @@
         color: #333;
     }
 }
+.lineTime .timeline.scrollAnimation:before { 
+    
+    -webkit-animation: drawLine 10s ease-in-out;
+    animation: drawLine 10s ease-in-out;
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 
+    content: '';
+            position: absolute;
+            border: 1px solid #333;
+            top: 0;
+            margin-top: 4rem;
+            opacity: .3;
+    }
 @media (min-width: 600px) and (max-width: 700px) {
     .lineTime .timeline__item:before {
         right: -6.5%;
@@ -133,3 +152,19 @@
         right: -2.3rem;
     }
 }
+@-webkit-keyframes drawLine {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 94%;
+    }
+  }
+  @keyframes drawLine {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 94%;
+    }
+  }
