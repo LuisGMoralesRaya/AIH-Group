@@ -1,0 +1,120 @@
+$color_1: #fff;
+$color_2: black;
+$font_family_1: monospace;
+$background_color_1: white;
+$background_color_2: #292c3866;
+
+/* Menu principal */
+#navbar {
+	width: 60%;
+	height: 100px;
+	position: fixed;
+	z-index: 3;
+	border-bottom: 3px solid #ffffff;
+	border-radius: 3px;
+	transition: all 1.3s cubic-bezier(0.57, 0, 0.2, 1);
+}
+#logo {
+	display: inline;
+	float: left;
+	img {
+		transform: translate(100px, 40px);
+		width: 150px;
+	}
+}
+#menuprincipal {
+	position: relative;
+	float: left;
+	margin-left: 35%;
+	a {
+		text-decoration: none;
+	}
+	nav {
+		font-family: $font_family_1;
+	}
+	ul {
+		background: rgb(6, 6, 6);
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		li {
+			ul {
+				background: transparent;
+				visibility: hidden;
+				opacity: 0;
+				min-width: 5rem;
+				position: absolute;
+				transition: all 0.5s ease;
+				margin-top: 50px;
+				left: 0;
+				display: flex;
+				&:hover {
+					visibility: visible;
+					opacity: 1;
+				}
+				&:focus {
+					visibility: visible;
+					opacity: 1;
+				}
+				li {
+					clear: both;
+					width: 100%;
+					border: 1px solid white;
+					margin-right: 10px;
+					width: 150px;
+					text-align: center;
+				}
+			}
+			&:hover {
+				>ul {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+			&:focus-within {
+				>ul {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		}
+	}
+	li {
+		color: $color_1;
+		background: transparent;
+		display: block;
+		float: left;
+		padding: 2.3rem 1rem;
+		position: relative;
+		text-decoration: none;
+		transition-duration: 0.5s;
+		a {
+			color: $color_1;
+			font-size: 0.8em;
+			font-weight: 300;
+			text-transform: uppercase;
+		}
+		&:hover {
+			background-color: $background_color_1;
+			cursor: pointer;
+			color: $color_2;
+			a {
+				color: $color_2;
+			}
+		}
+		&:focus-within {
+			background-color: $background_color_1;
+			cursor: pointer;
+			color: $color_2;
+			a {
+				outline: none;
+			}
+		}
+	}
+}
+.scrolled {
+	height: 80px !important;
+	padding: 0px !important;
+	background-color: $background_color_2;
+	margin-top: -15px;
+}
