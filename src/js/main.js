@@ -10,7 +10,7 @@
 
 // --------------------------------------------------- Inicializar Scrollmagic
 
-$(function() {
+$(function () {
     controller = new ScrollMagic.Controller({
         loglevel: 3
     });
@@ -18,12 +18,12 @@ $(function() {
     /* ------------------------    Slider 1 */
 
     var scene = new ScrollMagic.Scene({
-            triggerElement: '#seccion1',
-            offset: 10,
-            triggerHook: 0.5,
-            duration: "100%",
-            reverse: true
-        })
+        triggerElement: '#seccion1',
+        offset: 10,
+        triggerHook: 0.5,
+        duration: "100%",
+        reverse: true
+    })
         .setClassToggle('.cuadroescondido', 'cuadrovisible')
         // .addIndicators({name: "Aparecer cuadro", colorEnd: "#FFFFFF"})
         .addTo(controller);
@@ -31,11 +31,11 @@ $(function() {
     /* ------------------------    Slider 1 */
     /* Texto slider 1 */
     var scene1 = new ScrollMagic.Scene({
-            triggerElement: '#seccion1',
-            offset: 10,
-            triggerHook: 0.5,
-            reverse: true
-        })
+        triggerElement: '#seccion1',
+        offset: 10,
+        triggerHook: 0.5,
+        reverse: true
+    })
         .setClassToggle('.owl-slide-title', 'owl-slide-text-desaparecer')
         // .addIndicators({name: "Desaparecer texto", colorEnd: "#FFFFFF"})
         .addTo(controller);
@@ -47,33 +47,33 @@ $(function() {
 
     /* Linea 1 slider 1 */
     var scene2 = new ScrollMagic.Scene({
-            triggerElement: '#seccion2',
-            offset: -470,
-            triggerHook: 0.5,
-            reverse: true
-        })
+        triggerElement: '#seccion2',
+        offset: -470,
+        triggerHook: 0.5,
+        reverse: true
+    })
         .setClassToggle('.S1_linea1', 'S1_linea1-oculta')
         // .addIndicators()
         .addTo(controller);
 
     /* Linea 0 slider 1 */
     var scene2_0 = new ScrollMagic.Scene({
-            triggerElement: '#seccion2',
-            offset: -470,
-            triggerHook: 0.5,
-            reverse: true
-        })
+        triggerElement: '#seccion2',
+        offset: -470,
+        triggerHook: 0.5,
+        reverse: true
+    })
         .setClassToggle('.S1_linea0', 'S1_linea0-oculta')
         // .addIndicators()
         .addTo(controller);
 
     /* Linea 2 slider 1 */
     var scene2 = new ScrollMagic.Scene({
-            triggerElement: '#seccion2',
-            offset: -470,
-            triggerHook: 0.5,
-            reverse: true
-        })
+        triggerElement: '#seccion2',
+        offset: -470,
+        triggerHook: 0.5,
+        reverse: true
+    })
         .setClassToggle('.S1_linea2', 'S1_linea2-oculta')
         // .addIndicators()
         .addTo(controller);
@@ -84,11 +84,11 @@ $(function() {
     /* ------------------------    Seccion 2 */
     /* Mostrar tabsempresa */
     var scene3 = new ScrollMagic.Scene({
-            triggerElement: '#seccion2',
-            offset: 100,
-            triggerHook: 0.5,
-            reverse: true
-        })
+        triggerElement: '#seccion2',
+        offset: 100,
+        triggerHook: 0.5,
+        reverse: true
+    })
         .setClassToggle('.tabsempresa', 'tabsempresamostrar')
         // .addIndicators()
         .addTo(controller);
@@ -106,30 +106,30 @@ $(function() {
 */
     /* Mostrar texto botones empresa */
     var scene4 = new ScrollMagic.Scene({
-            triggerElement: '#iconoempresa',
-            offset: -125,
-            triggerHook: 0.5,
-            reverse: true
-        })
+        triggerElement: '#iconoempresa',
+        offset: -125,
+        triggerHook: 0.5,
+        reverse: true
+    })
         .setClassToggle('.button_slide', 'button_slide_mostrar')
         // .addIndicators()
         .addTo(controller);
 
     /* Mostrar btn historia */
     var scene5 = new ScrollMagic.Scene({
-            triggerElement: '#seccion2',
-            triggerHook: 0.5,
-            reverse: true
-        })
+        triggerElement: '#seccion2',
+        triggerHook: 0.5,
+        reverse: true
+    })
         .setClassToggle('.btn_historia', 'btn_historia_aparecer')
         .addTo(controller);
 
     /* Mostrar btn estatutos */
     var scene5 = new ScrollMagic.Scene({
-            triggerElement: '#seccion2',
-            triggerHook: 0.5,
-            reverse: true
-        })
+        triggerElement: '#seccion2',
+        triggerHook: 0.5,
+        reverse: true
+    })
         .setClassToggle('.btn_estatutos', 'btn_estatutos_aparecer')
         .addTo(controller);
 
@@ -140,7 +140,7 @@ $(function() {
 
 function parallax() {
     var parallaxController = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onEnter", duration: "200%" } });
-    $('.parallax').each(function() {
+    $('.parallax').each(function () {
         var trig = this.parentNode,
             parallax = this.getAttribute('data-parallax'),
             speed = parallax * 100 + '%';
@@ -211,14 +211,45 @@ $owlCarousel.on("changed.owl.carousel", e => {
 });
 
 $owlCarousel.on("resize.owl.carousel", () => {
-    setTimeout(() => {}, 50);
+    setTimeout(() => { }, 50);
 });
 
 /* 
 ------------- Botones subslider blur
 */
+$.fn.isOnScreen = function(){
 
-$(document).ready(function() {
+    var win = $(window);
+
+    var viewport = {
+        top : win.scrollTop(),
+        left : win.scrollLeft()
+    };
+    viewport.right = viewport.left + win.width();
+    viewport.bottom = viewport.top + win.height();
+
+    var bounds = this.offset();
+    bounds.right = bounds.left + this.outerWidth();
+    bounds.bottom = bounds.top + this.outerHeight();
+
+    return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+
+};
+function addAnimation(e){
+    $(".lineTime .timeline").toggleClass('scrollAnimation'); 
+    return false;
+    e.stopPropagation();
+}
+$.fn.isInViewport = function() {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+$(document).ready(function () {
     //Mapa
     //jalisco
     //$("#path5174-4").hide();
@@ -234,17 +265,37 @@ $(document).ready(function() {
     //$("#path30321-9").hide();
     $("#g1934").hide();
 
+$(window).scroll( function(event){
+    var scroll = $(window).scrollTop();
 
+    if ($(".time1").isInViewport()) {
+        $(".lineTime .timeline").addClass("scrollAnimation");
+    } else {
+        // do something else
+    }
+    $('.hideme').each( function(i){
+        
+        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+        if( bottom_of_window > bottom_of_object ){
+            
+            $(this).animate({'opacity':'1'},500);
+                
+        }
+        
+    }); 
+
+});
 
 
     //
-    $('.customNextBtn').click(function() {
+    $('.customNextBtn').click(function () {
         $owlCarousel.trigger('next.owl.carousel', [100]);
     })
 });
 
 $('path').on({
-    mouseenter: function() {
+    mouseenter: function () {
 
         var id = $(this).attr("id");
         console.log(id);
@@ -356,7 +407,7 @@ $('path').on({
         }
 
     },
-    mouseleave: function() {
+    mouseleave: function () {
         console.log("Bye");
     }
 });
@@ -367,10 +418,10 @@ $('path').on({
 /* 
 Efecto menu
 */
-$(function() {
+$(function () {
     var header = $("#navbar");
 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         var scroll = $(window).scrollTop();
         if (scroll >= 100) {
             header.addClass("scrolled");
@@ -391,7 +442,7 @@ $(function() {
 */
 
 var pxlCount = 0;
-$(window).on('scroll', function() {
+$(window).on('scroll', function () {
     if ($(document).scrollTop() <= 70) {
         pxlCount = $(document).scrollTop() / 5;
 
@@ -417,7 +468,7 @@ $(window).on('scroll', function() {
 /* ----------------------------------------------- Ventana de menú  ----------------------  */
 
 // ---------------- Presionar el boton de [MENÚ]
-$('#toggle').click(function() {
+$('#toggle').click(function () {
 
     if ($('#toggle-formulario').hasClass("active")) {
         $('#toggle-formulario').toggleClass('active');
@@ -435,7 +486,7 @@ $('#toggle').click(function() {
 
 /* Ventana de formulario */
 
-$('#toggle-formulario').click(function() {
+$('#toggle-formulario').click(function () {
 
     if ($('#toggle').hasClass("active")) {
         $('#toggle').toggleClass('active');
@@ -457,7 +508,7 @@ $('#toggle-formulario').click(function() {
 
 
 $('#btn_historia').click(
-    function() {
+    function () {
         $('#ventanahistoria').toggleClass('abierta');
         $('#img_historia').toggleClass('imagenhistoria');
         $('#titulohistoria').toggleClass('mostrartitulohistoria');
@@ -466,7 +517,7 @@ $('#btn_historia').click(
     });
 
 $('#btn_cerrarhistoria').click(
-    function() {
+    function () {
         $('#ventanahistoria').toggleClass('abierta');
         $('body').toggleClass('body_bloqueado');
         $('#img_historia').toggleClass('imagenhistoria');
@@ -483,12 +534,12 @@ let btn_scrollup = document.getElementById("btn_scrollup");
 let cajahistoria = document.getElementById("textohistoria");
 let scrollinicio = 0;
 
-btn_scrolldown.onclick = function() {
+btn_scrolldown.onclick = function () {
     scrollinicio += 40;
     cajahistoria.scrollTop = scrollinicio;
 };
 
-btn_scrollup.onclick = function() {
+btn_scrollup.onclick = function () {
     scrollinicio -= 40;
     cajahistoria.scrollTop = scrollinicio;
     console.log(scrollinicio);
@@ -498,7 +549,7 @@ btn_scrollup.onclick = function() {
 /* ----------------------------------------------- Ventana de estatutos  ----------------------  */
 
 $('#btn_estatutos').click(
-    function() {
+    function () {
         $('#ventanaestatutos').toggleClass('abiertaestatutos');
         $('#img_estatutos').toggleClass('imagenestatutos');
         $('#tituloestatutos').toggleClass('mostrartituloestatutos');
@@ -507,7 +558,7 @@ $('#btn_estatutos').click(
     });
 
 $('#btn_cerrarestatutos').click(
-    function() {
+    function () {
         $('#ventanaestatutos').toggleClass('abiertaestatutos');
         $('#img_estatutos').toggleClass('imagenestatutos');
         $('#tituloestatutos').toggleClass('mostrartituloestatutos');
@@ -529,8 +580,8 @@ $('#btn_cerrarestatutos').click(
 
 $('#sliderservicios').owlCarousel({
     loop: true,
-    autoplay:true,
-    autoplayTimeout:1000,
+    autoplay: true,
+    autoplayTimeout: 1000,
     margin: 200,
     nav: true,
     responsive: {
@@ -556,7 +607,7 @@ $('#sliderservicios').owlCarousel({
 /* ----------------------------------------------- Ventana de aih capital  ----------------------  */
 
 $('.cuadroitem').click(
-    function() {
+    function () {
         $('#overlay-advisors').toggleClass('overlay-advisors-mostrar');
         $('body').toggleClass('body_bloqueado');
         console.log("Abierto");
@@ -564,7 +615,7 @@ $('.cuadroitem').click(
 
 
 $('#cerrar_advisors').click(
-    function() {
+    function () {
         $('#overlay-advisors').toggleClass('overlay-advisors-mostrar');
         $('body').toggleClass('body_bloqueado');
         console.log("cerrado");
@@ -587,10 +638,10 @@ $('#cerrar_advisors').click(
 
 //Cuarta Seccion Luis Morales
 
-(function($, document) {
+(function ($, document) {
     let height = -1;
 
-    $('.tab__content').each(function() {
+    $('.tab__content').each(function () {
         height = height > $(this).outerHeight() ? height : $(this).outerHeight();
         $(this).css('position', 'absolute');
     });
@@ -602,11 +653,11 @@ $('.brand-carousel').owlCarousel({
     loop: true,
     margin: 0,
     center: true,
-    autoplay:true,
-    autoplayTimeout:2000,
+    autoplay: true,
+    autoplayTimeout: 2000,
     responsive: {
         0: {
-            items: 1
+            items: 3
         },
         600: {
             items: 3
@@ -632,3 +683,67 @@ $('.containerSectionCarousel').owlCarousel({
         }
     }
 });
+$('.containerCarousel').owlCarousel({
+    loop: false,
+    stagePadding: 50,
+    nav: false,
+    center: true,
+    items: 1,
+    responsive: {
+        0: {
+            items: 1,
+            center: true,
+            autoplay: false,
+            stagePadding: 0,
+            nav: true,
+        },
+        821: {
+            center: true,
+            items: 2,
+            stagePadding: 0,
+            loop: true,
+            margin: 40,
+        },
+        1025: {
+            items: 1
+        }
+    }
+});
+function postsCarousel() {
+    var checkWidth = $(window).width();
+    var owlPost = $(".containerLogos");
+    if (checkWidth > 961) {
+        if (typeof owlPost.data('owl.carousel') != 'undefined') {
+            owlPost.data('owl.carousel').destroy();
+        }
+        owlPost.removeClass('owl-carousel');
+    } else if (checkWidth < 960) {
+        owlPost.addClass('owl-carousel');
+        owlPost.owlCarousel({
+            items: 1,
+            slideSpeed: 500,
+            animateOut: 'fadeOut',
+            touchDrag: false,
+            mouseDrag: false,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            autoplayTimeout: 2000,
+            dots: false,
+            loop: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    center: false,
+                },
+                560: {
+                    center: false,
+                    items: 2,
+                    margin:200,
+                }
+            }
+        });
+    }
+}
+
+postsCarousel();
+$(window).resize(postsCarousel);	
