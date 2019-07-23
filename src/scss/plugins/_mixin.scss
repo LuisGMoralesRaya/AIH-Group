@@ -11,15 +11,7 @@
 }
 
 $browser-context: 16;
-@function size($pixels, $context: $browser-context) {
-    @if (unitless($pixels)) {
-        $pixels: $pixels * 1px;
-    }
-    @if (unitless($context)) {
-        $context: $context * 1px;
-    }
-    @return $pixels / $context * 1em;
-}
+
 
 @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
     $u1: unit($min-vw);
@@ -30,13 +22,23 @@ $browser-context: 16;
     $max: floor($max-font-size);
     @if $u1==$u2 and $u1==$u3 and $u1==$u4 {
         & {
-            font-size: $min!important;
+            font-size: $min;
             @media screen and (min-width: $min-vw) {
-                font-size: calc( #{$min} + #{strip-unit($max - $min)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}))!important;
+                font-size: calc( #{$min} + #{strip-unit($max - $min)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
             }
             @media screen and (min-width: $max-vw) {
-                font-size: $max!important;
+                font-size: $max;
             }
         }
     }
+}
+
+@function size($pixels, $context: $browser-context) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+    @return $pixels / $context * 1em;
 }

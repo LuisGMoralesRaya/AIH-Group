@@ -1,0 +1,16 @@
+.templateChido{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    body{
+        height:100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        footer{
+            min-height: auto;
+        }
+    }
+}
+@import 'historia';
+@import 'filosofia';

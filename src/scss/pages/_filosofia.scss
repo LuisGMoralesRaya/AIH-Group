@@ -1,0 +1,337 @@
+@import "../plugins/mixin";
+.contenedorFilosofia {
+  height: 100%;
+  width: 100%;
+  background-image: url("../img/backgroundPages/filosofia/backFilosofia.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  min-height: 120vh;
+  padding-left: 0;
+  padding-right: 5rem;
+
+  .titulo {
+    text-align: left;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    h1 {
+      font-weight: lighter;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 260px;
+      line-height: 40px;
+
+      @include fluid-type(320px, 1500px, 26px, 34px);
+      img {
+        width: 100%;
+        margin-top: 15px;
+      }
+
+      b {
+        @include fluid-type(320px, 1500px, 32px, 48px);
+        font-weight: bold;
+      }
+    }
+  }
+
+  .contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-content: center;
+    position: relative;
+    flex: 1;
+    &[m-flex="row"] {
+      flex-direction: row-reverse;
+      height: 600px;
+    }
+    .colLarge {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 0;
+
+      max-height: 700px;
+      div {
+        height: auto;
+        max-height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border: 2.5rem solid white;
+        h2 {
+          display: flex;
+          flex-direction: row;
+          @include fluid-type(320px, 1500px, 20px, 36px);
+          margin-bottom: 1rem;
+          color: #4d4d4d;
+          img {
+            height: size(16);
+            margin-left: size(5);
+          }
+        }
+        .textoAbajo {
+          margin: -5px 0 0 -5px;
+          border: 1px solid white;
+        }
+        p {
+          text-align: justify;
+          margin-bottom: 0;
+          @include fluid-type(320px, 1500px, 12px, 16px);
+          color: #4d4d4d;
+          overflow: visible;
+          padding-right: 10px;
+          max-height: 700px;
+          overflow: auto;
+          $background_color_1: #f5f5f5;
+          $background_color_2: #000000;
+
+        }
+      }
+    }
+    .columnsDown {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: center;
+      align-content: center;
+      margin-right: 2rem;
+      div {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding: 2.5rem;
+        h2 {
+          display: flex;
+          flex-direction: row;
+          @include fluid-type(320px, 1500px, 20px, 36px);
+          margin-bottom: 1rem;
+          color: #4d4d4d;
+          img {
+            height: size(16);
+            margin-left: size(5);
+          }
+        }
+
+        p {
+          margin-bottom: 0;
+          @include fluid-type(320px, 1500px, 12px, 16px);
+          color: #4d4d4d;
+          overflow: auto;
+          padding-right: 10px;
+          text-align: left;
+        }
+      }
+      &[m-flex="column"] {
+        flex-direction: column;
+      }
+      .carouselHistoria {
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      div {
+        width: 350px;
+        background-color: white;
+        &:first-child {
+          margin-bottom: 1rem;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+          background-size: 100% 100%;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 850px) and (max-width: 1099px) {
+  .contenedorFilosofia .contenido .columnsDown div {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (min-width: 560px) and (max-width: 767px) {
+  .contenedorFilosofia .contenido .columnsDown div {
+    height: 250px;
+    width: 250px;
+  }
+}
+@media (min-width: 0px) and (max-width: 559px) {
+  .contenedorFilosofia .contenido .columnsDown div:first-child img {
+    width: auto;
+    height: 100%;
+  }
+  .contenedorFilosofia .contenido .columnsDown {
+    flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contenedorFilosofia .contenido .columnsDown div:first-child {
+    margin-right: 0;
+  }
+  .contenedorFilosofia .contenido .columnsDown div {
+    width: inherit;
+    height: 400px;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 2000px) {
+  .contenedorFilosofia {
+    padding-left: 16.375em;
+    padding-right: 16.375em;
+  }
+  .contenedorFilosofia .titulo {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1250px) and (max-width: 1380px) {
+    .contenedorFilosofia .titulo{
+        flex: .6;
+    }
+  }
+  @media (min-width: 1070px) and (max-width: 1249px) {
+    .contenedorFilosofia{
+        padding-right: 2rem;
+    }
+    .contenedorFilosofia .titulo{
+        flex: .4;
+    }
+    .contenedorFilosofia .contenido .columnsDown div{
+        width: 270px;
+        height: 50%;
+    }
+  }
+  @media (min-width: 951px) and (max-width: 1069px) {
+    .contenedorFilosofia .contenido .columnsDown div{
+        height: auto;
+        width: 50%;
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+    }
+    .contenedorFilosofia .titulo{
+        flex: .5;
+    }
+    .contenedorFilosofia .contenido .columnsDown[m-flex="column"]{
+        flex-direction: row;
+        margin-right: 0;
+    }
+    .contenedorFilosofia .contenido[m-flex="row"]{
+        flex-direction: column-reverse;
+    }
+    .contenedorFilosofia .contenido .columnsDown div:first-child{
+        margin-right: 1.5rem;
+    }
+  }
+  @media (min-width: 580px) and (max-width: 950px) {
+    .contenedorFilosofia .titulo{
+
+        margin-bottom: 3rem;
+    }
+    .contenedorFilosofia .titulo h1{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        width: auto;
+    }
+    .contenedorFilosofia .contenido .columnsDown[m-flex="column"]{
+        flex-direction: row;
+        margin-right: 0;
+    }
+    .contenedorFilosofia{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .contenedorFilosofia .contenido .columnsDown div{
+        margin-bottom: 2rem!important;
+        width: 50%;
+        height: auto;
+    }
+    .contenedorFilosofia .contenido .columnsDown div:first-child{
+        margin-right: 1.5rem;
+    }
+    .contenedorFilosofia .titulo{
+        width: 100%;
+        flex: none;
+    }
+    .contenedorFilosofia .contenido[m-flex="row"]{
+        flex: none;
+        flex-direction: column-reverse;
+    }
+    .contenedorFilosofia .titulo h1 img{
+        position: absolute;
+        bottom: -3rem;
+    }
+  }
+  @media (min-width: 0px) and (max-width: 579px) {
+    .contenedorFilosofia .titulo{
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+    }
+    .contenedorFilosofia .titulo h1{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        width: auto;
+    }
+    .contenedorFilosofia .contenido .columnsDown[m-flex="column"]{
+        flex-direction: column;
+        margin-right: 0;
+    }
+    .contenedorFilosofia{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .contenedorFilosofia .contenido .columnsDown div{
+        margin-bottom: 2rem!important;
+        width: 100%;
+        height: auto;
+    }
+    .contenedorFilosofia .contenido .columnsDown div:first-child{
+        margin-right: 0;
+    }
+    .contenedorFilosofia .titulo{
+        width: 100%;
+        flex: none;
+    }
+    .contenedorFilosofia .contenido[m-flex="row"]{
+        height: auto;
+        flex: none;
+        flex-direction: column-reverse;
+    }
+    .contenedorFilosofia .titulo h1 img{
+        position: absolute;
+        bottom: -3rem;
+    }
+    .contenedorFilosofia .contenido .colLarge div{
+        max-height: initial;
+
+        margin-bottom: 36%;
+    }
+  }
