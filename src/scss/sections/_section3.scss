@@ -58,7 +58,7 @@
 
 .logoservicio{
     width: 70% !important;
-    margin: 10px auto;
+    margin: 320px auto;
 }
 
 h4{
@@ -68,53 +68,12 @@ h4{
 
 
 
-/* Cuadros items */
-
-.cuadroitem{
-    height: 70px;
-    width: 70px;
-    position: absolute;
-}
-
-#c_1, #c_2, #c_3, #c_4, #c_5, #c_6{
-    z-index: 1;
-    opacity: .8;
-    cursor: pointer;
-}
-
-#c_1{
-
-    background-color: #99283dff;
-}
-
-#c_2{
-    background-color:  #397366ff;
-}
-
-#c_3{
-    background-color: #d84914;
-
-}
-
-#c_4{
-    background-color: #e3a900ff;    
-
-}
-
-#c_5{
-    background-color: #4b7893;
-}
-
-#c_6{
-    background-color: #dd397a;
-}
-
-
-
 .iconoservicio{
     position: absolute;
     height: 90%;
     width: 100%;
+    left:0;
+    top: 20px; 
 }
 
 
@@ -123,20 +82,59 @@ h4{
 }
 
 
+#advisor::before, #capital::before, #habitat::before, #holding::before, #personnel::before, #media::before{
+    content: "";
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    opacity: 0.7;
+}
 
+
+#advisor::before{
+    background-color:#99283d;
+}
+
+#capital::before{
+    background-color: #397366;
+}
+
+#habitat::before{
+    background-color: #d84914;
+}
+
+#holding::before{
+    background-color: #e3a900;    
+}
+
+#personnel::before{
+    background-color: #4b7893;    
+}
+
+#media::before{
+    background-color: #dd397a;    
+}
+
+
+
+
+
+/*
 
  .iconoadvisor:hover {
       -webkit-filter: drop-shadow(1px 1px 15px #8f1c27);
       filter: drop-shadow(1px 1px 15px #a71d2b);
       transform: scale(1.1);
   }
+*/
 
 
 
 
 
-
-
+/*
 
 
   .iconocapital {
@@ -179,7 +177,7 @@ h4{
       transform: scale(1.1);
     }
   }
-
+*/
 
 
 
@@ -190,17 +188,6 @@ h4{
     z-index: -1;
 }
 
-
-
-#c_1::before, #c_2::before, #c_3::before, #c_4::before, #c_5::before, #c_6::before{
-    content: "+";
-    color: #ffffff;
-    font-size: 4em;
-    font-weight: 100;
-    position: absolute;
-    top: -10px;
-    right: 18px;
-}
 
 
 
@@ -224,10 +211,74 @@ h4{
 }
 
 #cerrar_advisors{
-    font-size: 5em;
+    font-size: 4em;
     color: white;
     cursor: pointer;
 }
+
+#c_tituloservicio{
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+
+}
+
+
+.overlay_tituloservicio, .overlay_textoservicio{
+    color: white;
+    text-align: left;
+}
+
+
+
+
+
+/* Efecto flip */
+
+.flip-card {
+    background-color: transparent;
+    width: 260px;
+    height: 307px;
+    perspective: 1000px;
+    margin-left: 15px;
+    margin-top: 20px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-image: url(/img/fondo_s_1.jpg);
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: black;
+    color: white;
+    transform: rotateY(180deg);
+    font-size: 0.7em;
+    padding: 1.5em;
+  }
+
+
+
 
 
 

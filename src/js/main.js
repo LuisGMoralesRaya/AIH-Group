@@ -542,7 +542,6 @@ btn_scrolldown.onclick = function () {
 btn_scrollup.onclick = function () {
     scrollinicio -= 40;
     cajahistoria.scrollTop = scrollinicio;
-    console.log(scrollinicio);
 };
 
 
@@ -581,7 +580,8 @@ $('#btn_cerrarestatutos').click(
 $('#sliderservicios').owlCarousel({
     loop: true,
     autoplay: true,
-    autoplayTimeout: 1000,
+    autoplayTimeout: 2000,
+    autoplayHoverPause:true,
     margin: 200,
     nav: true,
     responsive: {
@@ -608,10 +608,46 @@ $('#sliderservicios').owlCarousel({
 
 $('.cuadroitem').click(
     function () {
+        var idservicio = $(this).attr("id");
         $('#overlay-advisors').toggleClass('overlay-advisors-mostrar');
         $('body').toggleClass('body_bloqueado');
-        console.log("Abierto");
-    });
+
+        switch(idservicio){
+            case "c_1":
+                $('.overlay_tituloservicio').html("Advisors ");
+                $('.overlay_textoservicio').html("Advisors Advisors Advisors Advisors Advisors Advisors Advisors Advisors Advisors Advisors Advisors Advisors Advisors Advisors Advisors ")
+            break;
+
+            case "c_2":
+                $('.overlay_tituloservicio').html("Capital ");
+                $('.overlay_textoservicio').html("Capital Capital Capital Capital Capital Capital Capital Capital Capital Capital Capital Capital Capital Capital ")
+            break;
+
+            case "c_3":
+                $('.overlay_tituloservicio').html("Habitat");
+                $('.overlay_textoservicio').html("Habitat Habitat Habitat Habitat Habitat Habitat Habitat Habitat Habitat Habitat Habitat Habitat Habitat Habitat Habitat ")
+            break;
+
+            case "c_4":
+                $('.overlay_tituloservicio').html("Holding");
+                $('.overlay_textoservicio').html("Aunque nuestra experiencia nos ha llevado a especializarnos en el giro hotelero la estructura corporativa actual del grupo nos hace compatibles con empresas de cualquier giro para ofrecerles estrategias efectivas, analíticas y seguras sobre cómo operar la distribución de sus recursos a fin de maximizar su rendimiento, prever contingencias futuras, resguardar sus activos y garantizar el crecimiento constante de su patrimonio.")
+            break;
+
+            case "c_5":
+                $('.overlay_tituloservicio').html("Personnel");
+                $('.overlay_textoservicio').html("Personnel Personnel Personnel Personnel Personnel Personnel Personnel Personnel Personnel Personnel Personnel Personnel Personnel Personnel ")
+            break;
+            case "c_6":
+                $('.overlay_tituloservicio').html("Media");
+                $('.overlay_textoservicio').html("Media Media Media Media Media Media Media Media Media Media Media Media ")
+            break;
+        }
+
+
+
+
+    }
+);
 
 
 $('#cerrar_advisors').click(
