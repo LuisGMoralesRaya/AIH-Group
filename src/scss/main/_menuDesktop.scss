@@ -92,7 +92,7 @@ $background_color_2: #292c3866;
 		padding: 2.3rem 1rem;
 		position: relative;
 		text-decoration: none;
-		transition-duration: 0.5s;
+
 		a {
 			color: $color_1;
 			font-size: 0.8em;
@@ -132,6 +132,7 @@ $background_color_2: #292c3866;
 			}
 			&:hover{
 				background-color: transparent !important;
+				color: black !important;
 			}
 		}
 
