@@ -15,17 +15,15 @@ $background_color_2: #292c3866;
 	transition: all 1.3s cubic-bezier(0.57, 0, 0.2, 1);
 }
 #logo {
-	display: inline;
-	float: left;
 	img {
 		transform: translate(100px, 40px);
 		width: 150px;
 	}
 }
 #menuprincipal {
-	position: relative;
-	float: left;
-	margin-left: 35%;
+	position: absolute;
+    top: 0;
+    right: 0;
 	a {
 		text-decoration: none;
 		color: white;
@@ -49,6 +47,7 @@ $background_color_2: #292c3866;
     			margin-top: 55px;
 				left: 0;
 				display: flex;
+				margin-left: -100px;
 				&:hover {
 					visibility: visible;
 					opacity: 1;
@@ -164,23 +163,12 @@ $background_color_2: #292c3866;
 
 /* Reponsive */ 
 
-
-@media screen and (max-width: 1579px) {
-		
-	#menuprincipal ul li{
-		margin-top: -22px;
-	}
-}
-
 @media screen and (max-width: 1360px) {
 	#navbar{
 		width: 80%;
 	}
 	#menuprincipal{
 		margin-left: 30%;
-	}
-	#menuprincipal ul li ul{
-		margin-left: -150%;
 	}
 
 
@@ -190,27 +178,37 @@ $background_color_2: #292c3866;
 	#menuprincipal ul li{
 		margin-top: 0px;
 	}
+	#menuprincipal ul li ul{
+		margin-left: -400px;
+	}
+    
+
 }
 
 @media (min-width:820px) and (max-width: 1099px) {
-	#menuprincipal{
-	margin-top: 20px;
-	}
 	#navbar{
 		width: 100%;
 	}
-
 	#menuprincipal ul li ul{
-		margin-left: -300%;
-		margin-top: 70px;
+		margin-left: -600px;
 	}
+
 }
 
 
-
-@media (min-width:851px) and (max-width: 880px) {
-	#menuprincipal{
-		margin: 25px 120px;
+@media (min-width:820px) and (max-width: 971px) {
+	#menuprincipal ul li ul{
+		margin-left: -450px;
+	}
+	#menuprincipal ul li ul li{
+		width: 120px;
 	}
 
+	.dropdown li a{
+		font-size: 0.6em !important;
+	}
+}
+
+.normal{
+	margin-left: 0px !important;
 }
