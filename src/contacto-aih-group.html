@@ -146,17 +146,15 @@
 					</div>
 					<div class="col-md-12">
 						<div class="formulario" style="color:white">
-							<form>
-								<!-- Información personal -->
-								<!-- Nombre y apellido -->
+							<form action="mail.php" method="POST"> 
 								<div class="form-group">
 									<label for="exampleFormControlInput1">Nombre completo</label>
-									<input m-type="nombre" type="text" class="control_formulario" id="formEmail" placeholder="Nombre
+									<input m-type="nombre" name="name" type="text" class="control_formulario" id="formEmail" placeholder="Nombre
                                             completo" required minlength="4"> </div>
 								<!-- País -->
 								<div class="form-group">
 									<label for="exampleFormControlInput1">País</label>
-									<select class="control_formulario" id="formPais">
+									<select class="control_formulario" name="pais" id="formPais">
 										<option value="AF">Afganistán</option>
 										<option value="AL">Albania</option>
 										<option value="DE">Alemania</option>
@@ -398,10 +396,10 @@
 									<div class="row">
 										<div class="col-md-6">
 											<label for="exampleFormControlInput1">Correo electrónico</label>
-											<input type="email" class="control_formulario" id="exampleFormControlInput1" placeholder="name@pagina.com"> </div>
+											<input type="email" name="email" class="control_formulario" id="exampleFormControlInput1" placeholder="name@pagina.com"> </div>
 										<div class="col-md-6">
 											<label for="exampleFormControlInput1">Número Telefónico</label>
-											<input type="email" class="control_formulario" id="exampleFormControlInput1" placeholder="(+Lada
+											<input type="tel" name="celular" class="control_formulario" id="exampleFormControlInput1" placeholder="(+Lada
                                                     internacional + 10
                                                     Digitos)"> </div>
 									</div>
@@ -409,7 +407,7 @@
 								<!-- Giro empresarial -->
 								<div class="form-group">
 									<label for="exampleFormControlSelect1">Giro Empresarial</label>
-									<select class="control_formulario" id="exampleFormControlSelect1">
+									<select name="giro" class="control_formulario" id="exampleFormControlSelect1">
 										<option>Bienes Raíces</option>
 										<option>Construcción</option>
 										<option>Hotelería</option>
@@ -425,7 +423,7 @@
 								<!-- Producto solicitado -->
 								<div class="form-group">
 									<label for="exampleFormControlSelect1">Producto Solicitado</label>
-									<select class="control_formulario" id="exampleFormControlSelect1">
+									<select name="producto" class="control_formulario" id="exampleFormControlSelect1">
 										<option>Advisors (Asesoría Legal y Tributaria)</option>
 										<option>Holding (Estrategia financiera internacional)</option>
 										<option>Personnel (Recursos Humanos)</option>
@@ -434,7 +432,7 @@
 								</div>
 								<div class="form-group">
 									<label for="exampleFormControlTextarea1">Mensaje</label>
-									<textarea style="height: 100px" class="control_formulario" id="exampleFormControlTextarea1" rows="3"></textarea>
+									<textarea name="mensaje" style="height: 100px" class="control_formulario" id="exampleFormControlTextarea1" rows="3"></textarea>
 								</div>
 								<button type="button" class="btn
                                         btn-outline-success float-right">Enviar</button>
@@ -454,14 +452,14 @@
                     Indícanos tu requerimiento y haz tu cita con un asesor de
                     negocios.
                 </h3>
-			<form class="contact__form" id="Form">
+			<form action="mail.php" method="POST" class="contact__form" id="Form">
 				<div class="input-container">
 					<input name="name" m-type="nombre" m-small="true" class="textInput" id="Input-Name" type="text">
 					<label for="Input-Name">Nombre completo</label>
 				</div>
 				<div class="input-container">
 					<label class="subLabel">País</label>
-					<select class="control_formulario" id="formPais">
+					<select name="pais" class="control_formulario" id="formPais">
 						<option value="AF">Afganistán</option>
 						<option value="AL">Albania</option>
 						<option value="DE">Alemania</option>
@@ -703,12 +701,12 @@
 					<label for="Input-Email">Correo electrónico</label>
 				</div>
 				<div class="input-container">
-					<input name="phone" m-type="telefono" m-small="true" id="Input-Celular" type="text">
+					<input name="celular" m-type="telefono" m-small="true" id="Input-Celular" type="text">
 					<label for="Input-Celular">Número Telefónico</label>
 				</div>
 				<div class="input-container">
 					<label class="subLabel">Giro Empresarial</label>
-					<select class="control_formulario" id="">
+					<select name="giro" class="control_formulario" id="">
 						<option>Bienes Raíces</option>
 						<option>Construcción</option>
 						<option>Hotelería</option>
@@ -723,7 +721,7 @@
 				</div>
 				<div class="input-container">
 					<label class="subLabel">Producto Solicitado</label>
-					<select name="subject" class="control_formulario" id="">
+					<select  name="producto" class="control_formulario" id="">
 						<option>Advisors (Asesoría Legal y Tributaria)</option>
 						<option>Holding (Estrategia financiera internacional)</option>
 						<option>Personnel (Recursos Humanos)</option>
@@ -731,7 +729,7 @@
 					</select>
 				</div>
 				<div class="input-container">
-					<input name="message" m-type="mensaje" m-small="false" class="mensaje" id="Input-Mensaje" type="text">
+					<input  name="mensaje" m-type="mensaje" m-small="false" class="mensaje" id="Input-Mensaje" type="text">
 					<label for="Input-Mensaje">Mensaje</label>
 				</div>
 				<input name="submit" type="submit" class="buttonLm" value="Enviar"> </form>

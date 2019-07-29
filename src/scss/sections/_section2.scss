@@ -42,29 +42,33 @@
 #headerempresa {
     text-align: center;
     width: 100%;
-    max-width: 1000px;
+    max-width: 850px;
     margin: 0 auto;
 }
 
 #headerempresa h1 {
-    margin: 0px auto;
+    font-weight: bold;
+
     color: white ;
     text-align: left;
     max-width: 1000px;
-    padding: 20px;
+    padding: 50px;
+    padding-bottom: 1rem;
+    margin: 0;
+    margin-left: 50px;
+    padding-right: 0;
+    padding-left: 0;
+    border-bottom: 1px solid white;
+    width: 250px;
     font-weight: 300;
-}
-
-#headerempresa h1::before{
-    content: "";
-    border-left: 5px solid #5A9396;
-    padding-left: 10px;
 }
 
 #headerempresa p{
     max-width: 1000px;
     margin: 0 auto;
     padding: 50px;
+    padding-top: 1rem;
+    line-height: inherit!important;
 }
 
 
@@ -367,7 +371,7 @@
     color: white;
     height: 100%;
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: hidden;
     margin-top: 300px;
 }
 
@@ -461,7 +465,7 @@
     color: white;
     height: 100%;
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: hidden;
     margin-top: 400px;
 }
 

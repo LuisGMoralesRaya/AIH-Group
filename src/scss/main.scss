@@ -24,3 +24,10 @@
   .rectFill{
     transform: scaleY(.99);
   }
+.animatedAll{
+  transform: translate(0px, 0px) !important;
+}
+.os-animation{
+
+  transform: translate(-400px, 0px);
+}

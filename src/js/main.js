@@ -124,6 +124,14 @@ $(function () {
         .setClassToggle('.btn_historia', 'btn_historia_aparecer')
         .addTo(controller);
 
+        var sceneAll = new ScrollMagic.Scene({
+            triggerElement: 'section',
+            triggerHook: 0.5,
+            reverse: true
+        })
+            .setClassToggle('.os-animation', 'animatedAll')
+            .addTo(controller);
+
     /* Mostrar btn estatutos */
     var scene5 = new ScrollMagic.Scene({
         triggerElement: '#seccion2',
@@ -298,9 +306,7 @@ $(window).scroll( function(event){
         var bottom_of_object = $(this).offset().top + $(this).outerHeight();
         var bottom_of_window = $(window).scrollTop() + $(window).height();
         if( bottom_of_window > bottom_of_object ){
-            
             $(this).animate({'opacity':'1'},500);
-                
         }
         
     }); 
@@ -830,6 +836,6 @@ function onScrollInit( items, trigger ) {
           });
     });
   }
-  
+    
    onScrollInit( $('.os-animation') );
    onScrollInit( $('.staggered-animation'), $('.staggered-animation-container') );

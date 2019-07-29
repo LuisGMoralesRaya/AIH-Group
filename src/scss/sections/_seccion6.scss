@@ -16,16 +16,9 @@
     align-content: center;
     align-items: center;
     color: white;
-    @include fluid-type(320px, 1440px, 28px, 32px);
-    margin-bottom: 5rem;
-
-    &:before {
-      content: "";
-      width: 79px;
-      background-color: white;
-      margin-right: 10px;
-      height: 20px;
-    }
+    @include fluid-type(320px, 1440px, 22px, 28px);
+    border-bottom: 1px solid white;
+    padding-bottom: 1rem;
   }
 
   .sectionCarousel {
@@ -195,11 +188,19 @@
     padding: 2rem;
 
     .slogan {
-      @include fluid-type(320px, 1440px, 22px, 50px);
+      @include fluid-type(320px, 1440px, 22px, 28px);
+      line-height: normal;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       color: white;
       width: 20%;
+      border-bottom: 1px solid white;
+      padding-bottom: 1rem;
+      font-weight: bold;
+      b{
+        margin-right: 5px;
+
+      }
     }
 
     $color_1: white;

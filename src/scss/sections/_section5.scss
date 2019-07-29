@@ -10,6 +10,11 @@
     background-color: #e4e4e4;
     display: flex;
     flex-direction: column;
+    .titleSeccion5{
+        font-weight: bold;
+        border-bottom: 1px solid #5A9396;
+        padding-bottom: 1rem;
+    }
     p {
         @include fluid-type(320px, 1440px, 28px, 34px);
         color: #5A9396;

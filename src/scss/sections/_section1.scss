@@ -122,7 +122,10 @@ body{
     display: none;
 }
 
-
+.btn-outline-light {
+    color: #f8f9fa;
+    border-color: #f8f9fa;
+    }
 /* Cuadros slider */
 
 .cuadroescondido {
@@ -150,7 +153,6 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
     letter-spacing: 0.8px;
-    line-height: 2;
     text-align: justify;
 }
 
