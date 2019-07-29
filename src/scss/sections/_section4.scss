@@ -62,3 +62,152 @@
         width: 100%;
     }
 }
+  
+  @keyframes animate1 {
+    to {
+          stroke-dashoffset: 1000;
+    }
+   }
+  #g14162{
+    stroke-dasharray: 100!important;
+  stroke-dashoffset: 1000!important;
+  animation: fill 8s linear  infinite;
+  }
+  #path5992-75,#path5992-7-5,#path5992-7-9-0,#path5992-8-7,#path15016{
+
+    animation: show 2s ease infinite;
+  }
+  
+   @keyframes show {
+    0% { opacity: 0; }
+    80% { opacity: .5; }
+    100% { opacity: 1; }
+}
+   @keyframes fill {
+    from {
+        stroke-dashoffset: 1000;
+      }
+      to {
+        stroke-dashoffset: 0;
+      }
+   }
+   #rect6149-4{
+    animation: bounce 8s infinite linear;
+   }
+   #rect6147-5{
+    animation: bounce 4s infinite linear;
+   }
+  #rect6151-7{
+   
+    animation: bounce 2s infinite linear;
+  }
+  
+  @keyframes bounce {
+    from {
+        transform: scaleY(1);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    25% {
+        transform: scaleY(.99);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    50% {
+        transform: scaleY(.999);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    75% {
+        transform: scaleY(.98);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    to {
+        transform: scaleY(1);
+    }
+  }
+
+  //animaciones Abajo
+  #g4203{
+    animation: topDown 3s infinite linear;
+  }
+  #g4142{
+    animation: topDown 3s infinite linear;
+  }
+  #g4168{
+    animation: topDown 2s infinite linear;
+  }
+  
+  @keyframes topDown {
+    from {
+        transform: scale(1,1);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    25% {
+        transform: scale(1.005 , 1);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    50% {
+        transform: scale(1.006 , 1);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    75% {
+        transform: scale(1.007 , 1);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    to {
+        transform: scale(1 , 1);
+    }
+  }
+//Animaciones Left
+#g4213,
+  #g4208,
+  #g4218
+  {
+    animation:topDown 6s infinite linear;
+  }
+  #g3996{
+    animation: leftRight 2s infinite linear;
+  }
+  #g4024{
+    animation: leftRight 3s infinite linear;
+  }
+  #g4050{
+    animation: leftRight 2s infinite linear;
+  }
+  #g4111{
+    animation: leftRight 3s infinite linear;
+  }
+  #g4073{
+    animation: leftRight 2s infinite linear;
+  }
+  @keyframes leftRight {
+    from {
+        transform: scale(1,1);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    25% {
+        transform: scale(1.05 , 1);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    50% {
+        transform: scale(1.06 , 1);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    75% {
+        transform: scale(1.07 , 1);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    to {
+        transform: scale(1 , 1);
+    }
+  }

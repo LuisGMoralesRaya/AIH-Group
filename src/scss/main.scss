@@ -12,4 +12,15 @@
 @import 'sections/seccion7';
 @import 'sections/sectionExtra';
 //Correciones Sitio Web
-@import 'pages/default.scss'
+@import 'pages/default.scss';
+
+.os-animation{
+    opacity: 0;
+  }
+  
+  .os-animation.animated{
+      opacity: 1;
+  }
+  .rectFill{
+    transform: scaleY(.99);
+  }

@@ -264,7 +264,27 @@ $(document).ready(function () {
     //republica
     //$("#path30321-9").hide();
     $("#g1934").hide();
-
+    //Animacion SVG
+    
+    $("#rect6149-4").each(function(i, item) {
+        setInterval(function() {
+          $(item).addClass('rectFill');
+      
+        }, 2000 + i)
+        setInterval(function() {
+          $(item).removeClass('rectFill');
+      
+        }, 2000 + i)
+      
+      });
+    
+    // var loops = 99 * 2;
+    //     function removeAddClass() {
+    //         $("#rect6147-5").toggleClass("rectFill");
+    //         if (--loops > 0)
+    //              setTimeout(removeAddClass, 1000);
+    //     }
+    //     removeAddClass();
 $(window).scroll( function(event){
     var scroll = $(window).scrollTop();
 
@@ -722,6 +742,9 @@ $('.containerSectionCarousel').owlCarousel({
 $('.containerCarousel').owlCarousel({
     loop: false,
     stagePadding: 50,
+    autoplay:true,
+    autoplayTimeout:2000,
+    autoplayHoverPause:true,
     nav: false,
     center: true,
     items: 1,
@@ -782,4 +805,31 @@ function postsCarousel() {
 }
 
 postsCarousel();
-$(window).resize(postsCarousel);	
+$(window).resize(postsCarousel);
+
+
+function onScrollInit( items, trigger ) {
+    items.each( function() {
+      var osElement = $(this),
+          osAnimationClass = osElement.attr('data-os-animation'),
+          osAnimationDelay = osElement.attr('data-os-animation-delay');
+        
+          osElement.css({
+            '-webkit-animation-delay':  osAnimationDelay,
+            '-moz-animation-delay':     osAnimationDelay,
+            'animation-delay':          osAnimationDelay
+          });
+  
+          var osTrigger = ( trigger ) ? trigger : osElement;
+          
+          osTrigger.waypoint(function() {
+            osElement.addClass('animated').addClass(osAnimationClass);
+            },{
+                triggerOnce: true,
+                offset: '90%'
+          });
+    });
+  }
+  
+   onScrollInit( $('.os-animation') );
+   onScrollInit( $('.staggered-animation'), $('.staggered-animation-container') );

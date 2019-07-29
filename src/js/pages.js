@@ -40,6 +40,24 @@ $(document).ready(function () {
         }
     });
     validatedContacto();
+    $(".habitat .contenidos .filtros .proyecto").click(function(){
+        var typeDiv = $(this).attr("id");
+        if(typeDiv == "habitacional"){
+            $(this).addClass("habitacional");
+            $(".habitat .contenidos .filtros .proyecto").removeClass("corpotrativo");
+            $("[m-type=corpotrativo]").fadeOut("slow");
+            $("[m-type=habitacional]").fadeIn("slow");
+        }else{
+            $(this).addClass("corpotrativo");
+            $(".habitat .contenidos .filtros .proyecto").removeClass("habitacional");
+            $("[m-type=corpotrativo]").fadeIn("slow");
+            $("[m-type=habitacional]").fadeOut("slow");
+        }
+        $(".habitat .contenidos .filtros .proyecto").attr("m-active", "false");
+        $(this).attr("m-active", "true");
+    });
+
+    
 });
 
 

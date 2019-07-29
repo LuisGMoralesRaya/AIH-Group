@@ -1,0 +1,53 @@
+.medios{
+height: 100%;
+    width: 100%;
+    background-image: url("../img/backgroundPages/medios/background-news.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 120vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    .contenidos{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        max-width: 1440px;
+        .titulo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            flex: 0.5;
+            margin-right: 4rem;
+            img{
+                max-width: 320px;
+            }
+        }
+        .noticias{
+            display: flex;
+            flex: 1.1;
+            flex-direction: row;
+            flex-wrap: wrap;
+            height: 650px;
+            overflow: auto;
+            .new{
+                height: 170px;
+                width: 400px;
+                margin-right: 1rem;
+                margin-bottom: 1rem;
+                background-color: white;
+                display: flex;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
