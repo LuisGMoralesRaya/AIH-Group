@@ -128,3 +128,43 @@ var timer = setInterval(function () {
             });
         });
 })();
+var carouselHabitat = $(".modalHabitad-slider");
+
+
+$(".right-control").on('click', function () {
+    carouselHabitat.trigger('next.owl.carousel');
+});
+$(".left-control").on('click', function () {
+    carouselHabitat.trigger('prev.owl.carousel');
+});
+$(".habitat .contenidos .noticias .new").click(function(){
+    carouselHabitat.owlCarousel({
+        loop:false,
+        //autoplay:true,
+        nav:true,
+        animateIn: 'fadeIn',
+        items:1
+    });
+    $(".modalHabitad").attr("m-active", "true");
+    // var folder = "img/proyectos/casa-pichilingue/";
+    // $.ajax({
+    //     url : folder,
+    //     success: function (data) {
+    //         $(data).find("a").attr("href", function (i, val) {
+    //             if( val.match(/\.(jpg|png|gif)$/) ) { 
+    //                 $(".modalHabitad-slider").append( "<div class='item'><img class='item' src='"+ folder + val +"'></div>" );
+    //             } 
+    //         });
+    //         carouselHabitat.owlCarousel({
+    //             loop:false,
+    //             //autoplay:true,
+    //             nav:true,
+    //             animateIn: 'fadeIn',
+    //             items:1
+    //         });
+    //     }
+    // });
+});
+$(".modalHabitad-closeModal").click(function(){
+    $(".modalHabitad").attr("m-active", "false");
+});
