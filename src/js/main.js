@@ -124,14 +124,51 @@ $(function () {
         .setClassToggle('.btn_historia', 'btn_historia_aparecer')
         .addTo(controller);
 
+    var sceneAll = new ScrollMagic.Scene({
+        triggerElement: '#seccion4',
+        triggerHook: 0.5,
+        reverse: true
+    })
+        .setClassToggle('#seccion4 .containerText', 'leftAnimation')
+        .addTo(controller);
+
+
+    var sceneAll = new ScrollMagic.Scene({
+        triggerElement: '#seccion3',
+        triggerHook: 0.5,
+        reverse: true
+    })
+        .setClassToggle('#tituloservicios', 'leftAnimation')
+        .addTo(controller);
+
+    var sceneAll = new ScrollMagic.Scene({
+        triggerElement: '#seccion6',
+        triggerHook: 0.5,
+        reverse: true
+    })
+        .setClassToggle('.ventajasCompetitivas .sectionCarousel .containerText', 'leftAnimation')
+        .addTo(controller);
+    var sceneAll = new ScrollMagic.Scene({
+        triggerElement: '#seccion6',
+        triggerHook: 0.5,
+        reverse: true
+    })
+        .setClassToggle('.ventajasCompetitivas .sectionTabs .slogan', 'leftAnimation')
+        .addTo(controller);
+    var sceneAll = new ScrollMagic.Scene({
+        triggerElement: '#seccion6',
+        triggerHook: 0.5,
+        reverse: true
+    })
+        .setClassToggle('.ventajasCompetitivas .sectionTabs .containerLogos', 'leftAnimation')
+        .addTo(controller);
         var sceneAll = new ScrollMagic.Scene({
-            triggerElement: 'section',
+            triggerElement: '#seccion7',
             triggerHook: 0.5,
             reverse: true
         })
-            .setClassToggle('.os-animation', 'animatedAll')
+            .setClassToggle('#seccion7 .title', 'leftAnimation')
             .addTo(controller);
-
     /* Mostrar btn estatutos */
     var scene5 = new ScrollMagic.Scene({
         triggerElement: '#seccion2',
@@ -225,13 +262,13 @@ $owlCarousel.on("resize.owl.carousel", () => {
 /* 
 ------------- Botones subslider blur
 */
-$.fn.isOnScreen = function(){
+$.fn.isOnScreen = function () {
 
     var win = $(window);
 
     var viewport = {
-        top : win.scrollTop(),
-        left : win.scrollLeft()
+        top: win.scrollTop(),
+        left: win.scrollLeft()
     };
     viewport.right = viewport.left + win.width();
     viewport.bottom = viewport.top + win.height();
@@ -243,12 +280,12 @@ $.fn.isOnScreen = function(){
     return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
 
 };
-function addAnimation(e){
-    $(".lineTime .timeline").toggleClass('scrollAnimation'); 
+function addAnimation(e) {
+    $(".lineTime .timeline").toggleClass('scrollAnimation');
     return false;
     e.stopPropagation();
 }
-$.fn.isInViewport = function() {
+$.fn.isInViewport = function () {
     var elementTop = $(this).offset().top;
     var elementBottom = elementTop + $(this).outerHeight();
 
@@ -273,19 +310,19 @@ $(document).ready(function () {
     //$("#path30321-9").hide();
     $("#g1934").hide();
     //Animacion SVG
-    
-    $("#rect6149-4").each(function(i, item) {
-        setInterval(function() {
-          $(item).addClass('rectFill');
-      
+
+    $("#rect6149-4").each(function (i, item) {
+        setInterval(function () {
+            $(item).addClass('rectFill');
+
         }, 2000 + i)
-        setInterval(function() {
-          $(item).removeClass('rectFill');
-      
+        setInterval(function () {
+            $(item).removeClass('rectFill');
+
         }, 2000 + i)
-      
-      });
-    
+
+    });
+
     // var loops = 99 * 2;
     //     function removeAddClass() {
     //         $("#rect6147-5").toggleClass("rectFill");
@@ -293,25 +330,25 @@ $(document).ready(function () {
     //              setTimeout(removeAddClass, 1000);
     //     }
     //     removeAddClass();
-$(window).scroll( function(event){
-    var scroll = $(window).scrollTop();
+    $(window).scroll(function (event) {
+        var scroll = $(window).scrollTop();
 
-    if ($(".time1").isInViewport()) {
-        $(".lineTime .timeline").addClass("scrollAnimation");
-    } else {
-        // do something else
-    }
-    $('.hideme').each( function(i){
-        
-        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-        var bottom_of_window = $(window).scrollTop() + $(window).height();
-        if( bottom_of_window > bottom_of_object ){
-            $(this).animate({'opacity':'1'},500);
+        if ($(".time1").isInViewport()) {
+            $(".lineTime .timeline").addClass("scrollAnimation");
+        } else {
+            // do something else
         }
-        
-    }); 
+        $('.hideme').each(function (i) {
 
-});
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if (bottom_of_window > bottom_of_object) {
+                $(this).animate({ 'opacity': '1' }, 500);
+            }
+
+        });
+
+    });
 
 
     //
@@ -607,7 +644,7 @@ $('#sliderservicios').owlCarousel({
     loop: true,
     autoplay: true,
     autoplayTimeout: 2000,
-    autoplayHoverPause:true,
+    autoplayHoverPause: true,
     margin: 200,
     nav: true,
     responsive: {
@@ -638,35 +675,35 @@ $('.cuadroitem').click(
         $('#overlay-advisors').toggleClass('overlay-advisors-mostrar');
         $('body').toggleClass('body_bloqueado');
 
-        switch(idservicio){
+        switch (idservicio) {
             case "c_1":
                 $('.overlay_tituloservicio').html("Advisors ");
                 $('.overlay_textoservicio').html("Advisors Advisors Advisors Advisors Advisors Advisors Advisors Advisors Advisors Advisors Advisors Advisors Advisors Advisors Advisors ")
-            break;
+                break;
 
             case "c_2":
                 $('.overlay_tituloservicio').html("Capital ");
                 $('.overlay_textoservicio').html("Capital Capital Capital Capital Capital Capital Capital Capital Capital Capital Capital Capital Capital Capital ")
-            break;
+                break;
 
             case "c_3":
                 $('.overlay_tituloservicio').html("Habitat");
                 $('.overlay_textoservicio').html("Habitat Habitat Habitat Habitat Habitat Habitat Habitat Habitat Habitat Habitat Habitat Habitat Habitat Habitat Habitat ")
-            break;
+                break;
 
             case "c_4":
                 $('.overlay_tituloservicio').html("Holding");
                 $('.overlay_textoservicio').html("Aunque nuestra experiencia nos ha llevado a especializarnos en el giro hotelero la estructura corporativa actual del grupo nos hace compatibles con empresas de cualquier giro para ofrecerles estrategias efectivas, analíticas y seguras sobre cómo operar la distribución de sus recursos a fin de maximizar su rendimiento, prever contingencias futuras, resguardar sus activos y garantizar el crecimiento constante de su patrimonio.")
-            break;
+                break;
 
             case "c_5":
                 $('.overlay_tituloservicio').html("Personnel");
                 $('.overlay_textoservicio').html("Personnel Personnel Personnel Personnel Personnel Personnel Personnel Personnel Personnel Personnel Personnel Personnel Personnel Personnel ")
-            break;
+                break;
             case "c_6":
                 $('.overlay_tituloservicio').html("Media");
                 $('.overlay_textoservicio').html("Media Media Media Media Media Media Media Media Media Media Media Media ")
-            break;
+                break;
         }
 
 
@@ -748,9 +785,9 @@ $('.containerSectionCarousel').owlCarousel({
 $('.containerCarousel').owlCarousel({
     loop: false,
     stagePadding: 50,
-    autoplay:true,
-    autoplayTimeout:2000,
-    autoplayHoverPause:true,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
     nav: false,
     center: true,
     items: 1,
@@ -803,7 +840,7 @@ function postsCarousel() {
                 560: {
                     center: false,
                     items: 2,
-                    margin:200,
+                    margin: 200,
                 }
             }
         });
@@ -817,17 +854,17 @@ $(window).resize(postsCarousel);
 function onScrollInit( items, trigger ) {
     items.each( function() {
       var osElement = $(this),
-          osAnimationClass = osElement.attr('data-os-animation'),
-          osAnimationDelay = osElement.attr('data-os-animation-delay');
-        
+          osAnimationClass = osElement.attr('data-lgmr-animated'),
+          osAnimationDelay = osElement.attr('data-lgmr-animated-delay');
+
           osElement.css({
             '-webkit-animation-delay':  osAnimationDelay,
             '-moz-animation-delay':     osAnimationDelay,
             'animation-delay':          osAnimationDelay
           });
-  
+
           var osTrigger = ( trigger ) ? trigger : osElement;
-          
+
           osTrigger.waypoint(function() {
             osElement.addClass('animated').addClass(osAnimationClass);
             },{
@@ -836,6 +873,6 @@ function onScrollInit( items, trigger ) {
           });
     });
   }
-    
-   onScrollInit( $('.os-animation') );
+
+   onScrollInit( $('.lgmr-animated') );
    onScrollInit( $('.staggered-animation'), $('.staggered-animation-container') );

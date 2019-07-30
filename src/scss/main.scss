@@ -14,20 +14,37 @@
 //Correciones Sitio Web
 @import 'pages/default.scss';
 
-.os-animation{
-    opacity: 0;
-  }
-  
   .os-animation.animated{
       opacity: 1;
   }
   .rectFill{
     transform: scaleY(.99);
   }
-.animatedAll{
-  transform: translate(0px, 0px) !important;
+.leftAnimation{
+  transform: translate(0px, 0px)!important;;
 }
-.os-animation{
-
+#tituloservicios{
   transform: translate(-400px, 0px);
+  transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+}
+#seccion4 .containerText{
+  
+  transform: translate(-400px, 0px);
+  transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+}
+.ventajasCompetitivas .sectionCarousel .containerText{
+  transform: translate(-400px, 0px);
+  transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+}
+.ventajasCompetitivas .sectionTabs .containerLogos{
+  transform: translate(1200px, 0px);
+  transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+}
+.ventajasCompetitivas .sectionTabs .slogan{
+  transform: translate(-400px, 0px);
+  transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+}
+#seccion7 .title{
+  transform: translate(1200px, 0px);
+  transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
 }
