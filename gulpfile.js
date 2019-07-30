@@ -26,10 +26,10 @@ var config = {
     imgout: 'dist/img/',
     htmlout: 'dist/',
     scssout: 'src/css/',
-    cssoutname: 'style.css',
+    cssoutname: 'main.css',
     jsoutname: 'script.js',
-    cssreplaceout: 'css/style.css',
-    jsreplaceout: 'js/script.js'
+    cssreplaceout: 'css/main.css',
+    jsreplaceout: 'js/*.js'
 };
 
 gulp.task('reload', function() {
@@ -66,10 +66,10 @@ gulp.task('css', function() {
 
 gulp.task('js', function() {
     return gulp.src(config.jsin)
-        .pipe(concat(config.jsoutname))
-        .pipe(uglify())
-        .pipe(gulp.dest(config.jsout));
-});
+      .pipe(concat(config.jsoutname))
+      .pipe(uglify())
+      .pipe(gulp.dest(config.jsout));
+  });
 
 gulp.task('img', function() {
     return gulp.src(config.imgin)
