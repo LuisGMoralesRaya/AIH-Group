@@ -1,2 +1,16 @@
 .DS_Store
 /node_modules
+/vendor
+/bower_components
+/_site
+ehthumbs.db
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+*.com
+*.dll
+*.exe
+*.der
+*.key
+*.pem
