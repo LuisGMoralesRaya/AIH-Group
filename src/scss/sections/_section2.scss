@@ -668,3 +668,13 @@
 
 
 }
+@media (min-width: 0px) and (max-width: 767px) {
+    #ventanahistoria{
+        background-color: #21212f!important;
+        background-image: none!important;
+    }
+    #ventanaestatutos{
+        background-color: #639699!important;
+        background-image: none!important;
+    }
+  }

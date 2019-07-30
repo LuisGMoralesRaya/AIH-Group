@@ -9,7 +9,19 @@
 */
 
 // --------------------------------------------------- Inicializar Scrollmagic
+$(function () {
+    var header = $("#navbar");
 
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 100) {
+            $("#navbar").addClass("scrolled");
+        } else {
+            $("#navbar").removeClass("scrolled");
+        }
+    });
+
+});
 $(function () {
     controller = new ScrollMagic.Controller({
         loglevel: 3
@@ -359,9 +371,7 @@ $(document).ready(function () {
 
 $('path').on({
     mouseenter: function () {
-
         var id = $(this).attr("id");
-        console.log(id);
         //IF Jalisco
         if (id == "path5174-4") {
             $("#path5174-4").css({ fill: "#3caeb4" });
@@ -471,7 +481,6 @@ $('path').on({
 
     },
     mouseleave: function () {
-        console.log("Bye");
     }
 });
 
@@ -481,19 +490,7 @@ $('path').on({
 /* 
 Efecto menu
 */
-$(function () {
-    var header = $("#navbar");
 
-    $(window).scroll(function () {
-        var scroll = $(window).scrollTop();
-        if (scroll >= 100) {
-            header.addClass("scrolled");
-        } else {
-            header.removeClass("scrolled");
-        }
-    });
-
-});
 
 
 

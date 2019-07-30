@@ -12,7 +12,7 @@
 @import 'sections/seccion7';
 @import 'sections/sectionExtra';
 //Correciones Sitio Web
-@import 'pages/default.scss';
+@import 'pages/default';
 
   .os-animation.animated{
       opacity: 1;
@@ -47,4 +47,35 @@
 #seccion7 .title{
   transform: translate(1200px, 0px);
   transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+}
+@media (min-width: 0px) and (max-width: 767) {
+  
+  .leftAnimation{
+    transform: none!important;
+  }
+  #tituloservicios{
+    margin-top: -19rem
+  }
+  #seccion4 .containerText{
+    
+    transform: none!important;
+    transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+  }
+  .ventajasCompetitivas .sectionCarousel .containerText{
+    transform: none!important;
+    transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+  }
+  .ventajasCompetitivas .sectionTabs .containerLogos{
+    transform: translate(1200px, 0px);
+    transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+  }
+  .ventajasCompetitivas .sectionTabs .slogan{
+    transform: none!important;
+    transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+  }
+  #seccion7 .title{
+    transform: none!important;
+    transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+  }
+  
 }
