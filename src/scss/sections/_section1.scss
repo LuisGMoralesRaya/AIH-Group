@@ -449,7 +449,7 @@ body{
 }
 
 .button_container span.middle {
-    width: 130%;
+    width: 100%;
     top: 0;
     left: -5px;
 }
@@ -687,7 +687,8 @@ body{
 
 @media screen and (max-width: 850px) {
     #menu{
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
     .S1_linea0, .S1_linea1, .S1_linea2{
         display: none;

@@ -1,5 +1,5 @@
-.medios{
-height: 100%;
+.medios {
+    height: 100%;
     width: 100%;
     background-image: url("../img/backgroundPages/medios/background-news.jpg");
     background-size: cover;
@@ -12,32 +12,40 @@ height: 100%;
     padding-left: 2rem;
     padding-right: 2rem;
 
-    .contenidos{
+    .contenidos {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-content: center;
         align-items: center;
         max-width: 1440px;
-        .titulo{
+
+        .titulo {
             display: flex;
             justify-content: center;
             align-items: center;
             align-content: center;
             flex: 0.5;
             margin-right: 4rem;
-            img{
+
+            img {
                 max-width: 320px;
             }
         }
-        .noticias{
+        .containerNoticias{
             display: flex;
-            flex: 1.1;
-            flex-direction: row;
-            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
             height: 650px;
             overflow: auto;
-            .new{
+        }
+        .noticias {
+            display: flex;
+            flex-direction: row;
+
+            .new {
                 height: 170px;
                 width: 400px;
                 margin-right: 1rem;
@@ -47,7 +55,108 @@ height: 100%;
                 align-content: center;
                 align-items: center;
                 justify-content: center;
+                cursor: pointer;
+                &[m-reverse=true]{
+                    flex-direction: row-reverse;
+                }
+                &-title {
+                    cursor: pointer;
+                    padding: 10px;
+                    width: 50%;
+
+                    p {
+                        font-weight: bold;
+                        @include fluid-type(320px, 1440px, 14px, 16px);
+                    }
+                    .calss{
+                        font-weight: 400;
+                        line-height: 15px;
+                        @include fluid-type(320px, 1440px, 11px, 13px);
+                    }
+                }
+
+                &-img {
+                    width: 50%;
+                    height: 100%;
+                    position: relative;
+                    cursor: pointer;
+                    &::before {
+                        background: rgba(0, 99, 116, .7);
+                        background-image: url('/img/social/youtube/play.svg');
+                        background-size: 50% 50%;
+                        background-repeat:no-repeat;
+                        background-position: center center;
+                        content: '';
+                        display: block;
+                        height: 100%;
+                        position: absolute;
+                        width: 100%;
+                    }
+                    img {
+                        
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+
+                    }
+                }
             }
         }
     }
 }
+@media (min-width: 0px) and (max-width: 1260px) {
+    .medios .contenidos{
+        flex-direction: column;
+        margin-top: 9rem;
+    }
+  }
+  @media (min-width: 0px) and (max-width: 904px) {
+    .medios .contenidos .titulo{
+        margin-bottom: 3rem;
+        margin-right: 0;
+    }
+    .medios .contenidos .containerNoticias{
+        height: auto;
+    }
+    .medios .contenidos .noticias{
+        flex-direction: column;
+    }
+  }
+  @media (min-width: 0px) and (max-width: 580px) {
+      .medios .contenidos .titulo img{
+          width: 100%;
+      }
+    .medios .contenidos .containerNoticias{
+        margin-bottom: 4rem;
+    }
+    .medios .contenidos .noticias .new{
+        width: 100%;
+        margin-right: 0;
+    }
+  }
+  @media (min-width: 0px) and (max-width: 480px) {
+      .medios .contenidos .titulo img{
+          width: 100%;
+      }
+    .medios .contenidos .noticias .new-title p{
+        font-size: 18px;
+    }
+    .medios .contenidos .noticias .new-title span{
+        font-size: 16px;
+    }
+    .medios .contenidos .noticias .new{
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    .medios .contenidos .noticias .new[m-reverse=true]{
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    .medios .contenidos .noticias .new-title{
+        width: 100%;
+    }
+    .medios .contenidos .noticias .new-img{
+        width: 100%;
+        height: 200px;
+    }
+  }

@@ -22,176 +22,162 @@ $(function () {
     });
 
 });
-$(function () {
-    controller = new ScrollMagic.Controller({
-        loglevel: 3
-    });
+// $(function () {
+//     controller = new ScrollMagic.Controller({
+//         loglevel: 3
+//     });
 
-    /* ------------------------    Slider 1 */
+//     /* ------------------------    Slider 1 */
 
-    var scene = new ScrollMagic.Scene({
-        triggerElement: '#seccion1',
-        offset: 10,
-        triggerHook: 0.5,
-        duration: "100%",
-        reverse: true
-    })
-        .setClassToggle('.cuadroescondido', 'cuadrovisible')
-        // .addIndicators({name: "Aparecer cuadro", colorEnd: "#FFFFFF"})
-        .addTo(controller);
+//     var scene = new ScrollMagic.Scene({
+//         triggerElement: '#seccion1',
+//         offset: 10,
+//         triggerHook: 0.5,
+//         duration: "100%",
+//         reverse: true
+//     })
+//         .setClassToggle('.cuadroescondido', 'cuadrovisible')
+//         // .addIndicators({name: "Aparecer cuadro", colorEnd: "#FFFFFF"})
+//         .addTo(controller);
 
-    /* ------------------------    Slider 1 */
-    /* Texto slider 1 */
-    var scene1 = new ScrollMagic.Scene({
-        triggerElement: '#seccion1',
-        offset: 10,
-        triggerHook: 0.5,
-        reverse: true
-    })
-        .setClassToggle('.owl-slide-title', 'owl-slide-text-desaparecer')
-        // .addIndicators({name: "Desaparecer texto", colorEnd: "#FFFFFF"})
-        .addTo(controller);
-
-
-
-
-    /* Lineas transparentes ================================================= */
-
-    /* Linea 1 slider 1 */
-    var scene2 = new ScrollMagic.Scene({
-        triggerElement: '#seccion2',
-        offset: -470,
-        triggerHook: 0.5,
-        reverse: true
-    })
-        .setClassToggle('.S1_linea1', 'S1_linea1-oculta')
-        // .addIndicators()
-        .addTo(controller);
-
-    /* Linea 0 slider 1 */
-    var scene2_0 = new ScrollMagic.Scene({
-        triggerElement: '#seccion2',
-        offset: -470,
-        triggerHook: 0.5,
-        reverse: true
-    })
-        .setClassToggle('.S1_linea0', 'S1_linea0-oculta')
-        // .addIndicators()
-        .addTo(controller);
-
-    /* Linea 2 slider 1 */
-    var scene2 = new ScrollMagic.Scene({
-        triggerElement: '#seccion2',
-        offset: -470,
-        triggerHook: 0.5,
-        reverse: true
-    })
-        .setClassToggle('.S1_linea2', 'S1_linea2-oculta')
-        // .addIndicators()
-        .addTo(controller);
+//     /* ------------------------    Slider 1 */
+//     /* Texto slider 1 */
+//     var scene1 = new ScrollMagic.Scene({
+//         triggerElement: '#seccion1',
+//         offset: 10,
+//         triggerHook: 0.5,
+//         reverse: true
+//     })
+//         .setClassToggle('.owl-slide-title', 'owl-slide-text-desaparecer')
+//         // .addIndicators({name: "Desaparecer texto", colorEnd: "#FFFFFF"})
+//         .addTo(controller);
 
 
 
 
-    /* ------------------------    Seccion 2 */
-    /* Mostrar tabsempresa */
-    var scene3 = new ScrollMagic.Scene({
-        triggerElement: '#seccion2',
-        offset: 100,
-        triggerHook: 0.5,
-        reverse: true
-    })
-        .setClassToggle('.tabsempresa', 'tabsempresamostrar')
-        // .addIndicators()
-        .addTo(controller);
+//     /* Lineas transparentes ================================================= */
 
-    /* Mostrar linea empresa 
-    var scene4 = new ScrollMagic.Scene({
-            triggerElement: '#iconoempresa',
-            offset: -150,
-            triggerHook: 0.5,
-            reverse: true
-        })
-        .setClassToggle('.lineaempresa', 'abrirlinea')
-        // .addIndicators()
-        .addTo(controller);
-*/
-    /* Mostrar texto botones empresa */
-    var scene4 = new ScrollMagic.Scene({
-        triggerElement: '#iconoempresa',
-        offset: -125,
-        triggerHook: 0.5,
-        reverse: true
-    })
-        .setClassToggle('.button_slide', 'button_slide_mostrar')
-        // .addIndicators()
-        .addTo(controller);
+//     /* Linea 1 slider 1 */
+//     var scene2 = new ScrollMagic.Scene({
+//         triggerElement: '#seccion2',
+//         offset: -470,
+//         triggerHook: 0.5,
+//         reverse: true
+//     })
+//         .setClassToggle('.S1_linea1', 'S1_linea1-oculta')
+//         // .addIndicators()
+//         .addTo(controller);
 
-    /* Mostrar btn historia */
-    var scene5 = new ScrollMagic.Scene({
-        triggerElement: '#seccion2',
-        triggerHook: 0.5,
-        reverse: true
-    })
-        .setClassToggle('.btn_historia', 'btn_historia_aparecer')
-        .addTo(controller);
+//     /* Linea 0 slider 1 */
+//     var scene2_0 = new ScrollMagic.Scene({
+//         triggerElement: '#seccion2',
+//         offset: -470,
+//         triggerHook: 0.5,
+//         reverse: true
+//     })
+//         .setClassToggle('.S1_linea0', 'S1_linea0-oculta')
+//         // .addIndicators()
+//         .addTo(controller);
 
-    var sceneAll = new ScrollMagic.Scene({
-        triggerElement: '#seccion4',
-        triggerHook: 0.5,
-        reverse: true
-    })
-        .setClassToggle('#seccion4 .containerText', 'leftAnimation')
-        .addTo(controller);
+//     /* Linea 2 slider 1 */
+//     var scene2 = new ScrollMagic.Scene({
+//         triggerElement: '#seccion2',
+//         offset: -470,
+//         triggerHook: 0.5,
+//         reverse: true
+//     })
+//         .setClassToggle('.S1_linea2', 'S1_linea2-oculta')
+//         // .addIndicators()
+//         .addTo(controller);
 
 
-    var sceneAll = new ScrollMagic.Scene({
-        triggerElement: '#seccion3',
-        triggerHook: 0.5,
-        reverse: true
-    })
-        .setClassToggle('#tituloservicios', 'leftAnimation')
-        .addTo(controller);
-
-    var sceneAll = new ScrollMagic.Scene({
-        triggerElement: '#seccion6',
-        triggerHook: 0.5,
-        reverse: true
-    })
-        .setClassToggle('.ventajasCompetitivas .sectionCarousel .containerText', 'leftAnimation')
-        .addTo(controller);
-    var sceneAll = new ScrollMagic.Scene({
-        triggerElement: '#seccion6',
-        triggerHook: 0.5,
-        reverse: true
-    })
-        .setClassToggle('.ventajasCompetitivas .sectionTabs .slogan', 'leftAnimation')
-        .addTo(controller);
-    var sceneAll = new ScrollMagic.Scene({
-        triggerElement: '#seccion6',
-        triggerHook: 0.5,
-        reverse: true
-    })
-        .setClassToggle('.ventajasCompetitivas .sectionTabs .containerLogos', 'leftAnimation')
-        .addTo(controller);
-        var sceneAll = new ScrollMagic.Scene({
-            triggerElement: '#seccion7',
-            triggerHook: 0.5,
-            reverse: true
-        })
-            .setClassToggle('#seccion7 .title', 'leftAnimation')
-            .addTo(controller);
-    /* Mostrar btn estatutos */
-    var scene5 = new ScrollMagic.Scene({
-        triggerElement: '#seccion2',
-        triggerHook: 0.5,
-        reverse: true
-    })
-        .setClassToggle('.btn_estatutos', 'btn_estatutos_aparecer')
-        .addTo(controller);
 
 
-});
+//     /* ------------------------    Seccion 2 */
+//     /* Mostrar tabsempresa */
+//     var scene3 = new ScrollMagic.Scene({
+//         triggerElement: '#seccion2',
+//         offset: 100,
+//         triggerHook: 0.5,
+//         reverse: true
+//     })
+//         .setClassToggle('.tabsempresa', 'tabsempresamostrar')
+//         .addTo(controller);
+//     var scene4 = new ScrollMagic.Scene({
+//         triggerElement: '#iconoempresa',
+//         offset: -125,
+//         triggerHook: 0.5,
+//         reverse: true
+//     })
+//         .setClassToggle('.button_slide', 'button_slide_mostrar')
+//         // .addIndicators()
+//         .addTo(controller);
+
+//     /* Mostrar btn historia */
+//     var scene5 = new ScrollMagic.Scene({
+//         triggerElement: '#seccion2',
+//         triggerHook: 0.5,
+//         reverse: true
+//     })
+//         .setClassToggle('.btn_historia', 'btn_historia_aparecer')
+//         .addTo(controller);
+
+//     var sceneAll = new ScrollMagic.Scene({
+//         triggerElement: '#seccion4',
+//         triggerHook: 0.5,
+//         reverse: true
+//     })
+//         .setClassToggle('#seccion4 .containerText', 'leftAnimation')
+//         .addTo(controller);
+
+
+//     var sceneAll = new ScrollMagic.Scene({
+//         triggerElement: '#seccion3',
+//         triggerHook: 0.5,
+//         reverse: true
+//     })
+//         .setClassToggle('#tituloservicios', 'leftAnimation')
+//         .addTo(controller);
+
+//     var sceneAll = new ScrollMagic.Scene({
+//         triggerElement: '#seccion6',
+//         triggerHook: 0.5,
+//         reverse: true
+//     })
+//         .setClassToggle('.ventajasCompetitivas .sectionCarousel .containerText', 'leftAnimation')
+//         .addTo(controller);
+//     var sceneAll = new ScrollMagic.Scene({
+//         triggerElement: '#seccion6',
+//         triggerHook: 0.5,
+//         reverse: true
+//     })
+//         .setClassToggle('.ventajasCompetitivas .sectionTabs .slogan', 'leftAnimation')
+//         .addTo(controller);
+//     var sceneAll = new ScrollMagic.Scene({
+//         triggerElement: '#seccion6',
+//         triggerHook: 0.5,
+//         reverse: true
+//     })
+//         .setClassToggle('.ventajasCompetitivas .sectionTabs .containerLogos', 'leftAnimation')
+//         .addTo(controller);
+//         var sceneAll = new ScrollMagic.Scene({
+//             triggerElement: '#seccion7',
+//             triggerHook: 0.5,
+//             reverse: true
+//         })
+//             .setClassToggle('#seccion7 .title', 'leftAnimation')
+//             .addTo(controller);
+//     /* Mostrar btn estatutos */
+//     var scene5 = new ScrollMagic.Scene({
+//         triggerElement: '#seccion2',
+//         triggerHook: 0.5,
+//         reverse: true
+//     })
+//         .setClassToggle('.btn_estatutos', 'btn_estatutos_aparecer')
+//         .addTo(controller);
+
+
+// });
 
 /* Efecto parallax de con scrollmagic (Triangulos) */
 
@@ -307,6 +293,16 @@ $.fn.isInViewport = function () {
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 $(document).ready(function () {
+    document.addEventListener('touchmove', function (event) {
+        if (event.scale !== 1) { event.preventDefault(); }
+      }, false);
+      document.addEventListener('touchmove', function(event) {
+        event = event.originalEvent || event;
+        if(event.scale > 1) {
+          event.preventDefault();
+        }
+      }, false);
+    AOS.init();
     //Mapa
     //jalisco
     //$("#path5174-4").hide();
@@ -873,3 +869,5 @@ function onScrollInit( items, trigger ) {
 
    onScrollInit( $('.lgmr-animated') );
    onScrollInit( $('.staggered-animation'), $('.staggered-animation-container') );
+
+  

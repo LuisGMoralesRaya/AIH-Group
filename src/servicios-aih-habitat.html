@@ -7,7 +7,7 @@
     <meta name="description" content="Desarrollo de proyectos arquitectónicos de vivienda y oficinas en México" />
     <meta name="keywords"
         content="Administracióninternacionalhotelera,Administraciónderecursoshumanosparahoteles,Administracióndenóminasparaindustriaturística,Especialistasentercerizaciónenelrubroturístico,Outsourcingenrecursoshumanosycontabilidad,Tercerizaciónderecursoshumanos,contableytributario,Negociosrentablesatravésdeloutsourcing,Cómodisminuirlacargatributariademiempresa,Gestióndenóminaempresarial,Reclutamientoespecializadodetalentohumano,Estrategiasdeoptimizaciónderecursosempresariales,Pagarmenosimpuestosatravésdeloutsourcing,Ahorrarenimpuestoscontercerización,¿Cómoadministrarnómina?,¿cómocontratarpersonal?,">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
 
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -74,60 +74,43 @@
                 </div>
             </div>
             <div class="noticias">
-                <div m-type="habitacional" class="new"></div>
-                <div m-type="corpotrativo" class="new"></div>
-                <div m-type="habitacional" class="new"></div>
-                <div m-type="corpotrativo" class="new"></div>
-                <div m-type="habitacional" class="new"></div>
-                <div m-type="corpotrativo" class="new"></div>
-                <div m-type="habitacional" class="new"></div>
-                <div m-type="corpotrativo" class="new"></div>
-                <div m-type="habitacional" class="new"></div>
-                <div m-type="habitacional" class="new"></div>
-                <div m-type="habitacional" class="new"></div>
-                <div m-type="corpotrativo" class="new"></div>
-            </div>
-        </div>
-        <div class="modalHabitad">
-            <div class="modalHabitad-contenedor">
-                <div class="modalHabitad-closeModal">
-                        <i class="material-icons">close</i>
-                </div>
-                <div class="modalHabitad-controles">
-                        <i class="material-icons left-control">chevron_left</i>
-                        <i class="material-icons right-control">chevron_right</i>
-                </div>
-                <p class="modalHabitad-titulo">Proyecto #1</p>
-                <p class="modalHabitad-subheadline">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <div class="modalHabitad-slider owl-carousel owl-theme">
-                    <div class="item">
-                        <img alt="" src="https://via.placeholder.com/150" />
-                    </div>
-                    <div class="item">
-                        <img alt="" src="https://via.placeholder.com/150" />
-                    </div>
-                    <div class="item">
-                        <img alt="" src="https://via.placeholder.com/150" />
-                    </div>
-                    <div class="item">
-                        <img alt="" src="https://via.placeholder.com/150" />
-                    </div>
-                    <div class="item">
-                        <img alt="" src="https://via.placeholder.com/150" />
-                    </div>
-                </div>
-                <div class="modalHabitad-ficha">
-                    <p class="modalHabitad-ficha_titulo">FICHA TÉCNICA</p>
-                    <p class="modalHabitad-ficha_info"><span class="area">ÁREA</span> 328.90 M<sup>2</sup></p>
-                    <p class="modalHabitad-ficha_info"><span class="tipo">TIPO</span> DEPARTAMENTO</p>
-                    <p class="modalHabitad-ficha_info"><span class="anio">AÑO PROYECTO</span> 2018</p>
-                    <p class="modalHabitad-ficha_info"><span class="ubicacion">UBICACIÓN</span> Amores 1120, Col del Valle Centro, 03100 Ciudad de México, CDMX Amores 1120, Col del Valle Centro, 03100 Ciudad de México, CDMX</p>
-                </div>
+                <div m-type="habitacional" m-proyecto="casapichilingue" class="new"></div>
+                <div m-type="corpotrativo"  m-proyecto="amores" class="new"></div>
+                <div m-type="habitacional" m-proyecto="casagrande" class="new"></div>
+                <div m-type="corpotrativo" m-proyecto="patricio" class="new"></div>
+                <div m-type="habitacional" m-proyecto="sanrafael1073" class="new"></div>
+                <div m-type="corpotrativo" m-proyecto="polotitlan" class="new"></div>
+                <div m-type="habitacional"  m-proyecto="sanrafael1078" class="new"></div>
             </div>
         </div>
     </section>
+
+    <div class="modalHabitad">
+        <div class="modalHabitad-contenedor">
+            <div class="modalHabitad-closeModal">
+                    <i class="material-icons">close</i>
+            </div>
+            
+            <p class="modalHabitad-titulo">Proyecto #1</p>
+            <p class="modalHabitad-subheadline">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="modalHabitad-slider owl-carousel owl-theme">
+                
+            </div>
+            <div class="modalHabitad-controles">
+                <i class="material-icons left-control">chevron_left</i>
+                <i class="material-icons right-control">chevron_right</i>
+        </div>
+            <div class="modalHabitad-ficha">
+                <p class="modalHabitad-ficha_titulo">FICHA TÉCNICA</p>
+                <p id="area" class="modalHabitad-ficha_info"><span class="area">ÁREA</span> 328.0 M<sup>2</sup></p>
+                <p id="tipo" class="modalHabitad-ficha_info"><span class="tipo">TIPO</span> DEPARTAMENTO</p>
+                <p id="anio" class="modalHabitad-ficha_info"><span class="anio">AÑO PROYECTO</span> 2018</p>
+                <p id="ubicacion" class="modalHabitad-ficha_info"><span class="ubicacion">UBICACIÓN</span> Amores 1120, Col del Valle Centro, 03100 Ciudad de México, CDMX </p>
+            </div>
+        </div>
+    </div>
     <footer></footer>
 </body>
 <script src="js/plugins/all.plugins.js"></script>

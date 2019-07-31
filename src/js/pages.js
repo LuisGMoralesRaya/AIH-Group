@@ -40,14 +40,14 @@ $(document).ready(function () {
         }
     });
     validatedContacto();
-    $(".habitat .contenidos .filtros .proyecto").click(function(){
+    $(".habitat .contenidos .filtros .proyecto").click(function () {
         var typeDiv = $(this).attr("id");
-        if(typeDiv == "habitacional"){
+        if (typeDiv == "habitacional") {
             $(this).addClass("habitacional");
             $(".habitat .contenidos .filtros .proyecto").removeClass("corpotrativo");
             $("[m-type=corpotrativo]").fadeOut("slow");
             $("[m-type=habitacional]").fadeIn("slow");
-        }else{
+        } else {
             $(this).addClass("corpotrativo");
             $(".habitat .contenidos .filtros .proyecto").removeClass("habitacional");
             $("[m-type=corpotrativo]").fadeIn("slow");
@@ -57,7 +57,7 @@ $(document).ready(function () {
         $(this).attr("m-active", "true");
     });
 
-    
+
 });
 
 
@@ -72,26 +72,26 @@ function validatedContacto() {
             } else {
                 $(this).css("border-bottom", "1px solid green");
             }
-        }else if(typeInput == "nombre"){
-            if(valueCorrect.length >= 4 && valueCorrect.length <= 60){
+        } else if (typeInput == "nombre") {
+            if (valueCorrect.length >= 4 && valueCorrect.length <= 60) {
                 $(this).css("border-bottom", "1px solid green");
-            }else{
+            } else {
                 $(this).css("border-bottom", "1px solid red");
             }
-        }else if(typeInput == "telefono"){
-            if(valueCorrect.length >= 10 && valueCorrect.length <= 20){
+        } else if (typeInput == "telefono") {
+            if (valueCorrect.length >= 10 && valueCorrect.length <= 20) {
                 $(this).css("border-bottom", "1px solid green");
-            }else{
+            } else {
                 $(this).css("border-bottom", "1px solid red");
             }
-        }else if(typeInput == "mensaje"){
-            if(valueCorrect.length >= 10 && valueCorrect.length <= 200){
+        } else if (typeInput == "mensaje") {
+            if (valueCorrect.length >= 10 && valueCorrect.length <= 200) {
                 $(this).css("border-bottom", "1px solid green");
-            }else{
+            } else {
                 $(this).css("border-bottom", "1px solid red");
             }
         }
-        
+
     });
 }
 
@@ -137,34 +137,91 @@ $(".right-control").on('click', function () {
 $(".left-control").on('click', function () {
     carouselHabitat.trigger('prev.owl.carousel');
 });
-$(".habitat .contenidos .noticias .new").click(function(){
-    carouselHabitat.owlCarousel({
-        loop:false,
-        //autoplay:true,
-        nav:true,
-        animateIn: 'fadeIn',
-        items:1
-    });
+$(".habitat .contenidos .noticias .new").click(function () {
+
     $(".modalHabitad").attr("m-active", "true");
-    // var folder = "img/proyectos/casa-pichilingue/";
-    // $.ajax({
-    //     url : folder,
-    //     success: function (data) {
-    //         $(data).find("a").attr("href", function (i, val) {
-    //             if( val.match(/\.(jpg|png|gif)$/) ) { 
-    //                 $(".modalHabitad-slider").append( "<div class='item'><img class='item' src='"+ folder + val +"'></div>" );
-    //             } 
-    //         });
-    //         carouselHabitat.owlCarousel({
-    //             loop:false,
-    //             //autoplay:true,
-    //             nav:true,
-    //             animateIn: 'fadeIn',
-    //             items:1
-    //         });
-    //     }
-    // });
+
+    var proyecto = $(this).attr("m-proyecto");
+    var folder = "";
+    switch (proyecto) {
+        case "casapichilingue":
+            folder = "img/backgroundPages/habitat/proyectos/casa-pichilingue/";
+            $("#area").html('<span class="area">ÁREA</span> 328.90 M<sup>2</sup>');
+            $("#tipo").html('<span class="tipo">TIPO</span> DEPARTAMENTO');
+            $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2018');
+            $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Amores 1120, Col del Valle Centro, 03100 Ciudad de México, CDMX');
+            break;
+        case "casagrande":
+            folder = "img/backgroundPages/habitat/proyectos/casagrande/";
+            $("#area").html('<span class="area">ÁREA</span> 315 M<sup>2</sup>');
+            $("#tipo").html('<span class="tipo">TIPO</span> Vivienda Residencial');
+            $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2018');
+            $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Casas Grandes 127 Narvarte Oriente CP 03020 Benito Juárez, Ciudad de México');
+            break;
+        case "sanrafael1073":
+            folder = "img/backgroundPages/habitat/proyectos/sanrafael1073/";
+            $("#area").html('<span class="area">ÁREA</span> 363 M<sup>2</sup>');
+            $("#tipo").html('<span class="tipo">TIPO</span> Casa Habitación');
+            $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2019');
+            $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> San Rafael Atlixco 1073 Colonia El Rodeo CP 08510 Iztacalco, Ciudad de México');
+            break;
+        case "sanrafael1078":
+            folder = "img/backgroundPages/habitat/proyectos/sanrafael1078/";
+            $("#area").html('<span class="area">ÁREA</span> 62 M<sup>2</sup>');
+            $("#tipo").html('<span class="tipo">TIPO</span> Casa Habitación');
+            $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2015');
+            $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> San Rafael Atlixco 1078 Colonia El Rodeo CP 08510 Iztacalco, Ciudad de México');
+            break;
+        case "amores":
+            folder = "img/backgroundPages/habitat/proyectos/amores/";
+            $("#area").html('<span class="area">ÁREA</span> 62 M<sup>2</sup>');
+            $("#tipo").html('<span class="tipo">TIPO</span> Casa Habitación');
+            $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2015');
+            $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> San Rafael Atlixco 1078 Colonia El Rodeo CP 08510 Iztacalco, Ciudad de México');
+            break;
+        case "patricio":
+            folder = "img/backgroundPages/habitat/proyectos/patricio/";
+            $("#area").html('<span class="area">ÁREA</span> 608 M<sup>2</sup>');
+            $("#tipo").html('<span class="tipo">TIPO</span> Call Center');
+            $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2019');
+            $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Patricio Sanz 1609 Colonia del Valle Sur CP 03100 Benito Juárez, Ciudad de México');
+            break;
+        case "polotitlan":
+            folder = "img/backgroundPages/habitat/proyectos/polotitlan/";
+            $("#area").html('<span class="area">ÁREA</span> 20 has');
+            $("#tipo").html('<span class="tipo">TIPO</span> Invernaderos');
+            $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2019');
+            $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Municipio de Polotitlán');
+            break;
+        default:
+            folder = "img/backgroundPages/habitat/proyectos/";
+    }
+    $.ajax({
+        url : folder,
+        success: function (data) {
+            $(data).find("a").attr("href", function (i, val) {
+                if( val.match(/\.(jpg|png|gif)$/) ) { 
+                    $(".modalHabitad-slider").append( "<div class='item'><img class='item' src='"+ folder + val +"'></div>" );
+                } 
+            });
+            carouselHabitat.owlCarousel({
+                loop:false,
+                //autoplay:true,
+                nav:true,
+                animateIn: 'fadeIn',
+                items:1
+            });
+        }
+    });
 });
-$(".modalHabitad-closeModal").click(function(){
+$(".modalHabitad-closeModal").click(function () {
     $(".modalHabitad").attr("m-active", "false");
+    carouselHabitat.owlCarousel('destroy'); 
+    $(".modalHabitad-slider").html(" ")
+});
+$(window).resize(function(){
+    var heightSection = $(".habitat").height();
+    console.log(heightSection)
+    $(".modalHabitad").css("height",heightSection+"px")
+    $(".modalHabitad").css("min-height",heightSection+"px")
 });

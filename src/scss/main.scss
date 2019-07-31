@@ -13,69 +13,76 @@
 @import 'sections/sectionExtra';
 //Correciones Sitio Web
 @import 'pages/default';
+html{
+  overflow-x: hidden!important;
+  -webkit-text-size-adjust: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+body{
+  overflow-x: hidden!important;
+  overflow:hidden;
+    width:100%;
+    -webkit-box-sizing: border-box!important;
+       -moz-box-sizing: border-box!important;
+            box-sizing: border-box!important;
+}
 
-  .os-animation.animated{
-      opacity: 1;
+@media (min-width: 0px) and (max-width: 767px) {
+  footer .copyright{
+    position: relative;
   }
-  .rectFill{
-    transform: scaleY(.99);
+  #seccion3 {
+    flex-direction: column;
+    padding-top: 4rem;
   }
-.leftAnimation{
-  transform: translate(0px, 0px)!important;;
-}
-#tituloservicios{
-  transform: translate(-400px, 0px);
-  transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
-}
-#seccion4 .containerText{
-  
-  transform: translate(-400px, 0px);
-  transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
-}
-.ventajasCompetitivas .sectionCarousel .containerText{
-  transform: translate(-400px, 0px);
-  transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
-}
-.ventajasCompetitivas .sectionTabs .containerLogos{
-  transform: translate(1200px, 0px);
-  transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
-}
-.ventajasCompetitivas .sectionTabs .slogan{
-  transform: translate(-400px, 0px);
-  transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
-}
-#seccion7 .title{
-  transform: translate(1200px, 0px);
-  transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
-}
-@media (min-width: 0px) and (max-width: 767) {
-  
-  .leftAnimation{
-    transform: none!important;
+
+  .leftAnimation {
+    transform: none !important;
   }
-  #tituloservicios{
-    margin-top: -19rem
+
+  #tituloservicios {
+    margin-top: -19rem;
+    position: relative;
   }
-  #seccion4 .containerText{
-    
-    transform: none!important;
+
+  #seccion4 .containerText {
+
+    transform: none !important;
     transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
   }
-  .ventajasCompetitivas .sectionCarousel .containerText{
-    transform: none!important;
+
+  .ventajasCompetitivas .sectionCarousel .containerText {
+    transform: none !important;
     transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
   }
-  .ventajasCompetitivas .sectionTabs .containerLogos{
+
+  .ventajasCompetitivas .sectionTabs .containerLogos {
     transform: translate(1200px, 0px);
     transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
   }
-  .ventajasCompetitivas .sectionTabs .slogan{
-    transform: none!important;
+
+  .ventajasCompetitivas .sectionTabs .slogan {
+    transform: none !important;
     transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
   }
-  #seccion7 .title{
-    transform: none!important;
+
+  #seccion7 .title {
+    transform: none !important;
     transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
   }
-  
+
+}
+
+.btn_historia_aparecer,
+.btn_estatutos_aparecer {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+@media screen and (max-width: 850px){
+  #navbar{
+
+    display: none;
+    width: 100%;
+  }
 }
