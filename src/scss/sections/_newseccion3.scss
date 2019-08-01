@@ -1,0 +1,120 @@
+.section3 {
+    width: 100%;
+    height: 100vh;
+    background-color: #e4e4e4;
+    background-image: url("../img/fondoservicios.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    &-contenido {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+
+        &-titulo {
+            width: 40%;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+           
+            h2{
+                max-width: 450px;
+                @include fluid-type(320px, 1440px, 28px, 34px);
+                border-bottom: 1px solid #212529;
+                padding-bottom: 1rem;
+            }
+        }
+
+        &-carousel {
+            width: 58%;
+            display: flex;
+            flex-direction: row;
+
+            .owl-stage {
+                display: flex;
+                padding-left: 2rem;
+                padding-top: 2rem;
+                width: inherit!important;
+            }
+
+            .owl-item {
+                color: white;
+                position: relative;
+            }
+
+            .item {
+                position: relative;
+            }
+        }
+    }
+}
+@media (min-width: 0px) and (max-width: 1000px) {
+    .section3-contenido{
+        flex-direction:column;
+    }    
+    .section3-contenido-carousel{
+        width: 100%;
+    }
+  }
+  @media (min-width: 0px) and (max-width: 580px) {
+    .section3-contenido-titulo{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 3rem;
+        margin-bottom: 3rem;
+    }
+    .section3-contenido-carousel{
+        .owl-carousel{
+            padding:0;
+            text-align:center;
+            }
+    }
+    .section3-contenido-carousel .owl-stage{
+        padding: 0;
+    }
+    
+    .section3-contenido-carousel .item{
+        margin-right: 0;
+        padding-left: 0;
+        >*{
+            margin-top: 0;
+        }
+    }
+    .flip-card{
+        width: 220px;
+    }
+    .flip-card-back{
+        h3{
+            @include fluid-type(320px, 1440px, 20px, 34px);
+        }
+    }
+  }
+  
+  @media (min-width: 0px) and (max-width: 425px) {
+    .section3-contenido-carousel{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .itemservicios{
+        width:inherit;
+        margin: 0 auto;
+        margin-left: 0;
+    }
+    .flip-card{
+        width: inherit;
+        margin-top: 3rem!important;
+        margin-left: 0;
+    }
+    #advisor::before, #capital::before, #habitat::before, #holding::before, #personnel::before, #media::before{
+        left: 50%;
+        top: 0%;
+        transform: translate(-50%, -50%);
+    }
+  }

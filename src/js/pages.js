@@ -146,6 +146,7 @@ $(".habitat .contenidos .noticias .new").click(function () {
     switch (proyecto) {
         case "casapichilingue":
             folder = "img/backgroundPages/habitat/proyectos/casa-pichilingue/";
+            $("#tituloProyecto").html('Ampliación Residencia de Acapulco');
             $("#area").html('<span class="area">ÁREA</span> 328.90 M<sup>2</sup>');
             $("#tipo").html('<span class="tipo">TIPO</span> DEPARTAMENTO');
             $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2018');
@@ -153,6 +154,7 @@ $(".habitat .contenidos .noticias .new").click(function () {
             break;
         case "casagrande":
             folder = "img/backgroundPages/habitat/proyectos/casagrande/";
+            $("#tituloProyecto").html('Remodelación Casas Grandes');
             $("#area").html('<span class="area">ÁREA</span> 315 M<sup>2</sup>');
             $("#tipo").html('<span class="tipo">TIPO</span> Vivienda Residencial');
             $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2018');
@@ -160,6 +162,7 @@ $(".habitat .contenidos .noticias .new").click(function () {
             break;
         case "sanrafael1073":
             folder = "img/backgroundPages/habitat/proyectos/sanrafael1073/";
+            $("#tituloProyecto").html('Casa El Rodeo II');
             $("#area").html('<span class="area">ÁREA</span> 363 M<sup>2</sup>');
             $("#tipo").html('<span class="tipo">TIPO</span> Casa Habitación');
             $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2019');
@@ -167,6 +170,7 @@ $(".habitat .contenidos .noticias .new").click(function () {
             break;
         case "sanrafael1078":
             folder = "img/backgroundPages/habitat/proyectos/sanrafael1078/";
+            $("#tituloProyecto").html('Casa El Rodeo I');
             $("#area").html('<span class="area">ÁREA</span> 62 M<sup>2</sup>');
             $("#tipo").html('<span class="tipo">TIPO</span> Casa Habitación');
             $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2015');
@@ -174,6 +178,7 @@ $(".habitat .contenidos .noticias .new").click(function () {
             break;
         case "amores":
             folder = "img/backgroundPages/habitat/proyectos/amores/";
+            $("#tituloProyecto").html('');
             $("#area").html('<span class="area">ÁREA</span> 62 M<sup>2</sup>');
             $("#tipo").html('<span class="tipo">TIPO</span> Casa Habitación');
             $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2015');
@@ -181,6 +186,7 @@ $(".habitat .contenidos .noticias .new").click(function () {
             break;
         case "patricio":
             folder = "img/backgroundPages/habitat/proyectos/patricio/";
+            $("#tituloProyecto").html('Call Center Patricio Sanz');
             $("#area").html('<span class="area">ÁREA</span> 608 M<sup>2</sup>');
             $("#tipo").html('<span class="tipo">TIPO</span> Call Center');
             $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2019');
@@ -188,6 +194,7 @@ $(".habitat .contenidos .noticias .new").click(function () {
             break;
         case "polotitlan":
             folder = "img/backgroundPages/habitat/proyectos/polotitlan/";
+            $("#tituloProyecto").html('Proyecto Invernaderos Polotitlán');
             $("#area").html('<span class="area">ÁREA</span> 20 has');
             $("#tipo").html('<span class="tipo">TIPO</span> Invernaderos');
             $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2019');
@@ -213,6 +220,10 @@ $(".habitat .contenidos .noticias .new").click(function () {
             });
         }
     });
+    var heightSection = $(".habitat").height();
+    console.log(heightSection)
+    $(".modalHabitad").css("height",heightSection+"px")
+    $(".modalHabitad").css("min-height",heightSection+"px")
 });
 $(".modalHabitad-closeModal").click(function () {
     $(".modalHabitad").attr("m-active", "false");

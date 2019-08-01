@@ -759,48 +759,64 @@ $('.brand-carousel').owlCarousel({
         }
     }
 });
-$('.containerSectionCarousel').owlCarousel({
-    autoplay: false,
-    margin: 2,
-    loop: false,
-    responsive: {
-        0: {
-            items: 1
-        },
-        200: {
-            items: 2
-        },
-        500: {
-            items: 2
-        }
-    }
-});
 $('.containerCarousel').owlCarousel({
-    loop: false,
-    stagePadding: 50,
-    autoplay: true,
-    autoplayTimeout: 2000,
+    autoplay: false,
+    loop: true,
+    autoplayTimeout: 2500,
     autoplayHoverPause: true,
-    nav: false,
-    center: true,
-    items: 1,
     responsive: {
         0: {
             items: 1,
+            margin:0,
             center: true,
-            autoplay: false,
-            stagePadding: 0,
+            loop: false,
             nav: true,
         },
-        821: {
-            center: true,
+        830: {
             items: 2,
-            stagePadding: 0,
-            loop: true,
-            margin: 40,
+            margin:50,
+            center: true,
         },
-        1025: {
-            items: 1
+        1026: {
+            items: 1,
+        }
+    }
+});
+$('.section3-contenido-carousel').owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 2500,
+    autoplayHoverPause: true,
+    nav: false,
+    center: true,
+    items: 3,
+    margin:120,
+    responsive: {
+        0: {
+            autoplay: false,
+            loop:true,
+            items: 2,
+            center: true,
+            margin:20,
+            nav: true,
+        },
+        510: {
+            items: 2,
+            center: true,
+        },
+        768: {
+            items: 3,
+            center: true,
+            margin:200,
+        },
+        1000: {
+            items: 2,
+            center: false,
+            margin:40,
+        },
+        1300: {
+            items: 3,
+            margin:120,
         }
     }
 });

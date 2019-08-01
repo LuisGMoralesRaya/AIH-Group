@@ -220,6 +220,7 @@
 
       img {
         height: 70px;
+        width: auto;
         margin-right: 2rem;
 
         &:last-child {
@@ -459,4 +460,46 @@
     width: 600px;
   }
   
+}
+@media (min-width: 0px) and (max-width: 1025px) {
+  .ventajasCompetitivas .sectionCarousel .containerCarousel .item{
+    width: inherit;
+  }
+}
+@media (min-width: 320px) and (max-width: 829px) {
+  .ventajasCompetitivas .sectionCarousel .containerCarousel .item{
+    width: 100%;
+  }
+  .ventajasCompetitivas .sectionCarousel .containerCarousel .item .container{
+    margin: 0 auto;
+    border: 2rem solid white;
+    border-right: 2rem solid white;
+  }
+  .ventajasCompetitivas .sectionCarousel .containerCarousel .item .number{
+    left: 0;
+  }
+  .ventajasCompetitivas .sectionCarousel .containerCarousel .owl-stage{
+    padding-left: 0;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .ventajasCompetitivas .sectionCarousel .containerCarousel .item .container_title{
+    font-size: 18px!important;
+    text-align: center;
+  }
+  .ventajasCompetitivas .sectionCarousel .containerCarousel .item .number{
+    font-size: 22px;
+  }
+  .ventajasCompetitivas .sectionCarousel .containerCarousel .item .container_title span{
+    font-size: 14px;
+  }
+  .ventajasCompetitivas .sectionCarousel .containerCarousel .item{
+    width: 85%;
+  }
+  .ventajasCompetitivas .sectionCarousel .containerCarousel .owl-item{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
 }

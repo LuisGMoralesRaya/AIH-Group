@@ -173,3 +173,21 @@
       height: 94%;
     }
   }
+  @media (min-width: 0px) and (max-width: 480px) {
+    .lineTime .timeline__item{
+        padding: 0;
+        margin-left: 0;
+    }
+    .lineTime .timeline__blurb{
+        padding-right: 1rem;
+    }
+    .lineTime .timeline__title{
+        margin-right: -1rem;
+    }
+    .lineTime .timeline:before{
+        right: 3.6rem;
+    }
+    .lineTime .timeline__item:before{
+        right: -1.3rem!important;
+    }
+  }
