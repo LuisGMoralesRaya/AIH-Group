@@ -239,7 +239,7 @@ $("#sliderprincipal").on("initialized.owl.carousel", () => {
 const $owlCarousel = $("#sliderprincipal").owlCarousel({
     items: 1,
     loop: true,
-    nav: true,
+    nav: false,
     /* navText: [
     '<svg width="50" height="50" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>',
     '<svg width="50" height="50" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>' 
@@ -293,15 +293,68 @@ $.fn.isInViewport = function () {
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 $(document).ready(function () {
+    var dataJson = "blog.json";
+    var divContent = "";
+    //var dataArr = $.parseJSON(dataJson);
+      $.getJSON(dataJson, function (data) {
+        $.each(data.rss.channel, function (k, v) {
+          var i = 0;
+          for (i; i < v.length; i++){
+            if(v[i].title != undefined && v[i].link != undefined){
+                console.log("Si")
+                divContent += '<a href='+v[i].link+' target="_blank" class="single-logo">';
+                divContent += '<div class="containerText">';
+                divContent += '<p class="numeroEntrada">'+v[i].title+'</p>';
+                divContent += '</div>';
+            }
+              if(v[i].content != undefined){
+                divContent += '<img src="'+v[i].content.thumbnail._url+'" alt="">';
+                divContent += '</a>';
+              }
+          }
+        });
+        
+        
+      $(".brand-carousel").html(divContent);
+      function runCarousel(){
+        $('.brand-carousel').owlCarousel({
+            loop: true,
+            margin: 0,
+            center: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            responsive: {
+                0: {
+                    items: 3
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 8,
+                    margin:20
+                }
+            }
+        }); 
+      }
+      setTimeout(runCarousel, 1000);
+      });
+    
+    /* var json = $.getJSON("blog.json",
+        function (response, status, jqXHR) {
+            console.log(jqXHR.responseJSON.rss.channel.item);
+        }
+    ); */
+    
     document.addEventListener('touchmove', function (event) {
         if (event.scale !== 1) { event.preventDefault(); }
-      }, false);
-      document.addEventListener('touchmove', function(event) {
+    }, false);
+    document.addEventListener('touchmove', function (event) {
         event = event.originalEvent || event;
-        if(event.scale > 1) {
-          event.preventDefault();
+        if (event.scale > 1) {
+            event.preventDefault();
         }
-      }, false);
+    }, false);
     AOS.init();
     //Mapa
     //jalisco
@@ -710,24 +763,7 @@ $('#cerrar_advisors').click(
     function () {
         $('#overlay-advisors').toggleClass('overlay-advisors-mostrar');
         $('body').toggleClass('body_bloqueado');
-        console.log("cerrado");
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Cuarta Seccion Luis Morales
 
 (function ($, document) {
@@ -741,24 +777,7 @@ $('#cerrar_advisors').click(
 
 }(jQuery, document));
 
-$('.brand-carousel').owlCarousel({
-    loop: true,
-    margin: 0,
-    center: true,
-    autoplay: true,
-    autoplayTimeout: 2000,
-    responsive: {
-        0: {
-            items: 3
-        },
-        600: {
-            items: 3
-        },
-        1000: {
-            items: 8
-        }
-    }
-});
+
 $('.containerCarousel').owlCarousel({
     autoplay: false,
     loop: true,
@@ -767,14 +786,14 @@ $('.containerCarousel').owlCarousel({
     responsive: {
         0: {
             items: 1,
-            margin:0,
+            margin: 0,
             center: true,
             loop: false,
             nav: true,
         },
         830: {
             items: 2,
-            margin:50,
+            margin: 50,
             center: true,
         },
         1026: {
@@ -790,14 +809,14 @@ $('.section3-contenido-carousel').owlCarousel({
     nav: false,
     center: true,
     items: 3,
-    margin:120,
+    margin: 120,
     responsive: {
         0: {
             autoplay: false,
-            loop:true,
+            loop: true,
             items: 2,
             center: true,
-            margin:20,
+            margin: 20,
             nav: true,
         },
         510: {
@@ -807,16 +826,16 @@ $('.section3-contenido-carousel').owlCarousel({
         768: {
             items: 3,
             center: true,
-            margin:200,
+            margin: 200,
         },
         1000: {
             items: 2,
             center: false,
-            margin:40,
+            margin: 40,
         },
         1300: {
             items: 3,
-            margin:120,
+            margin: 120,
         }
     }
 });
@@ -860,30 +879,36 @@ postsCarousel();
 $(window).resize(postsCarousel);
 
 
-function onScrollInit( items, trigger ) {
-    items.each( function() {
-      var osElement = $(this),
-          osAnimationClass = osElement.attr('data-lgmr-animated'),
-          osAnimationDelay = osElement.attr('data-lgmr-animated-delay');
+function onScrollInit(items, trigger) {
+    items.each(function () {
+        var osElement = $(this),
+            osAnimationClass = osElement.attr('data-lgmr-animated'),
+            osAnimationDelay = osElement.attr('data-lgmr-animated-delay');
 
-          osElement.css({
-            '-webkit-animation-delay':  osAnimationDelay,
-            '-moz-animation-delay':     osAnimationDelay,
-            'animation-delay':          osAnimationDelay
-          });
+        osElement.css({
+            '-webkit-animation-delay': osAnimationDelay,
+            '-moz-animation-delay': osAnimationDelay,
+            'animation-delay': osAnimationDelay
+        });
 
-          var osTrigger = ( trigger ) ? trigger : osElement;
+        var osTrigger = (trigger) ? trigger : osElement;
 
-          osTrigger.waypoint(function() {
+        osTrigger.waypoint(function () {
             osElement.addClass('animated').addClass(osAnimationClass);
-            },{
+        }, {
                 triggerOnce: true,
                 offset: '90%'
-          });
+            });
     });
-  }
+}
 
-   onScrollInit( $('.lgmr-animated') );
-   onScrollInit( $('.staggered-animation'), $('.staggered-animation-container') );
+onScrollInit($('.lgmr-animated'));
+onScrollInit($('.staggered-animation'), $('.staggered-animation-container'));
 
-  
+  //Read RSS
+//   jQuery(function($) {
+//     $(".brand-carousel").rss("https://aihgroup.com.mx/blog/feed/",
+//     {
+//       entryTemplate:'<li><a href="{url}">{title}</a><br/>{shortBodyPlain}</li>'
+//     })
+//   })
