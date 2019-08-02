@@ -6,24 +6,29 @@ $background_color_2: #292c3866;
 
 /* Menu principal */
 #navbar {
-	width: 60%;
+	width: 100%!important;
 	height: 100px;
 	position: fixed;
 	z-index: 3;
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+    align-content: center;
 	border-bottom: 3px solid #ffffff;
 	border-radius: 3px;
 	transition: all 1.3s cubic-bezier(0.57, 0, 0.2, 1);
+	padding-left: 3rem;
+	padding-right: 3rem;
 }
 #logo {
+	display: flex;
+	width: 150px;
 	img {
-		transform: translate(100px, 40px);
 		width: 150px;
 	}
 }
 #menuprincipal {
-	position: absolute;
-    top: 0;
-    right: 0;
+	position: relative;
 	a {
 		text-decoration: none;
 		color: white;
@@ -119,7 +124,27 @@ $background_color_2: #292c3866;
 		}
 	}
 }
-
+.socialIcons{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+    align-content: center;
+	img{
+		margin-right: 10px;
+		width: 20px;
+	}
+	a{
+		display: flex;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+	}
+	i{
+		color: white;
+		margin-right: 10px;
+		font-size: 1.7rem;
+	}
+}
 .dropdown{
 		li{
 			color: white !important;
@@ -140,7 +165,6 @@ $background_color_2: #292c3866;
 
 .scrolled {
 	height: 80px !important;
-	padding: 0px !important;
 	background-color: rgba(0, 0, 0, 0.6);
 	margin-top: -15px;
 }
@@ -163,7 +187,7 @@ $background_color_2: #292c3866;
 
 
 /* Reponsive */ 
-
+/* 
 @media screen and (max-width: 1360px) {
 	#navbar{
 		width: 80%;
@@ -208,8 +232,41 @@ $background_color_2: #292c3866;
 	.dropdown li a{
 		font-size: 0.6em !important;
 	}
-}
+} */
 
 .normal{
 	margin-left: 0px !important;
 }
+@media (min-width: 768px) and (max-width: 1650px) {
+	#menuprincipal ul li ul{
+		top: 87%;
+    left: 10rem;
+    transform: translate(-50%, -50%);
+	}
+  }
+  @media (min-width: 768px) and (max-width: 1020px) {
+	#navbar{
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	#menuprincipal li{
+		padding: 2.3rem 10px;
+	}
+	
+  }
+  .scrolled{
+	  .normalElements{
+		  .linkNormal{
+			padding-bottom: 24px!important;
+		  }
+	  }
+  }
+
+  #menu{
+	  .contentMenuMobile{
+		  height: 40px;
+		  width: 40px;
+		  background-color: red;
+		  cursor: pointer;
+	  }
+  }

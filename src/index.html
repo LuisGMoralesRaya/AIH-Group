@@ -39,7 +39,39 @@
    </script>
 </head>
 <body>
+   <div id="menu">
+      <div id="btnmenu">
+         <div class="d-flex align-items-center justify-content-center">
+            <div class="button_container" id="toggle">
+               <div class="button_container_centered d-flex align-items-center justify-content-center">
+                  <span class="top"></span>
+                  <span class="middle"></span>
+                  <span class="bottom"></span>
+               </div>
+            </div>
+         </div>
+      </div>
+   
+      <div class="btnmensaje" id="toggle-formulario">
+         <div class="d-flex align-items-center justify-content-center">
+            <i class="material-icons">
+               mail
+            </i>
+         </div>
+      </div>
+   
+      <div id="btnllamada">
+         <a href="tel:5500000000" style="text-decoration: none;">
+            <div class="d-flex align-items-center justify-content-center">
+               <i class="material-icons">
+                  phone
+               </i>
+            </div>
+         </a>
+      </div>
+   </div>
    <header>
+      
    </header>
    <div id="ventanahistoria">
       <div class="container completa">
@@ -87,7 +119,7 @@
                      <div class="container">
                         <div class="row">
                            <div class="col-md-12">
-                              <a href="historia" class="btn btn-outline-light">Conoce más</a>
+                              <a href="/historia-AIH-Group.html" class="btn btn-outline-light">Conoce más</a>
                            </div>
                         </div>
                      </div>
@@ -126,7 +158,7 @@
                      <div class="container">
                         <div class="row">
                            <div class="col-md-12">
-                              <a href="historia" class="btn btn-outline-light">Conoce más</a>
+                              <a href="/filosofia-AIH-Group.html" class="btn btn-outline-light">Conoce más</a>
                            </div>
                         </div>
                      </div>
@@ -342,7 +374,7 @@
 
          <a data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" id="btn_estatutos"
             class="btn_historia">
-            <span>Filosofía empresarial</span>
+            <span>Filosofía empresarial.</span>
          </a>
       </div>
 
@@ -545,7 +577,7 @@
                         compañías
    
                         <br> <br> <br>
-                        <p><button type="button" onclick="location.href='/servicios-aih-advisors.html'" class="btn" style="background:#99283d;color:white;">Ver más</button></p>
+                        <p><button type="button" onclick="location.href='/servicios-aih-advisors.html'" class=" btnServicios btn" style="background:#99283d;color:white;">Ver más</button></p>
    
                      </div>
                   </div>
@@ -671,7 +703,7 @@
                         Captación de recursos para proyectos de inversión en México y el Caribe.
    
                         <br> <br> <br> <br> <br>
-                        <p><button type="button" class="btn " onclick="location.href='/servicios-aih-capital.html'" style="background:#397366;color:white;">Ver más</button></p>
+                        <p><button type="button" class="btnServicios btn " onclick="location.href='/servicios-aih-capital.html'" style="background:#397366;color:white;">Ver más</button></p>
    
                      </div>
                   </div>
@@ -847,7 +879,7 @@
                         Desarrollo de proyectos arquitectónicos a través de un equipo multidisciplinario
    
                         <br> <br> <br> <br> <br>
-                        <p><button type="button"  onclick="location.href='/servicios-aih-habitat.html'" class="btn " style="background-color: #d84914;color:white;">Ver más</button></p>
+                        <p><button type="button"  onclick="location.href='/servicios-aih-habitat.html'" class="btnServicios btn " style="background-color: #d84914;color:white;">Ver más</button></p>
    
                      </div>
                   </div>
@@ -937,7 +969,7 @@
                         Estrategias efectivas analíticas y seguras para el resguardo y crecimiento de sus activos a
                         nivel internacional
                         <br> <br> <br> <br> <br>
-                        <p><button type="button" onclick="location.href='/servicios-aih-holding.html'" class="btn" style="color:white;background:#e3a900;">Ver más</button></p>
+                        <p><button type="button" onclick="location.href='/servicios-aih-holding.html'" class="btnServicios btn" style="color:white;background:#e3a900;">Ver más</button></p>
    
                      </div>
                   </div>
@@ -1096,7 +1128,7 @@
                         Administración de recursos humanos, gestión de nominas y reclutamiento especializado
    
                         <br> <br> <br> <br> <br>
-                        <p><button type="button" class="btn " onclick="location.href='/servicios-aih-personnel.html'" style="color:white;background:#5595ba;">Ver más</button></p>
+                        <p><button type="button" class="btn btnServicios " onclick="location.href='/servicios-aih-personnel.html'" style="color:white;background:#5595ba;">Ver más</button></p>
    
                      </div>
                   </div>
@@ -1198,7 +1230,7 @@
                         <br>
                         “Constancia y trabajo en equipo, aliados estratégicos del éxito empresarial”
                         <br> <br> <br> <br> <br>
-                        <p><button type="button" class="btn " onclick="location.href='/servicios-aih-media.html'" style="background:#e61766;color:white;">Ver más</button></p>
+                        <p><button type="button" class="btnServicios btn " onclick="location.href='/servicios-aih-media.html'" style="background:#e61766;color:white;">Ver más</button></p>
    
                      </div>
                   </div>
@@ -3751,7 +3783,7 @@
                      <em>Con AIH hemos recibido beneficios que nunca había visto en el ramo del tiempo
                         compartido.</em>
                      <span>Víctor Manuel Zamudio. <br>HOTEL ROYAL
-                        <span><i class="material-icons">chevron_left</i></span>
+                        <span class="nextVentajas"><i class="material-icons">chevron_left</i></span>
                      </span>
                   </p>
                </div>
@@ -3764,7 +3796,7 @@
                   <p class="container_title">
                      <em>AIH ofrece una propuesta bien organizada, bien estudiada y bien respaldada.</em>
                      <span>Héctor Colín.<br>HOTEL VILLA DEL PALMAR
-                        <span><i class="material-icons">chevron_left</i></span>
+                        <span class="nextVentajas"><i class="material-icons">chevron_left</i></span>
                      </span>
                   </p>
                </div>
@@ -3777,7 +3809,7 @@
                   <p class="container_title">
                      <em>Contratando los servicios de AIH tenemos tranquilidad y seguridad fiscal.</em>
                      <span>Santiago Pool.<br> TI
-                        <span><i class="material-icons">chevron_left</i></span>
+                        <span class="nextVentajas"><i class="material-icons">chevron_left</i></span>
                      </span>
                   </p>
                </div>
@@ -3791,7 +3823,7 @@
                      <em>Siempre nos han apoyado con la capacitación en asesorías fiscales y legales para obtener lo
                         mejor para nuestro equipo y para la empresa.</em>
                      <span>Carlos Teniente.<br> GRUPO SOLARIS
-                        <span><i class="material-icons">chevron_left</i></span>
+                        <span class="nextVentajas"><i class="material-icons">chevron_left</i></span>
                      </span>
                   </p>
                </div>
@@ -3804,7 +3836,7 @@
                   <p class="container_title">
                      <em>Una capacidad de servicio eficiente y reconocida eso nos da tranquilidad.</em>
                      <span>Erasto Ramírez.<br> CLUB PREMIER
-                        <span><i class="material-icons">chevron_left</i></span>
+                        <span class="nextVentajas"><i class="material-icons">chevron_left</i></span>
                      </span>
                   </p>
                </div>
@@ -3832,7 +3864,7 @@
       </div>
    </section>
    <section id="seccion7" class="mapaMundial">
-      <p class="title os-animation" data-os-animation="slideInRight" data-os-animation-delay="0s">Mapa de Operaciones
+      <p class="title os-animation"  data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">Mapa de Operaciones
       </p>
       <div class="mapaOperaciones">
          <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -6682,15 +6714,18 @@
          <img class="worldMobileFirst" src="img/mapaMobile.png" />
       </div>
       <!-- <iframe src="https://feed.mikle.com/widget/v2/113938/" height="474px" width="100%" class="fw-iframe" scrolling="no" frameborder="0"></iframe> -->
-      <div class="brand-carousel section-padding owl-carousel" data-htmlfromrss="https://aihgroup.com.mx/blog/feed">
-         <!-- <div class="single-logo">
-            <div class="containerText">
-               <p class="numeroEntrada">Entrada #1</p>
-               <p class="tituloEntrada">Crecimiento</p>
+      <div class="sectionBlog">
+         <div class="sectionBlog-title"  data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+            <p>últimas entradas</p>
+         </div>
+         <div class="sectionBlog-news">
+            <div class="sectionBlog-news-contentSlider  owl-carousel owl-theme">
+            
             </div>
-            <img src="img/blog1.png" alt="">
-         </div> -->
+         </div>
       </div>
+      <!-- <div class="brand-carousel section-padding owl-carousel" data-htmlfromrss="https://aihgroup.com.mx/blog/feed">
+      </div> -->
 
    </section>
    <footer>

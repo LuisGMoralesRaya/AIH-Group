@@ -14,7 +14,7 @@ $(function () {
 
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
-        if (scroll >= 100) {
+        if (scroll >= 10) {
             $("#navbar").addClass("scrolled");
         } else {
             $("#navbar").removeClass("scrolled");
@@ -22,162 +22,70 @@ $(function () {
     });
 
 });
-// $(function () {
-//     controller = new ScrollMagic.Controller({
-//         loglevel: 3
-//     });
-
-//     /* ------------------------    Slider 1 */
-
-//     var scene = new ScrollMagic.Scene({
-//         triggerElement: '#seccion1',
-//         offset: 10,
-//         triggerHook: 0.5,
-//         duration: "100%",
-//         reverse: true
-//     })
-//         .setClassToggle('.cuadroescondido', 'cuadrovisible')
-//         // .addIndicators({name: "Aparecer cuadro", colorEnd: "#FFFFFF"})
-//         .addTo(controller);
-
-//     /* ------------------------    Slider 1 */
-//     /* Texto slider 1 */
-//     var scene1 = new ScrollMagic.Scene({
-//         triggerElement: '#seccion1',
-//         offset: 10,
-//         triggerHook: 0.5,
-//         reverse: true
-//     })
-//         .setClassToggle('.owl-slide-title', 'owl-slide-text-desaparecer')
-//         // .addIndicators({name: "Desaparecer texto", colorEnd: "#FFFFFF"})
-//         .addTo(controller);
-
-
-
-
-//     /* Lineas transparentes ================================================= */
-
-//     /* Linea 1 slider 1 */
-//     var scene2 = new ScrollMagic.Scene({
-//         triggerElement: '#seccion2',
-//         offset: -470,
-//         triggerHook: 0.5,
-//         reverse: true
-//     })
-//         .setClassToggle('.S1_linea1', 'S1_linea1-oculta')
-//         // .addIndicators()
-//         .addTo(controller);
-
-//     /* Linea 0 slider 1 */
-//     var scene2_0 = new ScrollMagic.Scene({
-//         triggerElement: '#seccion2',
-//         offset: -470,
-//         triggerHook: 0.5,
-//         reverse: true
-//     })
-//         .setClassToggle('.S1_linea0', 'S1_linea0-oculta')
-//         // .addIndicators()
-//         .addTo(controller);
-
-//     /* Linea 2 slider 1 */
-//     var scene2 = new ScrollMagic.Scene({
-//         triggerElement: '#seccion2',
-//         offset: -470,
-//         triggerHook: 0.5,
-//         reverse: true
-//     })
-//         .setClassToggle('.S1_linea2', 'S1_linea2-oculta')
-//         // .addIndicators()
-//         .addTo(controller);
-
-
-
-
-//     /* ------------------------    Seccion 2 */
-//     /* Mostrar tabsempresa */
-//     var scene3 = new ScrollMagic.Scene({
-//         triggerElement: '#seccion2',
-//         offset: 100,
-//         triggerHook: 0.5,
-//         reverse: true
-//     })
-//         .setClassToggle('.tabsempresa', 'tabsempresamostrar')
-//         .addTo(controller);
-//     var scene4 = new ScrollMagic.Scene({
-//         triggerElement: '#iconoempresa',
-//         offset: -125,
-//         triggerHook: 0.5,
-//         reverse: true
-//     })
-//         .setClassToggle('.button_slide', 'button_slide_mostrar')
-//         // .addIndicators()
-//         .addTo(controller);
-
-//     /* Mostrar btn historia */
-//     var scene5 = new ScrollMagic.Scene({
-//         triggerElement: '#seccion2',
-//         triggerHook: 0.5,
-//         reverse: true
-//     })
-//         .setClassToggle('.btn_historia', 'btn_historia_aparecer')
-//         .addTo(controller);
-
-//     var sceneAll = new ScrollMagic.Scene({
-//         triggerElement: '#seccion4',
-//         triggerHook: 0.5,
-//         reverse: true
-//     })
-//         .setClassToggle('#seccion4 .containerText', 'leftAnimation')
-//         .addTo(controller);
-
-
-//     var sceneAll = new ScrollMagic.Scene({
-//         triggerElement: '#seccion3',
-//         triggerHook: 0.5,
-//         reverse: true
-//     })
-//         .setClassToggle('#tituloservicios', 'leftAnimation')
-//         .addTo(controller);
-
-//     var sceneAll = new ScrollMagic.Scene({
-//         triggerElement: '#seccion6',
-//         triggerHook: 0.5,
-//         reverse: true
-//     })
-//         .setClassToggle('.ventajasCompetitivas .sectionCarousel .containerText', 'leftAnimation')
-//         .addTo(controller);
-//     var sceneAll = new ScrollMagic.Scene({
-//         triggerElement: '#seccion6',
-//         triggerHook: 0.5,
-//         reverse: true
-//     })
-//         .setClassToggle('.ventajasCompetitivas .sectionTabs .slogan', 'leftAnimation')
-//         .addTo(controller);
-//     var sceneAll = new ScrollMagic.Scene({
-//         triggerElement: '#seccion6',
-//         triggerHook: 0.5,
-//         reverse: true
-//     })
-//         .setClassToggle('.ventajasCompetitivas .sectionTabs .containerLogos', 'leftAnimation')
-//         .addTo(controller);
-//         var sceneAll = new ScrollMagic.Scene({
-//             triggerElement: '#seccion7',
-//             triggerHook: 0.5,
-//             reverse: true
-//         })
-//             .setClassToggle('#seccion7 .title', 'leftAnimation')
-//             .addTo(controller);
-//     /* Mostrar btn estatutos */
-//     var scene5 = new ScrollMagic.Scene({
-//         triggerElement: '#seccion2',
-//         triggerHook: 0.5,
-//         reverse: true
-//     })
-//         .setClassToggle('.btn_estatutos', 'btn_estatutos_aparecer')
-//         .addTo(controller);
-
-
-// });
+$(function () {
+    controller = new ScrollMagic.Controller({
+        loglevel: 3
+    });
+    
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    }else{
+        var scene = new ScrollMagic.Scene({
+            triggerElement: '#seccion1',
+            offset: 10,
+            triggerHook: 0.5,
+            duration: "100%",
+            reverse: true
+        })
+            .setClassToggle('.cuadroescondido', 'cuadrovisible')
+            // .addIndicators({name: "Aparecer cuadro", colorEnd: "#FFFFFF"})
+            .addTo(controller);
+        /* ------------------------    Slider 1 */
+        /* Texto slider 1 */
+        var scene1 = new ScrollMagic.Scene({
+            triggerElement: '#seccion1',
+            offset: 10,
+            triggerHook: 0.5,
+            reverse: true
+        })
+            .setClassToggle('.owl-slide-title', 'owl-slide-text-desaparecer')
+            // .addIndicators({name: "Desaparecer texto", colorEnd: "#FFFFFF"})
+            .addTo(controller);
+        /* Lineas transparentes ================================================= */
+        /* Linea 1 slider 1 */
+        var scene2 = new ScrollMagic.Scene({
+            triggerElement: '#seccion2',
+            offset: -470,
+            triggerHook: 0.5,
+            reverse: true
+        })
+            .setClassToggle('.S1_linea1', 'S1_linea1-oculta')
+            // .addIndicators()
+            .addTo(controller);
+        /* Linea 0 slider 1 */
+        var scene2_0 = new ScrollMagic.Scene({
+            triggerElement: '#seccion2',
+            offset: -470,
+            triggerHook: 0.5,
+            reverse: true
+        })
+            .setClassToggle('.S1_linea0', 'S1_linea0-oculta')
+            // .addIndicators()
+            .addTo(controller);
+        /* Linea 2 slider 1 */
+        var scene2 = new ScrollMagic.Scene({
+            triggerElement: '#seccion2',
+            offset: -470,
+            triggerHook: 0.5,
+            reverse: true
+        })
+            .setClassToggle('.S1_linea2', 'S1_linea2-oculta')
+            // .addIndicators()
+            .addTo(controller);
+    }
+    
+    /* ------------------------    Seccion 2 */
+   
+});
 
 /* Efecto parallax de con scrollmagic (Triangulos) */
 
@@ -293,6 +201,14 @@ $.fn.isInViewport = function () {
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 $(document).ready(function () {
+
+    var scrolleed = $(window).scrollTop();
+    console.log(scrolleed)
+        if (scrolleed >= 10) {
+            $("#navbar").addClass("scrolled");
+        } else {
+            $("#navbar").removeClass("scrolled");
+        }
     var dataJson = "blog.json";
     var divContent = "";
     //var dataArr = $.parseJSON(dataJson);
@@ -301,41 +217,56 @@ $(document).ready(function () {
           var i = 0;
           for (i; i < v.length; i++){
             if(v[i].title != undefined && v[i].link != undefined){
-                console.log("Si")
-                divContent += '<a href='+v[i].link+' target="_blank" class="single-logo">';
-                divContent += '<div class="containerText">';
-                divContent += '<p class="numeroEntrada">'+v[i].title+'</p>';
+                divContent += '<a href="'+ v[i].link+'" target="_blank" class="item">';
+                divContent += '<div class="carouselNew">';
+                divContent += '<div class="carouselNew-img">';
+                divContent += '<img src="'+v[i].content._url+'" >';
                 divContent += '</div>';
-            }
-              if(v[i].content != undefined){
-                divContent += '<img src="'+v[i].content.thumbnail._url+'" alt="">';
+                divContent += '<div class="carouselNew-content">';
+                divContent += '<p class="tituloNew">"'+v[i].title+'"</p>';
+                if(v[i].description.__cdata != undefined){
+                    var str = v[i].description.__cdata;
+                    var substr = str.split('</p>');
+                    divContent += '<div class="descriptionNew">'+substr[0]+'</div>';
+                }
+                var str2 = v[i].pubDate;
+                    var sbr1 = str2.split(' ');
+                divContent += '<p class="dateNew">'+ sbr1[1] + " " + sbr1[2] + " " + sbr1[3]   +'</p>';
+                divContent += '</div>';
+                divContent += '</div>';
                 divContent += '</a>';
-              }
+            }
           }
         });
         
         
-      $(".brand-carousel").html(divContent);
+      $(".sectionBlog-news-contentSlider").html(divContent);
       function runCarousel(){
-        $('.brand-carousel').owlCarousel({
+        $('.sectionBlog-news-contentSlider').owlCarousel({
             loop: true,
-            margin: 0,
-            center: true,
-            autoplay: true,
+            autoplay: false,
             autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            center:true,
+            nav: true,
             responsive: {
                 0: {
-                    items: 3
+                    items: 1
                 },
-                600: {
-                    items: 3
+                645: {
+                    items: 1
                 },
-                1000: {
-                    items: 8,
-                    margin:20
+                670: {
+                    items: 2
+                },
+                940: {
+                    items: 2
+                },
+                1600: {
+                    items: 3
                 }
             }
-        }); 
+        });
       }
       setTimeout(runCarousel, 1000);
       });
@@ -578,7 +509,7 @@ $(window).on('scroll', function () {
 
 // ---------------- Presionar el boton de [MENÚ]
 $('#toggle').click(function () {
-
+    console.log("hey")
     if ($('#toggle-formulario').hasClass("active")) {
         $('#toggle-formulario').toggleClass('active');
         $('#overlay-formulario').toggleClass('open');
@@ -713,6 +644,8 @@ $('#sliderservicios').owlCarousel({
 })
 
 
+
+
 /* ----------------------------------------------- Ventana de aih capital  ----------------------  */
 
 $('.cuadroitem').click(
@@ -779,7 +712,7 @@ $('#cerrar_advisors').click(
 
 
 $('.containerCarousel').owlCarousel({
-    autoplay: false,
+    autoplay: true,
     loop: true,
     autoplayTimeout: 2500,
     autoplayHoverPause: true,
@@ -801,6 +734,9 @@ $('.containerCarousel').owlCarousel({
         }
     }
 });
+$('.nextVentajas').click(function() {
+    $(".containerCarousel").trigger('next.owl.carousel');
+})
 $('.section3-contenido-carousel').owlCarousel({
     loop: true,
     autoplay: true,
@@ -912,3 +848,4 @@ onScrollInit($('.staggered-animation'), $('.staggered-animation-container'));
 //       entryTemplate:'<li><a href="{url}">{title}</a><br/>{shortBodyPlain}</li>'
 //     })
 //   })
+///Links To Sections

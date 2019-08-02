@@ -14,21 +14,6 @@
 @import 'sections/newseccion3';
 //Correciones Sitio Web
 @import 'pages/default';
-html{
-  overflow-x: hidden!important;
-  -webkit-text-size-adjust: none;
-  touch-action: manipulation;
-  width: 100%;
-}
-body{
-  overflow-x: hidden!important;
-  overflow:hidden;
-    width:100%;
-    -webkit-box-sizing: border-box!important;
-       -moz-box-sizing: border-box!important;
-            box-sizing: border-box!important;
-}
-
 @media (min-width: 0px) and (max-width: 767px) {
   footer .copyright{
     position: relative;
@@ -86,4 +71,9 @@ body{
     display: none;
     width: 100%;
   }
+}
+.btnServicios{
+  padding: 0;
+  height: 40px;
+  width: 100px;
 }

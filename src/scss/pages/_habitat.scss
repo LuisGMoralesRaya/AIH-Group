@@ -50,6 +50,7 @@
         position: relative;
         transition: transform .2s;
         
+        cursor: pointer;
         border: 1px solid white;
         p {
           color: white;
@@ -90,6 +91,39 @@
         align-content: center;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
+        background-size: cover;
+        position: relative;
+        &:hover{
+          &::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color:rgba(138,66,68,0.5);
+          }
+        }
+      }
+      .casapichilingue{
+        background-image: url("/img/backgroundPages/habitat/mini/casapichilingue.jpg");
+      }
+      .amores{
+        background-image: url("/img/backgroundPages/habitat/mini/amores.jpg");
+      }
+      .casagrande{
+        background-image: url("/img/backgroundPages/habitat/mini/casagrande.png");
+      }
+      .patricio{
+        background-image: url("/img/backgroundPages/habitat/mini/patricio.jpg");
+      }
+      .sanrafael1073{
+        background-image: url("/img/backgroundPages/habitat/mini/sanrafael1073.jpg");
+      }
+      .polotitlan{
+        background-image: url("/img/backgroundPages/habitat/mini/polotitlan.jpg");
+      }
+      .sanrafael1078{
+        background-image: url("/img/backgroundPages/habitat/mini/sanrafael1078.jpg");
       }
     }
   }

@@ -489,14 +489,6 @@ body{
 }
 
 
-
-
-/*
-  ==========================================================================
-  ========================================================================== Ventana emergente 
-  ========================================================================== 
-  */
-
 .overlay {
     position: fixed;
     background: rgba(1, 12, 29, 0.58);
@@ -515,6 +507,7 @@ body{
     opacity: 1;
     visibility: visible;
     height: 100%;
+    overflow: auto;
 }
 
 .overlay.open li {
@@ -685,7 +678,7 @@ body{
 }
 
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1000px) {
     #menu{
         display: flex;
         flex-direction: column;
