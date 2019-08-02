@@ -29,6 +29,9 @@ $background_color_2: #292c3866;
 }
 #menuprincipal {
 	position: relative;
+	>*{
+		text-transform: capitalize;
+	}
 	a {
 		text-decoration: none;
 		color: white;
@@ -42,6 +45,7 @@ $background_color_2: #292c3866;
 		margin: 0;
 		padding-left: 0;
 		li {
+			text-transform: capitalize;
 			ul {
 				background: transparent;
 				visibility: hidden;
@@ -62,6 +66,7 @@ $background_color_2: #292c3866;
 					opacity: 1;
 				}
 				li {
+					text-transform: capitalize;
 					clear: both;
 					border: 1px solid white;
 					margin-right: 10px;
@@ -100,9 +105,6 @@ $background_color_2: #292c3866;
 
 		a {
 			color: $color_1;
-			font-size: 0.8em;
-			font-weight: 600;
-			text-transform: uppercase;
 		}
 		&:hover {
 			background-color: $background_color_1;
@@ -257,6 +259,7 @@ $background_color_2: #292c3866;
   .scrolled{
 	  .normalElements{
 		  .linkNormal{
+			text-transform: capitalize!important;
 			padding-bottom: 24px!important;
 		  }
 	  }

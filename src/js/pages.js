@@ -165,7 +165,7 @@ $(".habitat .contenidos .noticias .new").click(function () {
         case "sanrafael1073":
             folder = "img/backgroundPages/habitat/proyectos/sanrafael1073/";
             $("#tituloProyecto").html('Casa El Rodeo II');
-            $("#textoProyecto").html('');
+            $("#textoProyecto").html('Condominio habitacional vertical de 14 recámaras diseñado especialmente para estudiantes y solteros con acabados modernos y áreas comunes para el esparcimiento.');
             $("#area").html('<span class="area">ÁREA</span> 363 M<sup>2</sup>');
             $("#tipo").html('<span class="tipo">TIPO</span> Casa Habitación');
             $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2019');
@@ -174,7 +174,7 @@ $(".habitat .contenidos .noticias .new").click(function () {
         case "sanrafael1078":
             folder = "img/backgroundPages/habitat/proyectos/sanrafael1078/";
             $("#tituloProyecto").html('Casa El Rodeo I');
-            $("#textoProyecto").html('');
+            $("#textoProyecto").html('Condominio habitacional vertical de 14 recámaras diseñado especialmente para estudiantes y solteros con acabados modernos y áreas comunes para el esparcimiento. ');
             $("#area").html('<span class="area">ÁREA</span> 62 M<sup>2</sup>');
             $("#tipo").html('<span class="tipo">TIPO</span> Casa Habitación');
             $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2015');
@@ -182,17 +182,17 @@ $(".habitat .contenidos .noticias .new").click(function () {
             break;
         case "amores":
             folder = "img/backgroundPages/habitat/proyectos/amores/";
-            $("#tituloProyecto").html('');
-            $("#textoProyecto").html('');
-            $("#area").html('<span class="area">ÁREA</span> 62 M<sup>2</sup>');
-            $("#tipo").html('<span class="tipo">TIPO</span> Casa Habitación');
-            $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2015');
-            $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> San Rafael Atlixco 1078 Colonia El Rodeo CP 08510 Iztacalco, Ciudad de México');
+            $("#tituloProyecto").html('Corporativo AIH Group Ciudad de México');
+            $("#textoProyecto").html('Oficinas corporativas de AIH Group de Ciudad de México. Con capacidad para 30 personas.');
+            $("#area").html('<span class="area">ÁREA</span> 460 M<sup>2</sup>');
+            $("#tipo").html('<span class="tipo">TIPO</span> Corporativo');
+            $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2016');
+            $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Amores 1120 Oficina 202 Col del Valle Centro, 03100 Ciudad de México, CDMX');
             break;
         case "patricio":
             folder = "img/backgroundPages/habitat/proyectos/patricio/";
             $("#tituloProyecto").html('Call Center Patricio Sanz');
-            $("#textoProyecto").html('');
+            $("#textoProyecto").html('Oficinas open space para la empresa Traveline con 50 puestos de trabajo en el área central y 7 oficinas privadas.');
             $("#area").html('<span class="area">ÁREA</span> 608 M<sup>2</sup>');
             $("#tipo").html('<span class="tipo">TIPO</span> Call Center');
             $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2019');
@@ -201,11 +201,20 @@ $(".habitat .contenidos .noticias .new").click(function () {
         case "polotitlan":
             folder = "img/backgroundPages/habitat/proyectos/polotitlan/";
             $("#tituloProyecto").html('Proyecto Invernaderos Polotitlán');
-            $("#textoProyecto").html('');
+            $("#textoProyecto").html('Desarrollo del primer complejo agroindustrial para la producción de cannabis legal en México. Proyecto en planificación de acuerdo a los avances en materia de legalización.');
             $("#area").html('<span class="area">ÁREA</span> 20 has');
             $("#tipo").html('<span class="tipo">TIPO</span> Invernaderos');
             $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2019');
             $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Municipio de Polotitlán');
+            break;
+            case "guadalajara":
+            folder = "img/backgroundPages/habitat/proyectos/guadalajara/";
+            $("#tituloProyecto").html('Oficina AIH Group Guadalajara');
+            $("#textoProyecto").html('Oficinas corporativas AIH Group de Guadalajara. 5 oficinas con espacios de recepción, sala de juntas y área de comedor.');
+            $("#area").html('<span class="area">ÁREA</span> --');
+            $("#tipo").html('<span class="tipo">TIPO</span> Corporativo');
+            $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2018');
+            $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Punto Sao Paulo, Torre HSBC, Piso 4-E, Guadalajara, Jalisco.');
             break;
         default:
             folder = "img/backgroundPages/habitat/proyectos/";

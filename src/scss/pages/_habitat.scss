@@ -111,7 +111,7 @@
         background-image: url("/img/backgroundPages/habitat/mini/amores.jpg");
       }
       .casagrande{
-        background-image: url("/img/backgroundPages/habitat/mini/casagrande.png");
+        background-image: url("/img/backgroundPages/habitat/mini/casagrande.jpg");
       }
       .patricio{
         background-image: url("/img/backgroundPages/habitat/mini/patricio.jpg");
@@ -120,10 +120,13 @@
         background-image: url("/img/backgroundPages/habitat/mini/sanrafael1073.jpg");
       }
       .polotitlan{
-        background-image: url("/img/backgroundPages/habitat/mini/polotitlan.jpg");
+        background-image: url("/img/backgroundPages/habitat/mini/polotitlan.png");
       }
       .sanrafael1078{
         background-image: url("/img/backgroundPages/habitat/mini/sanrafael1078.jpg");
+      }
+      .guadalajara{
+        background-image: url("/img/backgroundPages/habitat/mini/guadalajara.jpg");
       }
     }
   }
@@ -309,7 +312,7 @@
       height: inherit;
       img{
         height: inherit;
-        object-fit: cover;
+        object-fit: scale-down!important;
       }
       .item{
         height: inherit;
