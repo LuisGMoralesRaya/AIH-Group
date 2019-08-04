@@ -569,22 +569,6 @@ $('#btn_cerrarhistoria').click(
 
 /* Botones */
 
-let btn_scrolldown = document.getElementById("btn_scrolldown");
-let btn_scrollup = document.getElementById("btn_scrollup");
-let cajahistoria = document.getElementById("textohistoria");
-let scrollinicio = 0;
-
-btn_scrolldown.onclick = function () {
-    scrollinicio += 40;
-    cajahistoria.scrollTop = scrollinicio;
-};
-
-btn_scrollup.onclick = function () {
-    scrollinicio -= 40;
-    cajahistoria.scrollTop = scrollinicio;
-};
-
-
 /* ----------------------------------------------- Ventana de estatutos  ----------------------  */
 
 $('#btn_estatutos').click(

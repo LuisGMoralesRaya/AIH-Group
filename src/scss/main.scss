@@ -14,6 +14,10 @@
 @import 'sections/newseccion3';
 //Correciones Sitio Web
 @import 'pages/default';
+body{
+  overflow-y: scroll;
+overflow-x: hidden;
+}
 @media (min-width: 0px) and (max-width: 767px) {
   footer .copyright{
     position: relative;
