@@ -1,14 +1,153 @@
-/* 
-=====================================================================================================================
-=====================================================================================================================
-=====================================================================================================================
-                                                        FUNCIONES GENERALES 
-=====================================================================================================================
-=====================================================================================================================
-===================================================================================================================== 
-*/
+var $header = $('#main-header');
+var $footer = $('#main-footer');
+$(document).ready(function () {
+    $.ajax({
+        url: 'header-footer.html',
+        cache: false,
+    }).done(function (html) {
+        buildHF(html);
+    });
+    var scrolleed = $(window).scrollTop();
+        if (scrolleed >= 10) {
+            $("#navbar").addClass("scrolled");
+        } else {
+            $("#navbar").removeClass("scrolled");
+        }
+    var dataJson = "blog.json";
+    var divContent = "";
+    //var dataArr = $.parseJSON(dataJson);
+      $.getJSON(dataJson, function (data) {
+        $.each(data.rss.channel, function (k, v) {
+          var i = 0;
+          for (i; i < v.length; i++){
+            if(v[i].title != undefined && v[i].link != undefined){
+                divContent += '<a href="'+ v[i].link+'" target="_blank" class="item">';
+                divContent += '<div class="carouselNew">';
+                divContent += '<div class="carouselNew-img">';
+                divContent += '<img src="'+v[i].content._url+'" >';
+                divContent += '</div>';
+                divContent += '<div class="carouselNew-content">';
+                divContent += '<p class="tituloNew">"'+v[i].title+'"</p>';
+                if(v[i].description.__cdata != undefined){
+                    var str = v[i].description.__cdata;
+                    var substr = str.split('</p>');
+                    divContent += '<div class="descriptionNew">'+substr[0]+'</div>';
+                }
+                var str2 = v[i].pubDate;
+                    var sbr1 = str2.split(' ');
+                divContent += '<p class="dateNew">'+ sbr1[1] + " " + sbr1[2] + " " + sbr1[3]   +'</p>';
+                divContent += '</div>';
+                divContent += '</div>';
+                divContent += '</a>';
+            }
+          }
+        });
+        
+        
+      $(".sectionBlog-news-contentSlider").html(divContent);
+      function runCarousel(){
+        $('.sectionBlog-news-contentSlider').owlCarousel({
+            loop: true,
+            autoplay: false,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            center:true,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                645: {
+                    items: 1
+                },
+                670: {
+                    items: 2
+                },
+                940: {
+                    items: 2
+                },
+                1600: {
+                    items: 3
+                }
+            }
+        });
+      }
+      setTimeout(runCarousel, 1000);
+      });
+    
+    document.addEventListener('touchmove', function (event) {
+        if (event.scale !== 1) { event.preventDefault(); }
+    }, false);
+    document.addEventListener('touchmove', function (event) {
+        event = event.originalEvent || event;
+        if (event.scale > 1) {
+            event.preventDefault();
+        }
+    }, false);
+    AOS.init();
+    //Mapa
+    //jalisco
+    //$("#path5174-4").hide();
+    $("#g1868").hide();
+    //Quintana
 
-// --------------------------------------------------- Inicializar Scrollmagic
+    //$("#path9431-3").hide();
+    $("#g1929").hide();
+    //panama
+    //$("#path30323-5").hide();
+    $("#g1878").hide();
+    //republica
+    //$("#path30321-9").hide();
+    $("#g1934").hide();
+    //Animacion SVG
+
+    $("#rect6149-4").each(function (i, item) {
+        setInterval(function () {
+            $(item).addClass('rectFill');
+
+        }, 2000 + i)
+        setInterval(function () {
+            $(item).removeClass('rectFill');
+
+        }, 2000 + i)
+
+    });
+    $(window).scroll(function (event) {
+        var scroll = $(window).scrollTop();
+
+        if ($(".time1").isInViewport()) {
+            $(".lineTime .timeline").addClass("scrollAnimation");
+        }
+        $('.hideme').each(function (i) {
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if (bottom_of_window > bottom_of_object) {
+                $(this).animate({ 'opacity': '1' }, 500);
+            }
+        });
+    });
+    $('.customNextBtn').click(function () {
+        $owlCarousel.trigger('next.owl.carousel', [100]);
+    })
+});
+function buildHF(html) {
+    $header.html(
+        $(
+            $(html)
+                .filter('header')
+                .get(0)
+        ).html()
+    );
+    $footer.html(
+        $(
+            $(html)
+                .filter('footer')
+                .get(0)
+        ).html()
+    );
+    
+}
+
 $(function () {
     var header = $("#navbar");
 
@@ -82,48 +221,8 @@ $(function () {
             // .addIndicators()
             .addTo(controller);
     }
-    
-    /* ------------------------    Seccion 2 */
    
 });
-
-/* Efecto parallax de con scrollmagic (Triangulos) */
-
-function parallax() {
-    var parallaxController = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onEnter", duration: "200%" } });
-    $('.parallax').each(function () {
-        var trig = this.parentNode,
-            parallax = this.getAttribute('data-parallax'),
-            speed = parallax * 100 + '%';
-
-        new ScrollMagic.Scene({ triggerElement: trig })
-            .setTween(this, { y: speed, ease: Linear.easeNone })
-            .addTo(parallaxController);
-    })
-}
-
-parallax();
-
-
-
-
-/* 
-=====================================================================================================================
-=====================================================================================================================
-=====================================================================================================================
-                                                        PRIMERA SECCIÓN 
-=====================================================================================================================
-=====================================================================================================================
-===================================================================================================================== 
-*/
-
-
-/* 
------------------------------------------------------------
------------------------------------------------------------ slider principal
------------------------------------------------------------
-*/
-
 
 const $slides = $("#sliderprincipal .owl-slide");
 $slides.css("height", $(window).height());
@@ -200,154 +299,7 @@ $.fn.isInViewport = function () {
 
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
-$(document).ready(function () {
 
-    var scrolleed = $(window).scrollTop();
-    console.log(scrolleed)
-        if (scrolleed >= 10) {
-            $("#navbar").addClass("scrolled");
-        } else {
-            $("#navbar").removeClass("scrolled");
-        }
-    var dataJson = "blog.json";
-    var divContent = "";
-    //var dataArr = $.parseJSON(dataJson);
-      $.getJSON(dataJson, function (data) {
-        $.each(data.rss.channel, function (k, v) {
-          var i = 0;
-          for (i; i < v.length; i++){
-            if(v[i].title != undefined && v[i].link != undefined){
-                divContent += '<a href="'+ v[i].link+'" target="_blank" class="item">';
-                divContent += '<div class="carouselNew">';
-                divContent += '<div class="carouselNew-img">';
-                divContent += '<img src="'+v[i].content._url+'" >';
-                divContent += '</div>';
-                divContent += '<div class="carouselNew-content">';
-                divContent += '<p class="tituloNew">"'+v[i].title+'"</p>';
-                if(v[i].description.__cdata != undefined){
-                    var str = v[i].description.__cdata;
-                    var substr = str.split('</p>');
-                    divContent += '<div class="descriptionNew">'+substr[0]+'</div>';
-                }
-                var str2 = v[i].pubDate;
-                    var sbr1 = str2.split(' ');
-                divContent += '<p class="dateNew">'+ sbr1[1] + " " + sbr1[2] + " " + sbr1[3]   +'</p>';
-                divContent += '</div>';
-                divContent += '</div>';
-                divContent += '</a>';
-            }
-          }
-        });
-        
-        
-      $(".sectionBlog-news-contentSlider").html(divContent);
-      function runCarousel(){
-        $('.sectionBlog-news-contentSlider').owlCarousel({
-            loop: true,
-            autoplay: false,
-            autoplayTimeout: 2000,
-            autoplayHoverPause: true,
-            center:true,
-            nav: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                645: {
-                    items: 1
-                },
-                670: {
-                    items: 2
-                },
-                940: {
-                    items: 2
-                },
-                1600: {
-                    items: 3
-                }
-            }
-        });
-      }
-      setTimeout(runCarousel, 1000);
-      });
-    
-    /* var json = $.getJSON("blog.json",
-        function (response, status, jqXHR) {
-            console.log(jqXHR.responseJSON.rss.channel.item);
-        }
-    ); */
-    
-    document.addEventListener('touchmove', function (event) {
-        if (event.scale !== 1) { event.preventDefault(); }
-    }, false);
-    document.addEventListener('touchmove', function (event) {
-        event = event.originalEvent || event;
-        if (event.scale > 1) {
-            event.preventDefault();
-        }
-    }, false);
-    AOS.init();
-    //Mapa
-    //jalisco
-    //$("#path5174-4").hide();
-    $("#g1868").hide();
-    //Quintana
-
-    //$("#path9431-3").hide();
-    $("#g1929").hide();
-    //panama
-    //$("#path30323-5").hide();
-    $("#g1878").hide();
-    //republica
-    //$("#path30321-9").hide();
-    $("#g1934").hide();
-    //Animacion SVG
-
-    $("#rect6149-4").each(function (i, item) {
-        setInterval(function () {
-            $(item).addClass('rectFill');
-
-        }, 2000 + i)
-        setInterval(function () {
-            $(item).removeClass('rectFill');
-
-        }, 2000 + i)
-
-    });
-
-    // var loops = 99 * 2;
-    //     function removeAddClass() {
-    //         $("#rect6147-5").toggleClass("rectFill");
-    //         if (--loops > 0)
-    //              setTimeout(removeAddClass, 1000);
-    //     }
-    //     removeAddClass();
-    $(window).scroll(function (event) {
-        var scroll = $(window).scrollTop();
-
-        if ($(".time1").isInViewport()) {
-            $(".lineTime .timeline").addClass("scrollAnimation");
-        } else {
-            // do something else
-        }
-        $('.hideme').each(function (i) {
-
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if (bottom_of_window > bottom_of_object) {
-                $(this).animate({ 'opacity': '1' }, 500);
-            }
-
-        });
-
-    });
-
-
-    //
-    $('.customNextBtn').click(function () {
-        $owlCarousel.trigger('next.owl.carousel', [100]);
-    })
-});
 
 $('path').on({
     mouseenter: function () {
@@ -542,64 +494,25 @@ $('#toggle-formulario').click(function () {
     $('body').toggleClass('body_bloqueado');
 });
 
+$('#btn_historia').click(function () {
+    $("#ventanahistoria").fadeIn(500);
+    $("#ventanahistoria").addClass("abierta")
+});
 
-/* ----------------------------------------------- Ventana de historia  ----------------------  */
+$('#btn_cerrarhistoria').click(function () {
+        $('#ventanahistoria').removeClass('abierta');
+        $("#ventanahistoria").fadeOut(500);
+});
 
+$('#btn_estatutos').click(function () {
+        $("#ventanaestatutos").fadeIn(500);
+        $("#ventanaestatutos").addClass("abierta");
+});
 
-
-$('#btn_historia').click(
-    function () {
-        $('#ventanahistoria').toggleClass('abierta');
-        $('#img_historia').toggleClass('imagenhistoria');
-        $('#titulohistoria').toggleClass('mostrartitulohistoria');
-        $('body').toggleClass('body_bloqueado');
-        cajahistoria.scrollTop = scrollinicio;
-    });
-
-$('#btn_cerrarhistoria').click(
-    function () {
-        $('#ventanahistoria').toggleClass('abierta');
-        $('body').toggleClass('body_bloqueado');
-        $('#img_historia').toggleClass('imagenhistoria');
-        $('#titulohistoria').toggleClass('mostrartitulohistoria');
-        /* Reiniciar el scroll interno */
-        scrollinicio = 0;
-    });
-
-
-/* Botones */
-
-/* ----------------------------------------------- Ventana de estatutos  ----------------------  */
-
-$('#btn_estatutos').click(
-    function () {
-        $('#ventanaestatutos').toggleClass('abiertaestatutos');
-        $('#img_estatutos').toggleClass('imagenestatutos');
-        $('#tituloestatutos').toggleClass('mostrartituloestatutos');
-        $('body').toggleClass('body_bloqueado');
-        cajahistoria.scrollTop = scrollinicio;
-    });
-
-$('#btn_cerrarestatutos').click(
-    function () {
-        $('#ventanaestatutos').toggleClass('abiertaestatutos');
-        $('#img_estatutos').toggleClass('imagenestatutos');
-        $('#tituloestatutos').toggleClass('mostrartituloestatutos');
-        $('body').toggleClass('body_bloqueado');
-        cajahistoria.scrollTop = 0;
-    });
-
-
-
-/* 
-=====================================================================================================================
-=====================================================================================================================
-=====================================================================================================================
-                                                        TERCERA SECCIÓN
-=====================================================================================================================
-=====================================================================================================================
-===================================================================================================================== 
-*/
+$('#btn_cerrarestatutos').click( function () {
+    $("#ventanaestatutos").fadeOut(500);
+    $("#ventanaestatutos").removeClass("abierta");
+});
 
 $('#sliderservicios').owlCarousel({
     loop: true,

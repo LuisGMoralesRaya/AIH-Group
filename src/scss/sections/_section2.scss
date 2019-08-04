@@ -345,16 +345,14 @@
     background-image: url(../img/seccion2_izda.jpg);
     background-size: cover;
     background-position: center;
-    display: block;
-    width: 100%;
     opacity: 0;
-    visibility: hidden;
-    transform: translateX(-100%);
-    transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    display: none;
+    width: 100%;
+    transition: opacity 1.5s ease-in;
 }
 
 .abierta {
-    transform: translateX(0px) !important;
+   
     opacity: 1 !important;
     visibility: visible!important;
 }
@@ -402,11 +400,7 @@
 #img_historia {
     position: absolute;
     width: 600px;
-    z-index: -1;
-    left: -300px;
     top: 100px;
-    transform: translateX(-800px);
-    transition: all 2.5s cubic-bezier(.57, 0, .2, 1);
 }
 
 .imagenhistoria {
@@ -416,10 +410,8 @@
 #titulohistoria {
     text-shadow: 3px 2px 4px #000;
     text-align: left;
-    transform: translateX(-1000px);
-    transition: all 1.9s cubic-bezier(.57, 0, .2, 1);
-    opacity: 0;
     color: white;
+    margin-top: 19rem;
 }
 
 .mostrartitulohistoria {
@@ -443,15 +435,9 @@
     width: 100%;
     opacity: 0;
     visibility: hidden;
-    transform: translateX(200%);
-    -webkit-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
-    -moz-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
-    -ms-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
-    -o-transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
     transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
 }
 .abiertaestatutos {
-    transform: translateX(0px) !important;
     opacity: 1 !important;
     visibility: visible!important;
 }
