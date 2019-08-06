@@ -120,7 +120,7 @@
         background-image: url("/img/backgroundPages/habitat/mini/sanrafael1073.jpg");
       }
       .polotitlan{
-        background-image: url("/img/backgroundPages/habitat/mini/polotitlan.png");
+        background-image: url("/img/backgroundPages/habitat/mini/polotitlan.jpg");
       }
       .sanrafael1078{
         background-image: url("/img/backgroundPages/habitat/mini/sanrafael1078.jpg");
@@ -152,6 +152,8 @@
   @media (min-width: 0px) and (max-width: 850px) {
     .habitat{
         padding-top: 4rem;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .habitat .textos{
         flex-direction: column;
@@ -162,21 +164,30 @@
     }
     .habitat .contenidos{
         flex-direction: column;
+        width: 100%;
     }
     .habitat .contenidos .filtros{
         flex-direction: row;
         align-items: center;
         align-content: center;
-        justify-content: space-around;
+        justify-content: center;
         width: 100%;
         margin-bottom: 4rem;
+        margin-right: 0!important;
+    }
+    .habitat .contenidos .filtros .proyecto:first-child{
+      margin-bottom: 0!important;
     }
     .habitat .contenidos .filtros .proyecto{
         margin-bottom: 0;
+        animation: none!important;
     }
     .habitat .contenidos .filtros .proyecto{
-        width: 220px;
-        height: 220px;
+        height: 50px!important;
+        width: 150px!important;
+    }
+    .habitat .contenidos .filtros .proyecto[m-active=true]{
+      transform: none;
     }
     .habitat .contenidos .noticias .new{
         width: 100%;
@@ -187,6 +198,7 @@
     }
     .habitat .contenidos .noticias{
         justify-content: center;
+        width: 100%;
     }
   }
   
@@ -204,10 +216,6 @@
             margin-bottom: 2rem;
         }
     }
-    .habitat .contenidos .filtros{
-
-        flex-direction:column;
-    }
   }
   
 //Modal
@@ -216,6 +224,8 @@
     visibility: visible;
     opacity: 1;
     display: flex;
+    position: fixed;
+    overflow: scroll;
   }
   visibility: hidden;
   opacity: 0;
@@ -321,14 +331,15 @@
   }
   &-ficha{
     color: white;
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
     &_titulo{
       @include fluid-type(320px, 1500px, 16px, 20px);
       font-weight: bold;
+      margin-bottom: .5rem;
     }
     &_info{
       text-transform: uppercase;
-      margin-bottom: 0;
+      margin-bottom: .5rem;
       @include fluid-type(320px, 1500px, 14px, 18px);
       font-weight: 100;
       span{
@@ -377,4 +388,21 @@
   
   //CSS
   
+}
+@media (min-width: 0px) and (max-width: 420px) {
+  .modalHabitad-closeModal{
+    top: 0;
+  }
+  .modalHabitad-slider .owl-item{
+    height: 300px;
+  }
+  .modalHabitad-slider .owl-stage-outer{
+    height: 300px;
+  }
+  .modalHabitad-slider{
+    height: 300px;
+  }
+  .habitat .contenidos .noticias .new{
+    min-width: 100%;
+  }
 }

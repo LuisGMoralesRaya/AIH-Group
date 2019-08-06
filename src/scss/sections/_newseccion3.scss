@@ -58,6 +58,9 @@
 @media (min-width: 0px) and (max-width: 1000px) {
     .section3-contenido{
         flex-direction:column;
+        .owl-theme .owl-nav{
+            top: 40%;
+        }
     }    
     .section3-contenido-carousel{
         width: 100%;
@@ -74,10 +77,18 @@
         .owl-carousel{
             padding:0;
             text-align:center;
+            .owl-dots{
+                display: block!important;
+            }
+            }
+            .owl-dots{
+                display: block!important;
             }
     }
     .section3-contenido-carousel .owl-stage{
         padding: 0;
+        
+       
     }
     
     .section3-contenido-carousel .item{

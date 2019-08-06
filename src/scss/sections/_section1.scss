@@ -325,13 +325,20 @@ body{
     ========================================================================== 
     */
 
+    .containerMenuMoobile{
+
+    display:none;
+        position: relative;
+        width: 100%;
+        top: 0;
+        z-index: 99;
+    }
 #menu {
-    position: fixed;
-    top: 0;
-    right: 0;
     width: 60px;
     z-index: 100;
     display:none;
+    position:fixed;
+    right: 0;
 }
 
 #btnmenu div,
@@ -491,7 +498,7 @@ body{
 
 .overlay {
     position: fixed;
-    background: rgba(1, 12, 29, 0.58);
+    background: rgba(1, 12, 29, 0.9);
     top: 0;
     left: 0;
     width: 100%;
@@ -508,6 +515,7 @@ body{
     visibility: visible;
     height: 100%;
     overflow: auto;
+    padding-top: 8rem;
 }
 
 .overlay.open li {
@@ -679,6 +687,10 @@ body{
 
 
 @media screen and (max-width: 1000px) {
+    .containerMenuMoobile{
+        display: block;
+        margin: 0 auto;
+    }
     #menu{
         display: flex;
         flex-direction: column;
@@ -752,10 +764,7 @@ body{
         font-size: 0.6em;
     }
 
-    .overlay-menu ul li:nth-child(2n + 1) a {
-        font-weight: 200;
-      }
-
+   
     #tituloformulario{
         padding: 0px;
     }

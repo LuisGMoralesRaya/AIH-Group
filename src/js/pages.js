@@ -40,22 +40,27 @@ $(document).ready(function () {
         }
     });
     validatedContacto();
-    $(".habitat .contenidos .filtros .proyecto").click(function () {
-        var typeDiv = $(this).attr("id");
-        if (typeDiv == "habitacional") {
-            $(this).addClass("habitacional");
-            $(".habitat .contenidos .filtros .proyecto").removeClass("corpotrativo");
-            $("[m-type=corpotrativo]").fadeOut("slow");
-            $("[m-type=habitacional]").fadeIn("slow");
-        } else {
-            $(this).addClass("corpotrativo");
-            $(".habitat .contenidos .filtros .proyecto").removeClass("habitacional");
-            $("[m-type=corpotrativo]").fadeIn("slow");
-            $("[m-type=habitacional]").fadeOut("slow");
-        }
-        $(".habitat .contenidos .filtros .proyecto").attr("m-active", "false");
-        $(this).attr("m-active", "true");
-    });
+    var checkWidth = $(window).width();
+    if (checkWidth > 613){
+        $(".habitat .contenidos .filtros .proyecto").click(function () {
+            var typeDiv = $(this).attr("id");
+            console.log(typeDiv)
+            if (typeDiv == "habitacional") {
+                $(this).addClass("habitacional");
+                $(".habitat .contenidos .filtros .proyecto").removeClass("corpotrativo");
+                $("[m-type=corpotrativo]").fadeOut("slow");
+                $("[m-type=habitacional]").fadeIn("slow");
+            } else {
+                $(this).addClass("corpotrativo");
+                $(".habitat .contenidos .filtros .proyecto").removeClass("habitacional");
+                $("[m-type=corpotrativo]").fadeIn("slow");
+                $("[m-type=habitacional]").fadeOut("slow");
+            }
+            $(".habitat .contenidos .filtros .proyecto").attr("m-active", "false");
+            $(this).attr("m-active", "true");
+        });
+    }
+    
 
 
 });
@@ -137,110 +142,113 @@ $(".right-control").on('click', function () {
 $(".left-control").on('click', function () {
     carouselHabitat.trigger('prev.owl.carousel');
 });
-$(".habitat .contenidos .noticias .new").click(function () {
-
-    $(".modalHabitad").attr("m-active", "true");
-
-    var proyecto = $(this).attr("m-proyecto");
-    var folder = "";
-    switch (proyecto) {
-        case "casapichilingue":
-            folder = "img/backgroundPages/habitat/proyectos/casa-pichilingue/";
-            $("#tituloProyecto").html('Ampliación Residencia de Acapulco');
-            $("#textoProyecto").html('Remodelación y levantamiento de piso superior en casa vacacional en exclusivo condominio de Pichilingue Acapulco.');
-            $("#area").html('<span class="area">ÁREA</span> 328.90 M<sup>2</sup>');
-            $("#tipo").html('<span class="tipo">TIPO</span> DEPARTAMENTO');
-            $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2018');
-            $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Amores 1120, Col del Valle Centro, 03100 Ciudad de México, CDMX');
-            break;
-        case "casagrande":
-            folder = "img/backgroundPages/habitat/proyectos/casagrande/";
-            $("#tituloProyecto").html('Remodelación Casas Grandes');
-            $("#textoProyecto").html('Remodelación y restauración  total de un espacio unifamiliar de 3 niveles para vivienda  con acabados de lujo.');
-            $("#area").html('<span class="area">ÁREA</span> 315 M<sup>2</sup>');
-            $("#tipo").html('<span class="tipo">TIPO</span> Vivienda Residencial');
-            $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2018');
-            $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Casas Grandes 127 Narvarte Oriente CP 03020 Benito Juárez, Ciudad de México');
-            break;
-        case "sanrafael1073":
-            folder = "img/backgroundPages/habitat/proyectos/sanrafael1073/";
-            $("#tituloProyecto").html('Casa El Rodeo II');
-            $("#textoProyecto").html('Condominio habitacional vertical de 14 recámaras diseñado especialmente para estudiantes y solteros con acabados modernos y áreas comunes para el esparcimiento.');
-            $("#area").html('<span class="area">ÁREA</span> 363 M<sup>2</sup>');
-            $("#tipo").html('<span class="tipo">TIPO</span> Casa Habitación');
-            $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2019');
-            $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> San Rafael Atlixco 1073 Colonia El Rodeo CP 08510 Iztacalco, Ciudad de México');
-            break;
-        case "sanrafael1078":
-            folder = "img/backgroundPages/habitat/proyectos/sanrafael1078/";
-            $("#tituloProyecto").html('Casa El Rodeo I');
-            $("#textoProyecto").html('Condominio habitacional vertical de 14 recámaras diseñado especialmente para estudiantes y solteros con acabados modernos y áreas comunes para el esparcimiento. ');
-            $("#area").html('<span class="area">ÁREA</span> 62 M<sup>2</sup>');
-            $("#tipo").html('<span class="tipo">TIPO</span> Casa Habitación');
-            $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2015');
-            $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> San Rafael Atlixco 1078 Colonia El Rodeo CP 08510 Iztacalco, Ciudad de México');
-            break;
-        case "amores":
-            folder = "img/backgroundPages/habitat/proyectos/amores/";
-            $("#tituloProyecto").html('Corporativo AIH Group Ciudad de México');
-            $("#textoProyecto").html('Oficinas corporativas de AIH Group de Ciudad de México. Con capacidad para 30 personas.');
-            $("#area").html('<span class="area">ÁREA</span> 460 M<sup>2</sup>');
-            $("#tipo").html('<span class="tipo">TIPO</span> Corporativo');
-            $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2016');
-            $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Amores 1120 Oficina 202 Col del Valle Centro, 03100 Ciudad de México, CDMX');
-            break;
-        case "patricio":
-            folder = "img/backgroundPages/habitat/proyectos/patricio/";
-            $("#tituloProyecto").html('Call Center Patricio Sanz');
-            $("#textoProyecto").html('Oficinas open space para la empresa Traveline con 50 puestos de trabajo en el área central y 7 oficinas privadas.');
-            $("#area").html('<span class="area">ÁREA</span> 608 M<sup>2</sup>');
-            $("#tipo").html('<span class="tipo">TIPO</span> Call Center');
-            $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2019');
-            $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Patricio Sanz 1609 Colonia del Valle Sur CP 03100 Benito Juárez, Ciudad de México');
-            break;
-        case "polotitlan":
-            folder = "img/backgroundPages/habitat/proyectos/polotitlan/";
-            $("#tituloProyecto").html('Proyecto Invernaderos Polotitlán');
-            $("#textoProyecto").html('Desarrollo del primer complejo agroindustrial para la producción de cannabis legal en México. Proyecto en planificación de acuerdo a los avances en materia de legalización.');
-            $("#area").html('<span class="area">ÁREA</span> 20 has');
-            $("#tipo").html('<span class="tipo">TIPO</span> Invernaderos');
-            $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2019');
-            $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Municipio de Polotitlán');
-            break;
-            case "guadalajara":
-            folder = "img/backgroundPages/habitat/proyectos/guadalajara/";
-            $("#tituloProyecto").html('Oficina AIH Group Guadalajara');
-            $("#textoProyecto").html('Oficinas corporativas AIH Group de Guadalajara. 5 oficinas con espacios de recepción, sala de juntas y área de comedor.');
-            $("#area").html('<span class="area">ÁREA</span> --');
-            $("#tipo").html('<span class="tipo">TIPO</span> Corporativo');
-            $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2018');
-            $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Punto Sao Paulo, Torre HSBC, Piso 4-E, Guadalajara, Jalisco.');
-            break;
-        default:
-            folder = "img/backgroundPages/habitat/proyectos/";
-    }
-    $.ajax({
-        url : folder,
-        success: function (data) {
-            $(data).find("a").attr("href", function (i, val) {
-                if( val.match(/\.(jpg|png|gif)$/) ) { 
-                    $(".modalHabitad-slider").append( "<div class='item'><img class='item' src='"+ folder + val +"'></div>" );
-                } 
-            });
-            carouselHabitat.owlCarousel({
-                loop:false,
-                //autoplay:true,
-                nav:true,
-                animateIn: 'fadeIn',
-                items:1
-            });
+if ($(window).width() >= 613) {
+    $(".habitat .contenidos .noticiasHabitat .new").click(function () {
+        $(".modalHabitad").attr("m-active", "true");
+        var proyecto = $(this).attr("m-proyecto");
+        console.log(proyecto);
+        var folder = "";
+        switch (proyecto) {
+            case "casapichilingue":
+                folder = "img/backgroundPages/habitat/proyectos/casa-pichilingue/";
+                $("#tituloProyecto").html('Ampliación Residencia de Acapulco');
+                $("#textoProyecto").html('Remodelación y levantamiento de piso superior en casa vacacional en exclusivo condominio de Pichilingue Acapulco.');
+                $("#area").html('<span class="area">ÁREA</span> 328.90 M<sup>2</sup>');
+                $("#tipo").html('<span class="tipo">TIPO</span> DEPARTAMENTO');
+                $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2018');
+                $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Amores 1120, Col del Valle Centro, 03100 Ciudad de México, CDMX');
+                break;
+            case "casagrande":
+                folder = "img/backgroundPages/habitat/proyectos/casagrande/";
+                $("#tituloProyecto").html('Remodelación Casas Grandes');
+                $("#textoProyecto").html('Remodelación y restauración  total de un espacio unifamiliar de 3 niveles para vivienda  con acabados de lujo.');
+                $("#area").html('<span class="area">ÁREA</span> 315 M<sup>2</sup>');
+                $("#tipo").html('<span class="tipo">TIPO</span> Vivienda Residencial');
+                $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2018');
+                $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Casas Grandes 127 Narvarte Oriente CP 03020 Benito Juárez, Ciudad de México');
+                break;
+            case "sanrafael1073":
+                folder = "img/backgroundPages/habitat/proyectos/sanrafael1073/";
+                $("#tituloProyecto").html('Casa El Rodeo II');
+                $("#textoProyecto").html('Condominio habitacional vertical de 14 recámaras diseñado especialmente para estudiantes y solteros con acabados modernos y áreas comunes para el esparcimiento.');
+                $("#area").html('<span class="area">ÁREA</span> 363 M<sup>2</sup>');
+                $("#tipo").html('<span class="tipo">TIPO</span> Casa Habitación');
+                $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2019');
+                $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> San Rafael Atlixco 1073 Colonia El Rodeo CP 08510 Iztacalco, Ciudad de México');
+                break;
+            case "sanrafael1078":
+                folder = "img/backgroundPages/habitat/proyectos/sanrafael1078/";
+                $("#tituloProyecto").html('Casa El Rodeo I');
+                $("#textoProyecto").html('Condominio habitacional vertical de 14 recámaras diseñado especialmente para estudiantes y solteros con acabados modernos y áreas comunes para el esparcimiento. ');
+                $("#area").html('<span class="area">ÁREA</span> 62 M<sup>2</sup>');
+                $("#tipo").html('<span class="tipo">TIPO</span> Casa Habitación');
+                $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2015');
+                $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> San Rafael Atlixco 1078 Colonia El Rodeo CP 08510 Iztacalco, Ciudad de México');
+                break;
+            case "amores":
+                folder = "img/backgroundPages/habitat/proyectos/amores/";
+                $("#tituloProyecto").html('Corporativo AIH Group Ciudad de México');
+                $("#textoProyecto").html('Oficinas corporativas de AIH Group de Ciudad de México. Con capacidad para 30 personas.');
+                $("#area").html('<span class="area">ÁREA</span> 460 M<sup>2</sup>');
+                $("#tipo").html('<span class="tipo">TIPO</span> Corporativo');
+                $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2016');
+                $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Amores 1120 Oficina 202 Col del Valle Centro, 03100 Ciudad de México, CDMX');
+                break;
+            // case "patricio":
+            //     folder = "img/backgroundPages/habitat/proyectos/patricio/";
+            //     $("#tituloProyecto").html('Call Center Patricio Sanz');
+            //     $("#textoProyecto").html('Oficinas open space para la empresa Traveline con 50 puestos de trabajo en el área central y 7 oficinas privadas.');
+            //     $("#area").html('<span class="area">ÁREA</span> 608 M<sup>2</sup>');
+            //     $("#tipo").html('<span class="tipo">TIPO</span> Call Center');
+            //     $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2019');
+            //     $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Patricio Sanz 1609 Colonia del Valle Sur CP 03100 Benito Juárez, Ciudad de México');
+            //     break;
+            case "polotitlan":
+                folder = "img/backgroundPages/habitat/proyectos/polotitlan/";
+                $("#tituloProyecto").html('Proyecto Invernaderos Polotitlán');
+                $("#textoProyecto").html('Desarrollo del primer complejo agroindustrial para la producción de cannabis legal en México. Proyecto en planificación de acuerdo a los avances en materia de legalización.');
+                $("#area").html('<span class="area">ÁREA</span> 20 has');
+                $("#tipo").html('<span class="tipo">TIPO</span> Invernaderos');
+                $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2019');
+                $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Municipio de Polotitlán');
+                break;
+                case "guadalajara":
+                folder = "img/backgroundPages/habitat/proyectos/guadalajara/";
+                $("#tituloProyecto").html('Oficina AIH Group Guadalajara');
+                $("#textoProyecto").html('Oficinas corporativas AIH Group de Guadalajara. 5 oficinas con espacios de recepción, sala de juntas y área de comedor.');
+                $("#area").html('<span class="area">ÁREA</span> --');
+                $("#tipo").html('<span class="tipo">TIPO</span> Corporativo');
+                $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2018');
+                $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Punto Sao Paulo, Torre HSBC, Piso 4-E, Guadalajara, Jalisco.');
+                break;
+            default:
+                folder = "img/backgroundPages/habitat/proyectos/";
         }
+        $.ajax({
+            url : folder,
+            success: function (data) {
+                $(data).find("a").attr("href", function (i, val) {
+                    if( val.match(/\.(jpg|jpeg|svg|png|gif)$/) ) { 
+                        $(".modalHabitad-slider").append( "<div class='item'><img class='item' src='"+ folder + val +"'></div>" );
+                    } 
+                });
+                setTimeout(function(){
+                    carouselHabitat.owlCarousel({
+                        loop:false,
+                        //autoplay:true,
+                        nav:true,
+                        animateIn: 'fadeIn',
+                        items:1
+                    });
+                  }, 1500);
+            }
+        });
+        var heightSection = $(".habitat").height();
+        $(".modalHabitad").css("height",heightSection+"px")
+        $(".modalHabitad").css("min-height",heightSection+"px")
     });
-    var heightSection = $(".habitat").height();
-    console.log(heightSection)
-    $(".modalHabitad").css("height",heightSection+"px")
-    $(".modalHabitad").css("min-height",heightSection+"px")
-});
+ }
+
 $(".modalHabitad-closeModal").click(function () {
     $(".modalHabitad").attr("m-active", "false");
     carouselHabitat.owlCarousel('destroy'); 
@@ -252,3 +260,170 @@ $(window).resize(function(){
     $(".modalHabitad").css("height",heightSection+"px")
     $(".modalHabitad").css("min-height",heightSection+"px")
 });
+var owlPost = $(".noticiasHabitat");
+function postsCarousel() {
+    var checkWidth = $(window).width();
+   
+    if (checkWidth >= 613) {
+        if(typeof owlPost.data('owl.carousel') != 'undefined'){
+            owlPost.data('owl.carousel').destroy(); 
+        }
+        owlPost.removeClass('owl-carousel');
+    } else if (checkWidth <= 612) {
+        $('.noticiasHabitat').on('click', '.owl-item', function () {
+            $(".modalHabitad").attr("m-active", "true");
+            var proyecto = $(this).children("div").attr("m-proyecto");
+            $('html, body').animate( { scrollTop : 0 }, 0 );
+            var folder = "";
+            switch (proyecto) {
+                case "casapichilingue":
+                    folder = "img/backgroundPages/habitat/proyectos/casa-pichilingue/";
+                    $("#tituloProyecto").html('Ampliación Residencia de Acapulco');
+                    $("#textoProyecto").html('Remodelación y levantamiento de piso superior en casa vacacional en exclusivo condominio de Pichilingue Acapulco.');
+                    $("#area").html('<span class="area">ÁREA</span> 328.90 M<sup>2</sup>');
+                    $("#tipo").html('<span class="tipo">TIPO</span> DEPARTAMENTO');
+                    $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2018');
+                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Amores 1120, Col del Valle Centro, 03100 Ciudad de México, CDMX');
+                    break;
+                case "casagrande":
+                    folder = "img/backgroundPages/habitat/proyectos/casagrande/";
+                    $("#tituloProyecto").html('Remodelación Casas Grandes');
+                    $("#textoProyecto").html('Remodelación y restauración  total de un espacio unifamiliar de 3 niveles para vivienda  con acabados de lujo.');
+                    $("#area").html('<span class="area">ÁREA</span> 315 M<sup>2</sup>');
+                    $("#tipo").html('<span class="tipo">TIPO</span> Vivienda Residencial');
+                    $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2018');
+                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Casas Grandes 127 Narvarte Oriente CP 03020 Benito Juárez, Ciudad de México');
+                    break;
+                case "sanrafael1073":
+                    folder = "img/backgroundPages/habitat/proyectos/sanrafael1073/";
+                    $("#tituloProyecto").html('Casa El Rodeo II');
+                    $("#textoProyecto").html('Condominio habitacional vertical de 14 recámaras diseñado especialmente para estudiantes y solteros con acabados modernos y áreas comunes para el esparcimiento.');
+                    $("#area").html('<span class="area">ÁREA</span> 363 M<sup>2</sup>');
+                    $("#tipo").html('<span class="tipo">TIPO</span> Casa Habitación');
+                    $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2019');
+                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> San Rafael Atlixco 1073 Colonia El Rodeo CP 08510 Iztacalco, Ciudad de México');
+                    break;
+                case "sanrafael1078":
+                    folder = "img/backgroundPages/habitat/proyectos/sanrafael1078/";
+                    $("#tituloProyecto").html('Casa El Rodeo I');
+                    $("#textoProyecto").html('Condominio habitacional vertical de 14 recámaras diseñado especialmente para estudiantes y solteros con acabados modernos y áreas comunes para el esparcimiento. ');
+                    $("#area").html('<span class="area">ÁREA</span> 62 M<sup>2</sup>');
+                    $("#tipo").html('<span class="tipo">TIPO</span> Casa Habitación');
+                    $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2015');
+                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> San Rafael Atlixco 1078 Colonia El Rodeo CP 08510 Iztacalco, Ciudad de México');
+                    break;
+                case "amores":
+                    folder = "img/backgroundPages/habitat/proyectos/amores/";
+                    $("#tituloProyecto").html('Corporativo AIH Group Ciudad de México');
+                    $("#textoProyecto").html('Oficinas corporativas de AIH Group de Ciudad de México. Con capacidad para 30 personas.');
+                    $("#area").html('<span class="area">ÁREA</span> 460 M<sup>2</sup>');
+                    $("#tipo").html('<span class="tipo">TIPO</span> Corporativo');
+                    $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2016');
+                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Amores 1120 Oficina 202 Col del Valle Centro, 03100 Ciudad de México, CDMX');
+                    break;
+                case "patricio":
+                    folder = "img/backgroundPages/habitat/proyectos/patricio/";
+                    $("#tituloProyecto").html('Call Center Patricio Sanz');
+                    $("#textoProyecto").html('Oficinas open space para la empresa Traveline con 50 puestos de trabajo en el área central y 7 oficinas privadas.');
+                    $("#area").html('<span class="area">ÁREA</span> 608 M<sup>2</sup>');
+                    $("#tipo").html('<span class="tipo">TIPO</span> Call Center');
+                    $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2019');
+                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Patricio Sanz 1609 Colonia del Valle Sur CP 03100 Benito Juárez, Ciudad de México');
+                    break;
+                case "polotitlan":
+                    folder = "img/backgroundPages/habitat/proyectos/polotitlan/";
+                    $("#tituloProyecto").html('Proyecto Invernaderos Polotitlán');
+                    $("#textoProyecto").html('Desarrollo del primer complejo agroindustrial para la producción de cannabis legal en México. Proyecto en planificación de acuerdo a los avances en materia de legalización.');
+                    $("#area").html('<span class="area">ÁREA</span> 20 has');
+                    $("#tipo").html('<span class="tipo">TIPO</span> Invernaderos');
+                    $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2019');
+                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Municipio de Polotitlán');
+                    break;
+                    case "guadalajara":
+                    folder = "img/backgroundPages/habitat/proyectos/guadalajara/";
+                    $("#tituloProyecto").html('Oficina AIH Group Guadalajara');
+                    $("#textoProyecto").html('Oficinas corporativas AIH Group de Guadalajara. 5 oficinas con espacios de recepción, sala de juntas y área de comedor.');
+                    $("#area").html('<span class="area">ÁREA</span> --');
+                    $("#tipo").html('<span class="tipo">TIPO</span> Corporativo');
+                    $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2018');
+                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Punto Sao Paulo, Torre HSBC, Piso 4-E, Guadalajara, Jalisco.');
+                    break;
+                default:
+                    folder = "img/backgroundPages/habitat/proyectos/";
+            }
+            $.ajax({
+                url : folder,
+                success: function (data) {
+                    $(data).find("a").attr("href", function (i, val) {
+                        if( val.match(/\.(jpg|jpeg|svg|png|gif)$/) ) { 
+                            $(".modalHabitad-slider").append( "<div class='item'><img class='item' src='"+ folder + val +"'></div>" );
+                        } 
+                    });
+                    setTimeout(function(){
+                        carouselHabitat.owlCarousel({
+                            loop:false,
+                            //autoplay:true,
+                            nav:true,
+                            animateIn: 'fadeIn',
+                            items:1
+                        });
+                      }, 1500);
+                    
+                }
+            });
+        });
+        owlPost.addClass('owl-carousel');
+        owlPost.owlCarousel({
+            items : 2,
+            slideSpeed : 500,
+            animateOut: 'fadeOut',
+            touchDrag: true,
+            mouseDrag: true,
+            margin:30,
+            center:true,
+            dots: true,
+            loop: true,
+            426:{
+                items : 2,
+                nav:true
+            },
+        });
+    }
+}
+var carousel_Settings = {
+    items : 2,
+            slideSpeed : 500,
+            animateOut: 'fadeOut',
+            touchDrag: true,
+            mouseDrag: true,
+            center:true,
+            dots: true,
+            loop: true,
+            426:{
+                items : 2,
+                nav:true
+            },
+  };
+
+  $( '.filtros' ).on( 'click', '.proyecto', function() {
+    var $item = $(this);
+    var $thisId = $(this).attr("id");
+    
+    if ($thisId == "habitacional") {
+        $(this).addClass("habitacional");
+        $(".habitat .contenidos .filtros .proyecto").removeClass("corpotrativo");
+    } else {
+        $(this).addClass("corpotrativo");
+        $(".habitat .contenidos .filtros .proyecto").removeClass("habitacional");
+    }
+
+    $(".proyecto").attr("m-active","false");
+    $("#"+$thisId).attr("m-active","true");
+    var filter = $item.data( 'owl-filter' )
+
+    owlPost.owlcarousel2_filter( filter );
+
+} )
+postsCarousel();
+$(window).resize(postsCarousel);	
+

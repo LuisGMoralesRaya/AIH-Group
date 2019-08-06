@@ -163,6 +163,9 @@
       }
     }
     @media (min-width: 0px) and (max-width: 789px) {
+      .advisors .modulos-one .blockImage .middleText{
+        flex-direction: column;
+      }
       .advisors{
           flex-direction: column;
           padding-top: 11rem;

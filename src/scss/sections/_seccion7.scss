@@ -155,7 +155,7 @@
 }
 
 .mapaMobileDes p{
-
+    margin-bottom: 1rem;
     @include fluid-type(320px, 1440px, 12px, 16px);
 }
 @media (min-width: 550px) and (max-width: 799px) {
@@ -203,6 +203,8 @@
         }
         .worldMobileFirst {
             width: 100%;
+
+            margin-bottom: 3rem;
         }
     }
 }
@@ -218,6 +220,7 @@
 
 .sectionBlog{
     background-color: white;
+    padding-top: 2rem;
     padding-bottom: 4rem;
     display: flex;
     flex-direction: column;

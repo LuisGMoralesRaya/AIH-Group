@@ -157,6 +157,9 @@
       }
     }
     @media (min-width: 0px) and (max-width: 789px) {
+      .personel .modulos-one .blockImage .middleText{
+        text-align: center;
+      }
       .personel{
           flex-direction: column;
           padding-top: 11rem;

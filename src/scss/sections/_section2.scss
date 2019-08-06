@@ -1,13 +1,3 @@
-/* 
---------------------------------------------------------------------------------------------------------------------- 
---------------------------------------------------------------------------------------------------------------------- 
---------------------------------------------------------------------------------------------------------------------- 
-                                                        SEGUNDA SECCIÓN 
---------------------------------------------------------------------------------------------------------------------- 
---------------------------------------------------------------------------------------------------------------------- 
---------------------------------------------------------------------------------------------------------------------- 
-*/
-
 #seccion2 {
     background-image: url(../img/fondoseccion2.jpg);
     background-size: cover;
@@ -70,24 +60,6 @@
     padding-top: 1rem;
     line-height: inherit !important;
 }
-
-
-
-/*
-.lineaempresa {
-    height: 2px;
-    width: 800px;
-    background-color: white;
-    margin: 0 auto;
-    transition: all 1.5s cubic-bezier(.57, 0, .2, 1);
-    transform: scaleX(0);
-}
-
-.abrirlinea {
-    transform: scaleX(1);
-}
-
-*/
 
 
 #btn_historia {
@@ -345,16 +317,72 @@
     background-image: url(../img/seccion2_izda.jpg);
     background-size: cover;
     background-position: center;
-    opacity: 0;
+    opacity: 1;
     display: none;
     width: 100%;
     transition: opacity 1.5s ease-in;
+    padding: 3rem;
+    .historiaContent{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-content: center;
+        justify-content: center;
+        position: relative;
+        width: 500px;
+        margin-right: 9rem;
+        img{
+            width: 450px;
+        }
+        .texto{
+            color:white;
+            max-width: 600px;
+            width: 100%;
+            text-align: left;
+            position: absolute;
+            top: 80%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+        }
+    }
+    .botonHistoria{
+        margin-right: 4rem;
+        .contentBBtn{
+            height: 500px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            align-content: flex-end;
+            border-right: 1px solid white;
+            i{
+                color:white;
+                font-size:4rem;
+                border: 2px solid white;
+            }
+        }
+    }
+    .historiaContentText{
+        max-width: 500px;
+        h2{
+            color:white;
+            font-size: 34px;
+            margin-bottom: 1rem;
+        }
+        p{
+            color:white;
+            line-height: initial;
+        }
+    }
 }
 
 .abierta {
-   
+   display: flex!important;
+   justify-content:space-evenly;
+   align-content: center;
+   align-items: center;
     opacity: 1 !important;
     visibility: visible!important;
+    overflow: scroll;
 }
 
 #contenedor_textohistoria {
@@ -371,31 +399,7 @@
     margin-top: 300px;
 }
 
-#btn_cerrarhistoria {
-    color: white;
-    font-size: 1em;
-    position: absolute;
-    border: 1px solid white;
-    color: white;
-    background-color: #5a9396;
-    margin-top: 350px;
-    margin-left: -49px;
-    border-top: none;
-}
 
-#btn_cerrarhistoria i {
-    font-size: 3em;
-}
-
-#btn_cerrarhistoria:hover {
-    -webkit-transition: all 0.5s cubic-bezier(.57, 0, .2, 1);
-    -moz-transition: all 0.5s cubic-bezier(.57, 0, .2, 1);
-    -ms-transition: all 0.5s cubic-bezier(.57, 0, .2, 1);
-    -o-transition: all 0.5s cubic-bezier(.57, 0, .2, 1);
-    transition: all 0.5s cubic-bezier(.57, 0, .2, 1);
-    background-color: black;
-    color: white;
-}
 
 #img_historia {
     position: absolute;
@@ -425,6 +429,7 @@
     background-color: white;
 }
 #ventanaestatutos {
+    padding: 20px;
     z-index: 30;
     position: fixed;
     top: 0;
@@ -436,6 +441,58 @@
     opacity: 0;
     visibility: hidden;
     transition: all 1.3s cubic-bezier(.57, 0, .2, 1);
+    flex-direction: row-reverse;
+    .historiaContent{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-content: center;
+        justify-content: center;
+        position: relative;
+        width: 500px;
+        margin-right: 9rem;
+        img{
+            width: 450px;
+        }
+        .texto{
+            color:white;
+            max-width: 600px;
+            width: 100%;
+            text-align: left;
+            position: absolute;
+            top: 80%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+        }
+    }
+    .botonHistoria{
+        margin-right: 4rem;
+        .contentBBtn{
+            height: 500px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            align-content: flex-end;
+            border-right: 1px solid white;
+            i{
+                color:white;
+                font-size:4rem;
+                border: 2px solid white;
+            }
+        }
+    }
+    .historiaContentText{
+        max-width: 500px;
+        h2{
+            color:white;
+            font-size: 34px;
+            margin-bottom: 1rem;
+        }
+        p{
+            color:white;
+            line-height: initial;
+        }
+    }
 }
 .abiertaestatutos {
     opacity: 1 !important;
@@ -450,32 +507,6 @@
     margin-top: 400px;
 }
 
-
-#btn_cerrarestatutos {
-    color: white;
-    font-size: 1em;
-    position: absolute;
-    border: 1px solid white;
-    color: white;
-    background-color: #5a9396;
-    margin-top: 350px;
-    border-top: none;
-
-}
-
-#btn_cerrarestatutos i {
-    font-size: 3em;
-}
-
-#btn_cerrarestatutos:hover {
-    -webkit-transition: all 0.5s cubic-bezier(.57, 0, .2, 1);
-    -moz-transition: all 0.5s cubic-bezier(.57, 0, .2, 1);
-    -ms-transition: all 0.5s cubic-bezier(.57, 0, .2, 1);
-    -o-transition: all 0.5s cubic-bezier(.57, 0, .2, 1);
-    transition: all 0.5s cubic-bezier(.57, 0, .2, 1);
-    background-color: black;
-    color: white;
-}
 
 #img_estatutos {
 
@@ -663,9 +694,6 @@
     .arregloBotones #btn_historia span{
         top:0;
     }
-    .arregloBotones #btn_estatutos span{
-        top: 0;
-    }
     
   }
   @media (min-width: 0px) and (max-width: 719px) {
@@ -721,11 +749,163 @@
     .arregloBotones #btn_historia span{
         top:0;
     }
-    .arregloBotones #btn_estatutos span{
-        top: 0;
-    }
     .contenedorHistoria{
         padding-left: 20px;
         padding-right: 4rem;
+    }
+  }
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    #ventanahistoria .historiaContent{
+        margin-right: 5rem;
+    }
+    #ventanahistoria .historiaContent img{
+        margin-bottom: 3rem;
+        width: 350px;
+    }
+    #ventanahistoria .historiaContent .texto{
+        position: relative;
+        left: 0;
+        transform: none;
+        margin: 0;
+        
+    }
+  }
+  @media (min-width: 0px) and (max-width: 1024px) {
+    #ventanahistoria{
+        flex-direction: column;
+    }
+    #ventanahistoria .historiaContent{
+        margin-right: 0;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    #ventanahistoria .historiaContent img{
+        margin-bottom: 3rem;
+        max-width: 650px;
+        width: 100%;
+    }
+    #ventanahistoria .historiaContentText{
+        max-width: 600px;
+        width: 100%;
+    }
+    #ventanahistoria .historiaContent{
+        max-width: 600px;
+        width: 100%;
+    }
+    #ventanahistoria .historiaContent .texto{
+        position: relative;
+        left: 0;
+        transform: none;
+        margin: 0;
+        top: 0;
+        
+    }
+    #ventanahistoria .botonHistoria .contentBBtn{
+        height:auto;
+    }
+    #ventanahistoria .botonHistoria{
+        margin-right: 0;
+    }
+  }
+  @media (min-width: 0px) and (max-width: 481px) {
+    #ventanahistoria{
+        justify-content: center;
+    }
+    #ventanahistoria .historiaContent{
+        margin-bottom: 3rem;
+    }
+    #ventanahistoria .botonHistoria{
+        margin-bottom: 3rem;
+    }
+    #ventanahistoria .botonHistoria .contentBBtn i{
+        font-size: 3rem;
+    }
+    #ventanahistoria .historiaContent .texto{
+        font-size: 20px;
+    }
+    #ventanahistoria .historiaContentText h2{
+        font-size: 20px;
+    }
+  }
+
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    #ventanaestatutos .historiaContent{
+        margin-right: 5rem;
+    }
+    #ventanaestatutos .historiaContent img{
+        margin-bottom: 3rem;
+        width: 350px;
+    }
+    #ventanaestatutos .historiaContent .texto{
+        position: relative;
+        left: 0;
+        transform: none;
+        margin: 0;
+        
+    }
+  }
+  @media (min-width: 0px) and (max-width: 1024px) {
+    #ventanaestatutos{
+        flex-direction: column;
+    }
+    #ventanaestatutos .historiaContent{
+        margin-right: 0;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    #ventanaestatutos .historiaContent img{
+        margin-bottom: 3rem;
+        max-width: 650px;
+        width: 100%;
+    }
+    #ventanaestatutos .historiaContentText{
+        max-width: 600px;
+        width: 100%;
+    }
+    #ventanaestatutos .historiaContent{
+        max-width: 600px;
+        width: 100%;
+    }
+    #ventanaestatutos .historiaContent .texto{
+        position: relative;
+        left: 0;
+        transform: none;
+        margin: 0;
+        top: 0;
+        
+    }
+    #ventanaestatutos .botonHistoria .contentBBtn{
+        height:auto;
+    }
+    #ventanaestatutos .botonHistoria{
+        margin-right: 0;
+    }
+  }
+  @media (min-width: 0px) and (max-width: 481px) {
+    #ventanaestatutos{
+        justify-content: center;
+    }
+    #ventanaestatutos .historiaContent{
+        margin-bottom: 3rem;
+    }
+    #ventanaestatutos .botonHistoria{
+        margin-bottom: 3rem;
+    }
+    #ventanaestatutos .botonHistoria .contentBBtn i{
+        font-size: 3rem;
+    }
+    #ventanaestatutos .historiaContent .texto{
+        font-size: 20px;
+    }
+    #ventanaestatutos .historiaContentText h2{
+        font-size: 20px;
+    }
+  }
+
+  @media (min-width: 0px) and (max-width: 481px) {
+    #btn_estatutos span{
+        top: 0;
     }
   }

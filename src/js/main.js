@@ -1,18 +1,23 @@
 var $header = $('#main-header');
 var $footer = $('#main-footer');
+function openNav() {
+    document.getElementById("page-loader").style.width = "100%";
+  }
+  
+  /* Close when someone clicks on the "x" symbol inside the overlay */
+  function closeNav() {
+    document.getElementById("page-loader").style.width = "0%";
+  }
 $(document).ready(function () {
+    
+    $('#page-loader').fadeOut(5000);
     $.ajax({
         url: 'header-footer.html',
         cache: false,
     }).done(function (html) {
         buildHF(html);
     });
-    var scrolleed = $(window).scrollTop();
-        if (scrolleed >= 10) {
-            $("#navbar").addClass("scrolled");
-        } else {
-            $("#navbar").removeClass("scrolled");
-        }
+    
     var dataJson = "blog.json";
     var divContent = "";
     //var dataArr = $.parseJSON(dataJson);
@@ -74,7 +79,6 @@ $(document).ready(function () {
       }
       setTimeout(runCarousel, 1000);
       });
-    
     document.addEventListener('touchmove', function (event) {
         if (event.scale !== 1) { event.preventDefault(); }
     }, false);
@@ -85,22 +89,10 @@ $(document).ready(function () {
         }
     }, false);
     AOS.init();
-    //Mapa
-    //jalisco
-    //$("#path5174-4").hide();
     $("#g1868").hide();
-    //Quintana
-
-    //$("#path9431-3").hide();
     $("#g1929").hide();
-    //panama
-    //$("#path30323-5").hide();
     $("#g1878").hide();
-    //republica
-    //$("#path30321-9").hide();
-    $("#g1934").hide();
-    //Animacion SVG
-
+    $("#g1934").hide(); 
     $("#rect6149-4").each(function (i, item) {
         setInterval(function () {
             $(item).addClass('rectFill');
@@ -113,10 +105,16 @@ $(document).ready(function () {
 
     });
     $(window).scroll(function (event) {
+        ScrolledNav();
         var scroll = $(window).scrollTop();
-
+        
+        var pathname = window.location.pathname;
+        if(pathname == "/historia-AIH-Group.html"){
         if ($(".time1").isInViewport()) {
-            $(".lineTime .timeline").addClass("scrollAnimation");
+            
+
+                $(".lineTime .timeline").addClass("scrollAnimation");
+            }
         }
         $('.hideme').each(function (i) {
             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
@@ -147,8 +145,16 @@ function buildHF(html) {
     );
     
 }
+$.fn.isInViewport = function () {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
 
-$(function () {
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+function ScrolledNav(){
     var header = $("#navbar");
 
     $(window).scroll(function () {
@@ -159,8 +165,7 @@ $(function () {
             $("#navbar").removeClass("scrolled");
         }
     });
-
-});
+}
 $(function () {
     controller = new ScrollMagic.Controller({
         loglevel: 3
@@ -247,10 +252,6 @@ const $owlCarousel = $("#sliderprincipal").owlCarousel({
     items: 1,
     loop: true,
     nav: false,
-    /* navText: [
-    '<svg width="50" height="50" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>',
-    '<svg width="50" height="50" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>' 
-    ]*/
 });
 
 $owlCarousel.on("changed.owl.carousel", e => {
@@ -290,15 +291,8 @@ function addAnimation(e) {
     return false;
     e.stopPropagation();
 }
-$.fn.isInViewport = function () {
-    var elementTop = $(this).offset().top;
-    var elementBottom = elementTop + $(this).outerHeight();
 
-    var viewportTop = $(window).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
 
-    return elementBottom > viewportTop && elementTop < viewportBottom;
-};
 
 
 $('path').on({
@@ -496,6 +490,7 @@ $('#toggle-formulario').click(function () {
 
 $('#btn_historia').click(function () {
     $("#ventanahistoria").fadeIn(500);
+    $("body").css("overflow","hidden")
     $("#ventanahistoria").addClass("abierta")
 });
 
@@ -506,6 +501,7 @@ $('#btn_cerrarhistoria').click(function () {
 
 $('#btn_estatutos').click(function () {
         $("#ventanaestatutos").fadeIn(500);
+        $("body").css("overflow","hidden")
         $("#ventanaestatutos").addClass("abierta");
 });
 
@@ -637,8 +633,9 @@ $('.nextVentajas').click(function() {
 $('.section3-contenido-carousel').owlCarousel({
     loop: true,
     autoplay: true,
-    autoplayTimeout: 2500,
+    autoplayTimeout: 2000,
     autoplayHoverPause: true,
+    dots: true,
     nav: false,
     center: true,
     items: 3,
@@ -650,25 +647,29 @@ $('.section3-contenido-carousel').owlCarousel({
             items: 2,
             center: true,
             margin: 20,
-            nav: true,
+            nav: false,
         },
         510: {
             items: 2,
             center: true,
+            dots: true,
         },
         768: {
             items: 3,
             center: true,
             margin: 200,
+            dots: true,
         },
         1000: {
             items: 2,
             center: false,
             margin: 40,
+            dots: true,
         },
         1300: {
             items: 3,
             margin: 120,
+            dots: true,
         }
     }
 });
@@ -685,7 +686,6 @@ function postsCarousel() {
         owlPost.owlCarousel({
             items: 1,
             slideSpeed: 500,
-            animateOut: 'fadeOut',
             touchDrag: false,
             mouseDrag: false,
             autoplay: true,
