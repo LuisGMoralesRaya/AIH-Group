@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $(".clickedArrow").click(function () {
         var attr = $(this).attr("m-active");
         var arrowType = $(this).attr("m-arrow");
@@ -352,7 +353,7 @@ function postsCarousel() {
                     folder = "img/backgroundPages/habitat/proyectos/";
             }
             $.ajax({
-                url : folder,
+                url :  folder,
                 success: function (data) {
                     $(data).find("a").attr("href", function (i, val) {
                         if( val.match(/\.(jpg|jpeg|svg|png|gif)$/) ) { 
@@ -427,3 +428,9 @@ var carousel_Settings = {
 postsCarousel();
 $(window).resize(postsCarousel);	
 
+$('#amaraa').click(function() {
+    window.open("https://www.aramaraloscabos.com", '_blank');
+ });
+ $('#sabinaa').click(function() {
+    window.open("https://www.sabinamexicanna.com", '_blank');
+ });

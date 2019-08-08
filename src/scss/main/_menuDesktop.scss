@@ -3,7 +3,9 @@ $color_2: black;
 $font_family_1: monospace;
 $background_color_1: white;
 $background_color_2: #292c3866;
-
+#menuprincipal ul li ul li{
+	background-color: rgba(0, 0, 0, 0.8);
+}
 /* Menu principal */
 #navbar {
 	width: 100%!important;
@@ -189,53 +191,6 @@ $background_color_2: #292c3866;
   }
 
 
-/* Reponsive */ 
-/* 
-@media screen and (max-width: 1360px) {
-	#navbar{
-		width: 80%;
-	}
-	#menuprincipal{
-		margin-left: 30%;
-	}
-
-
-}
-
-@media (min-width: 1100px) and (max-width: 1360px) {
-	#menuprincipal ul li{
-		margin-top: 0px;
-	}
-	#menuprincipal ul li ul{
-		margin-left: -400px;
-	}
-    
-
-}
-
-@media (min-width:820px) and (max-width: 1099px) {
-	#navbar{
-		width: 100%;
-	}
-	#menuprincipal ul li ul{
-		margin-left: -600px;
-	}
-
-}
-
-
-@media (min-width:820px) and (max-width: 971px) {
-	#menuprincipal ul li ul{
-		margin-left: -450px;
-	}
-	#menuprincipal ul li ul li{
-		width: 120px;
-	}
-
-	.dropdown li a{
-		font-size: 0.6em !important;
-	}
-} */
 
 .normal{
 	margin-left: 0px !important;
@@ -247,16 +202,7 @@ $background_color_2: #292c3866;
     transform: translate(-50%, -50%);
 	}
   }
-  @media (min-width: 768px) and (max-width: 1020px) {
-	#navbar{
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
-	#menuprincipal li{
-		padding: 2.3rem 10px;
-	}
-	
-  }
+  
   .scrolled{
 	  .normalElements{
 		  .linkNormal{
@@ -273,4 +219,78 @@ $background_color_2: #292c3866;
 		  background-color: red;
 		  cursor: pointer;
 	  }
+  }
+.menuMobile{
+	display: none!important;
+}
+.emailMobile{
+	display: none!important;
+}
+  @media (min-width: 0px) and (max-width: 1020px) {
+	.scrolled{
+		#menuprincipal[m-active=true]{
+			top: 21.4rem!important;
+		}
+	}
+	#navbar{
+		padding-left: 2rem;
+		padding-right: 2rem;
+		background-color: rgba(0, 0, 0, 0.8);
+		#logo{
+			width: 130px;
+			position: relative;
+		}
+		#menuprincipal{
+			display: none;
+			opacity:0;
+  			
+			&[m-active=true]{
+				display: flex;
+				flex-direction: column;
+				position: absolute;
+				-webkit-transition: opacity 0.5s ease-in;
+				-moz-transition: opacity 0.5s ease-in;
+				  -o-transition: opacity 0.5s ease-in;
+										   opacity: 1;
+				top: 23rem;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 100%;
+				.normalElements{
+					display: flex;
+					flex-direction: column;
+				}
+				li{
+					width: 100%;
+				}
+				ul li:hover > ul{
+					display: none!important;
+				}
+			}
+		}
+		.socialMedia{
+			display: none;
+		}
+		.socialIcons img{
+			height: 30px;
+			width: auto;
+		}
+		.socialIcons i{
+			font-size: 2.5rem;
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+		.emailMobile{
+			cursor: pointer;
+			display: flex!important;
+		}
+		.menuMobile{
+			cursor: pointer;
+			transition:opacity 1s linear;
+			display: flex!important;
+		}
+	}
+	
+	
   }

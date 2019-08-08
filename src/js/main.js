@@ -3,14 +3,12 @@ var $footer = $('#main-footer');
 function openNav() {
     document.getElementById("page-loader").style.width = "100%";
   }
-  
-  /* Close when someone clicks on the "x" symbol inside the overlay */
   function closeNav() {
     document.getElementById("page-loader").style.width = "0%";
   }
 $(document).ready(function () {
     
-    $('#page-loader').fadeOut(5000);
+    $('#page-loader').fadeOut();
     $.ajax({
         url: 'header-footer.html',
         cache: false,
@@ -127,6 +125,19 @@ $(document).ready(function () {
     $('.customNextBtn').click(function () {
         $owlCarousel.trigger('next.owl.carousel', [100]);
     })
+});
+$(document).on("click","#clickedMenu", function (event) {
+    var menuMobile = $("#menuprincipal");
+    var iconMenu = $("#clickedMenu");
+    
+    iconMenu.html("close");
+    if( menuMobile.attr("m-active") == "true"){
+        menuMobile.attr("m-active","false");
+        iconMenu.html("menu");
+    }else{
+        iconMenu.html("close");
+        menuMobile.attr("m-active","true");
+    }
 });
 function buildHF(html) {
     $header.html(
@@ -455,7 +466,6 @@ $(window).on('scroll', function () {
 
 // ---------------- Presionar el boton de [MENÚ]
 $('#toggle').click(function () {
-    console.log("hey")
     if ($('#toggle-formulario').hasClass("active")) {
         $('#toggle-formulario').toggleClass('active');
         $('#overlay-formulario').toggleClass('open');
@@ -480,8 +490,6 @@ $('#toggle-formulario').click(function () {
         $('.main').toggleClass('main_efecto');
         $('body').toggleClass('body_bloqueado');
     }
-
-
     $(this).toggleClass('active');
     $('#overlay-formulario').toggleClass('open');
     $('.main').toggleClass('main_efecto');
@@ -489,24 +497,24 @@ $('#toggle-formulario').click(function () {
 });
 
 $('#btn_historia').click(function () {
-    $("#ventanahistoria").fadeIn(500);
+    $("#ventanahistoria").fadeIn(100);
     $("body").css("overflow","hidden")
     $("#ventanahistoria").addClass("abierta")
 });
 
 $('#btn_cerrarhistoria').click(function () {
         $('#ventanahistoria').removeClass('abierta');
-        $("#ventanahistoria").fadeOut(500);
+        $("#ventanahistoria").fadeOut(10);
 });
 
 $('#btn_estatutos').click(function () {
-        $("#ventanaestatutos").fadeIn(500);
+        $("#ventanaestatutos").fadeIn(100);
         $("body").css("overflow","hidden")
         $("#ventanaestatutos").addClass("abierta");
 });
 
 $('#btn_cerrarestatutos').click( function () {
-    $("#ventanaestatutos").fadeOut(500);
+    $("#ventanaestatutos").fadeOut(10);
     $("#ventanaestatutos").removeClass("abierta");
 });
 
