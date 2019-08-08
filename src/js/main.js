@@ -8,7 +8,7 @@ function openNav() {
   }
 $(document).ready(function () {
     
-    $('#page-loader').fadeOut();
+    $('#page-loader').fadeOut(10);
     $.ajax({
         url: 'header-footer.html',
         cache: false,
@@ -19,11 +19,14 @@ $(document).ready(function () {
     var dataJson = "blog.json";
     var divContent = "";
     //var dataArr = $.parseJSON(dataJson);
+
       $.getJSON(dataJson, function (data) {
         $.each(data.rss.channel, function (k, v) {
           var i = 0;
           for (i; i < v.length; i++){
             if(v[i].title != undefined && v[i].link != undefined){
+                
+              console.log(v[i].content.thumbnail._url)
                 divContent += '<a href="'+ v[i].link+'" target="_blank" class="item">';
                 divContent += '<div class="carouselNew">';
                 divContent += '<div class="carouselNew-img">';

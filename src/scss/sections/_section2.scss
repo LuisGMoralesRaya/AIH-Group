@@ -315,7 +315,7 @@
     right: 0;
     height: 100vh;
     background-image: url(../img/seccion2_izda.jpg);
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     opacity: 1;
     display: none;
@@ -429,6 +429,7 @@
     background-color: white;
 }
 #ventanaestatutos {
+    background-size: 100% 100%;
     padding: 20px;
     z-index: 30;
     position: fixed;
