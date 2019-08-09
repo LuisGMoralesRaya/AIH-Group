@@ -157,7 +157,7 @@ if ($(window).width() >= 613) {
                 $("#area").html('<span class="area">ÁREA</span> 328.90 M<sup>2</sup>');
                 $("#tipo").html('<span class="tipo">TIPO</span> DEPARTAMENTO');
                 $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2018');
-                $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Amores 1120, Col del Valle Centro, 03100 Ciudad de México, CDMX');
+                $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span>Col del Valle Centro, 03100 Ciudad de México, CDMX');
                 break;
             case "casagrande":
                 folder = "img/backgroundPages/habitat/proyectos/casagrande/";
@@ -166,7 +166,7 @@ if ($(window).width() >= 613) {
                 $("#area").html('<span class="area">ÁREA</span> 315 M<sup>2</sup>');
                 $("#tipo").html('<span class="tipo">TIPO</span> Vivienda Residencial');
                 $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2018');
-                $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Casas Grandes 127 Narvarte Oriente CP 03020 Benito Juárez, Ciudad de México');
+                $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span>Narvarte Oriente CP 03020 Benito Juárez, Ciudad de México');
                 break;
             case "sanrafael1073":
                 folder = "img/backgroundPages/habitat/proyectos/sanrafael1073/";
@@ -175,7 +175,7 @@ if ($(window).width() >= 613) {
                 $("#area").html('<span class="area">ÁREA</span> 363 M<sup>2</sup>');
                 $("#tipo").html('<span class="tipo">TIPO</span> Casa Habitación');
                 $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2019');
-                $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> San Rafael Atlixco 1073 Colonia El Rodeo CP 08510 Iztacalco, Ciudad de México');
+                $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Colonia El Rodeo CP 08510 Iztacalco, Ciudad de México');
                 break;
             case "sanrafael1078":
                 folder = "img/backgroundPages/habitat/proyectos/sanrafael1078/";
@@ -184,7 +184,7 @@ if ($(window).width() >= 613) {
                 $("#area").html('<span class="area">ÁREA</span> 62 M<sup>2</sup>');
                 $("#tipo").html('<span class="tipo">TIPO</span> Casa Habitación');
                 $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2015');
-                $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> San Rafael Atlixco 1078 Colonia El Rodeo CP 08510 Iztacalco, Ciudad de México');
+                $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Colonia El Rodeo CP 08510 Iztacalco, Ciudad de México');
                 break;
             case "amores":
                 folder = "img/backgroundPages/habitat/proyectos/amores/";
@@ -193,17 +193,17 @@ if ($(window).width() >= 613) {
                 $("#area").html('<span class="area">ÁREA</span> 460 M<sup>2</sup>');
                 $("#tipo").html('<span class="tipo">TIPO</span> Corporativo');
                 $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2016');
-                $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Amores 1120 Oficina 202 Col del Valle Centro, 03100 Ciudad de México, CDMX');
+                $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Col del Valle Centro, 03100 Ciudad de México, CDMX');
                 break;
-            // case "patricio":
-            //     folder = "img/backgroundPages/habitat/proyectos/patricio/";
-            //     $("#tituloProyecto").html('Call Center Patricio Sanz');
-            //     $("#textoProyecto").html('Oficinas open space para la empresa Traveline con 50 puestos de trabajo en el área central y 7 oficinas privadas.');
-            //     $("#area").html('<span class="area">ÁREA</span> 608 M<sup>2</sup>');
-            //     $("#tipo").html('<span class="tipo">TIPO</span> Call Center');
-            //     $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2019');
-            //     $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Patricio Sanz 1609 Colonia del Valle Sur CP 03100 Benito Juárez, Ciudad de México');
-            //     break;
+            case "patricio":
+                folder = "img/backgroundPages/habitat/proyectos/patricio/";
+                $("#tituloProyecto").html('Call Center Patricio Sanz');
+                $("#textoProyecto").html('Oficinas open space para la empresa Traveline con 50 puestos de trabajo en el área central y 7 oficinas privadas.');
+                $("#area").html('<span class="area">ÁREA</span> 608 M<sup>2</sup>');
+                $("#tipo").html('<span class="tipo">TIPO</span> Call Center');
+                $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2019');
+                $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Col del Valle Sur CP 03100 Benito Juárez, Ciudad de México');
+                break;
             case "polotitlan":
                 folder = "img/backgroundPages/habitat/proyectos/polotitlan/";
                 $("#tituloProyecto").html('Proyecto Invernaderos Polotitlán');
@@ -220,7 +220,7 @@ if ($(window).width() >= 613) {
                 $("#area").html('<span class="area">ÁREA</span> --');
                 $("#tipo").html('<span class="tipo">TIPO</span> Corporativo');
                 $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2018');
-                $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Punto Sao Paulo, Torre HSBC, Piso 4-E, Guadalajara, Jalisco.');
+                $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Guadalajara, Jalisco.');
                 break;
             default:
                 folder = "img/backgroundPages/habitat/proyectos/";
@@ -284,7 +284,7 @@ function postsCarousel() {
                     $("#area").html('<span class="area">ÁREA</span> 328.90 M<sup>2</sup>');
                     $("#tipo").html('<span class="tipo">TIPO</span> DEPARTAMENTO');
                     $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2018');
-                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Amores 1120, Col del Valle Centro, 03100 Ciudad de México, CDMX');
+                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span>Col del Valle Centro, 03100 Ciudad de México, CDMX');
                     break;
                 case "casagrande":
                     folder = "img/backgroundPages/habitat/proyectos/casagrande/";
@@ -293,7 +293,7 @@ function postsCarousel() {
                     $("#area").html('<span class="area">ÁREA</span> 315 M<sup>2</sup>');
                     $("#tipo").html('<span class="tipo">TIPO</span> Vivienda Residencial');
                     $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2018');
-                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Casas Grandes 127 Narvarte Oriente CP 03020 Benito Juárez, Ciudad de México');
+                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span>Narvarte Oriente CP 03020 Benito Juárez, Ciudad de México');
                     break;
                 case "sanrafael1073":
                     folder = "img/backgroundPages/habitat/proyectos/sanrafael1073/";
@@ -302,7 +302,7 @@ function postsCarousel() {
                     $("#area").html('<span class="area">ÁREA</span> 363 M<sup>2</sup>');
                     $("#tipo").html('<span class="tipo">TIPO</span> Casa Habitación');
                     $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2019');
-                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> San Rafael Atlixco 1073 Colonia El Rodeo CP 08510 Iztacalco, Ciudad de México');
+                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Colonia El Rodeo CP 08510 Iztacalco, Ciudad de México');
                     break;
                 case "sanrafael1078":
                     folder = "img/backgroundPages/habitat/proyectos/sanrafael1078/";
@@ -311,7 +311,7 @@ function postsCarousel() {
                     $("#area").html('<span class="area">ÁREA</span> 62 M<sup>2</sup>');
                     $("#tipo").html('<span class="tipo">TIPO</span> Casa Habitación');
                     $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2015');
-                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> San Rafael Atlixco 1078 Colonia El Rodeo CP 08510 Iztacalco, Ciudad de México');
+                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Colonia El Rodeo CP 08510 Iztacalco, Ciudad de México');
                     break;
                 case "amores":
                     folder = "img/backgroundPages/habitat/proyectos/amores/";
@@ -320,7 +320,7 @@ function postsCarousel() {
                     $("#area").html('<span class="area">ÁREA</span> 460 M<sup>2</sup>');
                     $("#tipo").html('<span class="tipo">TIPO</span> Corporativo');
                     $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2016');
-                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Amores 1120 Oficina 202 Col del Valle Centro, 03100 Ciudad de México, CDMX');
+                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Col del Valle Centro, 03100 Ciudad de México, CDMX');
                     break;
                 case "patricio":
                     folder = "img/backgroundPages/habitat/proyectos/patricio/";
@@ -329,7 +329,7 @@ function postsCarousel() {
                     $("#area").html('<span class="area">ÁREA</span> 608 M<sup>2</sup>');
                     $("#tipo").html('<span class="tipo">TIPO</span> Call Center');
                     $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2019');
-                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Patricio Sanz 1609 Colonia del Valle Sur CP 03100 Benito Juárez, Ciudad de México');
+                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Col del Valle Sur CP 03100 Benito Juárez, Ciudad de México');
                     break;
                 case "polotitlan":
                     folder = "img/backgroundPages/habitat/proyectos/polotitlan/";
@@ -347,7 +347,7 @@ function postsCarousel() {
                     $("#area").html('<span class="area">ÁREA</span> --');
                     $("#tipo").html('<span class="tipo">TIPO</span> Corporativo');
                     $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2018');
-                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Punto Sao Paulo, Torre HSBC, Piso 4-E, Guadalajara, Jalisco.');
+                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Guadalajara, Jalisco.');
                     break;
                 default:
                     folder = "img/backgroundPages/habitat/proyectos/";
