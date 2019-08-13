@@ -1,5 +1,10 @@
 $(document).ready(function () {
-
+    $(".textoFlip").mouseenter(function(){    
+        $(this).attr('src','img/error/textoRosa.png');      
+    });     
+    $(".textoFlip").mouseleave(function(){       
+        $(this).attr('src','img/error/textoAzul.png');      
+    }); 
     $(".clickedArrow").click(function () {
         var attr = $(this).attr("m-active");
         var arrowType = $(this).attr("m-arrow");
