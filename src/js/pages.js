@@ -162,7 +162,7 @@ if ($(window).width() >= 613) {
                 $("#area").html('<span class="area">ÁREA</span> 328.90 M<sup>2</sup>');
                 $("#tipo").html('<span class="tipo">TIPO</span> DEPARTAMENTO');
                 $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2018');
-                $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span>Col del Valle Centro, 03100 Ciudad de México, CDMX');
+                $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Pichilingue 39880,  Acapulco, Guerrero.');
                 break;
             case "casagrande":
                 folder = "img/backgroundPages/habitat/proyectos/casagrande/";
@@ -289,7 +289,7 @@ function postsCarousel() {
                     $("#area").html('<span class="area">ÁREA</span> 328.90 M<sup>2</sup>');
                     $("#tipo").html('<span class="tipo">TIPO</span> DEPARTAMENTO');
                     $("#anio").html('<span class="anio">AÑO PROYECTO</span> 2018');
-                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span>Col del Valle Centro, 03100 Ciudad de México, CDMX');
+                    $("#ubicacion").html('<span class="ubicacion">UBICACIÓN</span> Pichilingue 39880,  Acapulco, Guerrero.');
                     break;
                 case "casagrande":
                     folder = "img/backgroundPages/habitat/proyectos/casagrande/";

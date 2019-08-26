@@ -12,8 +12,25 @@
 @import 'sections/seccion7';
 @import 'sections/sectionExtra';
 @import 'sections/newseccion3';
-//Correciones Sitio Web
 @import 'pages/default';
+.holding .textos p{
+  text-align: justify;
+}
+.personel .textos p{
+  text-align: justify;
+}
+.advisors .textos p{
+  text-align: justify;
+}
+.capital .textos p{
+  text-align: justify;
+}
+.habitat .textos p{
+  text-align: justify;
+}
+.mmedia .textos p{
+  text-align: justify;
+}
 html, body {
   -webkit-text-size-adjust: none;
   -webkit-overflow-scrolling: touch;
@@ -77,4 +94,22 @@ html, body {
   padding: 0;
   height: 40px;
   width: 100px;
+}
+
+@media (min-width: 1300px) {
+  .advisors{
+    padding-top: 9rem;
+  }
+  .holding{
+    padding-top: 9rem;
+  }
+  .personel{
+    padding-top: 9rem;
+  }
+  .habitat{
+    padding-top: 9rem;
+  }
+  .mmedia{
+    padding-top: 9rem;
+  }
 }

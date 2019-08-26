@@ -6,6 +6,10 @@ function openNav() {
   function closeNav() {
     document.getElementById("page-loader").style.width = "0%";
   }
+  $(window).on('beforeunload', function(){
+    $("html, body").scrollTop(0);
+    $(window).scrollTop(0);
+});
 $(document).ready(function () {
     
     $('#page-loader').fadeOut(10);

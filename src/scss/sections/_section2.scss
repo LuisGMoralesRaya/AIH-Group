@@ -553,7 +553,11 @@
     display: none;
 }
 
-
+@media (min-width: 0px) and (max-width: 750px) {
+    #btn_estatutos span {
+        top: 0%;
+    }
+}
 
 @media screen and (max-width: 1420px) {
 
@@ -574,9 +578,7 @@
         left: initial;
     }
 
-    #btn_estatutos span {
-        top: 0%;
-    }
+    
 
     #btn_historia::after {
         top: 30%;
