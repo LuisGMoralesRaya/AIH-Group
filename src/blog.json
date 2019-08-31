@@ -12,7 +12,7 @@
 				"https://aihgroup.com.mx/blog"
 			],
 			"description": "Soluciones de soporte empresarial outsourcing",
-			"lastBuildDate": "Tue, 13 Aug 2019 16:52:16 +0000",
+			"lastBuildDate": "Fri, 23 Aug 2019 21:19:14 +0000",
 			"language": "es-MX",
 			"updatePeriod": {
 				"__prefix": "sy",
@@ -32,6 +32,57 @@
 			},
 			"item": [
 				{
+					"title": "Employer branding: ¿Qué es y cómo puedo aprovecharlo?",
+					"link": "https://aihgroup.com.mx/blog/2019/08/23/que-es-el-employer-branding/",
+					"comments": [
+						"https://aihgroup.com.mx/blog/2019/08/23/que-es-el-employer-branding/#respond",
+						{
+							"__prefix": "slash",
+							"__text": "0"
+						}
+					],
+					"pubDate": "Fri, 23 Aug 2019 21:10:19 +0000",
+					"creator": {
+						"__prefix": "dc",
+						"__cdata": "aihUserRoot"
+					},
+					"category": [
+						"AIH Group",
+						"Posts",
+						"Recursos Humanos",
+						"cultura organizacional",
+						"Employer branding"
+					],
+					"guid": {
+						"_isPermaLink": "false",
+						"__text": "http://aihgroup.com.mx/blog/?p=376"
+					},
+					"description": "<p>El employer branding en la actualidad es un término que comienza a sonar cada vez con más fuerza en las compañías relacionadas con procesos de reclutamiento y recursos humanos. Hoy más que nunca las empresas, están más atentas de la ética y los valores que la organización comunica a través de su marca, buscando promoverlos [&#8230;]</p>\n<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/08/23/que-es-el-employer-branding/\">Employer branding: ¿Qué es y cómo puedo aprovecharlo?</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>\n",
+					"commentRss": {
+						"__prefix": "wfw",
+						"__text": "https://aihgroup.com.mx/blog/2019/08/23/que-es-el-employer-branding/feed/"
+					},
+					"content": {
+						"title": {
+							"_type": "plain",
+							"__prefix": "media",
+							"__cdata": "employer-branding-aih-group"
+						},
+						"thumbnail": {
+							"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/08/employer-branding-aih-group-150x150.jpg",
+							"_width": "150",
+							"_height": "150",
+							"__prefix": "media"
+						},
+						"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/08/employer-branding-aih-group.jpg",
+						"_type": "image/jpeg",
+						"_medium": "image",
+						"_width": "1280",
+						"_height": "847",
+						"__prefix": "media"
+					}
+				},
+				{
 					"title": "AIH Group: Dos generaciones impactando positivamente a través del outsourcing hotelero.",
 					"link": "https://aihgroup.com.mx/blog/2019/08/13/aih-group-directores/",
 					"comments": [
@@ -48,13 +99,16 @@
 					},
 					"category": [
 						"AIH Group",
-						"Noticias"
+						"Noticias",
+						"entrevista",
+						"lideres mexicanos",
+						"outsourcing"
 					],
 					"guid": {
 						"_isPermaLink": "false",
 						"__text": "http://aihgroup.com.mx/blog/?p=362"
 					},
-					"description": "<p>La protección social de los trabajadores ha sido un gran desafío para México y América Latina a lo largo del tiempo, y este problema lo ha vivido, entendido, y experimentado Ramiro Guerrero Miranda, fundador de AIH Group, una empresa con visión humana, una compañía pionera y  hoy un grupo familiar y empresarial sólido. Cerca de [&#8230;]</p>\n<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/08/13/aih-group-directores/\">AIH Group: Dos generaciones impactando positivamente a través del outsourcing hotelero.</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>\n",
+					"description": "<p>Cerca de su vigésimo aniversario en el mercado AIH Group y su equipo profesional ofrecen un portafolio de servicios, integral, transparente y efectivo en el manejo de soluciones de outsourcing empresarial.</p>\n<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/08/13/aih-group-directores/\">AIH Group: Dos generaciones impactando positivamente a través del outsourcing hotelero.</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>\n",
 					"commentRss": {
 						"__prefix": "wfw",
 						"__text": "https://aihgroup.com.mx/blog/2019/08/13/aih-group-directores/feed/"
@@ -444,51 +498,6 @@
 							"__prefix": "media"
 						},
 						"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/8.jpg",
-						"_type": "image/jpeg",
-						"_medium": "image",
-						"_width": "1800",
-						"_height": "1200",
-						"__prefix": "media"
-					}
-				},
-				{
-					"title": "Ética empresarial: cómo generar beneficios tangibles desde los valores",
-					"link": "https://aihgroup.com.mx/blog/2019/07/29/etica-empresarial-como-generar-beneficios-tangibles-desde-los-valores/",
-					"comments": [
-						"https://aihgroup.com.mx/blog/2019/07/29/etica-empresarial-como-generar-beneficios-tangibles-desde-los-valores/#respond",
-						{
-							"__prefix": "slash",
-							"__text": "0"
-						}
-					],
-					"pubDate": "Mon, 29 Jul 2019 19:09:04 +0000",
-					"creator": {
-						"__prefix": "dc",
-						"__cdata": "AIH Group"
-					},
-					"category": "Posts",
-					"guid": {
-						"_isPermaLink": "false",
-						"__text": "http://localhost:8888/Grupoaihfinal/?p=190"
-					},
-					"description": "<p>Dirigir los esfuerzos de una corporación a sólo un objetivo económico puede estar dejando de lado lo que ya no es una moda sino una necesidad: la ética empresarial. Sara Barajas Cortés, investigadora especializada en finanzas corporativas, define este concepto como el conjunto&#160; de principios y normas que rigen las actividades que desempeñan tanto empleados [&#8230;]</p>\n<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/07/29/etica-empresarial-como-generar-beneficios-tangibles-desde-los-valores/\">Ética empresarial: cómo generar beneficios tangibles desde los valores</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>\n",
-					"commentRss": {
-						"__prefix": "wfw",
-						"__text": "https://aihgroup.com.mx/blog/2019/07/29/etica-empresarial-como-generar-beneficios-tangibles-desde-los-valores/feed/"
-					},
-					"content": {
-						"title": {
-							"_type": "plain",
-							"__prefix": "media",
-							"__cdata": "ética empresarial"
-						},
-						"thumbnail": {
-							"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/9-150x150.jpg",
-							"_width": "150",
-							"_height": "150",
-							"__prefix": "media"
-						},
-						"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/9.jpg",
 						"_type": "image/jpeg",
 						"_medium": "image",
 						"_width": "1800",

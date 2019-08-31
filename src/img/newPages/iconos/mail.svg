@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="25mm"
+   height="25mm"
+   viewBox="0 0 25 25"
+   version="1.1"
+   id="svg10048"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   sodipodi:docname="mail.svg">
+  <defs
+     id="defs10042">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath15409">
+      <rect
+         ry="0"
+         y="168.45323"
+         x="-507.81848"
+         height="105.42503"
+         width="91.545845"
+         id="rect15411"
+         style="opacity:0.68699999;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.96499997;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-302.48892"
+     inkscape:cy="502.45207"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="2048"
+     inkscape:window-height="1447"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata10045">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-272)">
+    <path
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 4.1925,291.31202 c -0.41864,-0.11057 -0.99895,-0.71283 -1.10948,-1.1516 -0.12109,-0.48114 -0.12109,-10.83042 0,-11.3116 0.11848,-0.47064 0.68651,-1.03834 1.15735,-1.15686 0.48509,-0.12217 16.03416,-0.12217 16.51925,0 0.47084,0.11849 1.03879,0.68622 1.15736,1.15686 0.12109,0.48118 0.12109,10.83046 0,11.3116 -0.11862,0.47066 -0.68652,1.03838 -1.15736,1.15688 -0.45045,0.11344 -16.13643,0.10838 -16.56712,-0.007 z m 16.24695,-0.82718 c 0.0576,-0.0576 -5.15192,-5.29401 -5.26674,-5.29401 -0.0407,0 -0.41476,0.34476 -0.83136,0.76615 -0.85612,0.86601 -1.26139,1.11039 -1.84136,1.11039 -0.57995,0 -0.98524,-0.24438 -1.84136,-1.11039 -0.4166,-0.42139 -0.7907,-0.76615 -0.83137,-0.76615 -0.1148,0 -5.32431,5.23647 -5.26671,5.29401 0.0666,0.0668 15.81222,0.0668 15.8789,0 z M 6.59231,287.12335 c 1.40115,-1.40016 2.54757,-2.57823 2.54757,-2.61796 0,-0.1062 -5.07768,-5.16518 -5.18434,-5.16518 -0.0719,0 -0.0906,1.06944 -0.0906,5.16443 0,4.07186 0.019,5.16441 0.0898,5.16441 0.0494,0 1.23636,-1.14556 2.63752,-2.5457 z m 14.54285,-2.61871 c 0,-4.07186 -0.019,-5.16443 -0.09,-5.16443 -0.1062,0 -5.18507,5.05792 -5.18507,5.16366 0,0.1062 5.07766,5.16518 5.1843,5.16518 0.0719,0 0.0908,-1.06946 0.0908,-5.16441 z m -4.46761,-2.10788 c 2.09518,-2.09291 3.79302,-3.83186 3.77294,-3.8643 -0.0479,-0.0773 -15.83338,-0.0771 -15.88125,2.6e-4 -0.0202,0.0326 1.67823,1.7716 3.77429,3.86431 l 3.81099,3.80489 h 0.35679 0.3568 z"
+       id="path8509-7"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/Users/alonso/Documents/Ariel/AIH/AIH GROUP/Website/Recursos/DIVISIONES/ICONOS/mail.png"
+       inkscape:export-xdpi="156"
+       inkscape:export-ydpi="156" />
+  </g>
+</svg>

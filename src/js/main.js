@@ -11,7 +11,27 @@ function openNav() {
     $(window).scrollTop(0);
 });
 $(document).ready(function () {
-    
+    $.ajax({
+        url: 'https://aihgroup.com.mx/blog/feed/',
+        type: 'GET',
+        dataType: "xml"
+    }).done(function(xml) {
+        console.log(
+        $.each($("item", xml), function(i, e) {
+
+            var blogNumber = i + 1 + ". ";
+
+            var itemURL = ($(e).find("link"));
+            var blogURL = "<a href='" + itemURL.text() + "'>" + itemURL.text() +"</a>";
+
+            var itemTitle = ($(e).find("title"));
+            var blogTitle = "<h4>" + blogNumber + itemTitle.text() + "</h4>";
+
+            $("#feed").append(blogTitle);
+            $("#feed").append(blogURL);
+
+        }))
+    });
     $('#page-loader').fadeOut(10);
     $.ajax({
         url: 'header-footer.html',

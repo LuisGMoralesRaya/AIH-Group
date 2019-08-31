@@ -12,7 +12,7 @@
 	<atom:link href="https://aihgroup.com.mx/blog/feed/" rel="self" type="application/rss+xml" />
 	<link>https://aihgroup.com.mx/blog</link>
 	<description>Soluciones de soporte empresarial outsourcing</description>
-	<lastBuildDate>Thu, 01 Aug 2019 22:31:07 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 23 Aug 2019 21:19:14 +0000</lastBuildDate>
 	<language>es-MX</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,72 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Employer branding: ¿Qué es y cómo puedo aprovecharlo?</title>
+		<link>https://aihgroup.com.mx/blog/2019/08/23/que-es-el-employer-branding/</link>
+				<comments>https://aihgroup.com.mx/blog/2019/08/23/que-es-el-employer-branding/#respond</comments>
+				<pubDate>Fri, 23 Aug 2019 21:10:19 +0000</pubDate>
+		<dc:creator><![CDATA[aihUserRoot]]></dc:creator>
+				<category><![CDATA[AIH Group]]></category>
+		<category><![CDATA[Posts]]></category>
+		<category><![CDATA[Recursos Humanos]]></category>
+		<category><![CDATA[cultura organizacional]]></category>
+		<category><![CDATA[Employer branding]]></category>
+
+		<guid isPermaLink="false">http://aihgroup.com.mx/blog/?p=376</guid>
+				<description><![CDATA[<p>El employer branding en la actualidad es un término que comienza a sonar cada vez con más fuerza en las compañías relacionadas con procesos de reclutamiento y recursos humanos. Hoy más que nunca las empresas, están más atentas de la ética y los valores que la organización comunica a través de su marca, buscando promoverlos [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://aihgroup.com.mx/blog/2019/08/23/que-es-el-employer-branding/">Employer branding: ¿Qué es y cómo puedo aprovecharlo?</a> appeared first on <a rel="nofollow" href="https://aihgroup.com.mx/blog">Blog - AIH Group</a>.</p>
+]]></description>
+						<wfw:commentRss>https://aihgroup.com.mx/blog/2019/08/23/que-es-el-employer-branding/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+									<media:content
+				url="https://aihgroup.com.mx/blog/wp-content/uploads/2019/08/employer-branding-aih-group.jpg"
+				type="image/jpeg"
+				medium="image"
+				width="1280"
+				height="847">
+				<media:title type="plain">
+					<![CDATA[employer-branding-aih-group]]>
+				</media:title>
+				<media:thumbnail
+					url="https://aihgroup.com.mx/blog/wp-content/uploads/2019/08/employer-branding-aih-group-150x150.jpg"
+					width="150"
+					height="150" />
+											</media:content>
+				</item>
+		<item>
+		<title>AIH Group: Dos generaciones impactando positivamente a través del outsourcing hotelero.</title>
+		<link>https://aihgroup.com.mx/blog/2019/08/13/aih-group-directores/</link>
+				<comments>https://aihgroup.com.mx/blog/2019/08/13/aih-group-directores/#respond</comments>
+				<pubDate>Tue, 13 Aug 2019 16:12:50 +0000</pubDate>
+		<dc:creator><![CDATA[aihUserRoot]]></dc:creator>
+				<category><![CDATA[AIH Group]]></category>
+		<category><![CDATA[Noticias]]></category>
+		<category><![CDATA[entrevista]]></category>
+		<category><![CDATA[lideres mexicanos]]></category>
+		<category><![CDATA[outsourcing]]></category>
+
+		<guid isPermaLink="false">http://aihgroup.com.mx/blog/?p=362</guid>
+				<description><![CDATA[<p>Cerca de su vigésimo aniversario en el mercado AIH Group y su equipo profesional ofrecen un portafolio de servicios, integral, transparente y efectivo en el manejo de soluciones de outsourcing empresarial.</p>
+<p>The post <a rel="nofollow" href="https://aihgroup.com.mx/blog/2019/08/13/aih-group-directores/">AIH Group: Dos generaciones impactando positivamente a través del outsourcing hotelero.</a> appeared first on <a rel="nofollow" href="https://aihgroup.com.mx/blog">Blog - AIH Group</a>.</p>
+]]></description>
+						<wfw:commentRss>https://aihgroup.com.mx/blog/2019/08/13/aih-group-directores/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+									<media:content
+				url="https://aihgroup.com.mx/blog/wp-content/uploads/2019/08/Directores-AIH-Group.jpg"
+				type="image/jpeg"
+				medium="image"
+				width="5760"
+				height="3840">
+				<media:title type="plain">
+					<![CDATA[Directores-AIH-Group]]>
+				</media:title>
+				<media:thumbnail
+					url="https://aihgroup.com.mx/blog/wp-content/uploads/2019/08/Directores-AIH-Group-150x150.jpg"
+					width="150"
+					height="150" />
+											</media:content>
+				</item>
+		<item>
 		<title>10 consejos para combatir el ausentismo en tu empresa</title>
 		<link>https://aihgroup.com.mx/blog/2019/07/29/10-consejos-para-combatir-el-ausentismo-en-tu-empresa/</link>
 				<comments>https://aihgroup.com.mx/blog/2019/07/29/10-consejos-para-combatir-el-ausentismo-en-tu-empresa/#respond</comments>
@@ -55,9 +121,7 @@
 					url="https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/1-150x150.jpg"
 					width="150"
 					height="150" />
-									<media:description type="plain"><![CDATA[Mujer dormida frente a la computadora ]]></media:description>
-													<media:copyright>aihUserRoot</media:copyright>
-							</media:content>
+											</media:content>
 				</item>
 		<item>
 		<title>14 claves para ser más productivo en el trabajo</title>
@@ -86,9 +150,7 @@
 					url="https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/2-150x150.jpg"
 					width="150"
 					height="150" />
-									<media:description type="plain"><![CDATA[Una  reunión en sala de justas de equipo de trabajo]]></media:description>
-													<media:copyright>aihUserRoot</media:copyright>
-							</media:content>
+											</media:content>
 				</item>
 		<item>
 		<title>7 razones por las que debes recurrir al coaching laboral</title>
@@ -117,14 +179,12 @@
 					url="https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/3-150x150.jpg"
 					width="150"
 					height="150" />
-									<media:description type="plain"><![CDATA[Personas en inducción empresarial.]]></media:description>
-													<media:copyright>aihUserRoot</media:copyright>
-							</media:content>
+											</media:content>
 				</item>
 		<item>
 		<title>Los 10 aliados de tu autoestima profesional</title>
 		<link>https://aihgroup.com.mx/blog/2019/07/29/los-10-aliados-de-tu-autoestima-profesional/</link>
-				<comments>https://aihgroup.com.mx/blog/2019/07/29/los-10-aliados-de-tu-autoestima-profesional/#respond</comments>
+				<comments>https://aihgroup.com.mx/blog/2019/07/29/los-10-aliados-de-tu-autoestima-profesional/#comments</comments>
 				<pubDate>Mon, 29 Jul 2019 19:48:38 +0000</pubDate>
 		<dc:creator><![CDATA[AIH Group]]></dc:creator>
 				<category><![CDATA[Posts]]></category>
@@ -135,7 +195,7 @@
 <p>The post <a rel="nofollow" href="https://aihgroup.com.mx/blog/2019/07/29/los-10-aliados-de-tu-autoestima-profesional/">Los 10 aliados de tu autoestima profesional</a> appeared first on <a rel="nofollow" href="https://aihgroup.com.mx/blog">Blog - AIH Group</a>.</p>
 ]]></description>
 						<wfw:commentRss>https://aihgroup.com.mx/blog/2019/07/29/los-10-aliados-de-tu-autoestima-profesional/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
+		<slash:comments>1</slash:comments>
 									<media:content
 				url="https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/4.jpg"
 				type="image/jpeg"
@@ -149,9 +209,7 @@
 					url="https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/4-150x150.jpg"
 					width="150"
 					height="150" />
-									<media:description type="plain"><![CDATA[Ejecutivo en sala de juntas siendo homenajeado por sus compañeros]]></media:description>
-													<media:copyright>aihUserRoot</media:copyright>
-							</media:content>
+											</media:content>
 				</item>
 		<item>
 		<title>Dress code en la oficina: qué sí y qué no</title>
@@ -160,9 +218,10 @@
 				<pubDate>Mon, 29 Jul 2019 19:38:32 +0000</pubDate>
 		<dc:creator><![CDATA[AIH Group]]></dc:creator>
 				<category><![CDATA[Posts]]></category>
+		<category><![CDATA[Recursos Humanos]]></category>
 
 		<guid isPermaLink="false">http://localhost:8888/Grupoaihfinal/?p=198</guid>
-				<description><![CDATA[<p>Tu dress code o código de vestimenta en la oficina refleja en qué tipo de empresa trabajas, a lo que ésta se dedica, cuál es la percepción que se tiene de ella y qué viene a la mente cuando se le menciona. Tú eres la cara de la empresa donde trabajas, tu apariencia es su [&#8230;]</p>
+				<description><![CDATA[<p>El código de vestimenta de la oficina varía considerablemente de acuerdo con el tipo de actividad de la empresa, su filosofía, los productos o servicios que ofrece, la clase de clientes, el clima laboral y el puesto que ocupas.</p>
 <p>The post <a rel="nofollow" href="https://aihgroup.com.mx/blog/2019/07/29/dress-code-en-la-oficina-que-si-y-que-no/">Dress code en la oficina: qué sí y qué no</a> appeared first on <a rel="nofollow" href="https://aihgroup.com.mx/blog">Blog - AIH Group</a>.</p>
 ]]></description>
 						<wfw:commentRss>https://aihgroup.com.mx/blog/2019/07/29/dress-code-en-la-oficina-que-si-y-que-no/feed/</wfw:commentRss>
@@ -180,24 +239,23 @@
 					url="https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/5-150x150.jpg"
 					width="150"
 					height="150" />
-									<media:description type="plain"><![CDATA[Dos ejecutivos de negocios bien vestidos viendo la agenda]]></media:description>
-													<media:copyright>aihUserRoot</media:copyright>
-							</media:content>
+											</media:content>
 				</item>
 		<item>
 		<title>Conoce los beneficios de las pausas activas en la oficina</title>
 		<link>https://aihgroup.com.mx/blog/2019/07/29/conoce-los-beneficios-de-las-pausas-activas-en-la-oficina/</link>
-				<comments>https://aihgroup.com.mx/blog/2019/07/29/conoce-los-beneficios-de-las-pausas-activas-en-la-oficina/#respond</comments>
+				<comments>https://aihgroup.com.mx/blog/2019/07/29/conoce-los-beneficios-de-las-pausas-activas-en-la-oficina/#comments</comments>
 				<pubDate>Mon, 29 Jul 2019 19:26:00 +0000</pubDate>
 		<dc:creator><![CDATA[AIH Group]]></dc:creator>
-				<category><![CDATA[Posts]]></category>
+				<category><![CDATA[Recursos Humanos]]></category>
+		<category><![CDATA[Mejores prácticas en la oficina]]></category>
 
 		<guid isPermaLink="false">http://localhost:8888/Grupoaihfinal/?p=196</guid>
 				<description><![CDATA[<p>Pasar ocho horas o más en el trabajo, casi todo el tiempo sentados, realizando una labor repetitiva y en una misma postura, es el pan de cada día de la mayoría de nosotros. Y quién no ha experimentado alguno o varios de estos síntomas: contractura en el cuello y los músculos, dolor de espalda, lesiones [&#8230;]</p>
 <p>The post <a rel="nofollow" href="https://aihgroup.com.mx/blog/2019/07/29/conoce-los-beneficios-de-las-pausas-activas-en-la-oficina/">Conoce los beneficios de las pausas activas en la oficina</a> appeared first on <a rel="nofollow" href="https://aihgroup.com.mx/blog">Blog - AIH Group</a>.</p>
 ]]></description>
 						<wfw:commentRss>https://aihgroup.com.mx/blog/2019/07/29/conoce-los-beneficios-de-las-pausas-activas-en-la-oficina/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
+		<slash:comments>1</slash:comments>
 									<media:content
 				url="https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/6.jpg"
 				type="image/jpeg"
@@ -211,9 +269,7 @@
 					url="https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/6-150x150.jpg"
 					width="150"
 					height="150" />
-									<media:description type="plain"><![CDATA[Personas tomando un descanso en la oficina.]]></media:description>
-													<media:copyright>aihUserRoot</media:copyright>
-							</media:content>
+											</media:content>
 				</item>
 		<item>
 		<title>Descubre si eres un workaholic y cómo puedes rehabilitarte</title>
@@ -224,7 +280,7 @@
 				<category><![CDATA[Posts]]></category>
 
 		<guid isPermaLink="false">http://localhost:8888/Grupoaihfinal/?p=194</guid>
-				<description><![CDATA[<p>Si pensabas que la necesidad compulsiva, excesiva e incontrolable de trabajar era sólo un signo normal de compromiso con la empresa, debes saber que no es así. Se trata de una adicción que afecta a 35% de los mexicanos, cifra que se deriva de un estudio hecho por la Facultad de Psicología de la UNAM [&#8230;]</p>
+				<description><![CDATA[<p>Los workaholics llevan una pésima alimentación, pues comen rápido y sin atender a sus requerimientos nutrimentales.</p>
 <p>The post <a rel="nofollow" href="https://aihgroup.com.mx/blog/2019/07/29/descubre-si-eres-un-workaholic-y-como-puedes-rehabilitarte/">Descubre si eres un workaholic y cómo puedes rehabilitarte</a> appeared first on <a rel="nofollow" href="https://aihgroup.com.mx/blog">Blog - AIH Group</a>.</p>
 ]]></description>
 						<wfw:commentRss>https://aihgroup.com.mx/blog/2019/07/29/descubre-si-eres-un-workaholic-y-como-puedes-rehabilitarte/feed/</wfw:commentRss>
@@ -242,14 +298,12 @@
 					url="https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/7-150x150.jpg"
 					width="150"
 					height="150" />
-									<media:description type="plain"><![CDATA[Mujer en escritorio pensando ]]></media:description>
-													<media:copyright>aihUserRoot</media:copyright>
-							</media:content>
+											</media:content>
 				</item>
 		<item>
 		<title>¿Eres víctima de mobbing? 5 herramientas para enfrentarlo</title>
 		<link>https://aihgroup.com.mx/blog/2019/07/29/eres-victima-de-mobbing-5-herramientas-para-enfrentarlo/</link>
-				<comments>https://aihgroup.com.mx/blog/2019/07/29/eres-victima-de-mobbing-5-herramientas-para-enfrentarlo/#respond</comments>
+				<comments>https://aihgroup.com.mx/blog/2019/07/29/eres-victima-de-mobbing-5-herramientas-para-enfrentarlo/#comments</comments>
 				<pubDate>Mon, 29 Jul 2019 19:15:46 +0000</pubDate>
 		<dc:creator><![CDATA[AIH Group]]></dc:creator>
 				<category><![CDATA[Posts]]></category>
@@ -259,7 +313,7 @@
 <p>The post <a rel="nofollow" href="https://aihgroup.com.mx/blog/2019/07/29/eres-victima-de-mobbing-5-herramientas-para-enfrentarlo/">¿Eres víctima de mobbing? 5 herramientas para enfrentarlo</a> appeared first on <a rel="nofollow" href="https://aihgroup.com.mx/blog">Blog - AIH Group</a>.</p>
 ]]></description>
 						<wfw:commentRss>https://aihgroup.com.mx/blog/2019/07/29/eres-victima-de-mobbing-5-herramientas-para-enfrentarlo/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
+		<slash:comments>1</slash:comments>
 									<media:content
 				url="https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/8.jpg"
 				type="image/jpeg"
@@ -273,71 +327,7 @@
 					url="https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/8-150x150.jpg"
 					width="150"
 					height="150" />
-									<media:description type="plain"><![CDATA[Presión en eltrabajo, abuso laboral, mobbing]]></media:description>
-													<media:copyright>aihUserRoot</media:copyright>
-							</media:content>
-				</item>
-		<item>
-		<title>Ética empresarial: cómo generar beneficios tangibles desde los valores</title>
-		<link>https://aihgroup.com.mx/blog/2019/07/29/etica-empresarial-como-generar-beneficios-tangibles-desde-los-valores/</link>
-				<comments>https://aihgroup.com.mx/blog/2019/07/29/etica-empresarial-como-generar-beneficios-tangibles-desde-los-valores/#respond</comments>
-				<pubDate>Mon, 29 Jul 2019 19:09:04 +0000</pubDate>
-		<dc:creator><![CDATA[AIH Group]]></dc:creator>
-				<category><![CDATA[Posts]]></category>
-
-		<guid isPermaLink="false">http://localhost:8888/Grupoaihfinal/?p=190</guid>
-				<description><![CDATA[<p>Dirigir los esfuerzos de una corporación a sólo un objetivo económico puede estar dejando de lado lo que ya no es una moda sino una necesidad: la ética empresarial. Sara Barajas Cortés, investigadora especializada en finanzas corporativas, define este concepto como el conjunto&#160; de principios y normas que rigen las actividades que desempeñan tanto empleados [&#8230;]</p>
-<p>The post <a rel="nofollow" href="https://aihgroup.com.mx/blog/2019/07/29/etica-empresarial-como-generar-beneficios-tangibles-desde-los-valores/">Ética empresarial: cómo generar beneficios tangibles desde los valores</a> appeared first on <a rel="nofollow" href="https://aihgroup.com.mx/blog">Blog - AIH Group</a>.</p>
-]]></description>
-						<wfw:commentRss>https://aihgroup.com.mx/blog/2019/07/29/etica-empresarial-como-generar-beneficios-tangibles-desde-los-valores/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-									<media:content
-				url="https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/9.jpg"
-				type="image/jpeg"
-				medium="image"
-				width="1800"
-				height="1200">
-				<media:title type="plain">
-					<![CDATA[ética empresarial]]>
-				</media:title>
-				<media:thumbnail
-					url="https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/9-150x150.jpg"
-					width="150"
-					height="150" />
-									<media:description type="plain"><![CDATA[Grupo de jóvenes a la espera de una entrevista laboral]]></media:description>
-													<media:copyright>aihUserRoot</media:copyright>
-							</media:content>
-				</item>
-		<item>
-		<title>Salario emocional: estrategia para tener empleados contentos</title>
-		<link>https://aihgroup.com.mx/blog/2019/07/29/salario-emocional-estrategia-para-tener-empleados-contentos/</link>
-				<comments>https://aihgroup.com.mx/blog/2019/07/29/salario-emocional-estrategia-para-tener-empleados-contentos/#respond</comments>
-				<pubDate>Mon, 29 Jul 2019 19:07:57 +0000</pubDate>
-		<dc:creator><![CDATA[AIH Group]]></dc:creator>
-				<category><![CDATA[Posts]]></category>
-
-		<guid isPermaLink="false">http://localhost:8888/Grupoaihfinal/?p=188</guid>
-				<description><![CDATA[<p>¿Te has preguntado qué grado de satisfacción laboral hay en tu empresa? De acuerdo con una encuesta realizada por Gallup, en México sólo 12% de los trabajadores está completamente satisfecho con su trabajo, 60% se siente emocionalmente desconectado de su empleo, y 28% lo repudia. Según los expertos, para retener al talento humano y mantenerlo [&#8230;]</p>
-<p>The post <a rel="nofollow" href="https://aihgroup.com.mx/blog/2019/07/29/salario-emocional-estrategia-para-tener-empleados-contentos/">Salario emocional: estrategia para tener empleados contentos</a> appeared first on <a rel="nofollow" href="https://aihgroup.com.mx/blog">Blog - AIH Group</a>.</p>
-]]></description>
-						<wfw:commentRss>https://aihgroup.com.mx/blog/2019/07/29/salario-emocional-estrategia-para-tener-empleados-contentos/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-									<media:content
-				url="https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/10.jpg"
-				type="image/jpeg"
-				medium="image"
-				width="1800"
-				height="1200">
-				<media:title type="plain">
-					<![CDATA[Salario emocional]]>
-				</media:title>
-				<media:thumbnail
-					url="https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/10-150x150.jpg"
-					width="150"
-					height="150" />
-									<media:description type="plain"><![CDATA[Mesa de trabajo con personas discutiendo un proyecto]]></media:description>
-													<media:copyright>aihUserRoot</media:copyright>
-							</media:content>
+											</media:content>
 				</item>
 	</channel>
 </rss>
