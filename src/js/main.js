@@ -151,7 +151,21 @@ $(document).ready(function () {
     });
     $('.customNextBtn').click(function () {
         $owlCarousel.trigger('next.owl.carousel', [100]);
-    })
+    });
+    $('.contacto .mapa .direccion p').click(function () {
+        var thisID = $(this).attr("id");
+        if(thisID == "amores"){
+            $("#gmap_canvas").attr("src","https://maps.google.com/maps?q=AIH%20Group&t=&z=13&ie=UTF8&iwloc=&output=embed");
+        }else if(thisID == "guadalajara"){
+            $("#gmap_canvas").attr("src","https://maps.google.com/maps?q=Punto%20Sao%20Paulo%2C%20Torre%20HSBC%2C%20Piso%204-E%2C%20Guadalajara%2C%20Jalisco.&t=&z=13&ie=UTF8&iwloc=&output=embed");
+        }else if(thisID == "cancun"){
+            $("#gmap_canvas").attr("src","https://maps.google.com/maps?q=Xel-Ha%20Mza%2004%20&t=&z=13&ie=UTF8&iwloc=&output=embed");
+        }else if(thisID == "puntaCana"){
+            $("#gmap_canvas").attr("src","https://maps.google.com/maps?q=Aqua%20Business%20Center%3A%20Blvd.%201ro.%20de%20%09%09%09%09%09%09Noviembre%2C%20Punta%20Cana%2023000%2C%20Rep%C3%BAblica%20Dominicana&t=&z=13&ie=UTF8&iwloc=&output=embed");
+        }else if(thisID == "panama"){
+            $("#gmap_canvas").attr("src","https://maps.google.com/maps?q=Av.%20Manuel%20Espinosa%20Batista&t=&z=13&ie=UTF8&iwloc=&output=embed");
+        }
+    });
 });
 $(document).on("click","#clickedMenu", function (event) {
     var menuMobile = $("#menuprincipal");

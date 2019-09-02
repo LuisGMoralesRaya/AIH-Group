@@ -60,108 +60,16 @@
     </div>
     <header id="main-header"></header>
     <section class="containerNewPages">
-        <div class="containerNewPages-hero">
-            <img class="flotante" src="img/newPages/flotante.png">
-            <div class="containerNewPages-hero-text" >
-                <h1 m-page="personnel">Te ayudamos <span>a gestionar tu personal.</span></h1>
-                <p>Actualmente el 89% de las empresas están planeando mantener su nivel de subcontratación o incrementarlo.</p>
-            </div>
-            <div class="containerNewPages-hero-img" m-page="personnel">
-                <img class="containerNewPages-hero-img-back" src="img/newPages/personnel/hero.png">
-                <img class="containerNewPages-hero-img-logo" src="img/seccion3/blancos/personnel.png">
-            </div>
-        </div>
-        <div class="containerNewPages-cardsFirst">
-            
-                <img class="flotante" src="img/newPages/flotante.png">
-                <div class="containerNewPages-cardsFirst-cards">
-                    <div class="containerNewPages-cardsFirst-cards-card">
-                        <div class="itemCard">
-                            <img class="firstCard" src="img/newPages/personnel/1.jpg">
-                            <img class="secondCard" src="img/newPages/personnel/1-hover.jpg">
-                        </div>
-                        <div class="itemCard">
-                                <img class="firstCard" src="img/newPages/personnel/2.jpg">
-                                <img class="secondCard" src="img/newPages/personnel/2-hover.jpg">
-                        </div>
-                    </div>
-                    <div class="containerNewPages-cardsFirst-cards-card">
-                            <div class="itemCard">
-                                    <img class="firstCard" src="img/newPages/personnel/3.jpg">
-                                    <img class="secondCard" src="img/newPages/personnel/3-hover.jpg">
-                            </div>
-                            <div class="itemCard">
-                                    <img class="firstCard" src="img/newPages/personnel/4.jpg">
-                                    <img class="secondCard" src="img/newPages/personnel/4-hover.jpg">
-                            </div>
-                        </div>
-                </div>
-                <div class="containerNewPages-cardsFirst-accord">
-                    <ul>
-                        <li>
-                          <input type="checkbox" checked>
-                          <i></i>
-                          <h2 m-page="personnel">Nuestros Servicios <br>Administración de Personal</h2>
-                          <p>
-                            - Analizamos a profundidad el perfil para seleccionar al candidato ideal.<br><br>
-                            - Atracción de talento adecuado al perfil y a la cultura organizacional de su empresa.<br><br>
-                            - Ofrecemos una terna de candidatos validados.
-                          </p>
-                        </li>
-                        <li>
-                          <input type="checkbox" checked>
-                          <i></i>
-                          <h2 m-page="personnel">Reclutamiento Especializado</h2>
-                          <p>
-                            - Analizamos a profundidad el perfil para seleccionar al candidato ideal.<br><br>
-                            - Atracción de talento adecuado al perfil y a la cultura organizacional de su empresa.<br><br>
-                            - Ofrecemos una terna de candidatos validados.
-                            
-                          </p>
-                        </li>
-                      </ul>
-                </div>
-        </div>
-        <div class="containerNewPages-contact">
-            <div class="containerNewPages-contact-form">
-                <div class="containerNewPages-contact-form-Item">
-                    <p>Nuestros <b>expertos</b> pueden asesorarte</p>
-                </div>
-                <form role="form" id="contactForm" data-toggle="validator" class="containerNewPages-contact-form-Formulario">
-                        <div class="form-group ">
-                            <input m-page="personnel" type="text" class="form-control" id="name" placeholder="Nombre" required data-error="NEW ERROR MESSAGE">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group ">
-                            <input m-page="personnel" type="email" class="form-control" id="email" placeholder="Correo" required>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                    <div class="form-group">
-                        <textarea m-page="personnel" id="message" class="form-control" rows="5" placeholder="Mensaje" required></textarea>
-                        <div class="help-block with-errors"></div>
-                    </div>
-                    <button m-page="personnel" type="submit" id="form-submit" class="btn btn-success btn-lg pull-right ">Enviar</button>
-                    <div id="msgSubmit" class="h3 text-center hidden"></div>
-                    <div class="clearfix"></div>
-                </form>
-            </div>
-           
-        </div>
-        <div class="containerNewPages-divisiones">
-            <h2 m-page="personnel">A otros visitantes les interesó:</h2>
-            <div class="containerNewPages-divisiones-container">
-                    <div class="containerNewPages-divisiones-container-item">
-                        <img class="firstImg" src="img/newPages/divisiones/holding.png">
-                        <img class="secondImg" src="img/newPages/divisiones/holding.jpg">
-                    </div>
-                    <div class="containerNewPages-divisiones-container-item">
-                            <img class="firstImg" src="img/newPages/divisiones/advisors.png">
-                            <img class="secondImg" src="img/newPages/divisiones/advisors.jpg">
-                    </div>
-                    <div class="containerNewPages-divisiones-container-item">
-                            <img class="firstImg" src="img/newPages/divisiones/capital.png">
-                            <img class="secondImg" src="img/newPages/divisiones/capital.jpg">
-                    </div>
+        <div class="videoSection">
+            <div class="videoSection-blur"></div>
+            <video class="videoSection-video" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+                <source src="videos/walking.mp4" type="video/mp4">
+                <source src="movie.webm" type="video/webm">
+            </video>
+            <img class="videoSection-logo" src="img/newPages/logos/personnel.png">
+            <div class="videoSection-legend">
+                <h1>Te ayudamos a gestionar tu personal.</h1>
+                <h3>Actualmente el 89% de las empresas están planeando mantener su nivel de subcontratación o incrementarlo.</h3>
             </div>
         </div>
     </section>

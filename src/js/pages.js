@@ -45,6 +45,7 @@ $(document).ready(function () {
             }
         }
     });
+    checkUrlSite();
     validatedContacto();
     var checkWidth = $(window).width();
     if (checkWidth > 613){
@@ -71,7 +72,12 @@ $(document).ready(function () {
 
 });
 
-
+function checkUrlSite(){
+    var urlThis = window.location.pathname;
+    var linksSite = $("#menuprincipal");
+    if(urlThis == "/servicios-aih-personnel.html"){
+    }
+}
 function validatedContacto() {
     $("input").focusout(function () {
         var typeInput = $(this).attr("m-type");

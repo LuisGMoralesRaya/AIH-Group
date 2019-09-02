@@ -1,8 +1,12 @@
 @import "../plugins/mixin";
 .newTemplate {
     header {
-        height: 97px;
     }
+}
+.personelLinks{
+    background:linear-gradient(45deg, rgba(66,111,145,1) 0%, rgba(66,111,145,1) 18%, rgba(77,174,176,1) 83%, rgba(77,174,176,1) 100%)!important;
+  -webkit-background-clip: text!important;
+  -webkit-text-fill-color: transparent!important;
 }
 .containerNewPages {
     min-height: 100vh;
@@ -10,632 +14,64 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    &-hero {
-        min-height: 61vh;
-        display: flex;
-        flex-direction: row;
-
-        @keyframes float {
-            0% {
-                transform: translatey(0px);
-            }
-
-            50% {
-                transform: translatey(-20px);
-            }
-
-            100% {
-                transform: translatey(0px);
-            }
-        }
-
-        .flotante {
-            top: 5vw;
-            left: 10%;
-            transform: translate(-50%, -50%);
-            position: absolute;
-            width: 80px;
-
-            transform: translatey(0px);
-            animation: float 6s ease-in-out infinite;
-        }
-
-        &-text {
-            display: flex;
-            flex-direction: column;
-            align-content: center;
-            justify-content: center;
-            max-width: 1000px;
-            padding-left: 15vw;
-            width: 50%;
-
-            h1 {
-                display: flex;
-                flex-direction: column;
-                text-align: left;
-                @include fluid-type(320px, 1440px, 22px, 33px);
-                margin: 0;
-                margin-bottom: 2rem;
-
-                &[m-page=personnel] {
-                    background: linear-gradient(45deg, rgba(66, 111, 145, 1) 0%, rgba(66, 111, 145, 1) 18%, rgba(77, 174, 176, 1) 83%, rgba(77, 174, 176, 1) 100%);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-
-                span {
-                    font-weight: 100;
-                }
-            }
-
-            p {
-                padding: 1rem;
-                background-color: #f7f7f7;
-                font-weight: 100;
-                color: #4d4d4d;
-            }
-        }
-
-        &-img {
-            position: absolute;
-            max-width: 600px;
-            min-width: 200px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            align-content: center;
-            flex-direction: column;
-            justify-content: center;
-            top: 0%;
-            right: 0%;
-            transform: translate(-0%, -0%);
-
-            &-back {
-                width: 100%;
-                top: 0;
-            }
-
-            &-logo {
-                position: absolute;
-                top: 40%;
-                right: 20%;
-                transform: translate(-0%, -50%);
-                width: 250px;
-            }
-        }
-    }
-    &-cardsFirst {
-        display: flex;
-        align-content: center;
-        align-items: center;
-        flex-direction: row;
-        justify-content: space-around;
-        height: auto;
-        padding: 2rem;
+    .videoSection {
         position: relative;
-
-        @keyframes float {
-            0% {
-                transform: translatey(0px);
-            }
-
-            50% {
-                transform: translatey(-20px);
-            }
-
-            100% {
-                transform: translatey(0px);
-            }
-        }
-
-        .flotante {
-            top: 20%;
-            right: 5%;
-            transform: translate(-50%, -50%);
+        height:700px;
+        width:100%;
+        overflow: hidden;
+        &-blur{
+            width: 100%;
+            height: 100%;
+            background:linear-gradient(to right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.74) 100%);
             position: absolute;
-            width: 80px;
-            transform: translatey(0px);
-            animation: float 6s ease-in-out infinite;
+            top: 0;
+            z-index: 2;
+            opacity: 1;
         }
-
-        &-cards {
-            display: flex;
-            flex-direction: row;
-
-            &-card {
-                &:last-child {
-                    margin-top: 4rem;
-                }
-
-                .itemCard {
-                    width: 300px;
-                    height: 300px;
-                    margin: 1rem;
-                    transition: all .5s ease-in-out;
-                    box-shadow: 10px 10px 33px -9px rgba(0,0,0,0.41);
-                    img{
-                        height: 100%;
-                        width: 100%;
-                    }
-                    .firstCard{
-                        display: block;
-                    }
-                    .secondCard{
-                        display: none;
-                    }
-                    &:hover{
-                        transform: scale(1.05);
-                        .firstCard{
-                            display: none;
-                        }
-                        .secondCard{
-                            display: block;
-                        }
-                    }
-                }
-            }
-
-
+        &-video{
+            position: absolute;
+        top: 0;
+        left: 0;
+        height: auto;
+        width: auto;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
         }
-
-        &-accord {
-            $color_1: rgba(48, 69, 92, 0.8);
-            $color_2: #ff6873;
-            $font_family_1: "Titillium Web", sans-serif;
-            $background_color_1: #dce7eb;
-            $background_color_2: #fefffa;
-            $background_color_3: #ff6873;
-
-            @keyframes "flipdown" {
-                0% {
-                    opacity: 0;
-                    transform-origin: top center;
-                    transform: rotateX(-90deg);
-                }
-
-                5% {
-                    opacity: 1;
-                }
-
-                80% {
-                    transform: rotateX(8deg);
-                }
-
-                83% {
-                    transform: rotateX(6deg);
-                }
-
-                92% {
-                    transform: rotateX(-3deg);
-                }
-
-                100% {
-                    transform-origin: top center;
-                    transform: rotateX(0deg);
-                }
+        &-logo{
+            width: 25rem;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+        }
+        &-legend{
+            width: 70%;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            color: white;
+            transition: all 0.5s ease;
+            h1{
+                transition: all 0.5s ease;
+                text-align: left;
+                margin-left: 0;
+                font-weight: 600;
+                @include fluid-type(320px, 1440px, 22px, 28px);
+                border-bottom: 1px solid white;
+                padding-bottom: 2rem;
+                margin-bottom: 3rem;
             }
-
-            .transition {
-                transition: all 0.25s ease-in-out;
-            }
-
-            p {
-                transition: all 0.25s ease-in-out;
-                background-color: #f7f7f7;
+            h3{
+                transition: all 0.5s ease;
+                @include fluid-type(320px, 1440px, 18px, 22px);
                 font-weight: 100;
-                color: #4d4d4d;
-                padding: 1rem;
-                font-size: 16px;
-                position: relative;
-                overflow: hidden;
-                max-height: 800px;
-                opacity: 1;
-                transform: translate(0, 0);
-                margin-top: 14px;
-                z-index: 2;
-            }
-
-            ul {
-                max-width: 500px;
-
-                h2 {
-                    font-size: 25px;
-
-                    &[m-page=personnel] {
-                        background: linear-gradient(45deg, rgba(66, 111, 145, 1) 0%, rgba(66, 111, 145, 1) 18%, rgba(77, 174, 176, 1) 83%, rgba(77, 174, 176, 1) 100%);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                    }
-                }
-
-                li {
-                    i {
-                        &:before {
-                            transition: all 0.25s ease-in-out;
-                            content: "+";
-                            position: absolute;
-                            width: 2rem;
-                            height: 2rem;
-                            top: 50%;
-                            left: 30%;
-                            transform: translate(-50%, -50%);
-                            background: linear-gradient(45deg, rgba(66, 111, 145, 1) 0%, rgba(66, 111, 145, 1) 18%, rgba(77, 174, 176, 1) 83%, rgba(77, 174, 176, 1) 100%);
-                            display: flex;
-                            align-content: center;
-                            align-items: center;
-                            text-align: center;
-                            justify-content: center;
-                            color: white;
-                            font-size: 2rem;
-                        }
-
-                        position: absolute;
-                        transform: translate(-6px, 0);
-                        margin-top: 16px;
-                        right: 0;
-                    }
-
-                    animation: flipdown 0.5s ease both;
-                    position: relative;
-                    padding: 0;
-                    margin: 0;
-                    padding-bottom: 4px;
-                    padding-top: 18px;
-
-                    &:nth-of-type(1) {
-                        animation-delay: 0.5s;
-                    }
-
-                    &:nth-of-type(2) {
-                        animation-delay: 0.75s;
-                    }
-
-                    &:nth-of-type(3) {
-                        animation-delay: 1s;
-                    }
-
-                    &:last-of-type {
-                        padding-bottom: 0;
-                    }
-
-                    input[type=checkbox] {
-                        position: absolute;
-                        cursor: pointer;
-                        width: 100%;
-                        height: 100%;
-                        z-index: 1;
-                        opacity: 0;
-
-                        &:checked {
-                            &~p {
-                                margin-top: 0;
-                                max-height: 0;
-                                opacity: 0;
-                                transform: translate(0, 50%);
-                            }
-
-                            &~i {
-                                &:before {
-                                    content: "-";
-                                }
-                            }
-                        }
-                    }
-                }
-
-                list-style: none;
-                perspective: 900;
-                padding: 0;
-                margin: 0;
-            }
-
-            .flipIn {
-                animation: flipdown 0.5s ease both;
-            }
-
-            .no-select {
-                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-                -webkit-touch-callout: none;
-                -webkit-user-select: none;
-                -khtml-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
+                width: 70%;
             }
         }
-    }
-    &-contact {
-        background-color: white;
-        background-image: url('../img/newPages/puntos-gris.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 600px;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        &-form {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            align-content: center;
-            justify-content: center;
-            height: 300px;
-            box-shadow: 0px -1px 20px 8px rgba(0, 0, 0, 0.17);
-            &-Item {
-                width: 300px;
-                height: 100%;
-                background-image: url("../img/newPages/personnel/form.jpg");
-                background-size: cover;
-                p {
-                    color: white;
-                    width: 80%;
-                    padding: 20px;
-                    padding-top: 2rem;
-                    font-size: 22px;
-                }
-            }
-            &-Formulario {
-                height: 100%;
-                width: 600px;
-                background-color: white;
-                padding: 2rem;
-                position: relative;
-                label {
-                    font-weight: 400;
-
-                    &[m-page=personnel] {
-                        background: linear-gradient(45deg, rgba(66, 111, 145, 1) 0%, rgba(66, 111, 145, 1) 18%, rgba(77, 174, 176, 1) 83%, rgba(77, 174, 176, 1) 100%);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                    }
-                }
-                input {
-                    outline: 0;
-                    border-width: 0 0 2px;
-                    border-color: #dce7eb;
-                    width: 300px;
-
-                    &[m-page=personnel] {
-                        background: linear-gradient(45deg, rgba(66, 111, 145, 1) 0%, rgba(66, 111, 145, 1) 18%, rgba(77, 174, 176, 1) 83%, rgba(77, 174, 176, 1) 100%);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-
-                        &::placeholder {
-                            background: linear-gradient(45deg, rgba(66, 111, 145, 1) 0%, rgba(66, 111, 145, 1) 18%, rgba(77, 174, 176, 1) 83%, rgba(77, 174, 176, 1) 100%);
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                            opacity: 1;
-                        }
-
-                        &:-ms-input-placeholder {
-                            background: linear-gradient(45deg, rgba(66, 111, 145, 1) 0%, rgba(66, 111, 145, 1) 18%, rgba(77, 174, 176, 1) 83%, rgba(77, 174, 176, 1) 100%);
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                        }
-
-                        &::-ms-input-placeholder {
-                            background: linear-gradient(45deg, rgba(66, 111, 145, 1) 0%, rgba(66, 111, 145, 1) 18%, rgba(77, 174, 176, 1) 83%, rgba(77, 174, 176, 1) 100%);
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                        }
-                    }
-
-                }
-                textarea {
-                    outline: 0;
-                    border-width: 0 0 2px;
-                    border-color: #dce7eb;
-                    width: 300px;
-
-                    &[m-page=personnel] {
-                        background: linear-gradient(45deg, rgba(66, 111, 145, 1) 0%, rgba(66, 111, 145, 1) 18%, rgba(77, 174, 176, 1) 83%, rgba(77, 174, 176, 1) 100%);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-
-                        &::placeholder {
-                            background: linear-gradient(45deg, rgba(66, 111, 145, 1) 0%, rgba(66, 111, 145, 1) 18%, rgba(77, 174, 176, 1) 83%, rgba(77, 174, 176, 1) 100%);
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                            opacity: 1;
-                        }
-
-                        &:-ms-input-placeholder {
-                            background: linear-gradient(45deg, rgba(66, 111, 145, 1) 0%, rgba(66, 111, 145, 1) 18%, rgba(77, 174, 176, 1) 83%, rgba(77, 174, 176, 1) 100%);
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                        }
-
-                        &::-ms-input-placeholder {
-                            background: linear-gradient(45deg, rgba(66, 111, 145, 1) 0%, rgba(66, 111, 145, 1) 18%, rgba(77, 174, 176, 1) 83%, rgba(77, 174, 176, 1) 100%);
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                        }
-                    }
-
-                }
-                button {
-                    color: white;
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    padding: {
-                        left: 2rem;
-                        right: 2rem;
-                        top: 1rem;
-                        bottom: 1rem;
-                    }
-                    &[m-page=personnel] {
-                        background: linear-gradient(45deg, rgba(66, 111, 145, 1) 0%, rgba(66, 111, 145, 1) 18%, rgba(77, 174, 176, 1) 83%, rgba(77, 174, 176, 1) 100%);
-                        border: none;
-                        border-radius: 0;
-                    }
-                }
-                .form-group {
-                    margin: 0;
-                }
-            }
-        }
-    }
-    &-divisiones{
-        background-color: #f7f7f7;
-        background-image: url('../img/newPages/puntos-blancos.png');
-        background-size: 70%;
-        background-repeat: no-repeat;
-        min-height: 600px;
-        background-position: 174% 18%;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        align-items: center;
-        justify-content: center;
-        h2{
-            @include fluid-type(320px, 1440px, 18px, 33px);
-            margin: 0;
-            margin-bottom: 2rem;
-            &[m-page=personnel] {
-                background: linear-gradient(45deg, rgba(66, 111, 145, 1) 0%, rgba(66, 111, 145, 1) 18%, rgba(77, 174, 176, 1) 83%, rgba(77, 174, 176, 1) 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-        }
-        &-container{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-content: center;
-            align-content: center;
-            justify-content: center;
-            &-item{
-                width: 400px;
-                height: 200px;
-                margin-left: 10px;
-                margin-right: 10px;
-                transition: all .5s ease-in-out;
-                img{
-                    height: 100%;
-                    width: 100%;
-                    
-                }
-                .firstImg{
-                    display: block;
-                }
-                .secondImg{
-                    display: none;
-                }
-                &:hover{
-
-                    box-shadow: -19px -12px 22px -12px rgba(0,0,0,0.27);
-                    transform: scale(1.05);
-                    .firstImg{
-                        display: none;
-                    }
-                    .secondImg{
-                        display: block;
-                    }
-                }
-                &:first-child{
-                    margin-left: 0;
-                }
-                &:last-child{
-                    margin-right: 0;
-                }
-            }
-        }
-    }
-}
-//Hero Responsive
-@media (min-width: 740px) and (max-width: 1100px){
-    .containerNewPages-hero-text{
-        padding-left: 5vw;
-    }
-    .containerNewPages-hero-img{
-        align-content: flex-end;
-        justify-items: flex-end;
-        justify-content: flex-end;
-        align-items: flex-end;
-    }
-    .containerNewPages-hero-img-back{
-        width: 80%;
-    }
-}
-@media (min-width: 0px) and (max-width: 739px)  {
-    .containerNewPages-hero-text{
-        padding-left: 5vw;
-        width: 70%;
-    }
-    .containerNewPages-hero-text h1{
-        margin-top: 3rem;
-    }
-    .containerNewPages-hero-img{
-        align-content: flex-end;
-        justify-items: flex-end;
-        justify-content: flex-end;
-        align-items: flex-end;
-    }
-    .containerNewPages-hero-img-back{
-        width: 60%;
-    }
-    .containerNewPages-hero-img-logo{
-        right: 6%;
-        width: 40%;
-    }
-    .containerNewPages-hero .flotante{
-        left: auto;
-    right: 7%;
-    top: 31vh;
-    }
-}
-//Sectin 1 Responsive
-@media (min-width: 1110px) and (max-width: 1290px) {
-    .containerNewPages-cardsFirst-cards-card .itemCard{
-        width: 250px;
-        height: 250px;
-    }
-    .containerNewPages-cardsFirst-accord ul{
-        max-width: 400px;
-    }
-    .containerNewPages-cardsFirst-accord ul h2{
-        padding-right: 2rem;
-    }
-    
-}
-@media (min-width: 740px) and (max-width: 1109px) {
-    .containerNewPages-cardsFirst{
-        flex-direction:column;
-    }
-    .containerNewPages-cardsFirst-cards{
-        margin-bottom: 3rem;
-        z-index: 2;
-    }
-}
-@media (min-width: 550px) and (max-width: 739px) {
-    .containerNewPages-cardsFirst{
-        flex-direction:column;
-    }
-    .containerNewPages-cardsFirst-cards{
-        margin-bottom: 3rem;
-        z-index: 2;
-    }
-    .containerNewPages-cardsFirst-cards-card .itemCard{
-        width: 80%;
-        height: auto;
-    }
-}
-@media (min-width: 0px) and (max-width: 549px) {
-    .containerNewPages-cardsFirst{
-        flex-direction:column;
-    }
-    .containerNewPages-cardsFirst-cards{
-        margin-bottom: 3rem;
-        z-index: 2;
-    }
-    .containerNewPages-cardsFirst-cards-card .itemCard{
-        width: 80%;
-        height: auto;
-    }
-    .containerNewPages-cardsFirst .flotante{
-        top: -5%;
-        right: 39%;
     }
 }
