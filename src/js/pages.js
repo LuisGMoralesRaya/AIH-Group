@@ -67,11 +67,23 @@ $(document).ready(function () {
             $(this).attr("m-active", "true");
         });
     }
-    
-
+    $(document).on("click", ".textoTab", showTabs);
 
 });
-
+function showTabs() {
+    $('.textoTab').attr("m-active", "false");
+    $(this).attr("m-active", "true");
+    var numberTab = $(this).attr("m-position");
+    if(numberTab = numberTab){
+        var tabContent = $("#position"+numberTab);
+        $(".contentTab").attr("m-show",false);
+        tabContent.attr("m-show",true);
+        //Change Image Servicio
+        var imgServicio = $("#imgServicio");
+        imgServicio.attr("src","img/newPages/personnel/servicio"+numberTab+".jpg")
+        console.log(imgServicio.attr("src"))
+    }
+}
 function checkUrlSite(){
     var urlThis = window.location.pathname;
     var linksSite = $("#menuprincipal");

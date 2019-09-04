@@ -1,519 +1,392 @@
 {
-	"rss": {
-		"channel": {
-			"title": "Blog – AIH Group",
-			"link": [
-				{
-					"_href": "https://aihgroup.com.mx/blog/feed/",
-					"_rel": "self",
-					"_type": "application/rss+xml",
-					"__prefix": "atom"
-				},
-				"https://aihgroup.com.mx/blog"
-			],
-			"description": "Soluciones de soporte empresarial outsourcing",
-			"lastBuildDate": "Fri, 23 Aug 2019 21:19:14 +0000",
-			"language": "es-MX",
-			"updatePeriod": {
-				"__prefix": "sy",
-				"__text": "hourly"
-			},
-			"updateFrequency": {
-				"__prefix": "sy",
-				"__text": "1"
-			},
-			"generator": "https://wordpress.org/?v=5.2.2",
-			"image": {
-				"url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/08/favicon-96x96.png",
-				"title": "Blog – AIH Group",
-				"link": "https://aihgroup.com.mx/blog",
-				"width": "32",
-				"height": "32"
-			},
-			"item": [
-				{
-					"title": "Employer branding: ¿Qué es y cómo puedo aprovecharlo?",
-					"link": "https://aihgroup.com.mx/blog/2019/08/23/que-es-el-employer-branding/",
-					"comments": [
-						"https://aihgroup.com.mx/blog/2019/08/23/que-es-el-employer-branding/#respond",
-						{
-							"__prefix": "slash",
-							"__text": "0"
-						}
-					],
-					"pubDate": "Fri, 23 Aug 2019 21:10:19 +0000",
-					"creator": {
-						"__prefix": "dc",
-						"__cdata": "aihUserRoot"
-					},
-					"category": [
-						"AIH Group",
-						"Posts",
-						"Recursos Humanos",
-						"cultura organizacional",
-						"Employer branding"
-					],
-					"guid": {
-						"_isPermaLink": "false",
-						"__text": "http://aihgroup.com.mx/blog/?p=376"
-					},
-					"description": "<p>El employer branding en la actualidad es un término que comienza a sonar cada vez con más fuerza en las compañías relacionadas con procesos de reclutamiento y recursos humanos. Hoy más que nunca las empresas, están más atentas de la ética y los valores que la organización comunica a través de su marca, buscando promoverlos [&#8230;]</p>\n<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/08/23/que-es-el-employer-branding/\">Employer branding: ¿Qué es y cómo puedo aprovecharlo?</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>\n",
-					"commentRss": {
-						"__prefix": "wfw",
-						"__text": "https://aihgroup.com.mx/blog/2019/08/23/que-es-el-employer-branding/feed/"
-					},
-					"content": {
-						"title": {
-							"_type": "plain",
-							"__prefix": "media",
-							"__cdata": "employer-branding-aih-group"
-						},
-						"thumbnail": {
-							"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/08/employer-branding-aih-group-150x150.jpg",
-							"_width": "150",
-							"_height": "150",
-							"__prefix": "media"
-						},
-						"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/08/employer-branding-aih-group.jpg",
-						"_type": "image/jpeg",
-						"_medium": "image",
-						"_width": "1280",
-						"_height": "847",
-						"__prefix": "media"
-					}
-				},
-				{
-					"title": "AIH Group: Dos generaciones impactando positivamente a través del outsourcing hotelero.",
-					"link": "https://aihgroup.com.mx/blog/2019/08/13/aih-group-directores/",
-					"comments": [
-						"https://aihgroup.com.mx/blog/2019/08/13/aih-group-directores/#respond",
-						{
-							"__prefix": "slash",
-							"__text": "0"
-						}
-					],
-					"pubDate": "Tue, 13 Aug 2019 16:12:50 +0000",
-					"creator": {
-						"__prefix": "dc",
-						"__cdata": "aihUserRoot"
-					},
-					"category": [
-						"AIH Group",
-						"Noticias",
-						"entrevista",
-						"lideres mexicanos",
-						"outsourcing"
-					],
-					"guid": {
-						"_isPermaLink": "false",
-						"__text": "http://aihgroup.com.mx/blog/?p=362"
-					},
-					"description": "<p>Cerca de su vigésimo aniversario en el mercado AIH Group y su equipo profesional ofrecen un portafolio de servicios, integral, transparente y efectivo en el manejo de soluciones de outsourcing empresarial.</p>\n<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/08/13/aih-group-directores/\">AIH Group: Dos generaciones impactando positivamente a través del outsourcing hotelero.</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>\n",
-					"commentRss": {
-						"__prefix": "wfw",
-						"__text": "https://aihgroup.com.mx/blog/2019/08/13/aih-group-directores/feed/"
-					},
-					"content": {
-						"title": {
-							"_type": "plain",
-							"__prefix": "media",
-							"__cdata": "Directores-AIH-Group"
-						},
-						"thumbnail": {
-							"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/08/Directores-AIH-Group-150x150.jpg",
-							"_width": "150",
-							"_height": "150",
-							"__prefix": "media"
-						},
-						"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/08/Directores-AIH-Group.jpg",
-						"_type": "image/jpeg",
-						"_medium": "image",
-						"_width": "5760",
-						"_height": "3840",
-						"__prefix": "media"
-					}
-				},
-				{
-					"title": "10 consejos para combatir el ausentismo en tu empresa",
-					"link": "https://aihgroup.com.mx/blog/2019/07/29/10-consejos-para-combatir-el-ausentismo-en-tu-empresa/",
-					"comments": [
-						"https://aihgroup.com.mx/blog/2019/07/29/10-consejos-para-combatir-el-ausentismo-en-tu-empresa/#respond",
-						{
-							"__prefix": "slash",
-							"__text": "0"
-						}
-					],
-					"pubDate": "Mon, 29 Jul 2019 20:27:06 +0000",
-					"creator": {
-						"__prefix": "dc",
-						"__cdata": "AIH Group"
-					},
-					"category": [
-						"Posts",
-						"Recursos Humanos"
-					],
-					"guid": {
-						"_isPermaLink": "false",
-						"__text": "http://localhost:8888/Grupoaihfinal/?p=206"
-					},
-					"description": "<p>El ausentismo laboral es uno de los grandes retos que afrontan a diario las empresas. ¿Pero sabemos por qué los empleados faltan al trabajo?</p>\n<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/07/29/10-consejos-para-combatir-el-ausentismo-en-tu-empresa/\">10 consejos para combatir el ausentismo en tu empresa</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>\n",
-					"commentRss": {
-						"__prefix": "wfw",
-						"__text": "https://aihgroup.com.mx/blog/2019/07/29/10-consejos-para-combatir-el-ausentismo-en-tu-empresa/feed/"
-					},
-					"content": {
-						"title": {
-							"_type": "plain",
-							"__prefix": "media",
-							"__cdata": "Evitar las faltas de empleados al trabajo"
-						},
-						"thumbnail": {
-							"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/1-150x150.jpg",
-							"_width": "150",
-							"_height": "150",
-							"__prefix": "media"
-						},
-						"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/1.jpg",
-						"_type": "image/jpeg",
-						"_medium": "image",
-						"_width": "1800",
-						"_height": "1200",
-						"__prefix": "media"
-					}
-				},
-				{
-					"title": "14 claves para ser más productivo en el trabajo",
-					"link": "https://aihgroup.com.mx/blog/2019/07/29/14-claves-para-ser-mas-productivo-en-el-trabajo/",
-					"comments": [
-						"https://aihgroup.com.mx/blog/2019/07/29/14-claves-para-ser-mas-productivo-en-el-trabajo/#respond",
-						{
-							"__prefix": "slash",
-							"__text": "0"
-						}
-					],
-					"pubDate": "Mon, 29 Jul 2019 20:10:17 +0000",
-					"creator": {
-						"__prefix": "dc",
-						"__cdata": "AIH Group"
-					},
-					"category": "Recursos Humanos",
-					"guid": {
-						"_isPermaLink": "false",
-						"__text": "http://localhost:8888/Grupoaihfinal/?p=204"
-					},
-					"description": "<p>La productividad en el entorno laboral no tiene que ver con trabajar más, sino con hacerlo mejor.</p>\n<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/07/29/14-claves-para-ser-mas-productivo-en-el-trabajo/\">14 claves para ser más productivo en el trabajo</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>\n",
-					"commentRss": {
-						"__prefix": "wfw",
-						"__text": "https://aihgroup.com.mx/blog/2019/07/29/14-claves-para-ser-mas-productivo-en-el-trabajo/feed/"
-					},
-					"content": {
-						"title": {
-							"_type": "plain",
-							"__prefix": "media",
-							"__cdata": "Claves para ser productivo en el trabajo"
-						},
-						"thumbnail": {
-							"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/2-150x150.jpg",
-							"_width": "150",
-							"_height": "150",
-							"__prefix": "media"
-						},
-						"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/2.jpg",
-						"_type": "image/jpeg",
-						"_medium": "image",
-						"_width": "1800",
-						"_height": "1200",
-						"__prefix": "media"
-					}
-				},
-				{
-					"title": "7 razones por las que debes recurrir al coaching laboral",
-					"link": "https://aihgroup.com.mx/blog/2019/07/29/7-razones-por-las-que-debes-recurrir-al-coaching-laboral/",
-					"comments": [
-						"https://aihgroup.com.mx/blog/2019/07/29/7-razones-por-las-que-debes-recurrir-al-coaching-laboral/#respond",
-						{
-							"__prefix": "slash",
-							"__text": "0"
-						}
-					],
-					"pubDate": "Mon, 29 Jul 2019 20:07:19 +0000",
-					"creator": {
-						"__prefix": "dc",
-						"__cdata": "AIH Group"
-					},
-					"category": "Posts",
-					"guid": {
-						"_isPermaLink": "false",
-						"__text": "http://localhost:8888/Grupoaihfinal/?p=202"
-					},
-					"description": "<p>Si ya no sientes motivación por tu trabajo, si perdiste el empleo y ya lo intentaste casi todo y no logras conseguir otro, o si concluiste tu carrera y quieres obtener tu primera experiencia profesional, posiblemente necesites el apoyo de un coach laboral. Descúbrelo aquí. ¿Qué es el coaching laboral? Será difícil que avances en [&#8230;]</p>\n<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/07/29/7-razones-por-las-que-debes-recurrir-al-coaching-laboral/\">7 razones por las que debes recurrir al coaching laboral</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>\n",
-					"commentRss": {
-						"__prefix": "wfw",
-						"__text": "https://aihgroup.com.mx/blog/2019/07/29/7-razones-por-las-que-debes-recurrir-al-coaching-laboral/feed/"
-					},
-					"content": {
-						"title": {
-							"_type": "plain",
-							"__prefix": "media",
-							"__cdata": "Coaching laboral y sus beneficios"
-						},
-						"thumbnail": {
-							"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/3-150x150.jpg",
-							"_width": "150",
-							"_height": "150",
-							"__prefix": "media"
-						},
-						"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/3.jpg",
-						"_type": "image/jpeg",
-						"_medium": "image",
-						"_width": "1800",
-						"_height": "1200",
-						"__prefix": "media"
-					}
-				},
-				{
-					"title": "Los 10 aliados de tu autoestima profesional",
-					"link": "https://aihgroup.com.mx/blog/2019/07/29/los-10-aliados-de-tu-autoestima-profesional/",
-					"comments": [
-						"https://aihgroup.com.mx/blog/2019/07/29/los-10-aliados-de-tu-autoestima-profesional/#comments",
-						{
-							"__prefix": "slash",
-							"__text": "1"
-						}
-					],
-					"pubDate": "Mon, 29 Jul 2019 19:48:38 +0000",
-					"creator": {
-						"__prefix": "dc",
-						"__cdata": "AIH Group"
-					},
-					"category": [
-						"Posts",
-						"Recursos Humanos"
-					],
-					"guid": {
-						"_isPermaLink": "false",
-						"__text": "http://localhost:8888/Grupoaihfinal/?p=200"
-					},
-					"description": "<p>¿Constantemente temes ser despedido?, ¿crees que no cumples las expectativas de tus jefes?, ¿piensas que cualquier compañero de trabajo es mejor que tú?, ¿sientes miedo y falta de confianza en ti mismo al realizar tus tareas? Si es así, significa que tu autoestima profesional no anda bien. Y no es cosa sencilla. Tener una baja [&#8230;]</p>\n<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/07/29/los-10-aliados-de-tu-autoestima-profesional/\">Los 10 aliados de tu autoestima profesional</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>\n",
-					"commentRss": {
-						"__prefix": "wfw",
-						"__text": "https://aihgroup.com.mx/blog/2019/07/29/los-10-aliados-de-tu-autoestima-profesional/feed/"
-					},
-					"content": {
-						"title": {
-							"_type": "plain",
-							"__prefix": "media",
-							"__cdata": "La autoestima profesional"
-						},
-						"thumbnail": {
-							"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/4-150x150.jpg",
-							"_width": "150",
-							"_height": "150",
-							"__prefix": "media"
-						},
-						"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/4.jpg",
-						"_type": "image/jpeg",
-						"_medium": "image",
-						"_width": "1800",
-						"_height": "1200",
-						"__prefix": "media"
-					}
-				},
-				{
-					"title": "Dress code en la oficina: qué sí y qué no",
-					"link": "https://aihgroup.com.mx/blog/2019/07/29/dress-code-en-la-oficina-que-si-y-que-no/",
-					"comments": [
-						"https://aihgroup.com.mx/blog/2019/07/29/dress-code-en-la-oficina-que-si-y-que-no/#respond",
-						{
-							"__prefix": "slash",
-							"__text": "0"
-						}
-					],
-					"pubDate": "Mon, 29 Jul 2019 19:38:32 +0000",
-					"creator": {
-						"__prefix": "dc",
-						"__cdata": "AIH Group"
-					},
-					"category": [
-						"Posts",
-						"Recursos Humanos"
-					],
-					"guid": {
-						"_isPermaLink": "false",
-						"__text": "http://localhost:8888/Grupoaihfinal/?p=198"
-					},
-					"description": "<p>El código de vestimenta de la oficina varía considerablemente de acuerdo con el tipo de actividad de la empresa, su filosofía, los productos o servicios que ofrece, la clase de clientes, el clima laboral y el puesto que ocupas.</p>\n<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/07/29/dress-code-en-la-oficina-que-si-y-que-no/\">Dress code en la oficina: qué sí y qué no</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>\n",
-					"commentRss": {
-						"__prefix": "wfw",
-						"__text": "https://aihgroup.com.mx/blog/2019/07/29/dress-code-en-la-oficina-que-si-y-que-no/feed/"
-					},
-					"content": {
-						"title": {
-							"_type": "plain",
-							"__prefix": "media",
-							"__cdata": "Importancia del código de vestimenta"
-						},
-						"thumbnail": {
-							"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/5-150x150.jpg",
-							"_width": "150",
-							"_height": "150",
-							"__prefix": "media"
-						},
-						"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/5.jpg",
-						"_type": "image/jpeg",
-						"_medium": "image",
-						"_width": "1800",
-						"_height": "1200",
-						"__prefix": "media"
-					}
-				},
-				{
-					"title": "Conoce los beneficios de las pausas activas en la oficina",
-					"link": "https://aihgroup.com.mx/blog/2019/07/29/conoce-los-beneficios-de-las-pausas-activas-en-la-oficina/",
-					"comments": [
-						"https://aihgroup.com.mx/blog/2019/07/29/conoce-los-beneficios-de-las-pausas-activas-en-la-oficina/#comments",
-						{
-							"__prefix": "slash",
-							"__text": "1"
-						}
-					],
-					"pubDate": "Mon, 29 Jul 2019 19:26:00 +0000",
-					"creator": {
-						"__prefix": "dc",
-						"__cdata": "AIH Group"
-					},
-					"category": [
-						"Recursos Humanos",
-						"Mejores prácticas en la oficina"
-					],
-					"guid": {
-						"_isPermaLink": "false",
-						"__text": "http://localhost:8888/Grupoaihfinal/?p=196"
-					},
-					"description": "<p>Pasar ocho horas o más en el trabajo, casi todo el tiempo sentados, realizando una labor repetitiva y en una misma postura, es el pan de cada día de la mayoría de nosotros. Y quién no ha experimentado alguno o varios de estos síntomas: contractura en el cuello y los músculos, dolor de espalda, lesiones [&#8230;]</p>\n<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/07/29/conoce-los-beneficios-de-las-pausas-activas-en-la-oficina/\">Conoce los beneficios de las pausas activas en la oficina</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>\n",
-					"commentRss": {
-						"__prefix": "wfw",
-						"__text": "https://aihgroup.com.mx/blog/2019/07/29/conoce-los-beneficios-de-las-pausas-activas-en-la-oficina/feed/"
-					},
-					"content": {
-						"title": {
-							"_type": "plain",
-							"__prefix": "media",
-							"__cdata": "Las pausas activas son beneficiosas para el desempeño laboral"
-						},
-						"thumbnail": {
-							"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/6-150x150.jpg",
-							"_width": "150",
-							"_height": "150",
-							"__prefix": "media"
-						},
-						"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/6.jpg",
-						"_type": "image/jpeg",
-						"_medium": "image",
-						"_width": "1800",
-						"_height": "1200",
-						"__prefix": "media"
-					}
-				},
-				{
-					"title": "Descubre si eres un workaholic y cómo puedes rehabilitarte",
-					"link": "https://aihgroup.com.mx/blog/2019/07/29/descubre-si-eres-un-workaholic-y-como-puedes-rehabilitarte/",
-					"comments": [
-						"https://aihgroup.com.mx/blog/2019/07/29/descubre-si-eres-un-workaholic-y-como-puedes-rehabilitarte/#respond",
-						{
-							"__prefix": "slash",
-							"__text": "0"
-						}
-					],
-					"pubDate": "Mon, 29 Jul 2019 19:19:47 +0000",
-					"creator": {
-						"__prefix": "dc",
-						"__cdata": "AIH Group"
-					},
-					"category": "Posts",
-					"guid": {
-						"_isPermaLink": "false",
-						"__text": "http://localhost:8888/Grupoaihfinal/?p=194"
-					},
-					"description": "<p>Los workaholics llevan una pésima alimentación, pues comen rápido y sin atender a sus requerimientos nutrimentales.</p>\n<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/07/29/descubre-si-eres-un-workaholic-y-como-puedes-rehabilitarte/\">Descubre si eres un workaholic y cómo puedes rehabilitarte</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>\n",
-					"commentRss": {
-						"__prefix": "wfw",
-						"__text": "https://aihgroup.com.mx/blog/2019/07/29/descubre-si-eres-un-workaholic-y-como-puedes-rehabilitarte/feed/"
-					},
-					"content": {
-						"title": {
-							"_type": "plain",
-							"__prefix": "media",
-							"__cdata": "¿Cómo saber si eres un workaholic?"
-						},
-						"thumbnail": {
-							"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/7-150x150.jpg",
-							"_width": "150",
-							"_height": "150",
-							"__prefix": "media"
-						},
-						"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/7.jpg",
-						"_type": "image/jpeg",
-						"_medium": "image",
-						"_width": "1800",
-						"_height": "1200",
-						"__prefix": "media"
-					}
-				},
-				{
-					"title": "¿Eres víctima de mobbing? 5 herramientas para enfrentarlo",
-					"link": "https://aihgroup.com.mx/blog/2019/07/29/eres-victima-de-mobbing-5-herramientas-para-enfrentarlo/",
-					"comments": [
-						"https://aihgroup.com.mx/blog/2019/07/29/eres-victima-de-mobbing-5-herramientas-para-enfrentarlo/#comments",
-						{
-							"__prefix": "slash",
-							"__text": "1"
-						}
-					],
-					"pubDate": "Mon, 29 Jul 2019 19:15:46 +0000",
-					"creator": {
-						"__prefix": "dc",
-						"__cdata": "AIH Group"
-					},
-					"category": "Posts",
-					"guid": {
-						"_isPermaLink": "false",
-						"__text": "http://localhost:8888/Grupoaihfinal/?p=192"
-					},
-					"description": "<p>¿Te suena conocido el término mobbing? Su sinónimo en español es acoso laboral, y la Organización Mundial de la Salud (OMS) lo define como una actitud de violencia laboral recurrente dirigida a una persona en concreto. Se caracteriza por conductas crueles y hostiles que se convierten en una tortura psicológica para la víctima.&#160; LA OMS [&#8230;]</p>\n<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/07/29/eres-victima-de-mobbing-5-herramientas-para-enfrentarlo/\">¿Eres víctima de mobbing? 5 herramientas para enfrentarlo</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>\n",
-					"commentRss": {
-						"__prefix": "wfw",
-						"__text": "https://aihgroup.com.mx/blog/2019/07/29/eres-victima-de-mobbing-5-herramientas-para-enfrentarlo/feed/"
-					},
-					"content": {
-						"title": {
-							"_type": "plain",
-							"__prefix": "media",
-							"__cdata": "Maltrato laboral"
-						},
-						"thumbnail": {
-							"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/8-150x150.jpg",
-							"_width": "150",
-							"_height": "150",
-							"__prefix": "media"
-						},
-						"_url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/8.jpg",
-						"_type": "image/jpeg",
-						"_medium": "image",
-						"_width": "1800",
-						"_height": "1200",
-						"__prefix": "media"
-					}
-				}
-			]
-		},
-		"_xmlns:content": "http://purl.org/rss/1.0/modules/content/",
-		"_xmlns:wfw": "http://wellformedweb.org/CommentAPI/",
-		"_xmlns:dc": "http://purl.org/dc/elements/1.1/",
-		"_xmlns:atom": "http://www.w3.org/2005/Atom",
-		"_xmlns:sy": "http://purl.org/rss/1.0/modules/syndication/",
-		"_xmlns:slash": "http://purl.org/rss/1.0/modules/slash/",
-		"_xmlns:media": "http://search.yahoo.com/mrss/",
-		"_version": "2.0"
-	}
+  "rss": {
+    "-xmlns:content": "http://purl.org/rss/1.0/modules/content/",
+    "-xmlns:wfw": "http://wellformedweb.org/CommentAPI/",
+    "-xmlns:dc": "http://purl.org/dc/elements/1.1/",
+    "-xmlns:atom": "http://www.w3.org/2005/Atom",
+    "-xmlns:sy": "http://purl.org/rss/1.0/modules/syndication/",
+    "-xmlns:slash": "http://purl.org/rss/1.0/modules/slash/",
+    "-xmlns:media": "http://search.yahoo.com/mrss/",
+    "-version": "2.0",
+    "channel": {
+      "title": "Blog – AIH Group",
+      "atom:link": {
+        "-href": "https://aihgroup.com.mx/blog/feed/",
+        "-rel": "self",
+        "-type": "application/rss+xml"
+      },
+      "link": "https://aihgroup.com.mx/blog",
+      "description": "Soluciones de soporte empresarial outsourcing",
+      "lastBuildDate": "Thu, 29 Aug 2019 22:23:49 +0000",
+      "language": "es-MX",
+      "sy:updatePeriod": "
+	hourly	",
+      "sy:updateFrequency": "
+	1	",
+      "generator": "https://wordpress.org/?v=5.2.2",
+      "image": {
+        "url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/08/favicon-96x96.png",
+        "title": "Blog – AIH Group",
+        "link": "https://aihgroup.com.mx/blog",
+        "width": "32",
+        "height": "32"
+      },
+      "item": [
+        {
+          "title": "Employer branding: ¿Qué es y cómo puedo aprovecharlo?",
+          "link": "https://aihgroup.com.mx/blog/2019/08/29/que-es-el-employer-branding/",
+          "comments": "https://aihgroup.com.mx/blog/2019/08/29/que-es-el-employer-branding/#respond",
+          "pubDate": "Thu, 29 Aug 2019 22:23:35 +0000",
+          "dc:creator": "AIH Group",
+          "category": [
+            "AIH Group",
+            "Posts",
+            "Recursos Humanos",
+            "cultura organizacional",
+            "Employer branding"
+          ],
+          "guid": {
+            "-isPermaLink": "false",
+            "#text": "http://aihgroup.com.mx/blog/?p=388"
+          },
+          "description": "<p>El employer branding en la actualidad es un término que comienza a sonar cada vez con más fuerza en las compañías relacionadas con procesos de reclutamiento y recursos humanos. Hoy más que nunca las empresas, están más atentas de la ética y los valores que la organización comunica a través de su marca, buscando promoverlos [&#8230;]</p>
+<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/08/29/que-es-el-employer-branding/\">Employer branding: ¿Qué es y cómo puedo aprovecharlo?</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>
+",
+          "wfw:commentRss": "https://aihgroup.com.mx/blog/2019/08/29/que-es-el-employer-branding/feed/",
+          "slash:comments": "0",
+          "media:content": {
+            "-url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/08/employer-branding-aih-group.jpg",
+            "-type": "image/jpeg",
+            "-medium": "image",
+            "-width": "1280",
+            "-height": "847",
+            "media:title": {
+              "-type": "plain",
+              "#cdata-section": "employer-branding-aih-group"
+            },
+            "media:thumbnail": {
+              "-url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/08/employer-branding-aih-group-150x150.jpg",
+              "-width": "150",
+              "-height": "150"
+            }
+          }
+        },
+        {
+          "title": "AIH Group: Dos generaciones impactando positivamente a través del outsourcing hotelero.",
+          "link": "https://aihgroup.com.mx/blog/2019/08/13/aih-group-directores/",
+          "comments": "https://aihgroup.com.mx/blog/2019/08/13/aih-group-directores/#respond",
+          "pubDate": "Tue, 13 Aug 2019 16:12:50 +0000",
+          "dc:creator": "aihUserRoot",
+          "category": [
+            "AIH Group",
+            "Noticias",
+            "entrevista",
+            "lideres mexicanos",
+            "outsourcing"
+          ],
+          "guid": {
+            "-isPermaLink": "false",
+            "#text": "http://aihgroup.com.mx/blog/?p=362"
+          },
+          "description": "<p>Cerca de su vigésimo aniversario en el mercado AIH Group y su equipo profesional ofrecen un portafolio de servicios, integral, transparente y efectivo en el manejo de soluciones de outsourcing empresarial.</p>
+<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/08/13/aih-group-directores/\">AIH Group: Dos generaciones impactando positivamente a través del outsourcing hotelero.</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>
+",
+          "wfw:commentRss": "https://aihgroup.com.mx/blog/2019/08/13/aih-group-directores/feed/",
+          "slash:comments": "0",
+          "media:content": {
+            "-url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/08/Directores-AIH-Group.jpg",
+            "-type": "image/jpeg",
+            "-medium": "image",
+            "-width": "5760",
+            "-height": "3840",
+            "media:title": {
+              "-type": "plain",
+              "#cdata-section": "Directores-AIH-Group"
+            },
+            "media:thumbnail": {
+              "-url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/08/Directores-AIH-Group-150x150.jpg",
+              "-width": "150",
+              "-height": "150"
+            }
+          }
+        },
+        {
+          "title": "10 consejos para combatir el ausentismo en tu empresa",
+          "link": "https://aihgroup.com.mx/blog/2019/07/29/10-consejos-para-combatir-el-ausentismo-en-tu-empresa/",
+          "comments": "https://aihgroup.com.mx/blog/2019/07/29/10-consejos-para-combatir-el-ausentismo-en-tu-empresa/#respond",
+          "pubDate": "Mon, 29 Jul 2019 20:27:06 +0000",
+          "dc:creator": "AIH Group",
+          "category": [
+            "Posts",
+            "Recursos Humanos"
+          ],
+          "guid": {
+            "-isPermaLink": "false",
+            "#text": "http://localhost:8888/Grupoaihfinal/?p=206"
+          },
+          "description": "<p>El ausentismo laboral es uno de los grandes retos que afrontan a diario las empresas. ¿Pero sabemos por qué los empleados faltan al trabajo?</p>
+<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/07/29/10-consejos-para-combatir-el-ausentismo-en-tu-empresa/\">10 consejos para combatir el ausentismo en tu empresa</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>
+",
+          "wfw:commentRss": "https://aihgroup.com.mx/blog/2019/07/29/10-consejos-para-combatir-el-ausentismo-en-tu-empresa/feed/",
+          "slash:comments": "0",
+          "media:content": {
+            "-url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/1.jpg",
+            "-type": "image/jpeg",
+            "-medium": "image",
+            "-width": "1800",
+            "-height": "1200",
+            "media:title": {
+              "-type": "plain",
+              "#cdata-section": "Evitar las faltas de empleados al trabajo"
+            },
+            "media:thumbnail": {
+              "-url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/1-150x150.jpg",
+              "-width": "150",
+              "-height": "150"
+            }
+          }
+        },
+        {
+          "title": "14 claves para ser más productivo en el trabajo",
+          "link": "https://aihgroup.com.mx/blog/2019/07/29/14-claves-para-ser-mas-productivo-en-el-trabajo/",
+          "comments": "https://aihgroup.com.mx/blog/2019/07/29/14-claves-para-ser-mas-productivo-en-el-trabajo/#respond",
+          "pubDate": "Mon, 29 Jul 2019 20:10:17 +0000",
+          "dc:creator": "AIH Group",
+          "category": "Recursos Humanos",
+          "guid": {
+            "-isPermaLink": "false",
+            "#text": "http://localhost:8888/Grupoaihfinal/?p=204"
+          },
+          "description": "<p>La productividad en el entorno laboral no tiene que ver con trabajar más, sino con hacerlo mejor.</p>
+<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/07/29/14-claves-para-ser-mas-productivo-en-el-trabajo/\">14 claves para ser más productivo en el trabajo</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>
+",
+          "wfw:commentRss": "https://aihgroup.com.mx/blog/2019/07/29/14-claves-para-ser-mas-productivo-en-el-trabajo/feed/",
+          "slash:comments": "0",
+          "media:content": {
+            "-url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/2.jpg",
+            "-type": "image/jpeg",
+            "-medium": "image",
+            "-width": "1800",
+            "-height": "1200",
+            "media:title": {
+              "-type": "plain",
+              "#cdata-section": "Claves para ser productivo en el trabajo"
+            },
+            "media:thumbnail": {
+              "-url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/2-150x150.jpg",
+              "-width": "150",
+              "-height": "150"
+            }
+          }
+        },
+        {
+          "title": "7 razones por las que debes recurrir al coaching laboral",
+          "link": "https://aihgroup.com.mx/blog/2019/07/29/7-razones-por-las-que-debes-recurrir-al-coaching-laboral/",
+          "comments": "https://aihgroup.com.mx/blog/2019/07/29/7-razones-por-las-que-debes-recurrir-al-coaching-laboral/#respond",
+          "pubDate": "Mon, 29 Jul 2019 20:07:19 +0000",
+          "dc:creator": "AIH Group",
+          "category": "Posts",
+          "guid": {
+            "-isPermaLink": "false",
+            "#text": "http://localhost:8888/Grupoaihfinal/?p=202"
+          },
+          "description": "<p>Si ya no sientes motivación por tu trabajo, si perdiste el empleo y ya lo intentaste casi todo y no logras conseguir otro, o si concluiste tu carrera y quieres obtener tu primera experiencia profesional, posiblemente necesites el apoyo de un coach laboral. Descúbrelo aquí. ¿Qué es el coaching laboral? Será difícil que avances en [&#8230;]</p>
+<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/07/29/7-razones-por-las-que-debes-recurrir-al-coaching-laboral/\">7 razones por las que debes recurrir al coaching laboral</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>
+",
+          "wfw:commentRss": "https://aihgroup.com.mx/blog/2019/07/29/7-razones-por-las-que-debes-recurrir-al-coaching-laboral/feed/",
+          "slash:comments": "0",
+          "media:content": {
+            "-url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/3.jpg",
+            "-type": "image/jpeg",
+            "-medium": "image",
+            "-width": "1800",
+            "-height": "1200",
+            "media:title": {
+              "-type": "plain",
+              "#cdata-section": "Coaching laboral y sus beneficios"
+            },
+            "media:thumbnail": {
+              "-url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/3-150x150.jpg",
+              "-width": "150",
+              "-height": "150"
+            }
+          }
+        },
+        {
+          "title": "Los 10 aliados de tu autoestima profesional",
+          "link": "https://aihgroup.com.mx/blog/2019/07/29/los-10-aliados-de-tu-autoestima-profesional/",
+          "comments": "https://aihgroup.com.mx/blog/2019/07/29/los-10-aliados-de-tu-autoestima-profesional/#comments",
+          "pubDate": "Mon, 29 Jul 2019 19:48:38 +0000",
+          "dc:creator": "AIH Group",
+          "category": [
+            "Posts",
+            "Recursos Humanos"
+          ],
+          "guid": {
+            "-isPermaLink": "false",
+            "#text": "http://localhost:8888/Grupoaihfinal/?p=200"
+          },
+          "description": "<p>¿Constantemente temes ser despedido?, ¿crees que no cumples las expectativas de tus jefes?, ¿piensas que cualquier compañero de trabajo es mejor que tú?, ¿sientes miedo y falta de confianza en ti mismo al realizar tus tareas? Si es así, significa que tu autoestima profesional no anda bien. Y no es cosa sencilla. Tener una baja [&#8230;]</p>
+<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/07/29/los-10-aliados-de-tu-autoestima-profesional/\">Los 10 aliados de tu autoestima profesional</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>
+",
+          "wfw:commentRss": "https://aihgroup.com.mx/blog/2019/07/29/los-10-aliados-de-tu-autoestima-profesional/feed/",
+          "slash:comments": "1",
+          "media:content": {
+            "-url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/4.jpg",
+            "-type": "image/jpeg",
+            "-medium": "image",
+            "-width": "1800",
+            "-height": "1200",
+            "media:title": {
+              "-type": "plain",
+              "#cdata-section": "La autoestima profesional"
+            },
+            "media:thumbnail": {
+              "-url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/4-150x150.jpg",
+              "-width": "150",
+              "-height": "150"
+            }
+          }
+        },
+        {
+          "title": "Dress code en la oficina: qué sí y qué no",
+          "link": "https://aihgroup.com.mx/blog/2019/07/29/dress-code-en-la-oficina-que-si-y-que-no/",
+          "comments": "https://aihgroup.com.mx/blog/2019/07/29/dress-code-en-la-oficina-que-si-y-que-no/#respond",
+          "pubDate": "Mon, 29 Jul 2019 19:38:32 +0000",
+          "dc:creator": "AIH Group",
+          "category": [
+            "Posts",
+            "Recursos Humanos"
+          ],
+          "guid": {
+            "-isPermaLink": "false",
+            "#text": "http://localhost:8888/Grupoaihfinal/?p=198"
+          },
+          "description": "<p>El código de vestimenta de la oficina varía considerablemente de acuerdo con el tipo de actividad de la empresa, su filosofía, los productos o servicios que ofrece, la clase de clientes, el clima laboral y el puesto que ocupas.</p>
+<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/07/29/dress-code-en-la-oficina-que-si-y-que-no/\">Dress code en la oficina: qué sí y qué no</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>
+",
+          "wfw:commentRss": "https://aihgroup.com.mx/blog/2019/07/29/dress-code-en-la-oficina-que-si-y-que-no/feed/",
+          "slash:comments": "0",
+          "media:content": {
+            "-url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/5.jpg",
+            "-type": "image/jpeg",
+            "-medium": "image",
+            "-width": "1800",
+            "-height": "1200",
+            "media:title": {
+              "-type": "plain",
+              "#cdata-section": "Importancia del código de vestimenta"
+            },
+            "media:thumbnail": {
+              "-url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/5-150x150.jpg",
+              "-width": "150",
+              "-height": "150"
+            }
+          }
+        },
+        {
+          "title": "Conoce los beneficios de las pausas activas en la oficina",
+          "link": "https://aihgroup.com.mx/blog/2019/07/29/conoce-los-beneficios-de-las-pausas-activas-en-la-oficina/",
+          "comments": "https://aihgroup.com.mx/blog/2019/07/29/conoce-los-beneficios-de-las-pausas-activas-en-la-oficina/#comments",
+          "pubDate": "Mon, 29 Jul 2019 19:26:00 +0000",
+          "dc:creator": "AIH Group",
+          "category": [
+            "Recursos Humanos",
+            "Mejores prácticas en la oficina"
+          ],
+          "guid": {
+            "-isPermaLink": "false",
+            "#text": "http://localhost:8888/Grupoaihfinal/?p=196"
+          },
+          "description": "<p>Pasar ocho horas o más en el trabajo, casi todo el tiempo sentados, realizando una labor repetitiva y en una misma postura, es el pan de cada día de la mayoría de nosotros. Y quién no ha experimentado alguno o varios de estos síntomas: contractura en el cuello y los músculos, dolor de espalda, lesiones [&#8230;]</p>
+<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/07/29/conoce-los-beneficios-de-las-pausas-activas-en-la-oficina/\">Conoce los beneficios de las pausas activas en la oficina</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>
+",
+          "wfw:commentRss": "https://aihgroup.com.mx/blog/2019/07/29/conoce-los-beneficios-de-las-pausas-activas-en-la-oficina/feed/",
+          "slash:comments": "1",
+          "media:content": {
+            "-url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/6.jpg",
+            "-type": "image/jpeg",
+            "-medium": "image",
+            "-width": "1800",
+            "-height": "1200",
+            "media:title": {
+              "-type": "plain",
+              "#cdata-section": "Las pausas activas son beneficiosas para el desempeño laboral"
+            },
+            "media:thumbnail": {
+              "-url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/6-150x150.jpg",
+              "-width": "150",
+              "-height": "150"
+            }
+          }
+        },
+        {
+          "title": "Descubre si eres un workaholic y cómo puedes rehabilitarte",
+          "link": "https://aihgroup.com.mx/blog/2019/07/29/descubre-si-eres-un-workaholic-y-como-puedes-rehabilitarte/",
+          "comments": "https://aihgroup.com.mx/blog/2019/07/29/descubre-si-eres-un-workaholic-y-como-puedes-rehabilitarte/#respond",
+          "pubDate": "Mon, 29 Jul 2019 19:19:47 +0000",
+          "dc:creator": "AIH Group",
+          "category": "Posts",
+          "guid": {
+            "-isPermaLink": "false",
+            "#text": "http://localhost:8888/Grupoaihfinal/?p=194"
+          },
+          "description": "<p>Los workaholics llevan una pésima alimentación, pues comen rápido y sin atender a sus requerimientos nutrimentales.</p>
+<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/07/29/descubre-si-eres-un-workaholic-y-como-puedes-rehabilitarte/\">Descubre si eres un workaholic y cómo puedes rehabilitarte</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>
+",
+          "wfw:commentRss": "https://aihgroup.com.mx/blog/2019/07/29/descubre-si-eres-un-workaholic-y-como-puedes-rehabilitarte/feed/",
+          "slash:comments": "0",
+          "media:content": {
+            "-url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/7.jpg",
+            "-type": "image/jpeg",
+            "-medium": "image",
+            "-width": "1800",
+            "-height": "1200",
+            "media:title": {
+              "-type": "plain",
+              "#cdata-section": "¿Cómo saber si eres un workaholic?"
+            },
+            "media:thumbnail": {
+              "-url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/7-150x150.jpg",
+              "-width": "150",
+              "-height": "150"
+            }
+          }
+        },
+        {
+          "title": "¿Eres víctima de mobbing? 5 herramientas para enfrentarlo",
+          "link": "https://aihgroup.com.mx/blog/2019/07/29/eres-victima-de-mobbing-5-herramientas-para-enfrentarlo/",
+          "comments": "https://aihgroup.com.mx/blog/2019/07/29/eres-victima-de-mobbing-5-herramientas-para-enfrentarlo/#comments",
+          "pubDate": "Mon, 29 Jul 2019 19:15:46 +0000",
+          "dc:creator": "AIH Group",
+          "category": "Posts",
+          "guid": {
+            "-isPermaLink": "false",
+            "#text": "http://localhost:8888/Grupoaihfinal/?p=192"
+          },
+          "description": "<p>¿Te suena conocido el término mobbing? Su sinónimo en español es acoso laboral, y la Organización Mundial de la Salud (OMS) lo define como una actitud de violencia laboral recurrente dirigida a una persona en concreto. Se caracteriza por conductas crueles y hostiles que se convierten en una tortura psicológica para la víctima.&#160; LA OMS [&#8230;]</p>
+<p>The post <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog/2019/07/29/eres-victima-de-mobbing-5-herramientas-para-enfrentarlo/\">¿Eres víctima de mobbing? 5 herramientas para enfrentarlo</a> appeared first on <a rel=\"nofollow\" href=\"https://aihgroup.com.mx/blog\">Blog - AIH Group</a>.</p>
+",
+          "wfw:commentRss": "https://aihgroup.com.mx/blog/2019/07/29/eres-victima-de-mobbing-5-herramientas-para-enfrentarlo/feed/",
+          "slash:comments": "1",
+          "media:content": {
+            "-url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/8.jpg",
+            "-type": "image/jpeg",
+            "-medium": "image",
+            "-width": "1800",
+            "-height": "1200",
+            "media:title": {
+              "-type": "plain",
+              "#cdata-section": "Maltrato laboral"
+            },
+            "media:thumbnail": {
+              "-url": "https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/8-150x150.jpg",
+              "-width": "150",
+              "-height": "150"
+            }
+          }
+        }
+      ]
+    }
+  }
 }

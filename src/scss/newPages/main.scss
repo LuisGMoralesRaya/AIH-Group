@@ -19,6 +19,7 @@
         height:700px;
         width:100%;
         overflow: hidden;
+        margin-bottom: 3rem;
         &-blur{
             width: 100%;
             height: 100%;
@@ -27,6 +28,9 @@
             top: 0;
             z-index: 2;
             opacity: 1;
+            &[m-page=personnel]{
+                background: linear-gradient(to right, rgba(22,60,87,0.86) 46%, rgba(50,117,132,0.86) 73%, rgba(77,174,176,0.48) 100%)!important;
+            }
         }
         &-video{
             position: absolute;
@@ -72,6 +76,424 @@
                 font-weight: 100;
                 width: 70%;
             }
+        }
+    }
+    .fichaTecnica{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        padding-top: 10rem;
+        margin: 0 auto;
+        width: 100%;
+        position: relative;
+        @keyframes increase {
+            100% {
+                height: 100%;
+            }
+        }
+        &::before{
+            content: "";
+            height: 0%;
+            width: 2px;
+            background:linear-gradient(45deg, rgba(66,111,145,1) 0%, rgba(66,111,145,1) 18%, rgba(77,174,176,1) 83%, rgba(77,174,176,1) 100%)!important;
+            position: absolute;
+            top: 0;
+            right: 3rem;
+            animation:   increase 10s; 
+            animation-fill-mode: forwards;
+        }
+        &-card{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+            min-height: 450px;
+            margin-bottom: 5rem;
+            position: relative;
+            &[m-reverse=true]{
+                flex-direction: row-reverse!important;
+
+                min-height: 650px;
+                .fichaTecnica-card-img{
+                        position: absolute;
+                        min-height: 600px;
+                        min-width: 650px;
+                        max-height: 600px;
+                        max-width: 650px;
+                        right: 0;
+                        img{
+                            left: 35%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            height: 350px;
+                            width: 100%;
+                            right: auto;
+                            
+                    box-shadow: 0px -1px 20px 8px rgba(0,0,0,0.17);
+
+                        }
+                }
+                .fichaTecnica-card-text{
+                    position: absolute;
+                    top: 50%;
+                    left: 30%;
+                    transform: translate(-50%, -50%);
+                    max-width: 600px;
+                }
+            }
+            &-img{
+                position: relative;
+                min-height: 400px;
+                min-width: 400px;
+                max-height: 400px;
+                max-width: 400px;
+                width: 50%;
+                &[m-page=personnel]{
+                    background:  linear-gradient(to right, rgba(21,59,86,1) 0%, rgba(48,115,130,1) 48%, rgba(78,176,177,1) 100%);
+                }
+                img{
+                    position: absolute;
+                    top: -6rem;
+                    right: -6rem;
+                    height: 100%;
+                    width: 100%;
+
+                    transition: all 0.5s ease;
+                    box-shadow: 0px -1px 20px 8px rgba(0,0,0,0.17);
+                }
+                .comillas{
+                    height: 60px;
+                    width: 60px;
+                    top: 10%;
+                    left: 10%;
+                    transform: translate(-50%, -50%);
+                    right: auto;
+                    position: absolute;
+                    
+                }
+                .reseña{
+                    @include fluid-type(320px, 1440px, 12px, 14px);
+                    position: absolute;
+                    bottom: 0;
+                    left: 1.5rem;
+                    color: white;
+                }
+                .titulo{
+                    @include fluid-type(320px, 1440px, 18px, 32px);
+                    font-weight:400!important;
+                    position: absolute;
+                    top: 10%;
+                    left: 57%;
+                    transform: translate(-50%, -50%);
+                    color: white;
+                    width: 100%;
+                    text-align: center;
+                    &::after{
+                        display: inline-block;
+                        content: "";
+                        border-top: 0.1rem solid white;
+                        width: 4rem;
+                        margin: 0 1rem;
+                        transform: translateY(-.4rem);
+                    }
+                }
+            }
+            &-text{
+                max-width: 450px;
+                width: 50%;
+                position: relative;
+                .comillas{
+                    position: absolute;
+                    height: 80px;
+                    width: 80px;
+                    top: 30%;
+                    right: -10%;
+                    transform: translate(-50%, -50%);
+                }
+                .titulo{
+                    @include fluid-type(320px, 1440px, 16px, 26px);
+                    font-weight: bold;
+                    &[m-page=personnel]{
+                        background: linear-gradient(to right, rgba(21,59,86,1) 0%, rgba(48,115,130,1) 48%, rgba(78,176,177,1) 100%)!important;
+                    -webkit-background-clip: text!important;
+                    -webkit-text-fill-color: transparent!important;
+                    }
+                }
+                .textoTab{
+                    @include fluid-type(320px, 1440px, 14px, 18px);
+                    font-weight: bold;
+                    cursor: pointer;
+                    color: #4d4d4d;
+                    opacity: .5;
+                    text-align: left;
+                    display: flex;
+                    &::after{
+                        display: inline-block;
+                        content: "____";
+                        width: 30px;
+                        background: linear-gradient(to right, rgba(21,59,86,1) 0%, rgba(48,115,130,1) 48%, rgba(78,176,177,1) 100%)!important;
+                        -webkit-background-clip: text!important;
+                        -webkit-text-fill-color: transparent!important;
+                        margin: 0 1rem;
+                        transform: translateY(-.4rem);
+                    }
+                    &[m-active=true]{
+                        transform: scale(1.1);
+                        background: linear-gradient(to right, rgba(21,59,86,1) 0%, rgba(48,115,130,1) 48%, rgba(78,176,177,1) 100%)!important;
+                        -webkit-background-clip: text!important;
+                        -webkit-text-fill-color: transparent!important;
+                        transition: all 0.5s ease;
+                        opacity: 1;
+                        &::after{
+                            content: "____";
+                            width: 30px;
+                        }
+                    }
+                }
+                .contentTab{
+                    width: 85%;
+                    margin-top: 3rem;
+                    display: none;
+                    transition: opacity 600ms, visibility 600ms;
+                    opacity: 0;
+                    min-height: 300px;
+                    &[m-show=true]{
+                        display: block!important;
+                        opacity: 1;
+                    }
+                }
+                .texto{
+                    text-align: justify;
+                    @include fluid-type(320px, 1440px, 12px, 17px);
+                    color: #4d4d4d;
+                }
+            }
+        }
+    }
+    .serviciosSection{
+        display: flex;
+        flex-direction: row;
+        width: 90vw;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        &-containers{
+            display: flex;
+            flex-direction: row;
+            .servicios{
+                display: flex;
+                flex-direction: column;
+                &:last-child{
+                    margin-left: 1rem;
+                    margin-top: 4em;
+                }
+                &-content{
+                    width: 300px;
+                    height: 300px;
+                    margin-bottom: 2rem;
+                    margin-right: 2rem;
+                    transition: all 0.5s ease;
+                    position: relative;
+
+                    box-shadow: 0px -1px 20px 8px rgba(0,0,0,0.17);
+                    .blurContent{
+                        background: linear-gradient(to right, rgba(21,59,86,1) 0%, rgba(48,115,130,1) 48%, rgba(78,176,177,1) 100%)!important;
+                        content: '';
+                        display: none;
+                        height: 100%;
+                        position: absolute;
+                        width: 100%;
+                        opacity: .9;
+                        img{
+                            width: 40px;
+                            height: auto;
+                        }
+                        .titulo{
+                            color: white;
+                            font-weight: 500;
+                            font-size: 22px;
+                        }
+                    }
+                    &:hover{
+                        .blurContent{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-content: center;
+                            align-items: center;
+                        }
+                        transform: scale(1.1);
+                    }
+                    img{
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &-textos{
+            .titulo{
+                @include fluid-type(320px, 1440px, 16px, 26px);
+                font-weight: bold;
+                &[m-page=personnel]{
+                    background: linear-gradient(to right, rgba(21,59,86,1) 0%, rgba(48,115,130,1) 48%, rgba(78,176,177,1) 100%)!important;
+                -webkit-background-clip: text!important;
+                -webkit-text-fill-color: transparent!important;
+                }
+            }
+            .texto{
+                max-width: 600px;
+                @include fluid-type(320px, 1440px, 12px, 17px);
+                color: #4d4d4d;
+            }
+
+        }
+    }
+    .formulario{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 600px;
+        height: 100%;
+        position: relative;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 2rem;
+
+        margin-bottom: 4rem;
+        &-text{
+            margin-right: 4rem;
+            z-index: 2;
+            width: 150px;
+            border-bottom: 1px solid white;
+            p{
+                font-weight: 200;
+                @include fluid-type(320px, 1440px, 16px, 26px);
+                color: white;
+                b{
+                    font-weight: 600;
+                }
+            }
+        }
+        &-form{
+            padding: 3rem;
+            background-color: white;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            min-height: 480px;
+            height: auto;
+            label{
+                margin-bottom: 1rem;
+                color: #4d4d4d;
+            }
+            input{
+                width: 80%;
+                margin-bottom: 1rem;
+                color: #4d4d4d;
+                height: 30px;
+                border-left: none;
+                border-right: none;
+                border-top: none;
+                border-bottom: 1px solid #4d4d4d;
+            }
+            button{
+                margin-top: 3rem;
+                position: absolute;
+                background: linear-gradient(to right, rgba(21,59,86,1) 0%, rgba(48,115,130,1) 48%, rgba(78,176,177,1) 100%)!important;
+                color: white;
+                outline: none;
+                border: none;
+                bottom: 0;
+                right: 0;
+                padding:{
+                    left: 3.5rem;
+                    right: 3.5rem;
+                    top: 1.3rem;
+                    bottom: 1.3rem;
+                }
+            }
+
+        }
+        &[m-page=personnel]{
+            background-image: url("../img/newPages/personnel/contacto-fondo.jpg");
+            &::before{
+                background: linear-gradient(to right, rgba(21,59,86,1) 0%, rgba(48,115,130,1) 48%, rgba(78,176,177,1) 100%)!important;
+                content: '';
+                display: block;
+                height: 100%;
+                position: absolute;
+                width: 100%;
+                opacity: .7;
+              }
+        }
+    }
+}
+@media (min-width: 1000px) and (max-width: 1100px) {
+    .containerNewPages .fichaTecnica-card{
+        justify-content: space-between;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        .fichaTecnica-card-img{
+            margin-bottom: 3rem;
+        }
+    }
+}
+@media (min-width: 900px) and (max-width: 1100px) {
+    .containerNewPages .fichaTecnica-card{
+        justify-content: space-between;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        .fichaTecnica-card-img{
+            margin-bottom: 3rem;
+            min-height: 300px;
+            min-width: 300px;
+            max-height: 300px;
+            max-width: 300px;
+        }
+    }
+}
+@media (min-width: 0px) and (max-width: 899px) {
+    .containerNewPages .fichaTecnica{
+        padding-top: 6rem;
+    }
+    .containerNewPages .fichaTecnica-card-text .comillas{
+        position: absolute;
+        height: 80px;
+        width: 80px;
+        top: 120%;
+        right: -10%;
+        transform: translate(-50%, -50%);
+    }
+    .containerNewPages .fichaTecnica-card{
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        margin-bottom: 4rem;
+        .fichaTecnica-card-img{
+            margin-bottom: 3rem;
+            min-height: 320px;
+            min-width: 320px;
+            max-height: 320px;
+            max-width: 320px;
+            left: -8vw;
+        }
+        .fichaTecnica-card-text{
+            width: 80%;
+            max-width: 100%;
         }
     }
 }
