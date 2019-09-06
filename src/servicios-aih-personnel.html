@@ -1,6 +1,13 @@
 <!doctype html>
 <html class=" newTemplate templateChido" lang="">
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WFKFCZZ');</script>
+<!-- End Google Tag Manager -->
     <meta charset="utf-8">
     <title>Servicios de administración de recursos humanos, nóminas y
         reclutamiento de personal en México y el Caribe. </title>
@@ -55,6 +62,10 @@
     <script src="js/plugins/all.plugins.js"></script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WFKFCZZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
     <div id="page-loader">
         <img src="img/loader.svg">
     </div>
@@ -64,7 +75,7 @@
             <div class="videoSection-blur" m-page="personnel"></div>
             <video class="videoSection-video" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
                 <source src="videos/personnel.mp4" type="video/mp4">
-                <source src="personnel.webm" type="video/webm">
+                <source src="videos/personnel.webm" type="video/webm">
             </video>
             <img class="videoSection-logo" src="img/newPages/logos/personnel.png">
             <div class="videoSection-legend">
@@ -72,7 +83,7 @@
                 <h3>Actualmente el 89% de las empresas están planeando mantener su nivel de subcontratación o incrementarlo.</h3>
             </div>
         </div>
-        <div class="fichaTecnica">
+        <div class="fichaTecnica" m-page="personnel">
             <div class="fichaTecnica-card">
                 <div  class="fichaTecnica-card-img" m-page="personnel">
                     <p class="reseña">Fuente:<br> Revista Forbes</p>
@@ -104,8 +115,8 @@
                         <img id="imgServicio" src="img/newPages/personnel/servicio1.jpg">
                     </div>
                     <div  class="fichaTecnica-card-text">
-                        <p class="textoTab" m-active="true" m-position="1">Nuestros Servicios Administración de Personal </p>
-                        <p class="textoTab" m-active="false" m-position="2">Reclutamiento Especializado </p>
+                        <p m-page="personnel" class="textoTab" m-active="true" m-position="1">Nuestros Servicios Administración de Personal </p>
+                        <p m-page="personnel" class="textoTab" m-active="false" m-position="2">Reclutamiento Especializado </p>
                         <div class="contentTab" m-show="true" id="position1">
                             <ul>
                                 <li>Altas y bajas del personal.</li>
@@ -127,14 +138,14 @@
             <div class="serviciosSection-containers">
                 <div class="servicios">
                     <div class="servicios-content">
-                        <div class="blurContent">
+                        <div class="blurContent" m-page="personnel">
                             <img src="img/newPages/iconos/experiencia.svg">
                             <p class="titulo">Experiencia</p>
                         </div>
                         <img src="img/newPages/personnel/ventaja1.jpg">
                     </div>
                     <div class="servicios-content">
-                        <div class="blurContent">
+                        <div class="blurContent" m-page="personnel">
                                 <img src="img/newPages/iconos/compromiso.svg">
                                 <p class="titulo">Compromiso</p>
                         </div>
@@ -143,14 +154,14 @@
                 </div>
                 <div class="servicios">
                         <div class="servicios-content">
-                            <div class="blurContent">
+                            <div class="blurContent" m-page="personnel">
                                     <img src="img/newPages/iconos/seguimiento.svg">
                                     <p class="titulo">Seguimiento</p>
                             </div>
                                 <img src="img/newPages/personnel/ventaja2.jpg">
                             </div>
                             <div class="servicios-content">
-                                <div class="blurContent">
+                                <div class="blurContent" m-page="personnel">
                                         <img src="img/newPages/iconos/calidad.svg">
                                         <p class="titulo">Calidad</p>
                                 </div>
@@ -169,6 +180,8 @@
             </div>
         </div>
         <div class="formulario" m-page="personnel">
+                <div class="line"></div>
+                <div class="lineTwo"></div>
             <div class="formulario-text">
                 <p>¿<b>Quieres</b> saber más?</p>
             </div>
@@ -198,7 +211,26 @@
                 </form>
         </div>
         <div class="otrosServicios">
-            
+            <h2 class="otrosServicios-titulo" m-page="personnel">A otros visitantes les interesó </h2>
+            <div class="otrosServicios-container">
+                <a href="/servicios-aih-advisors.html" class="item">
+                    <img class="firstImg" src="img/newPages/divisiones/advisors.png">
+                    <img class="secondImg" src="img/newPages/divisiones/advisors.jpg">
+                </a>
+                <a href="/servicios-aih-capital.html" class="item">
+                    <img class="firstImg" src="img/newPages/divisiones//capital.png">
+                    <img class="secondImg" src="img/newPages/divisiones/capital.jpg">
+                </a>
+                <a href="/servicios-aih-holding.html" class="item">
+                    <img class="firstImg" src="img/newPages/divisiones/holding.png">
+                    <img class="secondImg" src="img/newPages/divisiones/holding.jpg">
+                </a>
+            </div>
+        </div>
+        <div class="blogFeedSeccion" m-carousel="false">
+            <h3 class="titulo" m-page="personnel">Más información sobre el tema</h3>
+            <div class="blogFeedSeccion-post">
+            </div>
         </div>
     </section>
     <footer id="main-footer"></footer>

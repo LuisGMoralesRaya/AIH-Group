@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="25mm"
+   height="25mm"
+   viewBox="0 0 25 25"
+   version="1.1"
+   id="svg10048"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   sodipodi:docname="resultados.svg">
+  <defs
+     id="defs10042">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath15409">
+      <rect
+         ry="0"
+         y="168.45323"
+         x="-507.81848"
+         height="105.42503"
+         width="91.545845"
+         id="rect15411"
+         style="opacity:0.68699999;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.96499997;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.6"
+     inkscape:cx="20.532199"
+     inkscape:cy="43.56938"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="2048"
+     inkscape:window-height="1447"
+     inkscape:window-x="569"
+     inkscape:window-y="18"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata10045">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-272)">
+    <path
+       style="fill:#ffffff;stroke-width:1"
+       d="m 10.947547,292.50677 c -3.3836858,-0.42985 -6.1025419,-2.85167 -6.9136414,-6.15832 -0.2337278,-0.95284 -0.2526735,-2.65182 -0.040653,-3.64513 1.0105205,-4.73413 5.9339065,-7.51849 10.5367454,-5.9589 0.924722,0.31332 2.209192,1.01049 2.209192,1.19907 0,0.11138 -0.933905,1.38579 -1.01547,1.38579 -0.02432,0 -0.14637,-0.0727 -0.27119,-0.1616 -0.367381,-0.2616 -1.363905,-0.70667 -1.926708,-0.86051 -0.382568,-0.10452 -0.812124,-0.14222 -1.606687,-0.14081 -1.291369,0.003 -1.786256,0.11487 -2.8920369,0.65829 -0.6493627,0.31907 -0.878044,0.48949 -1.533438,1.14274 -0.6586278,0.65648 -0.8246525,0.87835 -1.1455582,1.53092 -0.5066636,1.0303 -0.6994303,1.82791 -0.7010035,2.9005 -0.00161,1.11868 0.1663688,1.8464 0.6652737,2.8816 0.3616519,0.75039 0.4892817,0.92488 1.1785609,1.61125 0.6577325,0.65494 0.8867825,0.82562 1.5361651,1.14466 2.6319339,1.29305 5.6007359,0.76714 7.5167539,-1.33155 0.573417,-0.62809 0.938132,-1.21755 1.283867,-2.07502 0.142072,-0.35237 0.278553,-0.66089 0.303286,-0.68563 0.0629,-0.0629 1.437768,0.29849 1.561272,0.41038 0.216766,0.19639 -0.64752,2.15055 -1.359273,3.07332 -0.832849,1.07979 -2.207122,2.11378 -3.4408,2.58883 -1.14118,0.43944 -2.760168,0.6406 -3.944663,0.49012 z m 0.799138,-7.40088 c -1.164391,-1.19709 -2.1270219,-2.21833 -2.1391799,-2.26946 -0.01209,-0.0511 0.246642,-0.3599 0.5751129,-0.68618 l 0.597221,-0.59324 1.569217,1.59742 1.569217,1.59741 3.278599,-3.27362 c 1.803228,-1.80049 3.333566,-3.27362 3.400746,-3.27362 0.06719,0 0.382981,0.26258 0.701773,0.58352 l 0.579625,0.58351 -3.955977,3.95538 c -2.175789,2.17546 -3.979223,3.95537 -4.00763,3.95537 -0.02841,0 -1.004333,-0.97943 -2.168724,-2.17649 z"
+       id="path1017"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/Users/alonso/Documents/Ariel/AIH/AIH GROUP/Website/Recursos/DIVISIONES/ICONOS/blancos/rersultados.png"
+       inkscape:export-xdpi="162.73636"
+       inkscape:export-ydpi="162.73636" />
+  </g>
+</svg>
