@@ -100,8 +100,10 @@ function getFeedBlog(){
                     blogContent +=  '</div>';
                     if(item >= 3){
                         isCarousel == true;
-                        $(".blogFeedSeccion").attr("m-carousel","true")
+                        $(".blogFeedSeccion").attr("m-carousel","true");
                     }
+                }else{
+                    $(".blogFeedSeccion").hide();
                 }
             }else if(urlBlog == "/servicios-aih-personnel.html"){
                 if(item.categories[0] == "personnel"){
@@ -119,6 +121,8 @@ function getFeedBlog(){
                         isCarousel == true;
                         $(".blogFeedSeccion").attr("m-carousel","true")
                     }
+                }else{
+                    $(".blogFeedSeccion").hide();
                 }
             }else if(urlBlog == "/servicios-aih-capital.html"){
                 if(item.categories[0] == "capital"){
@@ -136,6 +140,8 @@ function getFeedBlog(){
                         isCarousel == true;
                         $(".blogFeedSeccion").attr("m-carousel","true")
                     }
+                }else{
+                    $(".blogFeedSeccion").hide();
                 }
             }else if(urlBlog == "/servicios-aih-holding.html"){
                 if(item.categories[0] == "holding"){
@@ -153,6 +159,8 @@ function getFeedBlog(){
                         isCarousel == true;
                         $(".blogFeedSeccion").attr("m-carousel","true")
                     }
+                }else{
+                    $(".blogFeedSeccion").hide();
                 }
             }else if(urlBlog == "/servicios-aih-media.html"){
                 if(item.categories[0] == "media"){
@@ -174,6 +182,8 @@ function getFeedBlog(){
                     }else{
                         console.log("hey")
                     }
+                }else{
+                    $(".blogFeedSeccion").hide();
                 }
             }else if(urlBlog == "/servicios-aih-habitat.html"){
                 if(item.categories[0] == "habitat"){
@@ -193,6 +203,8 @@ function getFeedBlog(){
                         isCarousel == true;
                     }else{
                     }
+                }else{
+                    $(".blogFeedSeccion").hide();
                 }
             }
         }
