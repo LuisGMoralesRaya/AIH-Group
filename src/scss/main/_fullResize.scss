@@ -1,0 +1,469 @@
+@media (min-width: 1900px) {
+    #main-header{
+        .scrolled{
+            height: 4.210526315789474vw!important;
+            #menuprincipal ul li ul{
+                margin-top: 1.394737vw!important;
+            }
+        }
+        .scrolled .normalElements .linkNormal{
+            padding-bottom: 1.263157894736842vw!important;
+            
+        }
+        #navbar{
+            height: 5.263157894736842vw;
+        }
+        #logo{
+            width: 7.894736842105263vw;
+        }
+        #logo img{
+            width: 7.894736842105263vw;
+            height: auto;
+        }
+        #menuprincipal li{
+            padding: 2vw 1vw;
+            font-size: 0.842105263157895vw;
+        }
+        #menuprincipal ul li ul{
+            margin-top: 2.394736842105263vw;
+        }
+        #menuprincipal ul li ul li{
+            width: 7.894736842105263vw;
+            height: 0.526315789473684vw;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+        }
+        .socialIcons img{
+            width: 1.052631578947368vw;
+            margin-right: 0.526315789473684vw;
+        }
+        .socialIcons i{
+            font-size: 1.431578947368421vw;
+            margin-right: 0.526315789473684vw;
+            
+        }
+    }
+    #sliderprincipal{
+        .owl-slide-title{
+            font-size: 2.526315789473684vw;
+        }
+        #btnslide1{
+            width: 1.052631578947368vw!important;
+            height: 1.052631578947368vw!important;
+            padding: 2.105263157894737vw!important;
+            i{
+                font-size: 2.105263157894737vw!important;
+            }
+        }
+        #titulocuadro{
+            font-size: 1.526315789473684vw;
+        }
+        .textoformato{
+            font-size: 0.757894736842105vw;
+        }
+    }
+    //ventana Historia
+    #ventanahistoria .historiaContent{
+        width: 26.315789473684211vw;
+        margin-right: 7.578947368421053vw;
+    }
+    #ventanahistoria .historiaContent img{
+        width: 23.684210526315789vw;
+    }
+    #ventanahistoria .historiaContent .texto{
+        font-size: 1.789473684210526vw;
+        max-width: 31.578947368421053vw;
+    }
+    #ventanahistoria .botonHistoria .contentBBtn{
+        height: 26.315789473684211vw;
+        border-right: 0.052631578947368vw solid white;
+    }
+    #ventanahistoria .botonHistoria .contentBBtn i{
+        color: white;
+        font-size: 3.368421052631579vw;
+        border: 0.105263157894737vw solid white;
+    
+    }
+    #ventanahistoria .historiaContentText{
+        max-width: 26.315789473684211vw;
+    }
+    #ventanahistoria .historiaContentText h2{
+        font-size: 1.789473684210526vw;
+        margin-bottom: 0.052631578947368vw;
+    }
+    .textoformato{
+        font-size: 0.757894736842105vw;
+    }
+    .btnVermas{
+        padding: 0.842105263157895vw;
+        font-size: 0.842105263157895vw;
+        border: 0.052631578947368vw solid white;
+        color: white;
+        margin-top: 1.684210526315789vw;
+    }
+    #ventanaestatutos .historiaContentText h2{
+        font-size: 1.789473684210526vw;
+        margin-bottom: 0.052631578947368vw;
+    }
+    #ventanaestatutos .historiaContentText{
+        max-width: 26.315789473684211vw;
+    }
+    #ventanaestatutos .botonHistoria .contentBBtn{
+        height: 26.315789473684211vw;
+        border-right: 0.052631578947368vw solid white;
+    }
+    #ventanaestatutos .botonHistoria .contentBBtn i{
+        color: white;
+        font-size: 3.368421052631579vw;
+        border: 0.105263157894737vw solid white;
+    
+    }
+    #ventanaestatutos .historiaContent{
+        width: 26.315789473684211vw;
+        margin-right: 7.578947368421053vw;
+    }
+    #ventanaestatutos .historiaContent img{
+        width: 23.684210526315789vw;
+    }
+    #ventanaestatutos .historiaContent .texto{
+        font-size: 1.789473684210526vw;
+        max-width: 31.578947368421053vw;
+    }
+    //fin ventana historia
+    #seccion2{
+        .contenedorHistoria{
+            max-width: 31.578947368421053vw;
+            margin-bottom: 2.526315789473684vw;
+            h1{
+                border-bottom: 0.052631578947368vw solid white;
+                padding-bottom: 0.842105263157895vw;
+                max-width: 13.157894736842105vw;
+                font-size: 1.789473684210526vw;
+            }
+            .textoformato{
+                font-size: 0.757894736842105vw;
+                letter-spacing: 0.042105263157895vw;
+            }
+            
+        }
+        .arregloBotones #btn_estatutos, .arregloBotones #btn_historia{
+            height: 13.157894736842105vw;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+        }
+        .arregloBotones #btn_historia{
+            margin-top: 3.368421052631579vw;
+            width: 15.789473684210526vw;
+            top: -12.631578947368421vw;
+            left: 7.210526vw;
+            background-size: cover;
+        }
+        #btn_historia span{
+            font-size: 2.226315789473684vw;
+            background-size: cover;
+        }
+        .arregloBotones #btn_historia::after{
+            position: absolute;
+            top: 13.894736842105263vw;
+            left: 15.157894736842105vw;
+        }
+        .arregloBotones #btn_estatutos{
+            margin-top: 3.368421052631579vw;
+            width: 15.789473684210526vw;
+            top: -12.631578947368421vw;
+            left: auto;
+            right: -8.210526vw;
+            background-size: cover;
+        }
+        #btn_estatutos span{
+            font-size: 2vw;
+            top: 0;
+            line-height:initial;
+            background-size: cover;
+        }
+        .arregloBotones #btn_estatutos::after{
+            top: 13.894736842105263vw;
+            left: 0rem;
+        }
+        
+    }
+    .newSection{
+        .newSection-textos{
+            padding-left: 2.526315789473684vw;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+        }
+        .newSection-textos h2{
+            font-size: 1.684210526315789vw;
+            width: 21.052631578947368vw;
+        }
+        .newSection-textos p{
+            width: 21.052631578947368vw;
+            font-size: 0.842105263157895vw;
+        }
+        .newSection-cards-item{
+            width: 13.157894736842105vw;
+            height: 13.157894736842105vw;
+            margin-left: 0.526315789473684vw;
+            margin-right: 0.526315789473684vw;
+            margin-bottom: 2rem;
+        }
+        .newSection-cards-item .itemBack-content p{
+            font-size: 0.631578947368421vw;
+        }
+        .newSection-cards-item .itemBack-content .linkSite{
+            width: 5.263157894736842vw;
+            padding: 0.263157894736842vw;
+            font-size: 0.631578947368421vw;
+        }
+    }
+    .ventajasCompetitivas{
+        padding-top: 2.526315789473684vw;
+        padding-bottom: 3.368421052631579vw;
+        height: 33vw;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        .containerText .title{
+            font-size: 1.473684210526316vw;
+        }
+        .somosInov{
+            font-size: 0.842105263157895vw;
+        }
+        .sectionCarousel .containerCarousel .item .number{
+            font-size: 1.789473684210526vw;
+            left: 0rem;
+        }
+       .sectionCarousel .containerCarousel .item{
+            width: 31.578947368421053vw;
+            padding-left: 2em;
+       }
+       .sectionCarousel .containerCarousel .item .container_title{
+           font-size: 1.473684210526316vw;
+       }
+       .sectionCarousel .containerCarousel .item .container_title span{
+            width: 10.526315789473684vw;
+            height: 10.526315789473684vw;
+            font-size: 0.947368421052632vw;
+            left: 100%;
+    bottom: -4.4%;
+       }
+    }
+    #seccion7 {
+        .title{
+            font-size: 1.473684210526316vw;
+            max-width:21.052631578947368vw;
+        }
+        .mapaOperaciones{
+             svg{
+                height: 26.315789473684211vw;
+             }
+        }
+       .mapaOperaciones .containerText >* {
+            font-size: 0.842105263157895vw;
+       }
+       .mapaOperaciones .containerText #quintana{
+           width: 18.421052631578947vw;
+           top: -10.947368421052632vw;
+            left: 16vw;
+       }
+       .mapaOperaciones .containerText #jalisco{
+            width: 18.421052631578947vw;
+            top: 5.894736842105263vw;
+            left: 20.210526315789474vw;
+       }
+       .mapaOperaciones .containerText #amores{
+            width: 18.421052631578947vw;
+            top: -11.368421052631579vw;
+            left: 15.157894736842105vw;
+       }
+       .mapaOperaciones .containerText #panama{
+            width: 18.421052631578947vw;
+            top: 4.210526315789474vw;
+            left: 18.526315789473684vw;
+       }
+       .mapaOperaciones .containerText #dominicana{
+            width: 17.210526315789474vw;
+            top: -9.263157894736842vw;
+            left: 19.368421052631579vw;
+       }
+    }
+    .sectionBlog{
+        .sectionBlog-title{
+            font-size: 1.473684210526316vw;
+        }
+        .sectionBlog-title p{
+            padding-bottom: 0.842105263157895vw;
+            max-width: 17.368421052631579vw;
+        }
+    }
+    footer{
+        min-height: 14.315789473684211vw;
+        padding-left: 3.368421052631579vw;
+        padding-top: 3.368421052631579vw;
+        padding-right: 3.368421052631579vw;
+        padding-bottom: 5.052631578947368vw;
+        .logo{
+            width: 8.421052631578947vw;
+            height: auto;
+            margin-bottom: 1.684210526315789vw;
+        }
+       .menuFooter .containerLinks{
+        width: 36.842105263157895vw;
+        margin-bottom: 0.842105263157895vw;
+        border-bottom: 0.052631578947368vw solid white;
+       }
+       .menuFooter .containerLinks:before{
+        bottom: -.7em;
+        font-size: 0.578947368421053vw;
+       }
+        .menuFooter{
+            margin-bottom: 1.684210526315789vw;
+        }
+       .menuFooter .containerLinks a{
+           padding-bottom: 0.842105263157895vw;
+           font-size: 0.842105263157895vw;
+       }
+        .menuFooter .iconSocial img{
+            width: 1.052631578947368vw;
+            margin-right: 0.263157894736842vw;
+       }
+       .infoFooter{
+            height: 2.631578947368421vw;
+            margin-bottom: 2.526315789473684vw;
+       }
+       .infoFooter .direccion{
+           font-size: 0.842105263157895vw;
+       }
+        .copyright{
+            bottom: 0.842105263157895vw;
+            font-size: 0.842105263157895vw;
+
+       }
+    }
+
+    ///Paginas Filosofia e Historia
+    .contenedorFilosofia{
+        padding-left: 13.789473684210526vw;
+        padding-right: 13.789473684210526vw;
+        min-height: 62.157894736842105vw;
+        max-height: 120vh;
+
+    }
+    .contenedorFilosofia .titulo h1{
+        font-size: 1.789473684210526vw;
+        width: 13.684210526315789vw;
+        line-height: initial;
+    }
+    .contenedorFilosofia .contenido .columnsDown div h2{
+        font-size: 1.894736842105263vw;
+        margin-bottom: 0.842105263157895vw;
+    }
+    .contenedorFilosofia .contenido .columnsDown div{
+        margin-bottom: 0.842105263157895vw;
+        width: 18.421052631578947vw;
+        padding: 2.105263157894737vw;
+    }
+    .contenedorFilosofia .contenido .columnsDown div:first-child{
+        margin-bottom: 0.842105263157895vw;
+    }
+    .contenedorFilosofia .contenido .columnsDown div p{
+        font-size: 0.842105263157895vw;
+    }
+    .contenedorFilosofia .contenido .colLarge div{
+        border: 2.105263157894737vw solid white;
+    }
+    .contenedorFilosofia .contenido .colLarge div h2{
+        font-size: 1.894736842105263vw;
+    }
+    .contenedorFilosofia .contenido .colLarge div p{
+        font-size: 0.842105263157895vw;
+    }
+    .contenedorFilosofia .contenido .colLarge{
+        max-height: 36.842105263157895vw;
+    }
+    .contenedorFilosofia .contenido .colLarge div p{
+        max-height: 36.842105263157895vw;
+    }
+
+    .contenedor{
+        min-height: 63.157894736842105vw;
+        max-height: 120vh;
+    }
+    .contenedor .titulo h1{
+        font-size: 1.789473684210526vw;
+        width: 13.684210526315789vw;
+        line-height: initial;
+    }
+    .contenedor .titulo h1 b{
+        font-size: 2.526315789473684vw;
+    }
+    .contenedor .contenido .arrows{
+        left: -3.368421052631579vw;
+    }
+    .contenedor .contenido .arrows .arrow{
+        width: 2.631578947368421vw;
+        height: 2.631578947368421vw;
+        border: 0.157894736842105vw solid white;
+    }
+    .contenedor .contenido .arrows .arrow i{
+        font-size: 2.210526315789474vw;
+    }
+    .contenedor .contenido .oneCol{
+        margin-bottom: 1.684210526315789vw;
+    }
+    .contenedor .contenido .oneCol div h2{
+        font-size: 1.894736842105263vw;
+    }
+    .contenedor .contenido .oneCol div p{
+        font-size: 0.842105263157895vw;
+    }
+    .contenedor .contenido .twoCol div:first-child{
+        margin-right: 1.052631578947368vw;
+    }
+    .contenedor .contenido .twoCol div{
+        width: 18.421052631578947vw;
+        height: 18.421052631578947vw;
+    }
+
+
+    .lineTime .titleSeccion5{
+        border-bottom: 0.052631578947368vw solid #5A9396;
+        padding-bottom: 0.842105263157895vw;
+        font-size: 1.789473684210526vw;
+    }
+    .lineTime .timeline{
+        position: relative;
+        padding: 0.842105263157895vw;
+        max-width: 68.421052631578947vw;
+    }
+    .lineTime .timeline.scrollAnimation:before{
+        border: 0.052631578947368vw solid #333;
+        margin-top: 3.368421052631579vw;
+    }
+    .lineTime .timeline__title{
+        font-size: 1.789473684210526vw;
+    }
+    .lineTime .timeline__item:before{
+        border-width: 0.157894736842105vw;
+        width: 1.578947368421053vw;
+        height: 1.578947368421053vw;
+    }
+    .lineTime .timeline__item:nth-of-type(2n){
+        margin: 0.842105263157895vw;
+    }
+    .lineTime .timeline__item{
+        margin: 0.842105263157895vw;
+    }
+    .lineTime .timeline__blurb{
+        font-size: 0.947368421052632vw;
+        margin: 0.421052631578947vw 0 0;
+    }
+    //Fina Paginas Filosofia e Historia
+}

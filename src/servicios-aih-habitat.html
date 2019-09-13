@@ -35,7 +35,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="author" content="Luis Guillermo Morales Raya, luisgmoralesraya@gmail.com">
     <meta name="copyright" content="AIH Group">
     <meta name="revisit-after" content="7 days">
-    <meta http-equiv="Expires" content="0">
+    <meta http-equiv='expires' content='0'>
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta name="language" content="ES">
@@ -57,7 +57,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 
-    <meta http-equiv="expires" content="0">
+    <meta http-equiv='expires' content='0'>
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://twitter.com/AiHGroupMx">
@@ -111,7 +111,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <path d="m7.7187 290.95c-0.055099-0.0551-0.10002-4.7024-0.10002-10.328 0-11.051 0.05435-12.062 0.80991-15.056 0.49634-1.9665 1.7243-4.4161 2.836-5.6574 2.3159-2.5859 5.4895-3.6088 10.296-3.3188l2.213 0.1334v6.7908l-0.95899 0.11993c-1.624 0.20316-2.9161 0.51935-3.7654 0.92132-1.5362 0.72721-2.7727 2.2907-3.2628 4.1256-0.24947 0.93371-0.40021 4.0467-0.24329 5.0193l0.11933 0.73811 2.8016 0.074 2.8015 0.074v16.386l-6.7237 0.0385c-3.698 0.0207-6.7686-6e-3 -6.8235-0.0615zm19.878-0.1042c-0.04327-0.1123-0.05166-5.1121-0.01767-11.11 0.06363-11.682 0.0572-11.573 0.85834-14.523 0.39662-1.4602 1.5707-3.8492 2.4117-4.9073 1.2814-1.6122 3.1066-2.7706 5.342-3.3904 0.9851-0.27314 1.5412-0.32077 3.744-0.32063 1.4229 7e-5 2.7009 0.0439 2.8401 0.0973 0.22888 0.0879 0.25299 0.42129 0.25299 3.4905v3.3933l-0.55326 0.0832c-2.5822 0.38846-4.0456 1.0101-5.1644 2.1938-0.86421 0.91432-1.2528 1.6191-1.5717 2.8505-0.29205 1.1283-0.43267 3.5309-0.27942 4.7768l0.11828 0.95956 2.8031 0.074 2.8032 0.074v16.386l-6.7538 0.0385c-5.6429 0.032-6.7667 6e-3 -6.8322-0.16612z" fill="#fff"/>
                         </g>
                         </svg>
-                    <img src="img/newPages/media/sabiasque.jpg">
+                    <img src="img/newPages/habitat/sabiasque.jpg">
                 </div>
                 <div data-aos="fade-left"  class="fichaTecnica-card-text">
                     <p class="titulo" m-page="habitat">Soluciones estratégicas.</p>
@@ -125,34 +125,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h2>Nuestros Proyectos</h2>
                 <p></p>
             </div>
-            <div class="tabs-tabItem">
-                <div m-active="true" class="filtro">Habitacionales</div>
-                <div class="filtro">Corporativos</div>
-            </div>
+            <!-- <div class="tabs-tabItem">
+                <div m-tipo="habitacional" m-active="true" class="filtro">Habitacionales</div>
+                <div m-tipo="corporativo" class="filtro">Corporativos</div>
+            </div> -->
             <div class="tabs-content">
-                <div class="tabs-content-item">
+                <!-- <div m-proyecto="corporativo" class="tabs-content-item">
                     <div class="blurBack"></div>
                     <img src="img/newPages/habitat/proyectos/demos/1.jpg" class="blurBackground">
-                </div>
-                <div class="tabs-content-item">
+                    <div class="contentItem">
+                        <p>Proyecto Sabina Méxicana</p>
+                        <img src="img/newPages/habitat/proyectos/demos/1.jpg">
+                    </div>
+                </div> -->
+                <div m-proyecto="corporativo" class="tabs-content-item" m-nameProyecto="aihgroup">
                     <div class="blurBack"></div>
                     <img src="img/newPages/habitat/proyectos/demos/2.jpg" class="blurBackground">
+                    <div class="contentItem">
+                        <p>Proyecto AIH Group</p>
+                        <img src="img/newPages/habitat/proyectos/demos/2.jpg">
+                    </div>
                 </div>
-                <div class="tabs-content-item">
+                <!-- <div m-proyecto="habitacional" class="tabs-content-item">
                     <div class="blurBack"></div>
                     <img src="img/newPages/habitat/proyectos/demos/3.jpg" class="blurBackground">
-                </div>
-                <div class="tabs-content-item">
+                    <div class="contentItem">
+                        <p>Proyecto LALALALALA</p>
+                        <img src="img/newPages/habitat/proyectos/demos/3.jpg">
+                    </div>
+                </div> -->
+                <div m-proyecto="habitacional" class="tabs-content-item" m-nameProyecto="casasGrandes">
                     <div class="blurBack"></div>
                     <img src="img/newPages/habitat/proyectos/demos/4.jpg" class="blurBackground">
+                    <div class="contentItem">
+                        <p>Proyecto Casas Grandes</p>
+                        <img src="img/newPages/habitat/proyectos/demos/4.jpg">
+                    </div>
                 </div>
-                <div class="tabs-content-item">
+                <!-- <div m-proyecto="habitacional" class="tabs-content-item">
                     <div class="blurBack"></div>
                     <img src="img/newPages/habitat/proyectos/demos/5.jpg" class="blurBackground">
-                </div>
-                <div class="tabs-content-item">
+                    <div class="contentItem">
+                        <p>Proyecto LALALALALA</p>
+                        <img src="img/newPages/habitat/proyectos/demos/5.jpg">
+                    </div>
+                </div> -->
+                <div m-proyecto="habitacional" class="tabs-content-item" m-nameProyecto="room1078">
                     <div class="blurBack"></div>
                     <img src="img/newPages/habitat/proyectos/demos/6.jpg" class="blurBackground">
+                    <div class="contentItem">
+                        <p>Proyecto Room 1078</p>
+                        <img src="img/newPages/habitat/proyectos/demos/6.jpg">
+                    </div>
                 </div>
             </div>
         </div>
@@ -210,6 +234,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     </section>
+    <section class="modalHabitat" m-open="false">
+        <div class="modalHabitat-close">
+            <span>X</span>
+        </div>
+        <div class="containerSlider">
+            <div class="slider">
+            </div>
+        </div>
+        <div class="containerTextos">
+            <h2 class="containerTextos-titulo">Casas Grandes</h2>
+            <p class="containerTextos-ubicacion">Ciudad de México  Col. Del Valle</p>
+            <div class="containerTextos-descripcion">
+                <p>Este proyecto abarcó una remodelación completa de la residencia, al conservar los espacios originales, se tuvo la oportunidad de mejorar la experiencia y comodidad con acabados de estilo contemporáneo para ofrecer una mayor tranquilidad se reforzaron importantes puntos de seguridad; se adaptó un roof garden y se anexaron áreas verdes que aportan mayor exclusividad y plusvalía a la residencia.</p>
+            </div>
+            <div class="containerTextos-detalles">
+                <p><b>Típo:</b> Departamento</p>
+            </div>
+        </div>
+    </section>
     <footer id="main-footer"></footer>
 
 
@@ -225,21 +268,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
     gtag('js', new Date());
     gtag('config', 'UA-144303557-1');
-</script>
-<script>
-    (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-            'gtm.start': new Date().getTime(),
-            event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != 'dataLayer' ? '&l=' + l : '';
-        j. = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-WFKFCZZ');
 </script>
 <script src="https://www.google-analytics.com/analytics.js" ></script>
 

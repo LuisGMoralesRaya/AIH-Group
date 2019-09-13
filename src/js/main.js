@@ -654,7 +654,7 @@ $('#cerrar_advisors').click(
 
 
 $('.containerCarousel').owlCarousel({
-    autoplay: true,
+    autoplay: false,
     loop: true,
     autoplayTimeout: 2500,
     autoplayHoverPause: true,

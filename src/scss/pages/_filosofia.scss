@@ -9,7 +9,8 @@
     align-items: center;
     align-content: center;
     justify-content: space-around;
-    min-height: 120vh;
+    min-height: 1200px;
+    max-height: 120vh;
     padding-left: 0;
     padding-right: 5rem;
 
@@ -52,7 +53,7 @@
     flex: 1;
     &[m-flex="row"] {
       flex-direction: row-reverse;
-      height: 600px;
+      height: auto;
     }
     .colLarge {
       display: flex;

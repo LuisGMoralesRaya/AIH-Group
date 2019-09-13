@@ -1,55 +1,15 @@
 $(document).ready(function () {
-    $(".textoFlip").mouseenter(function(){    
-        $(this).attr('src','img/error/textoRosa.png');      
-    });     
-    $(".textoFlip").mouseleave(function(){       
-        $(this).attr('src','img/error/textoAzul.png');      
-    }); 
-    $(".clickedArrow").click(function () {
-        var attr = $(this).attr("m-active");
-        var arrowType = $(this).attr("m-arrow");
-
-        if (attr != "true") {
-            $(".contenedor .contenido .arrows .arrow").attr("m-active", "false");
-            $(this).attr("m-active", "true");
-            if (arrowType == "down") {
-                $(".contenedor .contenido .oneCol div h2")
-                    .animate({ opacity: 0 }, 1000, function () {
-                        $(this).html(
-                            'Nueva Generación <img src="img/backgroundPages/generacionHistoria.png" />'
-                        );
-                    })
-                    .animate({ opacity: 1 }, 1000);
-                $(".contenedor .contenido .oneCol div p")
-                    .animate({ opacity: 0 }, 1000, function () {
-                        $(this).html(
-                            "Hoy nuestro fundador Ramiro Guerrero continúa a la delantera de nuestro equipo permitiéndonos compartir conocimiento del entorno además de toda su experiencia en el rubro que actualmente se fusiona con la nueva generación, Ramiro Guerrero Carrillo, y su visión más moderna del entorno la cual equilibra el valor justo al beneficio social y las formas eficientes de hacer rentable el negocio sin perder de vista las necesidades del cliente. <br>Por años nuestra especialización en el ramo de la industria turística así como el posicionamiento en 15 de los destinos turísticos más importantes de México, Panamá y República Dominicana, nos ha permitido tener una visión 360 en este mercado haciéndonos expertos en el manejo de grandes cadenas empresariales, nacionales e internacionales, adicionalmente hemos participado como consultores en la más variada gama de industrias (industria restaurantera, sector petrolero, sector del entretenimiento, sector salud, maquiladoras, e industria vinícola) en México y América Latina. Hoy nos presentamos como un consorcio sólido con la capacidad de realizar una asesoría integral totalmente enfocada a la optimización de sus recursos de acuerdo a sus necesidades."
-                        );
-                    })
-                    .animate({ opacity: 1 }, 1000);
-            } else {
-                $(".contenedor .contenido .oneCol div h2")
-                    .animate({ opacity: 0 }, 1000, function () {
-                        $(this).html(
-                            'Fundación <img src="img/backgroundPages/flagHistoria.png" />'
-                        );
-                    })
-                    .animate({ opacity: 1 }, 1000);
-                $(".contenedor .contenido .oneCol div p")
-                    .animate({ opacity: 0 }, 1000, function () {
-                        $(this).html(
-                            "A finales de los años 90 Ramiro Guerrero inició con la idea de aportar valor a las compañías y personal del rubro de los clubes vacacionales a través de la tercerización de servicios contables y eventualmente de nóminas, así como recursos humanos. Anteriormente los representantes de ventas de la industria hotelera no recibían ningún tipo de beneficios salvo el pago de sus comisiones. AIH nace con la intención de brindar estructura y además el acceso a beneficios sociales a empleados y fomentar el desarrollo de empresas más responsables en México, convirtiéndose así en la empresa pionera en servicios de outsourcing y tercerización del país."
-                        );
-                    })
-                    .animate({ opacity: 1 }, 1000);
-            }
-        }
+    $(".textoFlip").mouseenter(function () {
+        $(this).attr('src', 'img/error/textoRosa.png');
     });
-    checkUrlSite();
+    $(".textoFlip").mouseleave(function () {
+        $(this).attr('src', 'img/error/textoAzul.png');
+    });
     validatedContacto();
     getFeedBlog();
+    //runSliderHabitat();
     var checkWidth = $(window).width();
-    if (checkWidth > 613){
+    if (checkWidth > 613) {
         $(".habitat .contenidos .filtros .proyecto").click(function () {
             var typeDiv = $(this).attr("id");
             console.log(typeDiv)
@@ -69,209 +29,216 @@ $(document).ready(function () {
         });
     }
     $(document).on("click", ".textoTab", showTabs);
+    $(document).on("click", ".containerNewPages .tabs-tabItem .filtro", tabsHabitat);
+    $(document).on("click", ".containerNewPages .tabs-content-item", openModalHabitat);
+    $(document).on("click", ".modalHabitat-close span", closeModal);
+    $(document).on("click", ".pageContacto-mapa-pais .item-titulo", clickContact);
+    $(document).on("click", ".pageContacto-mapa-pais .item ul li", clickContactMexico);
 
 });
-function getFeedBlog(){
+
+function getFeedBlog() {
     var urlBlog = window.location.pathname;
     var blogContent = "";
     var isCarousel = false;
     var feedURL = "https://aihgroup.com.mx/blog/feed/";
     $.ajax({
-      type: 'GET',
-      url: "https://api.rss2json.com/v1/api.json?rss_url=" + feedURL,
-      dataType: 'jsonp',
-      success: function(result) {
-        var item = result.items;
-        for(var i = 0; i < result.items.length && i < 20; i++) {
-            var item = result.items[i];
-            //console.log(item);
-            var counItem = result.items;
-            if(urlBlog == "/servicios-aih-advisors.html"){
-                if(item.categories[0] == "advisors"){
-                    blogContent += '<div class="itemCarousel">';
-                    blogContent += '<a href="' + item.link + '" target="_blank" class="item">';
-                    blogContent += '<img src="' + item.enclosure.link + '" class="item-img">';
-                    blogContent += '<h3 class="tituloBlog">' + item.title + '</h3>';
-                    var textDescriptio = $(item.content+"p:first").text();
-                    //console.log(textDescriptio)
-                    blogContent += '<div class="textoBlog">' + textDescriptio + '</div>';
-                    blogContent += '<div m-page="advisors" class="linkBlog" onclick="window.open("' + item.link + '","mywindow");">Ver más</div>';
-                    blogContent += '</a>';
-                    blogContent +=  '</div>';
-                    if(item >= 3){
-                        isCarousel == true;
-                        $(".blogFeedSeccion").attr("m-carousel","true");
+        type: 'GET',
+        url: "https://api.rss2json.com/v1/api.json?rss_url=" + feedURL,
+        dataType: 'jsonp',
+        success: function (result) {
+            var item = result.items;
+            for (var i = 0; i < result.items.length && i < 20; i++) {
+                var item = result.items[i];
+                //console.log(item);
+                var counItem = result.items;
+                if (urlBlog == "/servicios-aih-advisors.html") {
+                    if (item.categories[0] == "advisors") {
+                        if (i >= 1) {
+                            blogContent += '<div class="itemCarousel">';
+                            blogContent += '<a href="' + item.link + '" target="_blank" class="item">';
+                            blogContent += '<img src="' + item.enclosure.link + '" class="item-img">';
+                            blogContent += '<h3 class="tituloBlog">' + item.title + '</h3>';
+                            var textDescriptio = $(item.content + "p:first").text();
+                            //console.log(textDescriptio)
+                            blogContent += '<div class="textoBlog">' + textDescriptio + '</div>';
+                            blogContent += '<div m-page="advisors" class="linkBlog" onclick="window.open("' + item.link + '","mywindow");">Ver más</div>';
+                            blogContent += '</a>';
+                            blogContent += '</div>';
+                            if (item >= 3) {
+                                isCarousel == true;
+                                $(".blogFeedSeccion").attr("m-carousel", "true");
+                            }
+                        } else {
+                            $(".blogFeedSeccion").hide();
+                        }
                     }
-                }else{
-                    $(".blogFeedSeccion").hide();
-                }
-            }else if(urlBlog == "/servicios-aih-personnel.html"){
-                if(item.categories[0] == "personnel"){
-                        blogContent += '<div class="itemCarousel">';
-                        blogContent += '<a href="' + item.link + '" target="_blank" class="item">';
-                        blogContent += '<img src="' + item.enclosure.link + '" class="item-img">';
-                        blogContent += '<h3 class="tituloBlog">' + item.title + '</h3>';
-                        var textDescriptio = $(item.content+"p:first").text();
-                        //console.log(textDescriptio)
-                        blogContent += '<div class="textoBlog">' + textDescriptio + '</div>';
-                        blogContent += '<div m-page="personnel" class="linkBlog" onclick="window.open("' + item.link + '","mywindow");">Ver más</div>';
-                        blogContent += '</a>';
-                        blogContent +=  '</div>';
-                    if(item >= 3){
-                        isCarousel == true;
-                        $(".blogFeedSeccion").attr("m-carousel","true")
+                } else if (urlBlog == "/servicios-aih-personnel.html") {
+                    if (item.categories[0] == "personnel") {
+                        if (i >= 1) {
+                            blogContent += '<div class="itemCarousel">';
+                            blogContent += '<a href="' + item.link + '" target="_blank" class="item">';
+                            blogContent += '<img src="' + item.enclosure.link + '" class="item-img">';
+                            blogContent += '<h3 class="tituloBlog">' + item.title + '</h3>';
+                            var textDescriptio = $(item.content + "p:first").text();
+                            //console.log(textDescriptio)
+                            blogContent += '<div class="textoBlog">' + textDescriptio + '</div>';
+                            blogContent += '<div m-page="personnel" class="linkBlog" onclick="window.open("' + item.link + '","mywindow");">Ver más</div>';
+                            blogContent += '</a>';
+                            blogContent += '</div>';
+                            if (item >= 3) {
+                                isCarousel == true;
+                                $(".blogFeedSeccion").attr("m-carousel", "true");
+                            }
+                        } else {
+                            $(".blogFeedSeccion").hide();
+                        }
                     }
-                }else{
-                    $(".blogFeedSeccion").hide();
-                }
-            }else if(urlBlog == "/servicios-aih-capital.html"){
-                if(item.categories[0] == "capital"){
-                    blogContent += '<div class="itemCarousel">';
-                    blogContent += '<a href="' + item.link + '" target="_blank" class="item">';
-                    blogContent += '<img src="' + item.enclosure.link + '" class="item-img">';
-                    blogContent += '<h3 class="tituloBlog">' + item.title + '</h3>';
-                    var textDescriptio = $(item.content+"p:first").text();
-                    //console.log(textDescriptio)
-                    blogContent += '<div class="textoBlog">' + textDescriptio + '</div>';
-                    blogContent += '<div m-page="capital" class="linkBlog" onclick="window.open("' + item.link + '","mywindow");">Ver más</div>';
-                    blogContent += '</a>';
-                    blogContent +=  '</div>';
-                    if(item >= 3){
-                        isCarousel == true;
-                        $(".blogFeedSeccion").attr("m-carousel","true")
+                } else if (urlBlog == "/servicios-aih-capital.html") {
+                    if (item.categories[0] == "capital") {
+                        if (i >= 1) {
+                            blogContent += '<div class="itemCarousel">';
+                            blogContent += '<a href="' + item.link + '" target="_blank" class="item">';
+                            blogContent += '<img src="' + item.enclosure.link + '" class="item-img">';
+                            blogContent += '<h3 class="tituloBlog">' + item.title + '</h3>';
+                            var textDescriptio = $(item.content + "p:first").text();
+                            //console.log(textDescriptio)
+                            blogContent += '<div class="textoBlog">' + textDescriptio + '</div>';
+                            blogContent += '<div m-page="capital" class="linkBlog" onclick="window.open("' + item.link + '","mywindow");">Ver más</div>';
+                            blogContent += '</a>';
+                            blogContent += '</div>';
+                            if (item >= 3) {
+                                isCarousel == true;
+                                $(".blogFeedSeccion").attr("m-carousel", "true");
+                            }
+                        } else {
+                            $(".blogFeedSeccion").hide();
+                        }
                     }
-                }else{
-                    $(".blogFeedSeccion").hide();
-                }
-            }else if(urlBlog == "/servicios-aih-holding.html"){
-                if(item.categories[0] == "holding"){
-                    blogContent += '<div class="itemCarousel">';
-                    blogContent += '<a href="' + item.link + '" target="_blank" class="item">';
-                    blogContent += '<img src="' + item.enclosure.link + '" class="item-img">';
-                    blogContent += '<h3 class="tituloBlog">' + item.title + '</h3>';
-                    var textDescriptio = $(item.content+"p:first").text();
-                    //console.log(textDescriptio)
-                    blogContent += '<div class="textoBlog">' + textDescriptio + '</div>';
-                    blogContent += '<div m-page="holding" class="linkBlog" onclick="window.open("' + item.link + '","mywindow");">Ver más</div>';
-                    blogContent += '</a>';
-                    blogContent +=  '</div>';
-                    if(item >= 3){
-                        isCarousel == true;
-                        $(".blogFeedSeccion").attr("m-carousel","true")
+                } else if (urlBlog == "/servicios-aih-holding.html") {
+                    if (item.categories[0] == "holding") {
+                        if (i >= 1) {
+                            blogContent += '<div class="itemCarousel">';
+                            blogContent += '<a href="' + item.link + '" target="_blank" class="item">';
+                            blogContent += '<img src="' + item.enclosure.link + '" class="item-img">';
+                            blogContent += '<h3 class="tituloBlog">' + item.title + '</h3>';
+                            var textDescriptio = $(item.content + "p:first").text();
+                            //console.log(textDescriptio)
+                            blogContent += '<div class="textoBlog">' + textDescriptio + '</div>';
+                            blogContent += '<div m-page="holding" class="linkBlog" onclick="window.open("' + item.link + '","mywindow");">Ver más</div>';
+                            blogContent += '</a>';
+                            blogContent += '</div>';
+                            if (item >= 3) {
+                                isCarousel == true;
+                                $(".blogFeedSeccion").attr("m-carousel", "true");
+                            }
+                        } else {
+                            $(".blogFeedSeccion").hide();
+                        }
                     }
-                }else{
-                    $(".blogFeedSeccion").hide();
-                }
-            }else if(urlBlog == "/servicios-aih-media.html"){
-                if(item.categories[0] == "media"){
-
-                    $(".blogFeedSeccion").attr("m-carousel","false")
-                    blogContent += '<div class="itemCarousel">';
-                    blogContent += '<a href="' + item.link + '" target="_blank" class="item">';
-                    blogContent += '<img src="' + item.enclosure.link + '" class="item-img">';
-                    blogContent += '<h3 class="tituloBlog">' + item.title + '</h3>';
-                    var textDescriptio = $(item.content+"p:first").text();
-                    //console.log(textDescriptio)
-                    blogContent += '<div class="textoBlog">' + textDescriptio + '</div>';
-                    blogContent += '<div m-page="media" class="linkBlog" onclick="window.open("' + item.link + '","mywindow");">Ver más</div>';
-                    blogContent += '</a>';
-                    blogContent +=  '</div>';
-                    if(item >= 3){
-                        isCarousel == true;
-                        $(".blogFeedSeccion").attr("m-carousel","true")
-                    }else{
-                        console.log("hey")
+                } else if (urlBlog == "/servicios-aih-media.html") {
+                    if (item.categories[0] == "media") {
+                        if (i >= 1) {
+                            blogContent += '<div class="itemCarousel">';
+                            blogContent += '<a href="' + item.link + '" target="_blank" class="item">';
+                            blogContent += '<img src="' + item.enclosure.link + '" class="item-img">';
+                            blogContent += '<h3 class="tituloBlog">' + item.title + '</h3>';
+                            var textDescriptio = $(item.content + "p:first").text();
+                            //console.log(textDescriptio)
+                            blogContent += '<div class="textoBlog">' + textDescriptio + '</div>';
+                            blogContent += '<div m-page="media" class="linkBlog" onclick="window.open("' + item.link + '","mywindow");">Ver más</div>';
+                            blogContent += '</a>';
+                            blogContent += '</div>';
+                            if (item >= 3) {
+                                isCarousel == true;
+                                $(".blogFeedSeccion").attr("m-carousel", "true");
+                            }
+                        } else {
+                            $(".blogFeedSeccion").hide();
+                        }
                     }
-                }else{
-                    $(".blogFeedSeccion").hide();
-                }
-            }else if(urlBlog == "/servicios-aih-habitat.html"){
-                if(item.categories[0] == "habitat"){
-                    blogContent += '<div class="itemCarousel">';
-                    blogContent += '<a href="' + item.link + '" target="_blank" class="item">';
-                    blogContent += '<img src="' + item.enclosure.link + '" class="item-img">';
-                    blogContent += '<h3 class="tituloBlog">' + item.title + '</h3>';
-                    var textDescriptio = $(item.content+"p:first").text();
-                    //console.log(textDescriptio)
-                    blogContent += '<div class="textoBlog">' + textDescriptio + '</div>';
-                    blogContent += '<div m-page="habitat" class="linkBlog" onclick="window.open("' + item.link + '","mywindow");">Ver más</div>';
-                    blogContent += '</a>';
-                    blogContent +=  '</div>';
-                    
-                    if(item >= 3){
-                        $(".blogFeedSeccion").attr("m-carousel","true")
-                        isCarousel == true;
-                    }else{
+                } else if (urlBlog == "/servicios-aih-habitat.html") {
+                    if (item.categories[0] == "habitat") {
+                        console.log(i)
+                        if (i >= 1) {
+                            blogContent += '<div class="itemCarousel">';
+                            blogContent += '<a href="' + item.link + '" target="_blank" class="item">';
+                            blogContent += '<img src="' + item.enclosure.link + '" class="item-img">';
+                            blogContent += '<h3 class="tituloBlog">' + item.title + '</h3>';
+                            var textDescriptio = $(item.content + "p:first").text();
+                            //console.log(textDescriptio)
+                            blogContent += '<div class="textoBlog">' + textDescriptio + '</div>';
+                            blogContent += '<div m-page="habitat" class="linkBlog" onclick="window.open("' + item.link + '","mywindow");">Ver más</div>';
+                            blogContent += '</a>';
+                            blogContent += '</div>';
+                            if (item >= 3) {
+                                isCarousel == true;
+                                $(".blogFeedSeccion").attr("m-carousel", "true");
+                            }
+                        } else {
+                            $(".blogFeedSeccion").hide();
+                        }
                     }
-                }else{
-                    $(".blogFeedSeccion").hide();
                 }
             }
+            $(".blogFeedSeccion-post").html(blogContent);
+            function runBlogCarousel() {
+                $('.blogFeedSeccion-post').slick({
+                    centerMode: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    autoplay: false,
+                    autoplaySpeed: 1500,
+                    arrows: false,
+                    dots: false,
+                    pauseOnHover: false,
+                    responsive: [
+                        {
+                            breakpoint: 1300,
+                            settings: {
+                                slidesToShow: 2
+                            }
+                        }, {
+                            breakpoint: 767,
+                            settings: {
+                                slidesToShow: 1
+                            }
+                        }]
+                });
+            }
+            if (isCarousel == true) {
+                setTimeout(runBlogCarousel, 3000);
+            }
         }
-        $(".blogFeedSeccion-post").html(blogContent);
-        function runBlogCarousel(){
-              $('.blogFeedSeccion-post').slick({
-                centerMode: true,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                autoplay: false,
-                autoplaySpeed: 1500,
-                arrows: false,
-                dots: false,
-                pauseOnHover: false,
-                responsive: [
-                    {
-                    breakpoint: 1300,
-                    settings: {
-                        slidesToShow: 2
-                    }
-                }, {
-                    breakpoint: 767,
-                    settings: {
-                        slidesToShow: 1
-                    }
-                }]
-            });
-        }
-        if(isCarousel == true){
-            setTimeout(runBlogCarousel, 3000);
-        }
-      }
     });
 }
 function showTabs() {
 
     var url = window.location.pathname;
-    var nameFolder ="";
-    if(url == "/servicios-aih-advisors.html"){
-        nameFolder ="advisors";
-    }else if(url == "/servicios-aih-personnel.html"){
-        nameFolder ="personnel";
-    }else if(url == "/servicios-aih-capital.html"){
-        nameFolder ="capital";
-    }else if(url == "/servicios-aih-holding.html"){
-        nameFolder ="holding";
-    }else if(url == "/servicios-aih-media.html"){
-        nameFolder ="media";
-    }else if(url == "/servicios-aih-habitat.html"){
-        nameFolder ="habitat";
+    var nameFolder = "";
+    if (url == "/servicios-aih-advisors.html") {
+        nameFolder = "advisors";
+    } else if (url == "/servicios-aih-personnel.html") {
+        nameFolder = "personnel";
+    } else if (url == "/servicios-aih-capital.html") {
+        nameFolder = "capital";
+    } else if (url == "/servicios-aih-holding.html") {
+        nameFolder = "holding";
+    } else if (url == "/servicios-aih-media.html") {
+        nameFolder = "media";
+    } else if (url == "/servicios-aih-habitat.html") {
+        nameFolder = "habitat";
     }
     $('.textoTab').attr("m-active", "false");
     $(this).attr("m-active", "true");
     var numberTab = $(this).attr("m-position");
-    if(numberTab = numberTab){
-        var tabContent = $("#position"+numberTab);
-        $(".contentTab").attr("m-show",false);
-        tabContent.attr("m-show",true);
+    if (numberTab = numberTab) {
+        var tabContent = $("#position" + numberTab);
+        $(".contentTab").attr("m-show", false);
+        tabContent.attr("m-show", true);
         //Change Image Servicio
         var imgServicio = $("#imgServicio");
-        imgServicio.attr("src","img/newPages/"+nameFolder+"/servicio"+numberTab+".jpg");
-    }
-}
-function checkUrlSite(){
-    var urlThis = window.location.pathname;
-    var linksSite = $("#menuprincipal");
-    if(urlThis == "/servicios-aih-personnel.html"){
+        imgServicio.attr("src", "img/newPages/" + nameFolder + "/servicio" + numberTab + ".jpg");
     }
 }
 function validatedContacto() {
@@ -307,8 +274,213 @@ function validatedContacto() {
 
     });
 }
+function tabsHabitat(){
+    $(".containerNewPages .tabs-tabItem .filtro").attr("m-active","false");
+    $(this).attr("m-active","true");
+    var tipoProyecto =  $(this).attr("m-tipo");
+    console.log(tipoProyecto);
+    if(tipoProyecto == "habitacional"){
+        $("[m-proyecto='habitacional']").fadeOut();
+        $("[m-proyecto='corporativo']").fadeIn();
+    }else if(tipoProyecto == "corporativo"){
+        $("[m-proyecto='corporativo']").fadeOut();
+        $("[m-proyecto='habitacional']").fadeIn();
+    }
+    
+}
+function openModalHabitat() {
+    var nameProyect = $(this).attr("m-nameProyecto");
+    console.log(nameProyect);
+    $(".modalHabitat").attr("m-open","true");
+    if(nameProyect == "aihgroup"){
+        $(".modalHabitat .containerTextos-titulo").html("AIH Group");
+        $(".modalHabitat .containerTextos-ubicacion").html("Ciudad de México");
+        $(".modalHabitat .containerTextos-descripcion").html("<p>AIH Group cuenta con una identidad empresarial profesional y elegante, que requiere compartir y transmitir  a sus visitantes. Para lograrlo, se integraron los acabados del diseño con los espacios del edificio, logrando una imagen fresca que se percibe desde la recepción.</p> <p>En nuestras oficinas logramos diseñar zonas que transmiten la imagen personalizada, cercana y transparente del grupo, con accesos traslúcidos y detalles naturales colocados en el interior de las instalaciones, mismos que fomentan la eficiencia y el profesionalismo que nos caracterizan.</p>");
+        $(".modalHabitat .containerTextos-detalles").html("<p><b>Típo:</b> Corporativo</p>");
+        $(".modalHabitat .containerSlider .slider").html();
+        $(".modalHabitat .containerSlider .slider").append( "<img src='/img/proyectosHabitat/aihgroup/1.jpg' />" );
+        $(".modalHabitat .containerSlider .slider").append( "<img src='/img/proyectosHabitat/aihgroup/2.jpg' />" );
+        $(".modalHabitat .containerSlider .slider").append( "<img src='/img/proyectosHabitat/aihgroup/3.jpg' />" );
+        $(".modalHabitat .containerSlider .slider").append( "<img src='/img/proyectosHabitat/aihgroup/4.jpg' />" );
+        $(".modalHabitat .containerSlider .slider").append( "<img src='/img/proyectosHabitat/aihgroup/5.jpg' />" );
+        $(".modalHabitat .containerSlider .slider").append( "<img src='/img/proyectosHabitat/aihgroup/6.jpg' />" );
+        $(".modalHabitat .containerSlider .slider").append( "<img src='/img/proyectosHabitat/aihgroup/7.jpg' />" );
+        $(".modalHabitat .containerSlider .slider").append( "<img src='/img/proyectosHabitat/aihgroup/8.jpg' />" );
+        $(".modalHabitat .containerSlider .slider").append( "<img src='/img/proyectosHabitat/aihgroup/9.jpg' />" );
+        setTimeout(function(){
+            runSliderHabitat();
+          }, 1500);
+        /* folder = "/img/proyectosHabitat/aihgroup/";
+        $.ajax({
+            url : folder,
+            success: function (data) {
+                $(data).find("a").attr("href", function (i, val) {
+                    if( val.match(/\.(jpg|jpeg|svg|png|gif)$/) ) {
+                        $(".modalHabitat .containerSlider .slider").append( "<img src="+ folder + val +" />" );
+                    }
+                });
+                setTimeout(function(){
+                    runSliderHabitat();
+                  }, 1500);
+            }
+        }); */
+    }else if(nameProyect == "casasGrandes"){
+        $(".modalHabitat .containerTextos-titulo").html("Casas Grandes");
+        $(".modalHabitat .containerTextos-ubicacion").html("Ciudad de México");
+        $(".modalHabitat .containerTextos-descripcion").html("<p>Este proyecto abarcó una remodelación completa de la residencia, al conservar los espacios originales, se tuvo la oportunidad de mejorar la experiencia y comodidad con acabados de estilo contemporáneo para ofrecer una mayor tranquilidad se reforzaron importantes puntos de seguridad; se adaptó un roof garden y se anexaron áreas verdes que aportan mayor exclusividad y plusvalía a la residencia.</p>");
+        $(".modalHabitat .containerTextos-detalles").html("<p><b>Típo:</b> Residencial</p>");
+        $(".modalHabitat .containerSlider .slider").html();
+        $(".modalHabitat .containerSlider .slider").append( "<img src='/img/proyectosHabitat/casas-grande/1.jpg' />" );
+        $(".modalHabitat .containerSlider .slider").append( "<img src='/img/proyectosHabitat/casas-grande/2.jpg' />" );
+        $(".modalHabitat .containerSlider .slider").append( "<img src='/img/proyectosHabitat/casas-grande/3.jpg' />" );
+        $(".modalHabitat .containerSlider .slider").append( "<img src='/img/proyectosHabitat/casas-grande/4.jpg' />" );
+        $(".modalHabitat .containerSlider .slider").append( "<img src='/img/proyectosHabitat/casas-grande/5.jpg' />" );
+        setTimeout(function(){
+            runSliderHabitat();
+          }, 1500);
 
-var images = [
+    }else if(nameProyect == "room1078"){
+        $(".modalHabitat .containerTextos-titulo").html("Room 1078");
+        $(".modalHabitat .containerTextos-ubicacion").html("Ciudad de México");
+        $(".modalHabitat .containerTextos-descripcion").html("<p>La estancia nace de la idea de proponer un sitio agradable y acondicionado a estudiantes que compagine con las exigencias diarias de la vida universitaria. Sus habitaciones fueron acondicionadas para tener un cómodo descanso con la privacidad adecuada, cuenta con áreas compartidas que promueven la convivencia e integración, en un ambiente donde el estilo arquitectónico armoniza los acabados con los aspectos naturales y artificiales propuestos.</p>");
+        $(".modalHabitat .containerTextos-detalles").html("<p><b>Típo:</b> Estancia para estudiantes</p>");
+        $(".modalHabitat .containerSlider .slider").html();
+        $(".modalHabitat .containerSlider .slider").append( "<img src='/img/proyectosHabitat/room1078/1.png' />" );
+        $(".modalHabitat .containerSlider .slider").append( "<img src='/img/proyectosHabitat/room1078/2.jpg' />" );
+        $(".modalHabitat .containerSlider .slider").append( "<img src='/img/proyectosHabitat/room1078/3.jpg' />" );
+        $(".modalHabitat .containerSlider .slider").append( "<img src='/img/proyectosHabitat/room1078/4.jpg' />" );
+        $(".modalHabitat .containerSlider .slider").append( "<img src='/img/proyectosHabitat/room1078/5.jpg' />" );
+        $(".modalHabitat .containerSlider .slider").append( "<img src='/img/proyectosHabitat/room1078/6.jpg' />" );
+        $(".modalHabitat .containerSlider .slider").append( "<img src='/img/proyectosHabitat/room1078/7.png' />" );
+        setTimeout(function(){
+            runSliderHabitat();
+          }, 1500);
+    }
+}
+function closeModal(){
+    $('.slider').slick('unslick');
+    $(".modalHabitat").attr("m-open","false");
+    $(".modalHabitat .containerTextos-titulo").html("");
+        $(".modalHabitat .containerTextos-ubicacion").html("");
+        $(".modalHabitat .containerTextos-descripcion").html("");
+        $(".modalHabitat .containerTextos-detalles").html("");
+        $(".modalHabitat .containerSlider .slider").html("");
+}
+function runSliderHabitat(){
+    $('.slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: true,
+        responsive: [{
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+           breakpoint: 400,
+           settings: {
+              arrows: false,
+              slidesToShow: 1,
+              slidesToScroll: 1
+           }
+        }]
+    });
+}
+function clickContact(){
+    $(".pageContacto-mapa-pais .item-titulo").closest(".item").attr("m-active","false");
+    $(this).closest(".item").attr("m-active","true");
+    var pais = $(this).attr("m-pais");
+    if(pais == "republicaDominicana"){
+        $("#direccionContacto").html("Aqua Business Center: Blvd. 1ro. de Noviembre, Punta Cana 23000, República Dominicana.");
+        $("#telefonoContacto").html("<a href='tel:+18097959942'>(+1) 809 795 9942</a>");
+        $(".mexicoList").fadeOut();
+        $("#cdmxMapa").hide();
+        $("#guadalajaraMapa").hide();
+        $("#quintanaMapa").hide();
+        $("#republicaMapa").hide();
+        $("#panamaMapa").hide();
+        $("#republicaMapa").show();
+    }else if(pais == "panama"){
+        $("#direccionContacto").html("Av. Manuel Espinosa Batista, Antiguo edificio NCR piso 1 oficina 3 en Panamá.");
+        $("#telefonoContacto").html("<a href='tel:+5073888950'>(+507) 388 8950</a>");
+        $(".mexicoList").fadeOut();
+        $("#cdmxMapa").hide();
+        $("#guadalajaraMapa").hide();
+        $("#quintanaMapa").hide();
+        $("#republicaMapa").hide();
+        $("#panamaMapa").show();
+        $("#republicaMapa").hide();
+    }else if(pais == "mexico"){
+        $(".pageContacto-mapa-pais .item ul li").attr("m-active","false");
+        $(".pageContacto-mapa-pais .item ul li").first().attr("m-active","true");
+        $("#direccionContacto").html("Amores 1120, Corporativo Amores, Piso 2 oficina 202, Ciudad de México.");
+        $("#telefonoContacto").html("<a href='tel:+525541983819'>(+52) 554 198 3819</a>");
+        $("#cdmxMapa").show();
+        $("#guadalajaraMapa").hide();
+        $("#quintanaMapa").hide();
+        $("#republicaMapa").hide();
+        $("#panamaMapa").hide();
+        $("#republicaMapa").hide();
+        $(".mexicoList").fadeIn();
+    }
+}
+function clickContactMexico(){
+    $(".pageContacto-mapa-pais .item ul li").attr("m-active","false");
+    $(this).attr("m-active","true");
+    var estado = $(this).attr("m-estado");
+    if(estado == "cdmx"){
+        $("#direccionContacto").html("Amores 1120, Corporativo Amores, Piso 2 oficina 202, Ciudad de México.");
+        $("#telefonoContacto").html("<a href='tel:+525541983819'>(+52) 554 198 3819</a>");
+        $("#cdmxMapa").show();
+        $("#guadalajaraMapa").hide();
+        $("#quintanaMapa").hide();
+        $("#republicaMapa").hide();
+        $("#panamaMapa").hide();
+        $("#republicaMapa").hide();
+    }else if(estado == "guadalajara"){
+        $("#direccionContacto").html("Punto Sao Paulo, Torre HSBC, Piso 4-E, Guadalajara, Jalisco.");
+        $("#telefonoContacto").html("<a href='tel:+52332 736 4982'>(+52) 332 736 4982</a>");
+        $("#cdmxMapa").hide();
+        $("#guadalajaraMapa").show();
+        $("#quintanaMapa").hide();
+        $("#republicaMapa").hide();
+        $("#panamaMapa").hide();
+        $("#republicaMapa").hide();
+    }else if(estado == "quintanaRoo"){
+        $("#direccionContacto").html("Av. Xel-Ha Mza 04 Lote 06 D3 No.2 SM 26, Cancún, Quintana Roo.");
+        $("#telefonoContacto").html("<a href='tel:+529982521518'>(+52) 998 252 1518</a>");
+        $("#cdmxMapa").hide();
+        $("#guadalajaraMapa").hide();
+        $("#quintanaMapa").show();
+        $("#republicaMapa").hide();
+        $("#panamaMapa").hide();
+        $("#republicaMapa").hide();
+    }
+}
+(function () {
+    $("#Form")
+        .find("input")
+        .each(function () {
+            $(this).on("change", function () {
+                $this = $(this);
+                if (this.value !== "") {
+                    $this.addClass("filled");
+                } else {
+                    $this.removeClass("filled");
+                }
+            });
+        });
+})();
+
+
+/* var images = [
     "carouselHistoria2.jpg",
     "carouselHistoria3.jpg",
     "carouselHistoria1.jpg"
@@ -325,23 +497,9 @@ var timer = setInterval(function () {
         );
         $(".carouselHistoria img").fadeIn(200);
     });
-}, 2500);
+}, 2500); */
 
-(function () {
-    $("#Form")
-        .find("input")
-        .each(function () {
-            $(this).on("change", function () {
-                $this = $(this);
-                if (this.value !== "") {
-                    $this.addClass("filled");
-                } else {
-                    $this.removeClass("filled");
-                }
-            });
-        });
-})();
-var carouselHabitat = $(".modalHabitad-slider");
+/* var carouselHabitat = $(".modalHabitad-slider");
 
 
 $(".right-control").on('click', function () {
@@ -436,9 +594,9 @@ if ($(window).width() >= 613) {
             url : folder,
             success: function (data) {
                 $(data).find("a").attr("href", function (i, val) {
-                    if( val.match(/\.(jpg|jpeg|svg|png|gif)$/) ) { 
+                    if( val.match(/\.(jpg|jpeg|svg|png|gif)$/) ) {
                         $(".modalHabitad-slider").append( "<div class='item'><img class='item' src='"+ folder + val +"'></div>" );
-                    } 
+                    }
                 });
                 setTimeout(function(){
                     carouselHabitat.owlCarousel({
@@ -459,7 +617,7 @@ if ($(window).width() >= 613) {
 
 $(".modalHabitad-closeModal").click(function () {
     $(".modalHabitad").attr("m-active", "false");
-    carouselHabitat.owlCarousel('destroy'); 
+    carouselHabitat.owlCarousel('destroy');
     $(".modalHabitad-slider").html(" ")
 });
 $(window).resize(function(){
@@ -470,10 +628,10 @@ $(window).resize(function(){
 var owlPost = $(".noticiasHabitat");
 function postsCarousel() {
     var checkWidth = $(window).width();
-   
+
     if (checkWidth >= 613) {
         if(typeof owlPost.data('owl.carousel') != 'undefined'){
-            owlPost.data('owl.carousel').destroy(); 
+            owlPost.data('owl.carousel').destroy();
         }
         owlPost.removeClass('owl-carousel');
     } else if (checkWidth <= 612) {
@@ -562,9 +720,9 @@ function postsCarousel() {
                 url :  folder,
                 success: function (data) {
                     $(data).find("a").attr("href", function (i, val) {
-                        if( val.match(/\.(jpg|jpeg|svg|png|gif)$/) ) { 
+                        if( val.match(/\.(jpg|jpeg|svg|png|gif)$/) ) {
                             $(".modalHabitad-slider").append( "<div class='item'><img class='item' src='"+ folder + val +"'></div>" );
-                        } 
+                        }
                     });
                     setTimeout(function(){
                         carouselHabitat.owlCarousel({
@@ -575,7 +733,7 @@ function postsCarousel() {
                             items:1
                         });
                       }, 1500);
-                    
+
                 }
             });
         });
@@ -615,7 +773,7 @@ var carousel_Settings = {
   $( '.filtros' ).on( 'click', '.proyecto', function() {
     var $item = $(this);
     var $thisId = $(this).attr("id");
-    
+
     if ($thisId == "habitacional") {
         $(this).addClass("habitacional");
         $(".habitat .contenidos .filtros .proyecto").removeClass("corpotrativo");
@@ -632,11 +790,11 @@ var carousel_Settings = {
 
 } )
 postsCarousel();
-$(window).resize(postsCarousel);	
+$(window).resize(postsCarousel);
 
 $('#amaraa').click(function() {
     window.open("https://www.aramaraloscabos.com", '_blank');
  });
  $('#sabinaa').click(function() {
     window.open("https://www.sabinamexicanna.com", '_blank');
- });
+ }); */

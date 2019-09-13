@@ -7,6 +7,9 @@ AddType application/x-font-opentype .otf
 AddType application/x-font-woff .woff
 AddType image/svg+xml .svg
 
+RewriteEngine On 
+RewriteCond %{SERVER_PORT} 80 
+RewriteRule ^(.*)$ https://www.aihgroup.com.mx/$1 [R,L]
 # Compress compressible fonts
 AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-opentype image/svg+xml
 
