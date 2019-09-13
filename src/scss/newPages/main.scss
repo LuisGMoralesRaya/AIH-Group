@@ -1333,6 +1333,7 @@
     background-color: rgba(247, 247, 247, 0.98);
     position: fixed;
     flex-wrap: wrap;
+    overflow: scroll;
     &-close{
         position: absolute;
         font-size: 3rem;
