@@ -11,27 +11,7 @@ function openNav() {
     $(window).scrollTop(0);
 });
 $(document).ready(function () {
-    $.ajax({
-        url: 'https://aihgroup.com.mx/blog/feed/',
-        type: 'GET',
-        dataType: "xml"
-    }).done(function(xml) {
-        console.log(
-        $.each($("item", xml), function(i, e) {
-
-            var blogNumber = i + 1 + ". ";
-
-            var itemURL = ($(e).find("link"));
-            var blogURL = "<a href='" + itemURL.text() + "'>" + itemURL.text() +"</a>";
-
-            var itemTitle = ($(e).find("title"));
-            var blogTitle = "<h4>" + blogNumber + itemTitle.text() + "</h4>";
-
-            $("#feed").append(blogTitle);
-            $("#feed").append(blogURL);
-
-        }))
-    });
+    getIndexBlog();
     $('#page-loader').fadeOut(10);
     $.ajax({
         url: 'header-footer.html',
@@ -40,70 +20,6 @@ $(document).ready(function () {
         buildHF(html);
     });
     
-    var dataJson = "blog.json";
-    var divContent = "";
-    //var dataArr = $.parseJSON(dataJson);
-
-      $.getJSON(dataJson, function (data) {
-        $.each(data.rss.channel, function (k, v) {
-          var i = 0;
-          for (i; i < v.length; i++){
-            if(v[i].title != undefined && v[i].link != undefined){
-                
-              console.log(v[i].content.thumbnail._url)
-                divContent += '<a href="'+ v[i].link+'" target="_blank" class="item">';
-                divContent += '<div class="carouselNew">';
-                divContent += '<div class="carouselNew-img">';
-                divContent += '<img src="'+v[i].content._url+'" >';
-                divContent += '</div>';
-                divContent += '<div class="carouselNew-content">';
-                divContent += '<p class="tituloNew">"'+v[i].title+'"</p>';
-                if(v[i].description.__cdata != undefined){
-                    var str = v[i].description.__cdata;
-                    var substr = str.split('</p>');
-                    divContent += '<div class="descriptionNew">'+substr[0]+'</div>';
-                }
-                var str2 = v[i].pubDate;
-                    var sbr1 = str2.split(' ');
-                divContent += '<p class="dateNew">'+ sbr1[1] + " " + sbr1[2] + " " + sbr1[3]   +'</p>';
-                divContent += '</div>';
-                divContent += '</div>';
-                divContent += '</a>';
-            }
-          }
-        });
-        
-        
-      $(".sectionBlog-news-contentSlider").html(divContent);
-      function runCarousel(){
-        $('.sectionBlog-news-contentSlider').owlCarousel({
-            loop: true,
-            autoplay: false,
-            autoplayTimeout: 2000,
-            autoplayHoverPause: true,
-            center:true,
-            nav: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                645: {
-                    items: 1
-                },
-                670: {
-                    items: 2
-                },
-                940: {
-                    items: 2
-                },
-                1600: {
-                    items: 3
-                }
-            }
-        });
-      }
-      setTimeout(runCarousel, 1000);
-      });
     document.addEventListener('touchmove', function (event) {
         if (event.scale !== 1) { event.preventDefault(); }
     }, false);
@@ -786,12 +702,90 @@ function onScrollInit(items, trigger) {
 
 onScrollInit($('.lgmr-animated'));
 onScrollInit($('.staggered-animation'), $('.staggered-animation-container'));
-
-  //Read RSS
-//   jQuery(function($) {
-//     $(".brand-carousel").rss("https://aihgroup.com.mx/blog/feed/",
-//     {
-//       entryTemplate:'<li><a href="{url}">{title}</a><br/>{shortBodyPlain}</li>'
-//     })
-//   })
-///Links To Sections
+function getIndexBlog() {
+    var urlBlog = window.location.pathname;
+    var divContent = "";
+    var isCarousel = false;
+    var feedURL = "https://aihgroup.com.mx/blog/feed/";
+    $.ajax({
+        type: 'GET',
+        url: "https://api.rss2json.com/v1/api.json?rss_url=" + feedURL,
+        dataType: 'jsonp',
+        success: function (result) {
+            var item = result.items;
+            for (var i = 0; i < result.items.length && i < 20; i++) {
+                var item = result.items[i];
+                console.log(item)
+                divContent += '<a href="'+ item.link+'" target="_blank" class="item">';
+                divContent += '<div class="carouselNew">';
+                divContent += '<div class="carouselNew-img">';
+                divContent += '<img src="'+item.enclosure.link+'" >';
+                divContent += '</div>';
+                divContent += '<div class="carouselNew-content">';
+                divContent += '<p class="tituloNew">"'+item.title+'"</p>';
+                if(item.description != undefined){
+                    var str = item.description;
+                    var substr = str.split('</p>');
+                    divContent += '<div class="descriptionNew">'+substr[0]+'</div>';
+                }
+                var str2 = item.pubDate;
+                    var sbr1 = str2.split(' ');
+                divContent += '<p class="dateNew">'+ sbr1[0] +'</p>';
+                divContent += '</div>';
+                divContent += '</div>';
+                divContent += '</a>';
+            }
+            $(".sectionBlog-news-contentSlider").html(divContent);
+            function runCarousel(){
+                $('.sectionBlog-news-contentSlider').owlCarousel({
+                    loop: true,
+                    autoplay: false,
+                    autoplayTimeout: 2000,
+                    autoplayHoverPause: true,
+                    center:true,
+                    nav: true,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        645: {
+                            items: 1
+                        },
+                        670: {
+                            items: 2
+                        },
+                        940: {
+                            items: 2
+                        },
+                        1600: {
+                            items: 3
+                        }
+                    }
+                });
+              }
+              setTimeout(runCarousel, 1000);
+           /*  $(".sectionBlog-news-contentSlider").owlCarousel({
+                items: 1,
+                slideSpeed: 500,
+                touchDrag: false,
+                mouseDrag: false,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                autoplayTimeout: 2000,
+                dots: false,
+                loop: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        center: false,
+                    },
+                    560: {
+                        center: false,
+                        items: 2,
+                        margin: 200,
+                    }
+                }
+            }); */
+        }
+    });
+}
