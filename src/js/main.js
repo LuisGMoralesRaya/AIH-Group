@@ -715,7 +715,6 @@ function getIndexBlog() {
             var item = result.items;
             for (var i = 0; i < result.items.length && i < 20; i++) {
                 var item = result.items[i];
-                console.log(item)
                 divContent += '<a href="'+ item.link+'" target="_blank" class="item">';
                 divContent += '<div class="carouselNew">';
                 divContent += '<div class="carouselNew-img">';

@@ -54,7 +54,7 @@ function getFeedBlog() {
                 var counItem = result.items;
                 if (urlBlog == "/servicios-aih-advisors.html") {
                     if (item.categories[0] == "advisors") {
-                        if (i >= 1) {
+                        if (i >= 0) {
                             blogContent += '<div class="itemCarousel">';
                             blogContent += '<a href="' + item.link + '" target="_blank" class="item">';
                             blogContent += '<img src="' + item.enclosure.link + '" class="item-img">';
@@ -75,7 +75,7 @@ function getFeedBlog() {
                     }
                 } else if (urlBlog == "/servicios-aih-personnel.html") {
                     if (item.categories[0] == "personnel") {
-                        if (i >= 1) {
+                        if (i >= 0) {
                             blogContent += '<div class="itemCarousel">';
                             blogContent += '<a href="' + item.link + '" target="_blank" class="item">';
                             blogContent += '<img src="' + item.enclosure.link + '" class="item-img">';
@@ -96,7 +96,7 @@ function getFeedBlog() {
                     }
                 } else if (urlBlog == "/servicios-aih-capital.html") {
                     if (item.categories[0] == "capital") {
-                        if (i >= 1) {
+                        if (i >= 0) {
                             blogContent += '<div class="itemCarousel">';
                             blogContent += '<a href="' + item.link + '" target="_blank" class="item">';
                             blogContent += '<img src="' + item.enclosure.link + '" class="item-img">';
@@ -117,7 +117,7 @@ function getFeedBlog() {
                     }
                 } else if (urlBlog == "/servicios-aih-holding.html") {
                     if (item.categories[0] == "holding") {
-                        if (i >= 1) {
+                        if (i >= 0) {
                             blogContent += '<div class="itemCarousel">';
                             blogContent += '<a href="' + item.link + '" target="_blank" class="item">';
                             blogContent += '<img src="' + item.enclosure.link + '" class="item-img">';
@@ -138,7 +138,7 @@ function getFeedBlog() {
                     }
                 } else if (urlBlog == "/servicios-aih-media.html") {
                     if (item.categories[0] == "media") {
-                        if (i >= 1) {
+                        if (i >= 0) {
                             blogContent += '<div class="itemCarousel">';
                             blogContent += '<a href="' + item.link + '" target="_blank" class="item">';
                             blogContent += '<img src="' + item.enclosure.link + '" class="item-img">';
@@ -160,7 +160,7 @@ function getFeedBlog() {
                 } else if (urlBlog == "/servicios-aih-habitat.html") {
                     if (item.categories[0] == "habitat") {
                         console.log(i)
-                        if (i >= 1) {
+                        if (i >= 0) {
                             blogContent += '<div class="itemCarousel">';
                             blogContent += '<a href="' + item.link + '" target="_blank" class="item">';
                             blogContent += '<img src="' + item.enclosure.link + '" class="item-img">';
